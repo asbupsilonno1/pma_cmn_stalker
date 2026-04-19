@@ -104,7 +104,7 @@
   <div class="container">
 	<section class="hero">
 	  <h1>PMA CMN stalker</h1>
-	  <p>Generated at 2026-04-19T12:09:29</p>
+	  <p>Generated at 2026-04-19T12:16:21</p>
 	  <p>Monitoring stage-wise APR/RTLA logs across the current, golden, flatten, estimation, and selective runs.</p>
 	</section>
 	<div class="grid" id="dashboard"></div>
@@ -112,7 +112,7 @@
   </div>
   <script>
 	const snapshot = {
-  "generated_at": "2026-04-19T12:09:29",
+  "generated_at": "2026-04-19T12:16:21",
   "run_count": 5,
   "runs": [
     {
@@ -3374,8 +3374,7 @@
 	  return run.stages.filter(stage => stage.recent_lines && stage.recent_lines.length).map(stage => `
 		<details>
 		  <summary>${htmlEscape(stage.stage)} recent log lines</summary>
-		  <pre>${htmlEscape(stage.recent_lines.join('
-'))}</pre>
+		  <pre>${htmlEscape(stage.recent_lines.join('\n'))}</pre>
 		</details>
 	  `).join('');
 	}
