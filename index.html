@@ -99,12 +99,17 @@
 	.summary { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
 	.pill { background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 999px; padding: 6px 10px; font-size: 12px; color: var(--muted); }
 	.section { padding: 18px 20px 22px; }
+	.section + .section { border-top: 1px solid rgba(42,53,88,0.7); }
+	.section h3 { margin: 0 0 12px; font-size: 16px; }
 	table { width: 100%; border-collapse: collapse; }
 	th, td { text-align: left; padding: 10px 8px; font-size: 13px; vertical-align: top; border-bottom: 1px solid rgba(42,53,88,0.7); }
 	th { color: var(--muted); font-weight: 700; position: sticky; top: 0; background: rgba(21,28,49,0.98); }
 	tr:hover td { background: rgba(255,255,255,0.02); }
 	.stage-name { font-weight: 700; }
 	.logline { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #d2daf0; max-width: 520px; word-break: break-word; }
+	.cross-cell { min-width: 190px; }
+	.cross-cell .badge { margin-bottom: 6px; }
+	.small-note { font-size: 11px; color: var(--muted); line-height: 1.45; }
 	.empty { color: var(--muted); font-style: italic; }
 	details { margin-top: 12px; }
 	details summary { cursor: pointer; color: #c6d2ef; font-weight: 600; }
@@ -126,7 +131,7 @@
   <div class="container">
 	<section class="hero">
 	  <h1>PMA CMN stalker</h1>
-	  <p>Generated at 2026-04-19T12:35:39</p>
+	  <p>Generated at 2026-04-19T12:42:04</p>
 	  <p>Monitoring APR FC flow stages only. RTLA-only stages are limited to conditioning and estimation when those logs are actually present.</p>
 	  <p>Auxiliary logs such as abutment-rule, spacing-rule, interactive, assembly, and merge helpers are intentionally excluded from the stage list.</p>
 	</section>
@@ -136,7 +141,7 @@
   </div>
   <script>
 	const snapshot = {
-  "generated_at": "2026-04-19T12:35:39",
+  "generated_at": "2026-04-19T12:42:04",
   "run_count": 5,
   "runs": [
     {
@@ -2029,6 +2034,80 @@
 	  `).join('');
 	}
 
+	function getComparisonStages(run) {
+	  const wanted = ['conditioning', 'floorplan', 'estimation'];
+	  const stageMap = new Map(run.stages.map(stage => [stage.stage, stage]));
+	  return wanted.map(name => stageMap.get(name) || {
+		stage: name,
+		status: 'not_started',
+		last_updated: null,
+		latest_line: '',
+		recent_lines: [],
+		stage_exists: false,
+	  });
+	}
+
+	function comparisonRows(run) {
+	  return getComparisonStages(run).map(stage => `
+		<tr>
+		  <td class="stage-name">${htmlEscape(stage.stage)}</td>
+		  <td>${stage.stage_exists ? badge(stage.status) : '<span class="empty">N/A</span>'}</td>
+		  <td>${stage.last_updated ? htmlEscape(stage.last_updated) : '<span class="empty">--</span>'}</td>
+		  <td class="logline">${stage.latest_line ? htmlEscape(stage.latest_line) : '<span class="empty">No recent line</span>'}</td>
+		</tr>
+	  `).join('');
+	}
+
+	function crossComparisonCell(stage) {
+	  if (!stage || !stage.stage_exists) {
+		return '<span class="empty">N/A</span>';
+	  }
+	  const updated = stage.last_updated ? `<div class="small-note">updated: ${htmlEscape(stage.last_updated)}</div>` : '<div class="small-note">updated: --</div>';
+	  const line = stage.latest_line ? `<div class="small-note">${htmlEscape(stage.latest_line)}</div>` : '<div class="small-note">No recent line</div>';
+	  return `${badge(stage.status)}${updated}${line}`;
+	}
+
+	function renderCrossComparison(snapshot) {
+	  return `
+		<article class="card">
+		  <div class="card-header">
+			<div class="card-header-top">
+			  <h2>Cross folder comparison</h2>
+			  <span class="pill">stages: conditioning / floorplan / estimation</span>
+			</div>
+			<div class="meta">
+			  <div>Compare the RTLA-related stages across all monitored folders. APR-only folders show N/A where the stage does not exist.</div>
+			</div>
+		  </div>
+		  <div class="section">
+			<table>
+			  <thead>
+				<tr>
+				  <th>Folder</th>
+				  <th>conditioning</th>
+				  <th>floorplan</th>
+				  <th>estimation</th>
+				</tr>
+			  </thead>
+			  <tbody>
+				${snapshot.runs.map(run => {
+				  const stageMap = new Map(run.stages.map(stage => [stage.stage, stage]));
+				  return `
+					<tr>
+					  <td class="stage-name">${htmlEscape(run.label)}</td>
+					  <td class="cross-cell">${crossComparisonCell(stageMap.get('conditioning'))}</td>
+					  <td class="cross-cell">${crossComparisonCell(stageMap.get('floorplan'))}</td>
+					  <td class="cross-cell">${crossComparisonCell(stageMap.get('estimation'))}</td>
+					</tr>
+				  `;
+				}).join('')}
+			  </tbody>
+			</table>
+		  </div>
+		</article>
+	  `;
+	}
+
 	function detailBlocks(run) {
 	  return run.stages.filter(stage => stage.recent_lines && stage.recent_lines.length).map(stage => `
 		<details>
@@ -2070,6 +2149,23 @@
 			<div class="summary">${summaryPills(run)}</div>
 		  </div>
 		  <div class="section">
+			<h3>RTLA stage comparison</h3>
+			<table>
+			  <thead>
+				<tr>
+				  <th>Stage</th>
+				  <th>Status</th>
+				  <th>Last updated</th>
+				  <th>Recent line</th>
+				</tr>
+			  </thead>
+			  <tbody>
+				${comparisonRows(run)}
+			  </tbody>
+			</table>
+		  </div>
+		  <div class="section">
+			<h3>Full monitored flow</h3>
 			<table>
 			  <thead>
 				<tr>
@@ -2101,8 +2197,8 @@
 
 	const tabsElement = document.getElementById('tabs');
 	const dashboardElement = document.getElementById('dashboard');
-	tabsElement.innerHTML = snapshot.runs.map(renderTabButton).join('');
-	dashboardElement.innerHTML = snapshot.runs.map(renderTabPanel).join('');
+	tabsElement.innerHTML = ['<button class="tab-button active" data-tab="cross-comparison">comparison</button>', ...snapshot.runs.map(renderTabButton)].join('');
+	dashboardElement.innerHTML = [`<section class="tab-panel active" id="cross-comparison">${renderCrossComparison(snapshot)}</section>`, ...snapshot.runs.map(renderTabPanel)].join('');
 
 	tabsElement.querySelectorAll('.tab-button').forEach(button => {
 	  button.addEventListener('click', () => {
