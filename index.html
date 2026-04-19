@@ -142,7 +142,8 @@
 	.compact-log h4 { margin: 0 0 8px; font-size: 13px; }
 	.app-options-controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; margin-bottom: 12px; }
 	.app-options-controls label { display: grid; gap: 6px; color: var(--muted); font-size: 12px; }
-	.app-options-controls select { min-width: 170px; background: rgba(15,23,42,0.9); color: var(--text); border: 1px solid var(--border); border-radius: 10px; padding: 8px 10px; }
+	.app-options-controls select, .app-options-controls input { min-width: 170px; background: rgba(15,23,42,0.9); color: var(--text); border: 1px solid var(--border); border-radius: 10px; padding: 8px 10px; }
+	.app-options-controls input { width: min(320px, 100%); }
 	.app-options-meta { margin-bottom: 10px; white-space: normal; overflow-wrap: anywhere; }
 	.app-options-table { table-layout: fixed; }
 	.app-options-table th:nth-child(1), .app-options-table td:nth-child(1) { width: 12%; min-width: 110px; }
@@ -174,7 +175,7 @@
   <div class="container">
 	<section class="hero">
 	  <h1>PMA CMN stalker</h1>
-	  <p>Generated at 2026-04-19T13:39:05</p>
+	  <p>Generated at 2026-04-19T13:47:24</p>
 	  <p>Monitoring APR FC flow stages only. RTLA-only stages are limited to conditioning and estimation when those logs are actually present.</p>
 	  <p>Auxiliary logs such as abutment-rule, spacing-rule, interactive, assembly, and merge helpers are intentionally excluded from the stage list.</p>
 	</section>
@@ -184,7 +185,7 @@
   </div>
   <script>
 	const snapshot = {
-  "generated_at": "2026-04-19T13:39:05",
+  "generated_at": "2026-04-19T13:47:24",
   "run_count": 5,
   "runs": [
     {
@@ -1777,10 +1778,10 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "Information: Loading technology file '/p/hdk/cad/dp_contour/76p5/v1.0_1/pdk765_r1.0_1_26ww12.4/apr/synopsys/tech/m17_6x_2ya_2yb_2yc_2yd_1ye_1ga_mim3x_1gb__bumpi/g1m_8dg_50pp_tp4/p1276_icc2.tf' (FILE-007)",
+      "fc_latest_line": "Information: Added key list 'DesignWare' to design 'pma_cmn'. (DWS-0216)",
       "overall_status": "running",
       "running_stage": "import_design",
-      "last_updated": "2026-04-19T13:30:12",
+      "last_updated": "2026-04-19T13:45:58",
       "summary": {
         "passed": 17,
         "failed": 0,
@@ -2526,8 +2527,8 @@
             "Elapsed time for this session:   2322 seconds (  0.65 hours)",
             "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-19T13:30:12",
-          "size_bytes": 26230744,
+          "last_updated": "2026-04-19T13:45:58",
+          "size_bytes": 29008332,
           "stage_exists": true
         },
         {
@@ -2933,10 +2934,10 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "Information: Loading technology file '/p/hdk/cad/dp_contour/76p5/v1.0_1/pdk765_r1.0_1_26ww12.4/apr/synopsys/tech/m17_6x_2ya_2yb_2yc_2yd_1ye_1ga_mim3x_1gb__bumpi/g1m_8dg_50pp_tp4/p1276_icc2.tf' (FILE-007)",
+      "fc_latest_line": "Information: Added key list 'DesignWare' to design 'pma_cmn'. (DWS-0216)",
       "overall_status": "running",
       "running_stage": "import_design",
-      "last_updated": "2026-04-19T13:18:04",
+      "last_updated": "2026-04-19T13:46:03",
       "summary": {
         "passed": 7,
         "failed": 0,
@@ -3818,8 +3819,8 @@
             "Elapsed time for this session:   1243 seconds (  0.35 hours)",
             "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-19T13:18:04",
-          "size_bytes": 26254589,
+          "last_updated": "2026-04-19T13:46:03",
+          "size_bytes": 29059595,
           "stage_exists": true
         },
         {
@@ -5365,9 +5366,27 @@
 
 	function getAppOptionsState(runId) {
 	  if (!appOptionsState.has(runId)) {
-		appOptionsState.set(runId, { manifest: null, reportCache: new Map() });
+		appOptionsState.set(runId, { manifest: null, reportCache: new Map(), currentEntries: [] });
 	  }
 	  return appOptionsState.get(runId);
+	}
+
+	function filterAppOptionsEntries(entries, query) {
+	  const normalized = (query || '').trim().toLowerCase();
+	  if (!normalized) {
+		return entries;
+	  }
+	  return entries.filter(entry => [
+		entry.name,
+		entry.type,
+		entry.value,
+		entry.user_value,
+		entry.user_default,
+		entry.system_default,
+		entry.scope,
+		entry.status,
+		entry.source,
+	  ].some(value => (value || '').toLowerCase().includes(normalized)));
 	}
 
 	function renderAppOptionsRows(entries, selectedStage, selectedCategory) {
@@ -5406,6 +5425,7 @@
 	  const state = getAppOptionsState(runId);
 	  const stageSelect = document.getElementById(`app-stage-${runId}`);
 	  const categorySelect = document.getElementById(`app-category-${runId}`);
+	  const searchInput = document.getElementById(`app-search-${runId}`);
 	  const status = document.getElementById(`app-status-${runId}`);
 	  const body = document.getElementById(`app-body-${runId}`);
 	  if (!state.manifest) {
@@ -5425,9 +5445,11 @@
 		status.textContent = `Loading ${selectedStage} / ${selectedCategory} ...`;
 		state.reportCache.set(cacheKey, await fetchJson(report.file));
 	  }
-	  const entries = state.reportCache.get(cacheKey) || [];
-	  body.innerHTML = renderAppOptionsRows(entries, selectedStage, selectedCategory);
-	  status.textContent = `Showing ${entries.length} app options from ${selectedStage} / ${selectedCategory}.`;
+	  state.currentEntries = state.reportCache.get(cacheKey) || [];
+	  const filteredEntries = filterAppOptionsEntries(state.currentEntries, searchInput?.value || '');
+	  body.innerHTML = renderAppOptionsRows(filteredEntries, selectedStage, selectedCategory);
+	  const suffix = searchInput?.value?.trim() ? ` matching "${searchInput.value.trim()}"` : '';
+	  status.textContent = `Showing ${filteredEntries.length} of ${state.currentEntries.length} app options from ${selectedStage} / ${selectedCategory}${suffix}.`;
 	}
 
 	async function loadAppOptions(run) {
@@ -5436,6 +5458,7 @@
 	  const status = document.getElementById(`app-status-${runId}`);
 	  const stageSelect = document.getElementById(`app-stage-${runId}`);
 	  const categorySelect = document.getElementById(`app-category-${runId}`);
+	  const searchInput = document.getElementById(`app-search-${runId}`);
 	  if (!run.app_options_manifest) {
 		status.textContent = 'No app option reports available for this folder.';
 		return;
@@ -5456,6 +5479,7 @@
 	  stageSelect.value = preferredStage;
 	  fillCategoryOptions(runId, state.manifest, preferredStage, 'project');
 	  categorySelect.disabled = false;
+	  searchInput.disabled = false;
 	  await renderSelectedAppOptions(run, runId);
 	}
 
@@ -5475,6 +5499,7 @@
 			<div class="app-options-controls">
 			  <label>Stage<select id="app-stage-${runId}" data-run-label="${htmlEscape(run.label)}" disabled><option>Load app options first</option></select></label>
 			  <label>Category<select id="app-category-${runId}" data-run-label="${htmlEscape(run.label)}" disabled><option>Load app options first</option></select></label>
+			  <label>Search<input id="app-search-${runId}" data-run-label="${htmlEscape(run.label)}" type="search" placeholder="Search app options" disabled /></label>
 			</div>
 			<div class="app-options-meta small-note" id="app-status-${runId}">${run.app_options_report_count ? `${run.app_options_report_count} app option reports available.` : 'No app option reports available.'}</div>
 			<div class="table-wrap">
@@ -5691,6 +5716,18 @@
 	  if (target.id === `app-stage-${runId}`) {
 		fillCategoryOptions(runId, state.manifest, target.value, 'project');
 	  }
+	  await renderSelectedAppOptions(run, runId);
+	});
+
+	document.addEventListener('input', async event => {
+	  const target = event.target;
+	  if (!(target instanceof HTMLInputElement)) return;
+	  if (!target.id.startsWith('app-search-')) return;
+	  const run = snapshot.runs.find(item => item.label === target.dataset.runLabel);
+	  if (!run) return;
+	  const runId = safeId(run.label);
+	  const state = getAppOptionsState(runId);
+	  if (!state.manifest) return;
 	  await renderSelectedAppOptions(run, runId);
 	});
   </script>
