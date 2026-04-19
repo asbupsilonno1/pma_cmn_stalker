@@ -116,16 +116,6 @@
 	}
 	.section-btn:hover { border-color: #5e7dd1; }
 	.section-body.hidden { display: none; }
-	.section.maximized {
-	  position: fixed;
-	  inset: 18px;
-	  z-index: 50;
-	  background: rgba(21, 28, 49, 0.98);
-	  border: 1px solid var(--border);
-	  border-radius: 18px;
-	  overflow: auto;
-	  box-shadow: 0 20px 80px rgba(0,0,0,0.45);
-	}
 	.table-wrap { width: 100%; overflow-x: auto; overflow-y: hidden; }
 	table { width: 100%; border-collapse: collapse; }
 	th, td { text-align: left; padding: 10px 8px; font-size: 13px; vertical-align: top; border-bottom: 1px solid rgba(42,53,88,0.7); white-space: normal; overflow-wrap: anywhere; word-break: break-word; }
@@ -184,7 +174,7 @@
   <div class="container">
 	<section class="hero">
 	  <h1>PMA CMN stalker</h1>
-	  <p>Generated at 2026-04-19T13:34:50</p>
+	  <p>Generated at 2026-04-19T13:39:05</p>
 	  <p>Monitoring APR FC flow stages only. RTLA-only stages are limited to conditioning and estimation when those logs are actually present.</p>
 	  <p>Auxiliary logs such as abutment-rule, spacing-rule, interactive, assembly, and merge helpers are intentionally excluded from the stage list.</p>
 	</section>
@@ -194,7 +184,7 @@
   </div>
   <script>
 	const snapshot = {
-  "generated_at": "2026-04-19T13:34:50",
+  "generated_at": "2026-04-19T13:39:05",
   "run_count": 5,
   "runs": [
     {
@@ -5627,7 +5617,6 @@
 			  <h3>QoR comparison: conditioning vs floorplan vs estimation</h3>
 			  <div class="section-actions">
 				<button class="section-btn" data-action="toggle-collapse" data-target="${qorSectionId}">minimize</button>
-				<button class="section-btn" data-action="toggle-maximize" data-target="${qorSectionId}">maximize</button>
 			  </div>
 			</div>
 			<div class="section-body">
@@ -5673,13 +5662,6 @@
 		if (!body) return;
 		const hidden = body.classList.toggle('hidden');
 		button.textContent = hidden ? 'expand' : 'minimize';
-		return;
-	  }
-	  if (action === 'toggle-maximize') {
-		const section = document.getElementById(button.dataset.target);
-		if (!section) return;
-		const maximized = section.classList.toggle('maximized');
-		button.textContent = maximized ? 'restore' : 'maximize';
 		return;
 	  }
 	  if (action === 'load-app-options') {
