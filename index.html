@@ -126,8 +126,9 @@
   <div class="container">
 	<section class="hero">
 	  <h1>PMA CMN stalker</h1>
-	  <p>Generated at 2026-04-19T12:23:53</p>
-	  <p>Monitoring stage-wise APR/RTLA logs across the current, golden, flatten, estimation, and selective runs.</p>
+	  <p>Generated at 2026-04-19T12:35:39</p>
+	  <p>Monitoring APR FC flow stages only. RTLA-only stages are limited to conditioning and estimation when those logs are actually present.</p>
+	  <p>Auxiliary logs such as abutment-rule, spacing-rule, interactive, assembly, and merge helpers are intentionally excluded from the stage list.</p>
 	</section>
 	<div class="tabs" id="tabs"></div>
 	<div class="tab-panels" id="dashboard"></div>
@@ -135,25 +136,30 @@
   </div>
   <script>
 	const snapshot = {
-  "generated_at": "2026-04-19T12:23:53",
+  "generated_at": "2026-04-19T12:35:39",
   "run_count": 5,
   "runs": [
     {
       "label": "current",
+      "flow_type": "rtla_plus_apr",
+      "terminal_stage": "opt_signoff",
+      "has_rtla_stages": true,
       "base_path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn",
       "logs_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
       "fc_latest_line": "fc_shell>",
-      "overall_status": "running",
-      "running_stage": "finish.abutment_rules",
+      "overall_status": "passed",
+      "running_stage": null,
       "last_updated": "2026-04-18T11:03:44",
       "summary": {
         "passed": 21,
         "failed": 0,
         "skipped": 0,
-        "started": 27,
+        "started": 0,
         "not_started": 0
       },
+      "has_activity": true,
+      "complete": true,
       "stages": [
         {
           "stage": "import_design",
@@ -420,6 +426,28 @@
           "stage_exists": true
         },
         {
+          "stage": "compile_final_opto",
+          "status": "passed",
+          "files": {
+            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.compile_final_opto.log",
+            "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.parallel_rpt_out.log",
+            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.pass",
+            "fail_file": null,
+            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.skipped_fail"
+          },
+          "latest_line": "Thank you for using Fusion Compiler.",
+          "recent_lines": [
+            " 13189             1 Mb   Sat Apr 18 05:48:32 2026    Sat Apr 18 05:49:04 2026    du -sh /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn",
+            " 31725             1 Mb   Thu Apr 16 12:57:54 2026    Thu Apr 16 12:58:25 2026    tee -i /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fm.compile_final_opto.log",
+            "CPU usage for this session: 153135 seconds ( 42.54 hours)",
+            "Elapsed time for this session: 148802 seconds ( 41.33 hours)",
+            "Thank you for using Fusion Compiler."
+          ],
+          "last_updated": "2026-04-18T05:53:07",
+          "size_bytes": 71345831,
+          "stage_exists": true
+        },
+        {
           "stage": "ctmesh",
           "status": "passed",
           "files": {
@@ -530,6 +558,28 @@
           "stage_exists": true
         },
         {
+          "stage": "opt_signoff",
+          "status": "passed",
+          "files": {
+            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.opt_signoff.log",
+            "parallel_log": null,
+            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/opt_signoff.pass",
+            "fail_file": null,
+            "skipped_fail_file": null
+          },
+          "latest_line": "INTEL_INFO   : Task log is: /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.fill.log (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/global/common/setup.tcl) [Mon Mar  2 16:03:05 2026]",
+          "recent_lines": [
+            "INTEL_INFO   : Overriding ::ivar(log_dir) = '/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs' (same value) [Mon Mar  2 16:03:05 2026]",
+            "INTEL_INFO   : Overriding ::ivar(log_file) = '/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.fill.log' (prev. value = '/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.opt_signoff.log') [Mon Mar  2 16:03:05 2026]",
+            "INTEL_INFO   : Overriding ::ivar(cmd_file) = '/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fill.cmd' (prev. value = '/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/opt_signoff.cmd') [Mon Mar  2 16:03:05 2026]",
+            "INTEL_INFO   : Command log is: /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fill.cmd (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/global/common/setup.tcl) [Mon Mar  2 16:03:05 2026]",
+            "INTEL_INFO   : Task log is: /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.fill.log (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/global/common/setup.tcl) [Mon Mar  2 16:03:05 2026]"
+          ],
+          "last_updated": "2026-03-02T16:03:05",
+          "size_bytes": 28777987,
+          "stage_exists": true
+        },
+        {
           "stage": "fill",
           "status": "passed",
           "files": {
@@ -572,663 +622,30 @@
           "last_updated": "2026-04-17T07:14:20",
           "size_bytes": 47418555,
           "stage_exists": true
-        },
-        {
-          "stage": "compile_final_opto",
-          "status": "passed",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.compile_final_opto.log",
-            "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.parallel_rpt_out.log",
-            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.pass",
-            "fail_file": null,
-            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.skipped_fail"
-          },
-          "latest_line": "Thank you for using Fusion Compiler.",
-          "recent_lines": [
-            " 13189             1 Mb   Sat Apr 18 05:48:32 2026    Sat Apr 18 05:49:04 2026    du -sh /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn",
-            " 31725             1 Mb   Thu Apr 16 12:57:54 2026    Thu Apr 16 12:58:25 2026    tee -i /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fm.compile_final_opto.log",
-            "CPU usage for this session: 153135 seconds ( 42.54 hours)",
-            "Elapsed time for this session: 148802 seconds ( 41.33 hours)",
-            "Thank you for using Fusion Compiler."
-          ],
-          "last_updated": "2026-04-18T05:53:07",
-          "size_bytes": 71345831,
-          "stage_exists": true
-        },
-        {
-          "stage": "opt_signoff",
-          "status": "passed",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.opt_signoff.log",
-            "parallel_log": null,
-            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/opt_signoff.pass",
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : Task log is: /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.fill.log (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/global/common/setup.tcl) [Mon Mar  2 16:03:05 2026]",
-          "recent_lines": [
-            "INTEL_INFO   : Overriding ::ivar(log_dir) = '/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs' (same value) [Mon Mar  2 16:03:05 2026]",
-            "INTEL_INFO   : Overriding ::ivar(log_file) = '/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.fill.log' (prev. value = '/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.opt_signoff.log') [Mon Mar  2 16:03:05 2026]",
-            "INTEL_INFO   : Overriding ::ivar(cmd_file) = '/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fill.cmd' (prev. value = '/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/opt_signoff.cmd') [Mon Mar  2 16:03:05 2026]",
-            "INTEL_INFO   : Command log is: /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fill.cmd (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/global/common/setup.tcl) [Mon Mar  2 16:03:05 2026]",
-            "INTEL_INFO   : Task log is: /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.fill.log (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/global/common/setup.tcl) [Mon Mar  2 16:03:05 2026]"
-          ],
-          "last_updated": "2026-03-02T16:03:05",
-          "size_bytes": 28777987,
-          "stage_exists": true
-        },
-        {
-          "stage": "clock_route_opt.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.clock_route_opt.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 14:09:17 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 14:09:17 2026]"
-          ],
-          "last_updated": "2026-04-16T14:09:17",
-          "size_bytes": 154399,
-          "stage_exists": true
-        },
-        {
-          "stage": "compile_final_opto.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.compile_final_opto.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=1 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 10:13:09 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=1 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 10:13:09 2026]"
-          ],
-          "last_updated": "2026-04-16T10:13:09",
-          "size_bytes": 154399,
-          "stage_exists": true
-        },
-        {
-          "stage": "compile_initial_opto.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.compile_initial_opto.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 04:21:38 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 04:21:38 2026]"
-          ],
-          "last_updated": "2026-04-16T04:21:38",
-          "size_bytes": 154399,
-          "stage_exists": true
-        },
-        {
-          "stage": "conditioning.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.conditioning.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0124/stdcells/lib765_g1m_240h_50pp/pdk090_r3v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Tue Mar 24 02:45:08 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0124/stdcells/lib765_g1m_240h_50pp/pdk090_r3v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Tue Mar 24 02:45:08 2026]"
-          ],
-          "last_updated": "2026-03-24T02:45:08",
-          "size_bytes": 130070,
-          "stage_exists": true
-        },
-        {
-          "stage": "conditioning.spacing_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.conditioning.spacing_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0124/stdcells/lib765_g1m_240h_50pp/pdk090_r3v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=4, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/tech_placement_constraints.tcl) [Tue Mar 24 02:46:48 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0124/stdcells/lib765_g1m_240h_50pp/pdk090_r3v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=4, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/tech_placement_constraints.tcl) [Tue Mar 24 02:46:48 2026]"
-          ],
-          "last_updated": "2026-03-24T02:46:48",
-          "size_bytes": 13071927,
-          "stage_exists": true
-        },
-        {
-          "stage": "ctmesh.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.ctmesh.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 12:33:49 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 12:33:49 2026]"
-          ],
-          "last_updated": "2026-04-16T12:33:49",
-          "size_bytes": 154399,
-          "stage_exists": true
-        },
-        {
-          "stage": "cts.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.cts.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 12:40:09 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 12:40:09 2026]"
-          ],
-          "last_updated": "2026-04-16T12:40:09",
-          "size_bytes": 154399,
-          "stage_exists": true
-        },
-        {
-          "stage": "cts_backup",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.cts_backup.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : Task log is: /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.clock_route_opt.log (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/global/common/setup.tcl) [Mon Mar  2 08:13:17 2026]",
-          "recent_lines": [
-            "INTEL_INFO   : Overriding ::ivar(log_dir) = '/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs' (same value) [Mon Mar  2 08:13:17 2026]",
-            "INTEL_INFO   : Overriding ::ivar(log_file) = '/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.clock_route_opt.log' (prev. value = '/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.cts.log') [Mon Mar  2 08:13:17 2026]",
-            "INTEL_INFO   : Overriding ::ivar(cmd_file) = '/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/clock_route_opt.cmd' (prev. value = '/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/cts.cmd') [Mon Mar  2 08:13:17 2026]",
-            "INTEL_INFO   : Command log is: /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/clock_route_opt.cmd (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/global/common/setup.tcl) [Mon Mar  2 08:13:17 2026]",
-            "INTEL_INFO   : Task log is: /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.clock_route_opt.log (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/global/common/setup.tcl) [Mon Mar  2 08:13:17 2026]"
-          ],
-          "last_updated": "2026-03-02T08:13:17",
-          "size_bytes": 1124637199,
-          "stage_exists": true
-        },
-        {
-          "stage": "dta",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.dta.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "'1425893573 1351940498 23455832193296 1509530362 1351903464 1505288030 652147806 652131485 648093863 1419995653 348294923 348305910 23454770520573 348229673'",
-          "recent_lines": [
-            "Error code=11",
-            "CPU time=1008",
-            "Release = 'X-2025.06-SP1'  Architecture = 'linux64'  Program = 'Fusion Compiler'",
-            "Exec = '/nfs/site/disks/crt_tools_058/fusioncompiler/X-2025.06-SP1-T-20250911/linux64/nwtn/bin/dgcom_exec'",
-            "'1425893573 1351940498 23455832193296 1509530362 1351903464 1505288030 652147806 652131485 648093863 1419995653 348294923 348305910 23454770520573 348229673'"
-          ],
-          "last_updated": "2026-04-15T02:36:33",
-          "size_bytes": 23296744,
-          "stage_exists": true
-        },
-        {
-          "stage": "dta.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.dta.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0124/stdcells/lib765_g1m_240h_50pp/pdk090_r3v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Sun Feb 22 23:27:34 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0124/stdcells/lib765_g1m_240h_50pp/pdk090_r3v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Sun Feb 22 23:27:34 2026]"
-          ],
-          "last_updated": "2026-02-22T23:27:34",
-          "size_bytes": 130163,
-          "stage_exists": true
-        },
-        {
-          "stage": "estimation.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.estimation.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0124/stdcells/lib765_g1m_240h_50pp/pdk090_r3v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Tue Mar 24 06:27:26 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0124/stdcells/lib765_g1m_240h_50pp/pdk090_r3v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Tue Mar 24 06:27:26 2026]"
-          ],
-          "last_updated": "2026-03-24T06:27:26",
-          "size_bytes": 130162,
-          "stage_exists": true
-        },
-        {
-          "stage": "fill.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.fill.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=1 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 21:31:41 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=1 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 21:31:41 2026]"
-          ],
-          "last_updated": "2026-04-16T21:31:41",
-          "size_bytes": 154399,
-          "stage_exists": true
-        },
-        {
-          "stage": "finish.abutment_rules",
-          "status": "running",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.finish.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 22:48:16 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 22:48:16 2026]"
-          ],
-          "last_updated": "2026-04-16T22:48:16",
-          "size_bytes": 154399,
-          "stage_exists": true
-        },
-        {
-          "stage": "floorplan.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.floorplan.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 02:28:58 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 02:28:58 2026]"
-          ],
-          "last_updated": "2026-04-16T02:28:58",
-          "size_bytes": 154399,
-          "stage_exists": true
-        },
-        {
-          "stage": "floorplan.spacing_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.floorplan.spacing_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/tech_placement_constraints.tcl) [Thu Apr 16 02:30:31 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/tech_placement_constraints.tcl) [Thu Apr 16 02:30:31 2026]"
-          ],
-          "last_updated": "2026-04-16T02:30:31",
-          "size_bytes": 18775462,
-          "stage_exists": true
-        },
-        {
-          "stage": "import_design.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.import_design.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=2, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 00:19:20 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=2, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 00:19:20 2026]"
-          ],
-          "last_updated": "2026-04-16T00:19:20",
-          "size_bytes": 132346,
-          "stage_exists": true
-        },
-        {
-          "stage": "init_floorplan.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.init_floorplan.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 00:25:36 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 00:25:36 2026]"
-          ],
-          "last_updated": "2026-04-16T00:25:36",
-          "size_bytes": 154399,
-          "stage_exists": true
-        },
-        {
-          "stage": "initial_map.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.initial_map.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=2, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 00:44:09 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=2, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 00:44:09 2026]"
-          ],
-          "last_updated": "2026-04-16T00:44:09",
-          "size_bytes": 154399,
-          "stage_exists": true
-        },
-        {
-          "stage": "initial_map.spacing_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.initial_map.spacing_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/tech_placement_constraints.tcl) [Thu Apr 16 00:45:47 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/tech_placement_constraints.tcl) [Thu Apr 16 00:45:47 2026]"
-          ],
-          "last_updated": "2026-04-16T00:45:47",
-          "size_bytes": 18775462,
-          "stage_exists": true
-        },
-        {
-          "stage": "insert_dft.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.insert_dft.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 04:06:29 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 04:06:29 2026]"
-          ],
-          "last_updated": "2026-04-16T04:06:29",
-          "size_bytes": 154399,
-          "stage_exists": true
-        },
-        {
-          "stage": "interactive",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.interactive.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "fc_shell> ls ../apr_fc/\b\u001b[K\b\u001b[K\b\u001b[K\b\u001b[K\b\u001b[K\b\u001b[K\b\u001b[K\b\u001b[K\b\u001b[K\b\u001b[K\b\b\u001b[K\b\u001b[Khistory\b\u001b[K\b\u001b[K\b\u001b[K\b\u001b[K\b\u001b[K\b\u001b[K\b\u001b[K",
-          "recent_lines": [
-            "./                 apr_fc/            cbb_data/          extraction/        fev_conformal/     rtla/",
-            "fc_shell> ls ../apr_fc/",
-            "#...(50)   ....(2224) F...(32)   I...(1)    S...(15)   d...(25)   f...(6)    h...(1)    l...(1)    o...(1)    r...(4)    t...(1)",
-            "&...(1)    C...(1)    H...(1)    Q...(1)    c...(52)   e...(1)    g...(3)    i...(1)    m...(1)    p...(7)    s...(8)    u...(1)",
-            "fc_shell> ls ../apr_fc/\b\u001b[K\b\u001b[K\b\u001b[K\b\u001b[K\b\u001b[K\b\u001b[K\b\u001b[K\b\u001b[K\b\u001b[K\b\u001b[K\b\b\u001b[K\b\u001b[Khistory\b\u001b[K\b\u001b[K\b\u001b[K\b\u001b[K\b\u001b[K\b\u001b[K\b\u001b[K"
-          ],
-          "last_updated": "2026-04-15T01:42:14",
-          "size_bytes": 23422977,
-          "stage_exists": true
-        },
-        {
-          "stage": "logic_opto.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.logic_opto.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 03:07:14 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 03:07:14 2026]"
-          ],
-          "last_updated": "2026-04-16T03:07:14",
-          "size_bytes": 154399,
-          "stage_exists": true
-        },
-        {
-          "stage": "read_upf.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.read_upf.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 00:20:59 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 00:20:59 2026]"
-          ],
-          "last_updated": "2026-04-16T00:20:59",
-          "size_bytes": 154491,
-          "stage_exists": true
-        },
-        {
-          "stage": "redefine.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.redefine.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 00:22:55 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 00:22:55 2026]"
-          ],
-          "last_updated": "2026-04-16T00:22:55",
-          "size_bytes": 154399,
-          "stage_exists": true
-        },
-        {
-          "stage": "route_auto.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.route_auto.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=1 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 16:47:34 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=1 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 16:47:34 2026]"
-          ],
-          "last_updated": "2026-04-16T16:47:34",
-          "size_bytes": 154399,
-          "stage_exists": true
-        },
-        {
-          "stage": "route_opt.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.route_opt.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 17:32:27 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 17:32:27 2026]"
-          ],
-          "last_updated": "2026-04-16T17:32:27",
-          "size_bytes": 154399,
-          "stage_exists": true
-        },
-        {
-          "stage": "setup_timing.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.setup_timing.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 00:27:57 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Thu Apr 16 00:27:57 2026]"
-          ],
-          "last_updated": "2026-04-16T00:27:57",
-          "size_bytes": 154399,
-          "stage_exists": true
         }
       ]
     },
     {
       "label": "golden",
+      "flow_type": "apr",
+      "terminal_stage": "opt_signoff",
+      "has_rtla_stages": false,
       "base_path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden",
       "logs_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
       "fc_latest_line": "Thank you for using Fusion Compiler.",
-      "overall_status": "running",
-      "running_stage": "finish.abutment_rules",
+      "overall_status": "started",
+      "running_stage": null,
       "last_updated": "2026-04-17T16:41:02",
       "summary": {
         "passed": 18,
         "failed": 0,
         "skipped": 0,
-        "started": 20,
-        "not_started": 0
+        "started": 0,
+        "not_started": 1
       },
+      "has_activity": true,
+      "complete": false,
       "stages": [
         {
           "stage": "import_design",
@@ -1451,6 +868,28 @@
           "stage_exists": true
         },
         {
+          "stage": "compile_final_opto",
+          "status": "passed",
+          "files": {
+            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.compile_final_opto.log",
+            "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.parallel_rpt_out.log",
+            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.pass",
+            "fail_file": null,
+            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.skipped_fail"
+          },
+          "latest_line": "Thank you for using Fusion Compiler.",
+          "recent_lines": [
+            " 33482             2 Mb   Wed Apr 15 07:34:39 2026    Wed Apr 15 07:35:10 2026    /bin/sh /p/hdk/cad/formality/W-2024.09-SP5-VAL-20250711/bin/fm_shell -x set ivar(svf_integrate_in_ndm) 1; set ivar(dst_dir) /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/outputs/compile_final_opto; set iva",
+            " 33484             1 Mb   Wed Apr 15 07:34:39 2026    Wed Apr 15 07:35:10 2026    tee -i /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fm.compile_final_opto.log",
+            "CPU usage for this session:  54085 seconds ( 15.02 hours)",
+            "Elapsed time for this session:  51438 seconds ( 14.29 hours)",
+            "Thank you for using Fusion Compiler."
+          ],
+          "last_updated": "2026-04-15T21:28:25",
+          "size_bytes": 32453655,
+          "stage_exists": true
+        },
+        {
           "stage": "ctmesh",
           "status": "passed",
           "files": {
@@ -1561,6 +1000,22 @@
           "stage_exists": true
         },
         {
+          "stage": "opt_signoff",
+          "status": "not_started",
+          "files": {
+            "fc_log": null,
+            "parallel_log": null,
+            "pass_file": null,
+            "fail_file": null,
+            "skipped_fail_file": null
+          },
+          "latest_line": "",
+          "recent_lines": [],
+          "last_updated": null,
+          "size_bytes": 0,
+          "stage_exists": false
+        },
+        {
           "stage": "fill",
           "status": "passed",
           "files": {
@@ -1603,487 +1058,30 @@
           "last_updated": "2026-04-15T23:10:28",
           "size_bytes": 262060563,
           "stage_exists": true
-        },
-        {
-          "stage": "compile_final_opto",
-          "status": "passed",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.compile_final_opto.log",
-            "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.parallel_rpt_out.log",
-            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.pass",
-            "fail_file": null,
-            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.skipped_fail"
-          },
-          "latest_line": "Thank you for using Fusion Compiler.",
-          "recent_lines": [
-            " 33482             2 Mb   Wed Apr 15 07:34:39 2026    Wed Apr 15 07:35:10 2026    /bin/sh /p/hdk/cad/formality/W-2024.09-SP5-VAL-20250711/bin/fm_shell -x set ivar(svf_integrate_in_ndm) 1; set ivar(dst_dir) /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/outputs/compile_final_opto; set iva",
-            " 33484             1 Mb   Wed Apr 15 07:34:39 2026    Wed Apr 15 07:35:10 2026    tee -i /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fm.compile_final_opto.log",
-            "CPU usage for this session:  54085 seconds ( 15.02 hours)",
-            "Elapsed time for this session:  51438 seconds ( 14.29 hours)",
-            "Thank you for using Fusion Compiler."
-          ],
-          "last_updated": "2026-04-15T21:28:25",
-          "size_bytes": 32453655,
-          "stage_exists": true
-        },
-        {
-          "stage": "clock_route_opt.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.clock_route_opt.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 07:38:03 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 07:38:03 2026]"
-          ],
-          "last_updated": "2026-04-15T07:38:03",
-          "size_bytes": 155771,
-          "stage_exists": true
-        },
-        {
-          "stage": "compile_final_opto.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.compile_final_opto.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 06:51:16 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 06:51:16 2026]"
-          ],
-          "last_updated": "2026-04-15T06:51:16",
-          "size_bytes": 155771,
-          "stage_exists": true
-        },
-        {
-          "stage": "compile_initial_opto.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.compile_initial_opto.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 04:54:20 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 04:54:20 2026]"
-          ],
-          "last_updated": "2026-04-15T04:54:20",
-          "size_bytes": 155771,
-          "stage_exists": true
-        },
-        {
-          "stage": "ctmesh.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.ctmesh.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 07:11:31 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 07:11:31 2026]"
-          ],
-          "last_updated": "2026-04-15T07:11:31",
-          "size_bytes": 155771,
-          "stage_exists": true
-        },
-        {
-          "stage": "cts.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.cts.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=1 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 07:18:22 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=1 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 07:18:22 2026]"
-          ],
-          "last_updated": "2026-04-15T07:18:22",
-          "size_bytes": 155771,
-          "stage_exists": true
-        },
-        {
-          "stage": "fill.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.fill.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 08:12:16 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 08:12:16 2026]"
-          ],
-          "last_updated": "2026-04-15T08:12:16",
-          "size_bytes": 155771,
-          "stage_exists": true
-        },
-        {
-          "stage": "finish.abutment_rules",
-          "status": "running",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.finish.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 08:59:49 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 08:59:49 2026]"
-          ],
-          "last_updated": "2026-04-15T08:59:49",
-          "size_bytes": 155771,
-          "stage_exists": true
-        },
-        {
-          "stage": "floorplan.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.floorplan.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 04:00:51 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 04:00:51 2026]"
-          ],
-          "last_updated": "2026-04-15T04:00:51",
-          "size_bytes": 155771,
-          "stage_exists": true
-        },
-        {
-          "stage": "floorplan.spacing_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.floorplan.spacing_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/tech_placement_constraints.tcl) [Wed Apr 15 04:02:00 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/tech_placement_constraints.tcl) [Wed Apr 15 04:02:00 2026]"
-          ],
-          "last_updated": "2026-04-15T04:02:00",
-          "size_bytes": 18782280,
-          "stage_exists": true
-        },
-        {
-          "stage": "import_design.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.import_design.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=2, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 03:13:08 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=2, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 03:13:08 2026]"
-          ],
-          "last_updated": "2026-04-15T03:13:08",
-          "size_bytes": 133522,
-          "stage_exists": true
-        },
-        {
-          "stage": "init_floorplan.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.init_floorplan.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 03:18:05 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 03:18:05 2026]"
-          ],
-          "last_updated": "2026-04-15T03:18:05",
-          "size_bytes": 155771,
-          "stage_exists": true
-        },
-        {
-          "stage": "initial_map.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.initial_map.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=2, time=1 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 03:39:40 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=2, time=1 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 03:39:40 2026]"
-          ],
-          "last_updated": "2026-04-15T03:39:40",
-          "size_bytes": 155771,
-          "stage_exists": true
-        },
-        {
-          "stage": "initial_map.spacing_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.initial_map.spacing_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/tech_placement_constraints.tcl) [Wed Apr 15 03:40:43 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/tech_placement_constraints.tcl) [Wed Apr 15 03:40:43 2026]"
-          ],
-          "last_updated": "2026-04-15T03:40:43",
-          "size_bytes": 18782280,
-          "stage_exists": true
-        },
-        {
-          "stage": "insert_dft.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.insert_dft.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 04:46:11 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 04:46:11 2026]"
-          ],
-          "last_updated": "2026-04-15T04:46:11",
-          "size_bytes": 155771,
-          "stage_exists": true
-        },
-        {
-          "stage": "logic_opto.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.logic_opto.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=1 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 04:37:29 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=1 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 04:37:29 2026]"
-          ],
-          "last_updated": "2026-04-15T04:37:29",
-          "size_bytes": 155771,
-          "stage_exists": true
-        },
-        {
-          "stage": "read_upf.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.read_upf.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 03:14:22 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 03:14:22 2026]"
-          ],
-          "last_updated": "2026-04-15T03:14:22",
-          "size_bytes": 155863,
-          "stage_exists": true
-        },
-        {
-          "stage": "redefine.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.redefine.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 03:15:55 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 03:15:55 2026]"
-          ],
-          "last_updated": "2026-04-15T03:15:55",
-          "size_bytes": 155771,
-          "stage_exists": true
-        },
-        {
-          "stage": "route_auto.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.route_auto.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 07:48:22 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 07:48:22 2026]"
-          ],
-          "last_updated": "2026-04-15T07:48:22",
-          "size_bytes": 155771,
-          "stage_exists": true
-        },
-        {
-          "stage": "route_opt.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.route_opt.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 08:00:53 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 08:00:53 2026]"
-          ],
-          "last_updated": "2026-04-15T08:00:53",
-          "size_bytes": 155771,
-          "stage_exists": true
-        },
-        {
-          "stage": "setup_timing.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.setup_timing.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 03:19:53 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 03:19:53 2026]"
-          ],
-          "last_updated": "2026-04-15T03:19:53",
-          "size_bytes": 155771,
-          "stage_exists": true
         }
       ]
     },
     {
       "label": "flattenall",
+      "flow_type": "rtla",
+      "terminal_stage": "estimation",
+      "has_rtla_stages": true,
       "base_path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall",
       "logs_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
       "fc_latest_line": "Thank you for using Fusion Compiler.",
-      "overall_status": "running",
-      "running_stage": "estimation.abutment_rules",
+      "overall_status": "passed",
+      "running_stage": null,
       "last_updated": "2026-04-15T04:18:17",
       "summary": {
         "passed": 8,
         "failed": 0,
         "skipped": 0,
-        "started": 10,
+        "started": 0,
         "not_started": 0
       },
+      "has_activity": true,
+      "complete": true,
       "stages": [
         {
           "stage": "import_design",
@@ -2260,246 +1258,143 @@
           "last_updated": "2026-04-15T04:18:17",
           "size_bytes": 25230279,
           "stage_exists": true
-        },
-        {
-          "stage": "conditioning.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc.conditioning.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 01:54:42 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 01:54:42 2026]"
-          ],
-          "last_updated": "2026-04-15T01:54:42",
-          "size_bytes": 134101,
-          "stage_exists": true
-        },
-        {
-          "stage": "conditioning.spacing_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc.conditioning.spacing_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=4, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/tech/1276.5/snps/apr_fc/tech_placement_constraints.tcl) [Wed Apr 15 01:55:32 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=4, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/tech/1276.5/snps/apr_fc/tech_placement_constraints.tcl) [Wed Apr 15 01:55:32 2026]"
-          ],
-          "last_updated": "2026-04-15T01:55:32",
-          "size_bytes": 14716344,
-          "stage_exists": true
-        },
-        {
-          "stage": "estimation.abutment_rules",
-          "status": "running",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc.estimation.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 03:04:57 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 03:04:57 2026]"
-          ],
-          "last_updated": "2026-04-15T03:04:57",
-          "size_bytes": 134194,
-          "stage_exists": true
-        },
-        {
-          "stage": "floorplan.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc.floorplan.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 02:17:22 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 02:17:22 2026]"
-          ],
-          "last_updated": "2026-04-15T02:17:22",
-          "size_bytes": 134194,
-          "stage_exists": true
-        },
-        {
-          "stage": "floorplan.spacing_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc.floorplan.spacing_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/tech/1276.5/snps/apr_fc/tech_placement_constraints.tcl) [Wed Apr 15 02:19:15 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/tech/1276.5/snps/apr_fc/tech_placement_constraints.tcl) [Wed Apr 15 02:19:15 2026]"
-          ],
-          "last_updated": "2026-04-15T02:19:15",
-          "size_bytes": 14716344,
-          "stage_exists": true
-        },
-        {
-          "stage": "import_design.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc.import_design.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=2, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 00:20:43 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=2, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 00:20:43 2026]"
-          ],
-          "last_updated": "2026-04-15T00:20:43",
-          "size_bytes": 134194,
-          "stage_exists": true
-        },
-        {
-          "stage": "init_floorplan.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc.init_floorplan.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 01:02:43 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 01:02:43 2026]"
-          ],
-          "last_updated": "2026-04-15T01:02:43",
-          "size_bytes": 134194,
-          "stage_exists": true
-        },
-        {
-          "stage": "read_upf.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc.read_upf.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 00:39:04 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 00:39:04 2026]"
-          ],
-          "last_updated": "2026-04-15T00:39:04",
-          "size_bytes": 134194,
-          "stage_exists": true
-        },
-        {
-          "stage": "redefine.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc.redefine.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 00:50:30 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 00:50:30 2026]"
-          ],
-          "last_updated": "2026-04-15T00:50:30",
-          "size_bytes": 134194,
-          "stage_exists": true
-        },
-        {
-          "stage": "setup_timing.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc.setup_timing.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 01:14:29 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Wed Apr 15 01:14:29 2026]"
-          ],
-          "last_updated": "2026-04-15T01:14:29",
-          "size_bytes": 134194,
-          "stage_exists": true
         }
       ]
     },
     {
       "label": "estimation",
+      "flow_type": "apr",
+      "terminal_stage": "opt_signoff",
+      "has_rtla_stages": false,
       "base_path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation",
       "logs_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
       "fc_latest_line": "fc_shell>",
-      "overall_status": "running",
-      "running_stage": "interactive",
+      "overall_status": "started",
+      "running_stage": null,
       "last_updated": "2026-04-15T14:07:27",
       "summary": {
         "passed": 10,
         "failed": 0,
         "skipped": 0,
-        "started": 12,
-        "not_started": 0
+        "started": 0,
+        "not_started": 9
       },
+      "has_activity": true,
+      "complete": false,
       "stages": [
+        {
+          "stage": "import_design",
+          "status": "not_started",
+          "files": {
+            "fc_log": null,
+            "parallel_log": null,
+            "pass_file": null,
+            "fail_file": null,
+            "skipped_fail_file": null
+          },
+          "latest_line": "",
+          "recent_lines": [],
+          "last_updated": null,
+          "size_bytes": 0,
+          "stage_exists": false
+        },
+        {
+          "stage": "read_upf",
+          "status": "not_started",
+          "files": {
+            "fc_log": null,
+            "parallel_log": null,
+            "pass_file": null,
+            "fail_file": null,
+            "skipped_fail_file": null
+          },
+          "latest_line": "",
+          "recent_lines": [],
+          "last_updated": null,
+          "size_bytes": 0,
+          "stage_exists": false
+        },
+        {
+          "stage": "redefine",
+          "status": "not_started",
+          "files": {
+            "fc_log": null,
+            "parallel_log": null,
+            "pass_file": null,
+            "fail_file": null,
+            "skipped_fail_file": null
+          },
+          "latest_line": "",
+          "recent_lines": [],
+          "last_updated": null,
+          "size_bytes": 0,
+          "stage_exists": false
+        },
+        {
+          "stage": "init_floorplan",
+          "status": "not_started",
+          "files": {
+            "fc_log": null,
+            "parallel_log": null,
+            "pass_file": null,
+            "fail_file": null,
+            "skipped_fail_file": null
+          },
+          "latest_line": "",
+          "recent_lines": [],
+          "last_updated": null,
+          "size_bytes": 0,
+          "stage_exists": false
+        },
+        {
+          "stage": "setup_timing",
+          "status": "not_started",
+          "files": {
+            "fc_log": null,
+            "parallel_log": null,
+            "pass_file": null,
+            "fail_file": null,
+            "skipped_fail_file": null
+          },
+          "latest_line": "",
+          "recent_lines": [],
+          "last_updated": null,
+          "size_bytes": 0,
+          "stage_exists": false
+        },
+        {
+          "stage": "floorplan",
+          "status": "not_started",
+          "files": {
+            "fc_log": null,
+            "parallel_log": null,
+            "pass_file": null,
+            "fail_file": null,
+            "skipped_fail_file": null
+          },
+          "latest_line": "",
+          "recent_lines": [],
+          "last_updated": null,
+          "size_bytes": 0,
+          "stage_exists": false
+        },
+        {
+          "stage": "initial_map",
+          "status": "not_started",
+          "files": {
+            "fc_log": null,
+            "parallel_log": null,
+            "pass_file": null,
+            "fail_file": null,
+            "skipped_fail_file": null
+          },
+          "latest_line": "",
+          "recent_lines": [],
+          "last_updated": null,
+          "size_bytes": 0,
+          "stage_exists": false
+        },
         {
           "stage": "insert_dft",
           "status": "passed",
@@ -2523,6 +1418,22 @@
           "stage_exists": true
         },
         {
+          "stage": "logic_opto",
+          "status": "not_started",
+          "files": {
+            "fc_log": null,
+            "parallel_log": null,
+            "pass_file": null,
+            "fail_file": null,
+            "skipped_fail_file": null
+          },
+          "latest_line": "",
+          "recent_lines": [],
+          "last_updated": null,
+          "size_bytes": 0,
+          "stage_exists": false
+        },
+        {
           "stage": "compile_initial_opto",
           "status": "passed",
           "files": {
@@ -2542,6 +1453,28 @@
           ],
           "last_updated": "2026-04-14T07:32:56",
           "size_bytes": 420809185,
+          "stage_exists": true
+        },
+        {
+          "stage": "compile_final_opto",
+          "status": "passed",
+          "files": {
+            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.compile_final_opto.log",
+            "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.parallel_rpt_out.log",
+            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.pass",
+            "fail_file": null,
+            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.skipped_fail"
+          },
+          "latest_line": "Thank you for using Fusion Compiler.",
+          "recent_lines": [
+            " 15332            77 Mb   Tue Apr 14 07:30:25 2026    Tue Apr 14 07:30:57 2026    /usr/intel/bin/tclsh8.6 /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/global/snps/apr_fc/power_scoring.tcl -W /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation -B pma_cmn -D pma_cmn -F apr_fc -R apr_fc -te",
+            "  2396             0 Mb   Wed Apr 15 10:30:49 2026    Wed Apr 15 10:31:22 2026",
+            "CPU usage for this session: 105098 seconds ( 29.19 hours)",
+            "Elapsed time for this session: 101221 seconds ( 28.12 hours)",
+            "Thank you for using Fusion Compiler."
+          ],
+          "last_updated": "2026-04-15T10:34:47",
+          "size_bytes": 24746832,
           "stage_exists": true
         },
         {
@@ -2655,6 +1588,22 @@
           "stage_exists": true
         },
         {
+          "stage": "opt_signoff",
+          "status": "not_started",
+          "files": {
+            "fc_log": null,
+            "parallel_log": null,
+            "pass_file": null,
+            "fail_file": null,
+            "skipped_fail_file": null
+          },
+          "latest_line": "",
+          "recent_lines": [],
+          "last_updated": null,
+          "size_bytes": 0,
+          "stage_exists": false
+        },
+        {
           "stage": "fill",
           "status": "passed",
           "files": {
@@ -2697,297 +1646,14 @@
           "last_updated": "2026-04-15T11:41:23",
           "size_bytes": 39487801,
           "stage_exists": true
-        },
-        {
-          "stage": "compile_final_opto",
-          "status": "passed",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.compile_final_opto.log",
-            "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.parallel_rpt_out.log",
-            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.pass",
-            "fail_file": null,
-            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.skipped_fail"
-          },
-          "latest_line": "Thank you for using Fusion Compiler.",
-          "recent_lines": [
-            " 15332            77 Mb   Tue Apr 14 07:30:25 2026    Tue Apr 14 07:30:57 2026    /usr/intel/bin/tclsh8.6 /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/global/snps/apr_fc/power_scoring.tcl -W /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation -B pma_cmn -D pma_cmn -F apr_fc -R apr_fc -te",
-            "  2396             0 Mb   Wed Apr 15 10:30:49 2026    Wed Apr 15 10:31:22 2026",
-            "CPU usage for this session: 105098 seconds ( 29.19 hours)",
-            "Elapsed time for this session: 101221 seconds ( 28.12 hours)",
-            "Thank you for using Fusion Compiler."
-          ],
-          "last_updated": "2026-04-15T10:34:47",
-          "size_bytes": 24746832,
-          "stage_exists": true
-        },
-        {
-          "stage": "clock_route_opt.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.clock_route_opt.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Tue Apr 14 07:03:58 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Tue Apr 14 07:03:58 2026]"
-          ],
-          "last_updated": "2026-04-14T07:03:58",
-          "size_bytes": 156555,
-          "stage_exists": true
-        },
-        {
-          "stage": "compile_final_opto.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.compile_final_opto.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Tue Apr 14 06:16:58 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Tue Apr 14 06:16:58 2026]"
-          ],
-          "last_updated": "2026-04-14T06:16:58",
-          "size_bytes": 156555,
-          "stage_exists": true
-        },
-        {
-          "stage": "compile_initial_opto.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.compile_initial_opto.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Tue Apr 14 05:55:51 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Tue Apr 14 05:55:51 2026]"
-          ],
-          "last_updated": "2026-04-14T05:55:51",
-          "size_bytes": 156555,
-          "stage_exists": true
-        },
-        {
-          "stage": "ctmesh.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.ctmesh.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Tue Apr 14 06:27:33 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Tue Apr 14 06:27:33 2026]"
-          ],
-          "last_updated": "2026-04-14T06:27:33",
-          "size_bytes": 156555,
-          "stage_exists": true
-        },
-        {
-          "stage": "cts.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.cts.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Tue Apr 14 06:33:16 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Tue Apr 14 06:33:16 2026]"
-          ],
-          "last_updated": "2026-04-14T06:33:16",
-          "size_bytes": 156555,
-          "stage_exists": true
-        },
-        {
-          "stage": "dta",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.dta.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "fc_shell>",
-          "recent_lines": [
-            "Warning: All user-defined attributes are persistent by default from 2018.06 release. Please use the '-non_persistent' if non-persistent user attribute is preferred. (NDMUI-669)",
-            "Warning: All user-defined attributes are persistent by default from 2018.06 release. Please use the '-non_persistent' if non-persistent user attribute is preferred. (NDMUI-669)",
-            "INTEL_INFO   : script_start : /nfs/site/disks/crt_tools_058/fusioncompiler/X-2025.06-SP1-T-20250911/auxx/gui/common/propertyEditor/base.tcl (type=file, level=1) (global) [Tue Apr 14 13:18:03 2026]",
-            "INTEL_INFO   : script_stop  : /nfs/site/disks/crt_tools_058/fusioncompiler/X-2025.06-SP1-T-20250911/auxx/gui/common/propertyEditor/base.tcl (type=file, level=1, time=0 seconds) (global) [Tue Apr 14 13:18:03 2026]",
-            "fc_shell>"
-          ],
-          "last_updated": "2026-04-14T13:18:10",
-          "size_bytes": 12845208,
-          "stage_exists": true
-        },
-        {
-          "stage": "fill.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.fill.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Tue Apr 14 07:26:27 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Tue Apr 14 07:26:27 2026]"
-          ],
-          "last_updated": "2026-04-14T07:26:27",
-          "size_bytes": 156555,
-          "stage_exists": true
-        },
-        {
-          "stage": "finish.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.finish.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Tue Apr 14 08:01:19 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Tue Apr 14 08:01:19 2026]"
-          ],
-          "last_updated": "2026-04-14T08:01:19",
-          "size_bytes": 156555,
-          "stage_exists": true
-        },
-        {
-          "stage": "insert_dft.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.insert_dft.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Tue Apr 14 05:35:59 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Tue Apr 14 05:35:59 2026]"
-          ],
-          "last_updated": "2026-04-14T05:35:59",
-          "size_bytes": 134193,
-          "stage_exists": true
-        },
-        {
-          "stage": "interactive",
-          "status": "running",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.interactive.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "fc_shell>",
-          "recent_lines": [
-            "Warning: All user-defined attributes are persistent by default from 2018.06 release. Please use the '-non_persistent' if non-persistent user attribute is preferred. (NDMUI-669)",
-            "Warning: All user-defined attributes are persistent by default from 2018.06 release. Please use the '-non_persistent' if non-persistent user attribute is preferred. (NDMUI-669)",
-            "INTEL_INFO   : script_start : /nfs/site/disks/crt_tools_058/fusioncompiler/X-2025.06-SP1-T-20250911/auxx/gui/common/propertyEditor/base.tcl (type=file, level=1) (global) [Tue Apr 14 13:18:03 2026]",
-            "INTEL_INFO   : script_stop  : /nfs/site/disks/crt_tools_058/fusioncompiler/X-2025.06-SP1-T-20250911/auxx/gui/common/propertyEditor/base.tcl (type=file, level=1, time=0 seconds) (global) [Tue Apr 14 13:18:03 2026]",
-            "fc_shell>"
-          ],
-          "last_updated": "2026-04-14T13:18:10",
-          "size_bytes": 12970579,
-          "stage_exists": true
-        },
-        {
-          "stage": "route_auto.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.route_auto.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=1 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Tue Apr 14 07:11:45 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=1 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Tue Apr 14 07:11:45 2026]"
-          ],
-          "last_updated": "2026-04-14T07:11:45",
-          "size_bytes": 156555,
-          "stage_exists": true
-        },
-        {
-          "stage": "route_opt.abutment_rules",
-          "status": "started",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.route_opt.abutment_rules.log",
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=1 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Tue Apr 14 07:18:29 2026]",
-          "recent_lines": [
-            "Warning: Option '-persistent' for command 'define_user_attribute' is deprecated. See the command's man page for alternatives. (CMD-110)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'block' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'design' (ATR-012)",
-            "Warning: Attribute 'vertical_abut_pattern_bottom' is already defined in class 'lib_cell' (ATR-012)",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_stdcells_0144/stdcells/lib765_g1m_240h_50pp/pdk10_r4v0p0_fv_pseudo/spcl_hvt/ndm/postprocess/lib765_g1m_240h_50pp_spcl_hvt_vertical_abutment_pattern.tcl (type=file, level=3, time=1 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Tue Apr 14 07:18:29 2026]"
-          ],
-          "last_updated": "2026-04-14T07:18:29",
-          "size_bytes": 156555,
-          "stage_exists": true
         }
       ]
     },
     {
       "label": "flatten_selective",
+      "flow_type": "apr",
+      "terminal_stage": "opt_signoff",
+      "has_rtla_stages": false,
       "base_path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective",
       "logs_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs",
       "fc_latest_log": null,
@@ -3000,8 +1666,10 @@
         "failed": 0,
         "skipped": 0,
         "started": 0,
-        "not_started": 21
+        "not_started": 19
       },
+      "has_activity": false,
+      "complete": false,
       "stages": [
         {
           "stage": "import_design",
@@ -3084,39 +1752,7 @@
           "stage_exists": false
         },
         {
-          "stage": "conditioning",
-          "status": "not_started",
-          "files": {
-            "fc_log": null,
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "",
-          "recent_lines": [],
-          "last_updated": null,
-          "size_bytes": 0,
-          "stage_exists": false
-        },
-        {
           "stage": "floorplan",
-          "status": "not_started",
-          "files": {
-            "fc_log": null,
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "",
-          "recent_lines": [],
-          "last_updated": null,
-          "size_bytes": 0,
-          "stage_exists": false
-        },
-        {
-          "stage": "estimation",
           "status": "not_started",
           "files": {
             "fc_log": null,
@@ -3181,6 +1817,22 @@
         },
         {
           "stage": "compile_initial_opto",
+          "status": "not_started",
+          "files": {
+            "fc_log": null,
+            "parallel_log": null,
+            "pass_file": null,
+            "fail_file": null,
+            "skipped_fail_file": null
+          },
+          "latest_line": "",
+          "recent_lines": [],
+          "last_updated": null,
+          "size_bytes": 0,
+          "stage_exists": false
+        },
+        {
+          "stage": "compile_final_opto",
           "status": "not_started",
           "files": {
             "fc_log": null,
@@ -3276,6 +1928,22 @@
           "stage_exists": false
         },
         {
+          "stage": "opt_signoff",
+          "status": "not_started",
+          "files": {
+            "fc_log": null,
+            "parallel_log": null,
+            "pass_file": null,
+            "fail_file": null,
+            "skipped_fail_file": null
+          },
+          "latest_line": "",
+          "recent_lines": [],
+          "last_updated": null,
+          "size_bytes": 0,
+          "stage_exists": false
+        },
+        {
           "stage": "fill",
           "status": "not_started",
           "files": {
@@ -3306,38 +1974,6 @@
           "last_updated": null,
           "size_bytes": 0,
           "stage_exists": false
-        },
-        {
-          "stage": "compile_final_opto",
-          "status": "not_started",
-          "files": {
-            "fc_log": null,
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "",
-          "recent_lines": [],
-          "last_updated": null,
-          "size_bytes": 0,
-          "stage_exists": false
-        },
-        {
-          "stage": "opt_signoff",
-          "status": "not_started",
-          "files": {
-            "fc_log": null,
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "",
-          "recent_lines": [],
-          "last_updated": null,
-          "size_bytes": 0,
-          "stage_exists": false
         }
       ]
     }
@@ -3355,15 +1991,15 @@
     "insert_dft",
     "logic_opto",
     "compile_initial_opto",
+    "compile_final_opto",
     "ctmesh",
     "cts",
     "clock_route_opt",
     "route_auto",
     "route_opt",
+    "opt_signoff",
     "fill",
-    "finish",
-    "compile_final_opto",
-    "opt_signoff"
+    "finish"
   ]
 };
 
@@ -3403,7 +2039,10 @@
 	}
 
 	function summaryPills(run) {
-	  const parts = [];
+	  const parts = [
+		`<span class="pill">flow: ${htmlEscape(run.flow_type)}</span>`,
+		`<span class="pill">terminal stage: ${htmlEscape(run.terminal_stage)}</span>`,
+	  ];
 	  for (const [key, value] of Object.entries(run.summary)) {
 		parts.push(`<span class="pill">${htmlEscape(key)}: ${value}</span>`);
 	  }
@@ -3424,6 +2063,7 @@
 			<div class="meta">
 			  <div><strong>Base path:</strong> ${htmlEscape(run.base_path)}</div>
 			  <div><strong>Logs dir:</strong> ${htmlEscape(run.logs_dir)}</div>
+			  <div><strong>Flow type:</strong> ${htmlEscape(run.flow_type)}</div>
 			  <div><strong>Last updated:</strong> ${run.last_updated ? htmlEscape(run.last_updated) : '--'}</div>
 			  <div><strong>fc_latest:</strong> ${run.fc_latest_line ? htmlEscape(run.fc_latest_line) : '<span class="empty">No fc_latest.log line</span>'}</div>
 			</div>
