@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19T15:47:46",
+  "generated_at": "2026-04-19T16:17:52",
   "run_count": 5,
   "runs": [
     {
@@ -1592,15 +1592,15 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "Information: Muxed clock exclusivity enabled for mode dfx with 2 exclusive pins. (TIM-034)",
-      "overall_status": "running",
-      "running_stage": "estimation",
-      "last_updated": "2026-04-19T15:47:45",
+      "fc_latest_line": "Thank you for using Fusion Compiler.",
+      "overall_status": "started",
+      "running_stage": null,
+      "last_updated": "2026-04-19T16:17:33",
       "summary": {
-        "passed": 19,
+        "passed": 20,
         "failed": 0,
         "skipped": 0,
-        "started": 1,
+        "started": 0,
         "not_started": 1
       },
       "has_activity": true,
@@ -2701,38 +2701,38 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/floorplan.skipped_fail"
           },
-          "latest_line": "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsseq_svt/ndm/lib765_g1m_240h_50pp_dsseq_svt.ndm' (FILE-007)",
+          "latest_line": "INTEL_INFO   : Generating power reports for dfx.0p675-0p81-76dot5-max.S_125.prcs3 (::sd_report_clock_power) [Sun Apr 19 16:17:20 2026]",
           "recent_lines": [
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsiclk_svt/ndm/lib765_g1m_240h_50pp_dsiclk_svt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsispcl_lvt/ndm/lib765_g1m_240h_50pp_dsispcl_lvt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsispcl_svt/ndm/lib765_g1m_240h_50pp_dsispcl_svt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dspwm_svt/ndm/lib765_g1m_240h_50pp_dspwm_svt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsseq_svt/ndm/lib765_g1m_240h_50pp_dsseq_svt.ndm' (FILE-007)"
+            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_tools_099/eou_flow_global/2025.09.plus.p3/snps/apr_fc/summary_report.tcl (type=file, level=1, time=0 seconds) (::sd_report_design_qor) [Sun Apr 19 16:14:17 2026]",
+            "INTEL_INFO   : executing  proc sd_report_via_ladder to generate reports (::sd_report_all) [Sun Apr 19 16:15:13 2026]",
+            "INTEL_INFO   : executing  proc sd_report_clock_power to generate reports (::sd_report_all) [Sun Apr 19 16:15:23 2026]",
+            "INTEL_INFO   : Generating power reports for func.0p825-1p02-76dot5-min.F_125.pcff3 (::sd_report_clock_power) [Sun Apr 19 16:16:04 2026]",
+            "INTEL_INFO   : Generating power reports for dfx.0p675-0p81-76dot5-max.S_125.prcs3 (::sd_report_clock_power) [Sun Apr 19 16:17:20 2026]"
           ],
-          "last_updated": "2026-04-19T15:46:54",
-          "size_bytes": 42966287,
+          "last_updated": "2026-04-19T16:17:25",
+          "size_bytes": 43300349,
           "stage_exists": true
         },
         {
           "stage": "estimation",
-          "status": "running",
+          "status": "passed",
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.estimation.log",
-            "parallel_log": null,
-            "pass_file": null,
+            "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/estimation.parallel_rpt_out.log",
+            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/estimation.pass",
             "fail_file": null,
-            "skipped_fail_file": null
+            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/estimation.skipped_fail"
           },
-          "latest_line": "Information: Muxed clock exclusivity enabled for mode dfx with 2 exclusive pins. (TIM-034)",
+          "latest_line": "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/seq_svt/ndm/lib765_g1m_240h_50pp_seq_svt.ndm' (FILE-007)",
           "recent_lines": [
-            "Error: Mode: dfx, Generated clock 'ock_keepalive_as_visa_serial' has no path from master clock 'ock_dpmakeepalive'; zero source latency will be used. (GRF-014)",
-            "Error: Mode: dfx, Generated clock 'ock_keepalive_div2_visa_serial' has no path from master clock 'ock_dpmakeepalive'; zero source latency will be used. (GRF-014)",
-            "Warning: The exclusivity set with '-type mux' option on the output pin 'i_cmnlogic/i_synthlcslow/i_pg/i_rtl/i_lcslow_rtl/i_ckm/i_ckdiv_ref/i_mux/intc_ctech_ckmux/ctech_lib_clk_mux_2to1_dcszo/clkout' is ignored, due to the violation of condition 5. (TIM-030)",
-            "Warning: The exclusivity set with '-type mux' option on the output pin 'i_cmnlogic/i_synthlcfast/i_pg/i_rtl/i_lcfast_rtl/i_ckm/i_ckdiv_ref/i_mux/intc_ctech_ckmux/ctech_lib_clk_mux_2to1_dcszo/clkout' is ignored, due to the violation of condition 5. (TIM-030)",
-            "Information: Muxed clock exclusivity enabled for mode dfx with 2 exclusive pins. (TIM-034)"
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/cpi765_r1.0_26ww04.4/ndm/m17_6x_2ya_2yb_2yc_2yd_1ye_1ga_mim3x_1gb__bumpi/ip76_cpipad_lib.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/intel76rfad/ndm/intel76rfad.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/intel76edmlib/ndm/m17_6x_2ya_2yb_2yc_2yd_1ye_1ga_mim3x_1gb__bumpi/intel76edmlib.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/intel76esdlib/ndm/m17_6x_2ya_2yb_2yc_2yd_1ye_1ga_mim3x_1gb__bumpi/intel76esdlib.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/seq_svt/ndm/lib765_g1m_240h_50pp_seq_svt.ndm' (FILE-007)"
           ],
-          "last_updated": "2026-04-19T15:47:45",
-          "size_bytes": 12489973,
+          "last_updated": "2026-04-19T16:17:33",
+          "size_bytes": 24739564,
           "stage_exists": true
         },
         {
@@ -3028,10 +3028,10 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "Information: Connecting to PG pins in automatic mode. (MV-396)",
+      "fc_latest_line": "END_CMD: get_timing_paths      CPU:   2217 s ( 0.62 hr) ELAPSE:   1125 s ( 0.31 hr) MEM-PEAK: 57010 Mb Sun Apr 19 16:13:39 2026",
       "overall_status": "running",
-      "running_stage": "floorplan",
-      "last_updated": "2026-04-19T15:47:46",
+      "running_stage": "estimation",
+      "last_updated": "2026-04-19T16:17:09",
       "summary": {
         "passed": 7,
         "failed": 0,
@@ -4029,35 +4029,35 @@
         },
         {
           "stage": "floorplan",
-          "status": "running",
+          "status": "passed",
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc.floorplan.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/floorplan.parallel_rpt_out.log",
-            "pass_file": null,
+            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/floorplan.pass",
             "fail_file": null,
-            "skipped_fail_file": null
+            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/floorplan.skipped_fail"
           },
-          "latest_line": "Thank you for using Fusion Compiler.",
+          "latest_line": "END_CMD: update_timing         CPU:   1130 s ( 0.31 hr) ELAPSE:   1359 s ( 0.38 hr) MEM-PEAK: 51735 Mb Sun Apr 19 16:16:55 2026",
           "recent_lines": [
-            "  1295             2 Mb   Wed Apr 15 03:18:40 2026    Wed Apr 15 03:19:11 2026    /bin/sh /p/hdk/cad/formality/W-2024.09-SP5-VAL-20250711/bin/fm_shell -x set ivar(svf_integrate_in_ndm) 1; set ivar(dst_dir) /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/outputs/floorplan; set ivar(des",
-            "  1377             1 Mb   Wed Apr 15 03:18:40 2026    Wed Apr 15 03:19:11 2026    tee -i /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fm.floorplan.log",
-            "CPU usage for this session:   8519 seconds (  2.37 hours)",
-            "Elapsed time for this session:   4625 seconds (  1.28 hours)",
-            "Thank you for using Fusion Compiler."
+            "Information: Update timing completed net estimation for all the timing graph nets (TIM-111)",
+            "Information: Net estimation statistics: timing graph nets = 642879, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 5, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 24092. (TIM-112)",
+            "Information: Ending   'update_timing' (FLW-8001)",
+            "Information: Time: 2026-04-19 16:16:55 / Session:  00:22:38 / Command:  00:00:40 / CPU:  00:03:41 / Memory: 51735 MB (FLW-8100)",
+            "END_CMD: update_timing         CPU:   1130 s ( 0.31 hr) ELAPSE:   1359 s ( 0.38 hr) MEM-PEAK: 51735 Mb Sun Apr 19 16:16:55 2026"
           ],
-          "last_updated": "2026-04-19T15:47:46",
-          "size_bytes": 43138120,
+          "last_updated": "2026-04-19T16:17:09",
+          "size_bytes": 43304680,
           "stage_exists": true
         },
         {
           "stage": "estimation",
-          "status": "passed",
+          "status": "running",
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc.estimation.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/estimation.parallel_rpt_out.log",
-            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/estimation.pass",
+            "pass_file": null,
             "fail_file": null,
-            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/estimation.skipped_fail"
+            "skipped_fail_file": null
           },
           "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
@@ -4067,8 +4067,8 @@
             "Elapsed time for this session:   3319 seconds (  0.92 hours)",
             "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-15T04:18:17",
-          "size_bytes": 25230279,
+          "last_updated": "2026-04-19T16:13:44",
+          "size_bytes": 25200201,
           "stage_exists": true
         }
       ],
