@@ -77,25 +77,25 @@
     {
       "stage": "conditioning",
       "category": "design_class",
-      "row_count": 3058,
+      "row_count": 3018,
       "file": "app_options/golden/conditioning__design_class.json"
     },
     {
       "stage": "conditioning",
       "category": "global",
-      "row_count": 3058,
+      "row_count": 3018,
       "file": "app_options/golden/conditioning__global.json"
     },
     {
       "stage": "conditioning",
       "category": "project",
-      "row_count": 3058,
+      "row_count": 3018,
       "file": "app_options/golden/conditioning__project.json"
     },
     {
       "stage": "conditioning",
       "category": "user",
-      "row_count": 3058,
+      "row_count": 3018,
       "file": "app_options/golden/conditioning__user.json"
     },
     {
@@ -197,25 +197,25 @@
     {
       "stage": "floorplan",
       "category": "design_class",
-      "row_count": 3018,
+      "row_count": 3059,
       "file": "app_options/golden/floorplan__design_class.json"
     },
     {
       "stage": "floorplan",
       "category": "global",
-      "row_count": 3018,
+      "row_count": 3059,
       "file": "app_options/golden/floorplan__global.json"
     },
     {
       "stage": "floorplan",
       "category": "project",
-      "row_count": 3018,
+      "row_count": 3059,
       "file": "app_options/golden/floorplan__project.json"
     },
     {
       "stage": "floorplan",
       "category": "user",
-      "row_count": 3018,
+      "row_count": 3059,
       "file": "app_options/golden/floorplan__user.json"
     },
     {
