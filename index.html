@@ -128,11 +128,11 @@
 	}
 	.table-wrap { width: 100%; overflow-x: auto; overflow-y: hidden; }
 	table { width: 100%; border-collapse: collapse; }
-	th, td { text-align: left; padding: 10px 8px; font-size: 13px; vertical-align: top; border-bottom: 1px solid rgba(42,53,88,0.7); }
+	th, td { text-align: left; padding: 10px 8px; font-size: 13px; vertical-align: top; border-bottom: 1px solid rgba(42,53,88,0.7); white-space: normal; overflow-wrap: anywhere; word-break: break-word; }
 	th { color: var(--muted); font-weight: 700; position: sticky; top: 0; background: rgba(21,28,49,0.98); }
 	tr:hover td { background: rgba(255,255,255,0.02); }
 	.stage-name { font-weight: 700; }
-	.logline { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #d2daf0; max-width: 520px; word-break: break-word; }
+	.logline { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #d2daf0; max-width: 520px; white-space: normal; overflow-wrap: anywhere; word-break: break-word; }
 	.status-table th:nth-child(1), .status-table td:nth-child(1) { min-width: 150px; width: 16%; }
 	.status-table th:nth-child(2), .status-table td:nth-child(2) { min-width: 120px; width: 14%; }
 	.status-table th:nth-child(3), .status-table td:nth-child(3) { min-width: 170px; width: 18%; }
@@ -146,14 +146,14 @@
 	.run-qor-table th:not(:first-child), .run-qor-table td:not(:first-child) { width: 22%; min-width: 120px; }
 	.cross-qor-table th:first-child, .cross-qor-table td:first-child { width: 24%; min-width: 180px; }
 	.cross-qor-table th:not(:first-child), .cross-qor-table td:not(:first-child) { width: 15.2%; min-width: 120px; }
-	.qor-value { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #dbe6ff; }
+	.qor-value { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #dbe6ff; white-space: normal; overflow-wrap: anywhere; word-break: break-word; }
 	.details-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-top: 12px; }
 	.compact-log { border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: rgba(7, 11, 24, 0.45); }
 	.compact-log h4 { margin: 0 0 8px; font-size: 13px; }
 	.app-options-controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; margin-bottom: 12px; }
 	.app-options-controls label { display: grid; gap: 6px; color: var(--muted); font-size: 12px; }
 	.app-options-controls select { min-width: 170px; background: rgba(15,23,42,0.9); color: var(--text); border: 1px solid var(--border); border-radius: 10px; padding: 8px 10px; }
-	.app-options-meta { margin-bottom: 10px; }
+	.app-options-meta { margin-bottom: 10px; white-space: normal; overflow-wrap: anywhere; }
 	.app-options-table { table-layout: fixed; }
 	.app-options-table th:nth-child(1), .app-options-table td:nth-child(1) { width: 12%; min-width: 110px; }
 	.app-options-table th:nth-child(2), .app-options-table td:nth-child(2) { width: 10%; min-width: 90px; }
@@ -184,7 +184,7 @@
   <div class="container">
 	<section class="hero">
 	  <h1>PMA CMN stalker</h1>
-	  <p>Generated at 2026-04-19T13:20:03</p>
+	  <p>Generated at 2026-04-19T13:29:54</p>
 	  <p>Monitoring APR FC flow stages only. RTLA-only stages are limited to conditioning and estimation when those logs are actually present.</p>
 	  <p>Auxiliary logs such as abutment-rule, spacing-rule, interactive, assembly, and merge helpers are intentionally excluded from the stage list.</p>
 	</section>
@@ -194,7 +194,7 @@
   </div>
   <script>
 	const snapshot = {
-  "generated_at": "2026-04-19T13:20:03",
+  "generated_at": "2026-04-19T13:29:54",
   "run_count": 5,
   "runs": [
     {
@@ -1790,7 +1790,7 @@
       "fc_latest_line": "Thank you for using Fusion Compiler.",
       "overall_status": "started",
       "running_stage": null,
-      "last_updated": "2026-04-17T16:41:02",
+      "last_updated": "2026-04-19T13:29:36",
       "summary": {
         "passed": 18,
         "failed": 0,
@@ -2536,8 +2536,8 @@
             "Elapsed time for this session:   2322 seconds (  0.65 hours)",
             "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-15T03:52:44",
-          "size_bytes": 32228816,
+          "last_updated": "2026-04-19T13:29:36",
+          "size_bytes": 14100694,
           "stage_exists": true
         },
         {
