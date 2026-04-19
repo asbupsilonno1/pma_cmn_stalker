@@ -1,0 +1,174 @@
+{
+  "folder": "flattenall",
+  "report_count": 28,
+  "reports": [
+    {
+      "stage": "conditioning",
+      "category": "design_class",
+      "row_count": 3018,
+      "file": "app_options/flattenall/conditioning__design_class.json"
+    },
+    {
+      "stage": "conditioning",
+      "category": "global",
+      "row_count": 3018,
+      "file": "app_options/flattenall/conditioning__global.json"
+    },
+    {
+      "stage": "conditioning",
+      "category": "project",
+      "row_count": 3018,
+      "file": "app_options/flattenall/conditioning__project.json"
+    },
+    {
+      "stage": "conditioning",
+      "category": "user",
+      "row_count": 3018,
+      "file": "app_options/flattenall/conditioning__user.json"
+    },
+    {
+      "stage": "estimation",
+      "category": "design_class",
+      "row_count": 3018,
+      "file": "app_options/flattenall/estimation__design_class.json"
+    },
+    {
+      "stage": "estimation",
+      "category": "global",
+      "row_count": 3018,
+      "file": "app_options/flattenall/estimation__global.json"
+    },
+    {
+      "stage": "estimation",
+      "category": "project",
+      "row_count": 3018,
+      "file": "app_options/flattenall/estimation__project.json"
+    },
+    {
+      "stage": "estimation",
+      "category": "user",
+      "row_count": 3018,
+      "file": "app_options/flattenall/estimation__user.json"
+    },
+    {
+      "stage": "floorplan",
+      "category": "design_class",
+      "row_count": 3059,
+      "file": "app_options/flattenall/floorplan__design_class.json"
+    },
+    {
+      "stage": "floorplan",
+      "category": "global",
+      "row_count": 3059,
+      "file": "app_options/flattenall/floorplan__global.json"
+    },
+    {
+      "stage": "floorplan",
+      "category": "project",
+      "row_count": 3059,
+      "file": "app_options/flattenall/floorplan__project.json"
+    },
+    {
+      "stage": "floorplan",
+      "category": "user",
+      "row_count": 3059,
+      "file": "app_options/flattenall/floorplan__user.json"
+    },
+    {
+      "stage": "init_floorplan",
+      "category": "design_class",
+      "row_count": 3055,
+      "file": "app_options/flattenall/init_floorplan__design_class.json"
+    },
+    {
+      "stage": "init_floorplan",
+      "category": "global",
+      "row_count": 3055,
+      "file": "app_options/flattenall/init_floorplan__global.json"
+    },
+    {
+      "stage": "init_floorplan",
+      "category": "project",
+      "row_count": 3055,
+      "file": "app_options/flattenall/init_floorplan__project.json"
+    },
+    {
+      "stage": "init_floorplan",
+      "category": "user",
+      "row_count": 3055,
+      "file": "app_options/flattenall/init_floorplan__user.json"
+    },
+    {
+      "stage": "read_upf",
+      "category": "design_class",
+      "row_count": 3054,
+      "file": "app_options/flattenall/read_upf__design_class.json"
+    },
+    {
+      "stage": "read_upf",
+      "category": "global",
+      "row_count": 3052,
+      "file": "app_options/flattenall/read_upf__global.json"
+    },
+    {
+      "stage": "read_upf",
+      "category": "project",
+      "row_count": 3054,
+      "file": "app_options/flattenall/read_upf__project.json"
+    },
+    {
+      "stage": "read_upf",
+      "category": "user",
+      "row_count": 3055,
+      "file": "app_options/flattenall/read_upf__user.json"
+    },
+    {
+      "stage": "redefine",
+      "category": "design_class",
+      "row_count": 3055,
+      "file": "app_options/flattenall/redefine__design_class.json"
+    },
+    {
+      "stage": "redefine",
+      "category": "global",
+      "row_count": 3055,
+      "file": "app_options/flattenall/redefine__global.json"
+    },
+    {
+      "stage": "redefine",
+      "category": "project",
+      "row_count": 3055,
+      "file": "app_options/flattenall/redefine__project.json"
+    },
+    {
+      "stage": "redefine",
+      "category": "user",
+      "row_count": 3055,
+      "file": "app_options/flattenall/redefine__user.json"
+    },
+    {
+      "stage": "setup_timing",
+      "category": "design_class",
+      "row_count": 3055,
+      "file": "app_options/flattenall/setup_timing__design_class.json"
+    },
+    {
+      "stage": "setup_timing",
+      "category": "global",
+      "row_count": 3055,
+      "file": "app_options/flattenall/setup_timing__global.json"
+    },
+    {
+      "stage": "setup_timing",
+      "category": "project",
+      "row_count": 3055,
+      "file": "app_options/flattenall/setup_timing__project.json"
+    },
+    {
+      "stage": "setup_timing",
+      "category": "user",
+      "row_count": 3055,
+      "file": "app_options/flattenall/setup_timing__user.json"
+    }
+  ]
+}

@@ -100,7 +100,32 @@
 	.pill { background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 999px; padding: 6px 10px; font-size: 12px; color: var(--muted); }
 	.section { padding: 18px 20px 22px; }
 	.section + .section { border-top: 1px solid rgba(42,53,88,0.7); }
-	.section h3 { margin: 0 0 12px; font-size: 16px; }
+	.section-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+	.section h3 { margin: 0; font-size: 16px; }
+	.section-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+	.section-btn {
+	  appearance: none;
+	  border: 1px solid var(--border);
+	  background: rgba(15, 23, 42, 0.8);
+	  color: var(--text);
+	  border-radius: 10px;
+	  padding: 7px 11px;
+	  font-size: 12px;
+	  font-weight: 600;
+	  cursor: pointer;
+	}
+	.section-btn:hover { border-color: #5e7dd1; }
+	.section-body.hidden { display: none; }
+	.section.maximized {
+	  position: fixed;
+	  inset: 18px;
+	  z-index: 50;
+	  background: rgba(21, 28, 49, 0.98);
+	  border: 1px solid var(--border);
+	  border-radius: 18px;
+	  overflow: auto;
+	  box-shadow: 0 20px 80px rgba(0,0,0,0.45);
+	}
 	.table-wrap { width: 100%; overflow-x: auto; overflow-y: hidden; }
 	table { width: 100%; border-collapse: collapse; }
 	th, td { text-align: left; padding: 10px 8px; font-size: 13px; vertical-align: top; border-bottom: 1px solid rgba(42,53,88,0.7); }
@@ -115,13 +140,29 @@
 	.cross-cell { min-width: 190px; }
 	.cross-cell .badge { margin-bottom: 6px; }
 	.small-note { font-size: 11px; color: var(--muted); line-height: 1.45; }
-	.qor-table th:first-child, .qor-table td:first-child { position: sticky; left: 0; background: rgba(21,28,49,0.98); z-index: 1; }
-	.qor-table th:first-child, .qor-table td:first-child { min-width: 220px; width: 28%; }
-	.qor-table th:not(:first-child), .qor-table td:not(:first-child) { min-width: 140px; width: 14.4%; }
+	.qor-table { table-layout: fixed; }
+	.qor-table th:first-child, .qor-table td:first-child { position: sticky; left: 0; background: rgba(21,28,49,0.98); z-index: 1; word-break: break-word; }
+	.run-qor-table th:first-child, .run-qor-table td:first-child { width: 34%; min-width: 180px; }
+	.run-qor-table th:not(:first-child), .run-qor-table td:not(:first-child) { width: 22%; min-width: 120px; }
+	.cross-qor-table th:first-child, .cross-qor-table td:first-child { width: 24%; min-width: 180px; }
+	.cross-qor-table th:not(:first-child), .cross-qor-table td:not(:first-child) { width: 15.2%; min-width: 120px; }
 	.qor-value { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #dbe6ff; }
 	.details-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-top: 12px; }
 	.compact-log { border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: rgba(7, 11, 24, 0.45); }
 	.compact-log h4 { margin: 0 0 8px; font-size: 13px; }
+	.app-options-controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; margin-bottom: 12px; }
+	.app-options-controls label { display: grid; gap: 6px; color: var(--muted); font-size: 12px; }
+	.app-options-controls select { min-width: 170px; background: rgba(15,23,42,0.9); color: var(--text); border: 1px solid var(--border); border-radius: 10px; padding: 8px 10px; }
+	.app-options-meta { margin-bottom: 10px; }
+	.app-options-table { table-layout: fixed; }
+	.app-options-table th:nth-child(1), .app-options-table td:nth-child(1) { width: 12%; min-width: 110px; }
+	.app-options-table th:nth-child(2), .app-options-table td:nth-child(2) { width: 10%; min-width: 90px; }
+	.app-options-table th:nth-child(3), .app-options-table td:nth-child(3) { width: 24%; min-width: 220px; word-break: break-word; }
+	.app-options-table th:nth-child(4), .app-options-table td:nth-child(4) { width: 8%; min-width: 80px; }
+	.app-options-table th:nth-child(5), .app-options-table td:nth-child(5) { width: 16%; min-width: 140px; word-break: break-word; }
+	.app-options-table th:nth-child(6), .app-options-table td:nth-child(6) { width: 12%; min-width: 110px; }
+	.app-options-table th:nth-child(7), .app-options-table td:nth-child(7) { width: 8%; min-width: 80px; }
+	.app-options-table th:nth-child(8), .app-options-table td:nth-child(8) { width: 10%; min-width: 100px; word-break: break-word; }
 	.empty { color: var(--muted); font-style: italic; }
 	details { margin-top: 12px; }
 	details summary { cursor: pointer; color: #c6d2ef; font-weight: 600; }
@@ -143,7 +184,7 @@
   <div class="container">
 	<section class="hero">
 	  <h1>PMA CMN stalker</h1>
-	  <p>Generated at 2026-04-19T13:08:39</p>
+	  <p>Generated at 2026-04-19T13:20:03</p>
 	  <p>Monitoring APR FC flow stages only. RTLA-only stages are limited to conditioning and estimation when those logs are actually present.</p>
 	  <p>Auxiliary logs such as abutment-rule, spacing-rule, interactive, assembly, and merge helpers are intentionally excluded from the stage list.</p>
 	</section>
@@ -153,7 +194,7 @@
   </div>
   <script>
 	const snapshot = {
-  "generated_at": "2026-04-19T13:08:39",
+  "generated_at": "2026-04-19T13:20:03",
   "run_count": 5,
   "runs": [
     {
@@ -164,6 +205,7 @@
       "base_path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn",
       "logs_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs",
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/Indicators",
+      "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
       "fc_latest_line": "fc_shell>",
       "overall_status": "passed",
@@ -858,6 +900,417 @@
           "sequential_states": "33370"
         }
       },
+      "app_options_report_count": 68,
+      "app_options_reports": [
+        {
+          "stage": "clock_route_opt",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/clock_route_opt/fc.app_options_design_class.csv",
+          "relative_path": "clock_route_opt/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "clock_route_opt",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/clock_route_opt/fc.app_options_global.csv",
+          "relative_path": "clock_route_opt/fc.app_options_global.csv"
+        },
+        {
+          "stage": "clock_route_opt",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/clock_route_opt/fc.app_options_project.csv",
+          "relative_path": "clock_route_opt/fc.app_options_project.csv"
+        },
+        {
+          "stage": "clock_route_opt",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/clock_route_opt/fc.app_options_user.csv",
+          "relative_path": "clock_route_opt/fc.app_options_user.csv"
+        },
+        {
+          "stage": "compile_final_opto",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/compile_final_opto/fc.app_options_design_class.csv",
+          "relative_path": "compile_final_opto/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "compile_final_opto",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/compile_final_opto/fc.app_options_global.csv",
+          "relative_path": "compile_final_opto/fc.app_options_global.csv"
+        },
+        {
+          "stage": "compile_final_opto",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/compile_final_opto/fc.app_options_project.csv",
+          "relative_path": "compile_final_opto/fc.app_options_project.csv"
+        },
+        {
+          "stage": "compile_final_opto",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/compile_final_opto/fc.app_options_user.csv",
+          "relative_path": "compile_final_opto/fc.app_options_user.csv"
+        },
+        {
+          "stage": "compile_initial_opto",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/compile_initial_opto/fc.app_options_design_class.csv",
+          "relative_path": "compile_initial_opto/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "compile_initial_opto",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/compile_initial_opto/fc.app_options_global.csv",
+          "relative_path": "compile_initial_opto/fc.app_options_global.csv"
+        },
+        {
+          "stage": "compile_initial_opto",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/compile_initial_opto/fc.app_options_project.csv",
+          "relative_path": "compile_initial_opto/fc.app_options_project.csv"
+        },
+        {
+          "stage": "compile_initial_opto",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/compile_initial_opto/fc.app_options_user.csv",
+          "relative_path": "compile_initial_opto/fc.app_options_user.csv"
+        },
+        {
+          "stage": "ctmesh",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/ctmesh/fc.app_options_design_class.csv",
+          "relative_path": "ctmesh/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "ctmesh",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/ctmesh/fc.app_options_global.csv",
+          "relative_path": "ctmesh/fc.app_options_global.csv"
+        },
+        {
+          "stage": "ctmesh",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/ctmesh/fc.app_options_project.csv",
+          "relative_path": "ctmesh/fc.app_options_project.csv"
+        },
+        {
+          "stage": "ctmesh",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/ctmesh/fc.app_options_user.csv",
+          "relative_path": "ctmesh/fc.app_options_user.csv"
+        },
+        {
+          "stage": "cts",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/cts/fc.app_options_design_class.csv",
+          "relative_path": "cts/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "cts",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/cts/fc.app_options_global.csv",
+          "relative_path": "cts/fc.app_options_global.csv"
+        },
+        {
+          "stage": "cts",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/cts/fc.app_options_project.csv",
+          "relative_path": "cts/fc.app_options_project.csv"
+        },
+        {
+          "stage": "cts",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/cts/fc.app_options_user.csv",
+          "relative_path": "cts/fc.app_options_user.csv"
+        },
+        {
+          "stage": "fill",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/fill/fc.app_options_design_class.csv",
+          "relative_path": "fill/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "fill",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/fill/fc.app_options_global.csv",
+          "relative_path": "fill/fc.app_options_global.csv"
+        },
+        {
+          "stage": "fill",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/fill/fc.app_options_project.csv",
+          "relative_path": "fill/fc.app_options_project.csv"
+        },
+        {
+          "stage": "fill",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/fill/fc.app_options_user.csv",
+          "relative_path": "fill/fc.app_options_user.csv"
+        },
+        {
+          "stage": "finish",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/finish/fc.app_options_design_class.csv",
+          "relative_path": "finish/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "finish",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/finish/fc.app_options_global.csv",
+          "relative_path": "finish/fc.app_options_global.csv"
+        },
+        {
+          "stage": "finish",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/finish/fc.app_options_project.csv",
+          "relative_path": "finish/fc.app_options_project.csv"
+        },
+        {
+          "stage": "finish",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/finish/fc.app_options_user.csv",
+          "relative_path": "finish/fc.app_options_user.csv"
+        },
+        {
+          "stage": "floorplan",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/floorplan/fc.app_options_design_class.csv",
+          "relative_path": "floorplan/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "floorplan",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/floorplan/fc.app_options_global.csv",
+          "relative_path": "floorplan/fc.app_options_global.csv"
+        },
+        {
+          "stage": "floorplan",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/floorplan/fc.app_options_project.csv",
+          "relative_path": "floorplan/fc.app_options_project.csv"
+        },
+        {
+          "stage": "floorplan",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/floorplan/fc.app_options_user.csv",
+          "relative_path": "floorplan/fc.app_options_user.csv"
+        },
+        {
+          "stage": "init_floorplan",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/init_floorplan/fc.app_options_design_class.csv",
+          "relative_path": "init_floorplan/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "init_floorplan",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/init_floorplan/fc.app_options_global.csv",
+          "relative_path": "init_floorplan/fc.app_options_global.csv"
+        },
+        {
+          "stage": "init_floorplan",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/init_floorplan/fc.app_options_project.csv",
+          "relative_path": "init_floorplan/fc.app_options_project.csv"
+        },
+        {
+          "stage": "init_floorplan",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/init_floorplan/fc.app_options_user.csv",
+          "relative_path": "init_floorplan/fc.app_options_user.csv"
+        },
+        {
+          "stage": "initial_map",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/initial_map/fc.app_options_design_class.csv",
+          "relative_path": "initial_map/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "initial_map",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/initial_map/fc.app_options_global.csv",
+          "relative_path": "initial_map/fc.app_options_global.csv"
+        },
+        {
+          "stage": "initial_map",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/initial_map/fc.app_options_project.csv",
+          "relative_path": "initial_map/fc.app_options_project.csv"
+        },
+        {
+          "stage": "initial_map",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/initial_map/fc.app_options_user.csv",
+          "relative_path": "initial_map/fc.app_options_user.csv"
+        },
+        {
+          "stage": "insert_dft",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/insert_dft/fc.app_options_design_class.csv",
+          "relative_path": "insert_dft/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "insert_dft",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/insert_dft/fc.app_options_global.csv",
+          "relative_path": "insert_dft/fc.app_options_global.csv"
+        },
+        {
+          "stage": "insert_dft",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/insert_dft/fc.app_options_project.csv",
+          "relative_path": "insert_dft/fc.app_options_project.csv"
+        },
+        {
+          "stage": "insert_dft",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/insert_dft/fc.app_options_user.csv",
+          "relative_path": "insert_dft/fc.app_options_user.csv"
+        },
+        {
+          "stage": "logic_opto",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/logic_opto/fc.app_options_design_class.csv",
+          "relative_path": "logic_opto/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "logic_opto",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/logic_opto/fc.app_options_global.csv",
+          "relative_path": "logic_opto/fc.app_options_global.csv"
+        },
+        {
+          "stage": "logic_opto",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/logic_opto/fc.app_options_project.csv",
+          "relative_path": "logic_opto/fc.app_options_project.csv"
+        },
+        {
+          "stage": "logic_opto",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/logic_opto/fc.app_options_user.csv",
+          "relative_path": "logic_opto/fc.app_options_user.csv"
+        },
+        {
+          "stage": "read_upf",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/read_upf/fc.app_options_design_class.csv",
+          "relative_path": "read_upf/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "read_upf",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/read_upf/fc.app_options_global.csv",
+          "relative_path": "read_upf/fc.app_options_global.csv"
+        },
+        {
+          "stage": "read_upf",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/read_upf/fc.app_options_project.csv",
+          "relative_path": "read_upf/fc.app_options_project.csv"
+        },
+        {
+          "stage": "read_upf",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/read_upf/fc.app_options_user.csv",
+          "relative_path": "read_upf/fc.app_options_user.csv"
+        },
+        {
+          "stage": "redefine",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/redefine/fc.app_options_design_class.csv",
+          "relative_path": "redefine/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "redefine",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/redefine/fc.app_options_global.csv",
+          "relative_path": "redefine/fc.app_options_global.csv"
+        },
+        {
+          "stage": "redefine",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/redefine/fc.app_options_project.csv",
+          "relative_path": "redefine/fc.app_options_project.csv"
+        },
+        {
+          "stage": "redefine",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/redefine/fc.app_options_user.csv",
+          "relative_path": "redefine/fc.app_options_user.csv"
+        },
+        {
+          "stage": "route_auto",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/route_auto/fc.app_options_design_class.csv",
+          "relative_path": "route_auto/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "route_auto",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/route_auto/fc.app_options_global.csv",
+          "relative_path": "route_auto/fc.app_options_global.csv"
+        },
+        {
+          "stage": "route_auto",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/route_auto/fc.app_options_project.csv",
+          "relative_path": "route_auto/fc.app_options_project.csv"
+        },
+        {
+          "stage": "route_auto",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/route_auto/fc.app_options_user.csv",
+          "relative_path": "route_auto/fc.app_options_user.csv"
+        },
+        {
+          "stage": "route_opt",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/route_opt/fc.app_options_design_class.csv",
+          "relative_path": "route_opt/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "route_opt",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/route_opt/fc.app_options_global.csv",
+          "relative_path": "route_opt/fc.app_options_global.csv"
+        },
+        {
+          "stage": "route_opt",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/route_opt/fc.app_options_project.csv",
+          "relative_path": "route_opt/fc.app_options_project.csv"
+        },
+        {
+          "stage": "route_opt",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/route_opt/fc.app_options_user.csv",
+          "relative_path": "route_opt/fc.app_options_user.csv"
+        },
+        {
+          "stage": "setup_timing",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/setup_timing/fc.app_options_design_class.csv",
+          "relative_path": "setup_timing/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "setup_timing",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/setup_timing/fc.app_options_global.csv",
+          "relative_path": "setup_timing/fc.app_options_global.csv"
+        },
+        {
+          "stage": "setup_timing",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/setup_timing/fc.app_options_project.csv",
+          "relative_path": "setup_timing/fc.app_options_project.csv"
+        },
+        {
+          "stage": "setup_timing",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/setup_timing/fc.app_options_user.csv",
+          "relative_path": "setup_timing/fc.app_options_user.csv"
+        }
+      ],
       "stages": [
         {
           "stage": "import_design",
@@ -1321,7 +1774,8 @@
           "size_bytes": 47418555,
           "stage_exists": true
         }
-      ]
+      ],
+      "app_options_manifest": "app_options/current/manifest.json"
     },
     {
       "label": "golden",
@@ -1331,6 +1785,7 @@
       "base_path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden",
       "logs_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs",
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/Indicators",
+      "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
       "fc_latest_line": "Thank you for using Fusion Compiler.",
       "overall_status": "started",
@@ -1651,6 +2106,417 @@
         },
         "estimation": {}
       },
+      "app_options_report_count": 68,
+      "app_options_reports": [
+        {
+          "stage": "clock_route_opt",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/clock_route_opt/fc.app_options_design_class.csv",
+          "relative_path": "clock_route_opt/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "clock_route_opt",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/clock_route_opt/fc.app_options_global.csv",
+          "relative_path": "clock_route_opt/fc.app_options_global.csv"
+        },
+        {
+          "stage": "clock_route_opt",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/clock_route_opt/fc.app_options_project.csv",
+          "relative_path": "clock_route_opt/fc.app_options_project.csv"
+        },
+        {
+          "stage": "clock_route_opt",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/clock_route_opt/fc.app_options_user.csv",
+          "relative_path": "clock_route_opt/fc.app_options_user.csv"
+        },
+        {
+          "stage": "compile_final_opto",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/compile_final_opto/fc.app_options_design_class.csv",
+          "relative_path": "compile_final_opto/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "compile_final_opto",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/compile_final_opto/fc.app_options_global.csv",
+          "relative_path": "compile_final_opto/fc.app_options_global.csv"
+        },
+        {
+          "stage": "compile_final_opto",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/compile_final_opto/fc.app_options_project.csv",
+          "relative_path": "compile_final_opto/fc.app_options_project.csv"
+        },
+        {
+          "stage": "compile_final_opto",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/compile_final_opto/fc.app_options_user.csv",
+          "relative_path": "compile_final_opto/fc.app_options_user.csv"
+        },
+        {
+          "stage": "compile_initial_opto",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/compile_initial_opto/fc.app_options_design_class.csv",
+          "relative_path": "compile_initial_opto/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "compile_initial_opto",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/compile_initial_opto/fc.app_options_global.csv",
+          "relative_path": "compile_initial_opto/fc.app_options_global.csv"
+        },
+        {
+          "stage": "compile_initial_opto",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/compile_initial_opto/fc.app_options_project.csv",
+          "relative_path": "compile_initial_opto/fc.app_options_project.csv"
+        },
+        {
+          "stage": "compile_initial_opto",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/compile_initial_opto/fc.app_options_user.csv",
+          "relative_path": "compile_initial_opto/fc.app_options_user.csv"
+        },
+        {
+          "stage": "ctmesh",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/ctmesh/fc.app_options_design_class.csv",
+          "relative_path": "ctmesh/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "ctmesh",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/ctmesh/fc.app_options_global.csv",
+          "relative_path": "ctmesh/fc.app_options_global.csv"
+        },
+        {
+          "stage": "ctmesh",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/ctmesh/fc.app_options_project.csv",
+          "relative_path": "ctmesh/fc.app_options_project.csv"
+        },
+        {
+          "stage": "ctmesh",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/ctmesh/fc.app_options_user.csv",
+          "relative_path": "ctmesh/fc.app_options_user.csv"
+        },
+        {
+          "stage": "cts",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/cts/fc.app_options_design_class.csv",
+          "relative_path": "cts/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "cts",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/cts/fc.app_options_global.csv",
+          "relative_path": "cts/fc.app_options_global.csv"
+        },
+        {
+          "stage": "cts",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/cts/fc.app_options_project.csv",
+          "relative_path": "cts/fc.app_options_project.csv"
+        },
+        {
+          "stage": "cts",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/cts/fc.app_options_user.csv",
+          "relative_path": "cts/fc.app_options_user.csv"
+        },
+        {
+          "stage": "fill",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/fill/fc.app_options_design_class.csv",
+          "relative_path": "fill/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "fill",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/fill/fc.app_options_global.csv",
+          "relative_path": "fill/fc.app_options_global.csv"
+        },
+        {
+          "stage": "fill",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/fill/fc.app_options_project.csv",
+          "relative_path": "fill/fc.app_options_project.csv"
+        },
+        {
+          "stage": "fill",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/fill/fc.app_options_user.csv",
+          "relative_path": "fill/fc.app_options_user.csv"
+        },
+        {
+          "stage": "finish",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/finish/fc.app_options_design_class.csv",
+          "relative_path": "finish/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "finish",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/finish/fc.app_options_global.csv",
+          "relative_path": "finish/fc.app_options_global.csv"
+        },
+        {
+          "stage": "finish",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/finish/fc.app_options_project.csv",
+          "relative_path": "finish/fc.app_options_project.csv"
+        },
+        {
+          "stage": "finish",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/finish/fc.app_options_user.csv",
+          "relative_path": "finish/fc.app_options_user.csv"
+        },
+        {
+          "stage": "floorplan",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/floorplan/fc.app_options_design_class.csv",
+          "relative_path": "floorplan/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "floorplan",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/floorplan/fc.app_options_global.csv",
+          "relative_path": "floorplan/fc.app_options_global.csv"
+        },
+        {
+          "stage": "floorplan",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/floorplan/fc.app_options_project.csv",
+          "relative_path": "floorplan/fc.app_options_project.csv"
+        },
+        {
+          "stage": "floorplan",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/floorplan/fc.app_options_user.csv",
+          "relative_path": "floorplan/fc.app_options_user.csv"
+        },
+        {
+          "stage": "init_floorplan",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/init_floorplan/fc.app_options_design_class.csv",
+          "relative_path": "init_floorplan/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "init_floorplan",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/init_floorplan/fc.app_options_global.csv",
+          "relative_path": "init_floorplan/fc.app_options_global.csv"
+        },
+        {
+          "stage": "init_floorplan",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/init_floorplan/fc.app_options_project.csv",
+          "relative_path": "init_floorplan/fc.app_options_project.csv"
+        },
+        {
+          "stage": "init_floorplan",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/init_floorplan/fc.app_options_user.csv",
+          "relative_path": "init_floorplan/fc.app_options_user.csv"
+        },
+        {
+          "stage": "initial_map",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/initial_map/fc.app_options_design_class.csv",
+          "relative_path": "initial_map/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "initial_map",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/initial_map/fc.app_options_global.csv",
+          "relative_path": "initial_map/fc.app_options_global.csv"
+        },
+        {
+          "stage": "initial_map",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/initial_map/fc.app_options_project.csv",
+          "relative_path": "initial_map/fc.app_options_project.csv"
+        },
+        {
+          "stage": "initial_map",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/initial_map/fc.app_options_user.csv",
+          "relative_path": "initial_map/fc.app_options_user.csv"
+        },
+        {
+          "stage": "insert_dft",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/insert_dft/fc.app_options_design_class.csv",
+          "relative_path": "insert_dft/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "insert_dft",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/insert_dft/fc.app_options_global.csv",
+          "relative_path": "insert_dft/fc.app_options_global.csv"
+        },
+        {
+          "stage": "insert_dft",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/insert_dft/fc.app_options_project.csv",
+          "relative_path": "insert_dft/fc.app_options_project.csv"
+        },
+        {
+          "stage": "insert_dft",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/insert_dft/fc.app_options_user.csv",
+          "relative_path": "insert_dft/fc.app_options_user.csv"
+        },
+        {
+          "stage": "logic_opto",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/logic_opto/fc.app_options_design_class.csv",
+          "relative_path": "logic_opto/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "logic_opto",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/logic_opto/fc.app_options_global.csv",
+          "relative_path": "logic_opto/fc.app_options_global.csv"
+        },
+        {
+          "stage": "logic_opto",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/logic_opto/fc.app_options_project.csv",
+          "relative_path": "logic_opto/fc.app_options_project.csv"
+        },
+        {
+          "stage": "logic_opto",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/logic_opto/fc.app_options_user.csv",
+          "relative_path": "logic_opto/fc.app_options_user.csv"
+        },
+        {
+          "stage": "read_upf",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/read_upf/fc.app_options_design_class.csv",
+          "relative_path": "read_upf/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "read_upf",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/read_upf/fc.app_options_global.csv",
+          "relative_path": "read_upf/fc.app_options_global.csv"
+        },
+        {
+          "stage": "read_upf",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/read_upf/fc.app_options_project.csv",
+          "relative_path": "read_upf/fc.app_options_project.csv"
+        },
+        {
+          "stage": "read_upf",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/read_upf/fc.app_options_user.csv",
+          "relative_path": "read_upf/fc.app_options_user.csv"
+        },
+        {
+          "stage": "redefine",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/redefine/fc.app_options_design_class.csv",
+          "relative_path": "redefine/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "redefine",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/redefine/fc.app_options_global.csv",
+          "relative_path": "redefine/fc.app_options_global.csv"
+        },
+        {
+          "stage": "redefine",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/redefine/fc.app_options_project.csv",
+          "relative_path": "redefine/fc.app_options_project.csv"
+        },
+        {
+          "stage": "redefine",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/redefine/fc.app_options_user.csv",
+          "relative_path": "redefine/fc.app_options_user.csv"
+        },
+        {
+          "stage": "route_auto",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/route_auto/fc.app_options_design_class.csv",
+          "relative_path": "route_auto/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "route_auto",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/route_auto/fc.app_options_global.csv",
+          "relative_path": "route_auto/fc.app_options_global.csv"
+        },
+        {
+          "stage": "route_auto",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/route_auto/fc.app_options_project.csv",
+          "relative_path": "route_auto/fc.app_options_project.csv"
+        },
+        {
+          "stage": "route_auto",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/route_auto/fc.app_options_user.csv",
+          "relative_path": "route_auto/fc.app_options_user.csv"
+        },
+        {
+          "stage": "route_opt",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/route_opt/fc.app_options_design_class.csv",
+          "relative_path": "route_opt/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "route_opt",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/route_opt/fc.app_options_global.csv",
+          "relative_path": "route_opt/fc.app_options_global.csv"
+        },
+        {
+          "stage": "route_opt",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/route_opt/fc.app_options_project.csv",
+          "relative_path": "route_opt/fc.app_options_project.csv"
+        },
+        {
+          "stage": "route_opt",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/route_opt/fc.app_options_user.csv",
+          "relative_path": "route_opt/fc.app_options_user.csv"
+        },
+        {
+          "stage": "setup_timing",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/setup_timing/fc.app_options_design_class.csv",
+          "relative_path": "setup_timing/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "setup_timing",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/setup_timing/fc.app_options_global.csv",
+          "relative_path": "setup_timing/fc.app_options_global.csv"
+        },
+        {
+          "stage": "setup_timing",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/setup_timing/fc.app_options_project.csv",
+          "relative_path": "setup_timing/fc.app_options_project.csv"
+        },
+        {
+          "stage": "setup_timing",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/setup_timing/fc.app_options_user.csv",
+          "relative_path": "setup_timing/fc.app_options_user.csv"
+        }
+      ],
       "stages": [
         {
           "stage": "import_design",
@@ -2064,7 +2930,8 @@
           "size_bytes": 262060563,
           "stage_exists": true
         }
-      ]
+      ],
+      "app_options_manifest": "app_options/golden/manifest.json"
     },
     {
       "label": "flattenall",
@@ -2074,20 +2941,21 @@
       "base_path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall",
       "logs_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs",
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/Indicators",
+      "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "Thank you for using Fusion Compiler.",
-      "overall_status": "passed",
-      "running_stage": null,
-      "last_updated": "2026-04-15T04:18:17",
+      "fc_latest_line": "Information: Loading technology file '/p/hdk/cad/dp_contour/76p5/v1.0_1/pdk765_r1.0_1_26ww12.4/apr/synopsys/tech/m17_6x_2ya_2yb_2yc_2yd_1ye_1ga_mim3x_1gb__bumpi/g1m_8dg_50pp_tp4/p1276_icc2.tf' (FILE-007)",
+      "overall_status": "running",
+      "running_stage": "import_design",
+      "last_updated": "2026-04-19T13:18:04",
       "summary": {
-        "passed": 8,
+        "passed": 7,
         "failed": 0,
         "skipped": 0,
-        "started": 0,
+        "started": 1,
         "not_started": 0
       },
       "has_activity": true,
-      "complete": true,
+      "complete": false,
       "qor_by_stage": {
         "conditioning": {
           "run_directory": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc",
@@ -2770,16 +3638,187 @@
           "sequential_states": "2472"
         }
       },
+      "app_options_report_count": 28,
+      "app_options_reports": [
+        {
+          "stage": "conditioning",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/conditioning/fc.app_options_design_class.csv",
+          "relative_path": "conditioning/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "conditioning",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/conditioning/fc.app_options_global.csv",
+          "relative_path": "conditioning/fc.app_options_global.csv"
+        },
+        {
+          "stage": "conditioning",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/conditioning/fc.app_options_project.csv",
+          "relative_path": "conditioning/fc.app_options_project.csv"
+        },
+        {
+          "stage": "conditioning",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/conditioning/fc.app_options_user.csv",
+          "relative_path": "conditioning/fc.app_options_user.csv"
+        },
+        {
+          "stage": "estimation",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/estimation/fc.app_options_design_class.csv",
+          "relative_path": "estimation/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "estimation",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/estimation/fc.app_options_global.csv",
+          "relative_path": "estimation/fc.app_options_global.csv"
+        },
+        {
+          "stage": "estimation",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/estimation/fc.app_options_project.csv",
+          "relative_path": "estimation/fc.app_options_project.csv"
+        },
+        {
+          "stage": "estimation",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/estimation/fc.app_options_user.csv",
+          "relative_path": "estimation/fc.app_options_user.csv"
+        },
+        {
+          "stage": "floorplan",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/floorplan/fc.app_options_design_class.csv",
+          "relative_path": "floorplan/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "floorplan",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/floorplan/fc.app_options_global.csv",
+          "relative_path": "floorplan/fc.app_options_global.csv"
+        },
+        {
+          "stage": "floorplan",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/floorplan/fc.app_options_project.csv",
+          "relative_path": "floorplan/fc.app_options_project.csv"
+        },
+        {
+          "stage": "floorplan",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/floorplan/fc.app_options_user.csv",
+          "relative_path": "floorplan/fc.app_options_user.csv"
+        },
+        {
+          "stage": "init_floorplan",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/init_floorplan/fc.app_options_design_class.csv",
+          "relative_path": "init_floorplan/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "init_floorplan",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/init_floorplan/fc.app_options_global.csv",
+          "relative_path": "init_floorplan/fc.app_options_global.csv"
+        },
+        {
+          "stage": "init_floorplan",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/init_floorplan/fc.app_options_project.csv",
+          "relative_path": "init_floorplan/fc.app_options_project.csv"
+        },
+        {
+          "stage": "init_floorplan",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/init_floorplan/fc.app_options_user.csv",
+          "relative_path": "init_floorplan/fc.app_options_user.csv"
+        },
+        {
+          "stage": "read_upf",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/read_upf/fc.app_options_design_class.csv",
+          "relative_path": "read_upf/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "read_upf",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/read_upf/fc.app_options_global.csv",
+          "relative_path": "read_upf/fc.app_options_global.csv"
+        },
+        {
+          "stage": "read_upf",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/read_upf/fc.app_options_project.csv",
+          "relative_path": "read_upf/fc.app_options_project.csv"
+        },
+        {
+          "stage": "read_upf",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/read_upf/fc.app_options_user.csv",
+          "relative_path": "read_upf/fc.app_options_user.csv"
+        },
+        {
+          "stage": "redefine",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/redefine/fc.app_options_design_class.csv",
+          "relative_path": "redefine/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "redefine",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/redefine/fc.app_options_global.csv",
+          "relative_path": "redefine/fc.app_options_global.csv"
+        },
+        {
+          "stage": "redefine",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/redefine/fc.app_options_project.csv",
+          "relative_path": "redefine/fc.app_options_project.csv"
+        },
+        {
+          "stage": "redefine",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/redefine/fc.app_options_user.csv",
+          "relative_path": "redefine/fc.app_options_user.csv"
+        },
+        {
+          "stage": "setup_timing",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/setup_timing/fc.app_options_design_class.csv",
+          "relative_path": "setup_timing/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "setup_timing",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/setup_timing/fc.app_options_global.csv",
+          "relative_path": "setup_timing/fc.app_options_global.csv"
+        },
+        {
+          "stage": "setup_timing",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/setup_timing/fc.app_options_project.csv",
+          "relative_path": "setup_timing/fc.app_options_project.csv"
+        },
+        {
+          "stage": "setup_timing",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/setup_timing/fc.app_options_user.csv",
+          "relative_path": "setup_timing/fc.app_options_user.csv"
+        }
+      ],
       "stages": [
         {
           "stage": "import_design",
-          "status": "passed",
+          "status": "running",
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc.import_design.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/import_design.parallel_rpt_out.log",
-            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/import_design.pass",
+            "pass_file": null,
             "fail_file": null,
-            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/import_design.skipped_fail"
+            "skipped_fail_file": null
           },
           "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
@@ -2789,8 +3828,8 @@
             "Elapsed time for this session:   1243 seconds (  0.35 hours)",
             "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-15T00:42:14",
-          "size_bytes": 30956661,
+          "last_updated": "2026-04-19T13:18:04",
+          "size_bytes": 26254589,
           "stage_exists": true
         },
         {
@@ -2947,7 +3986,8 @@
           "size_bytes": 25230279,
           "stage_exists": true
         }
-      ]
+      ],
+      "app_options_manifest": "app_options/flattenall/manifest.json"
     },
     {
       "label": "estimation",
@@ -2957,6 +3997,7 @@
       "base_path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation",
       "logs_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs",
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/Indicators",
+      "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
       "fc_latest_line": "fc_shell>",
       "overall_status": "started",
@@ -2976,6 +4017,249 @@
         "floorplan": {},
         "estimation": {}
       },
+      "app_options_report_count": 40,
+      "app_options_reports": [
+        {
+          "stage": "clock_route_opt",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/clock_route_opt/fc.app_options_design_class.csv",
+          "relative_path": "clock_route_opt/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "clock_route_opt",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/clock_route_opt/fc.app_options_global.csv",
+          "relative_path": "clock_route_opt/fc.app_options_global.csv"
+        },
+        {
+          "stage": "clock_route_opt",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/clock_route_opt/fc.app_options_project.csv",
+          "relative_path": "clock_route_opt/fc.app_options_project.csv"
+        },
+        {
+          "stage": "clock_route_opt",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/clock_route_opt/fc.app_options_user.csv",
+          "relative_path": "clock_route_opt/fc.app_options_user.csv"
+        },
+        {
+          "stage": "compile_final_opto",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/compile_final_opto/fc.app_options_design_class.csv",
+          "relative_path": "compile_final_opto/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "compile_final_opto",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/compile_final_opto/fc.app_options_global.csv",
+          "relative_path": "compile_final_opto/fc.app_options_global.csv"
+        },
+        {
+          "stage": "compile_final_opto",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/compile_final_opto/fc.app_options_project.csv",
+          "relative_path": "compile_final_opto/fc.app_options_project.csv"
+        },
+        {
+          "stage": "compile_final_opto",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/compile_final_opto/fc.app_options_user.csv",
+          "relative_path": "compile_final_opto/fc.app_options_user.csv"
+        },
+        {
+          "stage": "compile_initial_opto",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/compile_initial_opto/fc.app_options_design_class.csv",
+          "relative_path": "compile_initial_opto/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "compile_initial_opto",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/compile_initial_opto/fc.app_options_global.csv",
+          "relative_path": "compile_initial_opto/fc.app_options_global.csv"
+        },
+        {
+          "stage": "compile_initial_opto",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/compile_initial_opto/fc.app_options_project.csv",
+          "relative_path": "compile_initial_opto/fc.app_options_project.csv"
+        },
+        {
+          "stage": "compile_initial_opto",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/compile_initial_opto/fc.app_options_user.csv",
+          "relative_path": "compile_initial_opto/fc.app_options_user.csv"
+        },
+        {
+          "stage": "ctmesh",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/ctmesh/fc.app_options_design_class.csv",
+          "relative_path": "ctmesh/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "ctmesh",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/ctmesh/fc.app_options_global.csv",
+          "relative_path": "ctmesh/fc.app_options_global.csv"
+        },
+        {
+          "stage": "ctmesh",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/ctmesh/fc.app_options_project.csv",
+          "relative_path": "ctmesh/fc.app_options_project.csv"
+        },
+        {
+          "stage": "ctmesh",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/ctmesh/fc.app_options_user.csv",
+          "relative_path": "ctmesh/fc.app_options_user.csv"
+        },
+        {
+          "stage": "cts",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/cts/fc.app_options_design_class.csv",
+          "relative_path": "cts/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "cts",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/cts/fc.app_options_global.csv",
+          "relative_path": "cts/fc.app_options_global.csv"
+        },
+        {
+          "stage": "cts",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/cts/fc.app_options_project.csv",
+          "relative_path": "cts/fc.app_options_project.csv"
+        },
+        {
+          "stage": "cts",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/cts/fc.app_options_user.csv",
+          "relative_path": "cts/fc.app_options_user.csv"
+        },
+        {
+          "stage": "fill",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/fill/fc.app_options_design_class.csv",
+          "relative_path": "fill/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "fill",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/fill/fc.app_options_global.csv",
+          "relative_path": "fill/fc.app_options_global.csv"
+        },
+        {
+          "stage": "fill",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/fill/fc.app_options_project.csv",
+          "relative_path": "fill/fc.app_options_project.csv"
+        },
+        {
+          "stage": "fill",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/fill/fc.app_options_user.csv",
+          "relative_path": "fill/fc.app_options_user.csv"
+        },
+        {
+          "stage": "finish",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/finish/fc.app_options_design_class.csv",
+          "relative_path": "finish/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "finish",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/finish/fc.app_options_global.csv",
+          "relative_path": "finish/fc.app_options_global.csv"
+        },
+        {
+          "stage": "finish",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/finish/fc.app_options_project.csv",
+          "relative_path": "finish/fc.app_options_project.csv"
+        },
+        {
+          "stage": "finish",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/finish/fc.app_options_user.csv",
+          "relative_path": "finish/fc.app_options_user.csv"
+        },
+        {
+          "stage": "insert_dft",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/insert_dft/fc.app_options_design_class.csv",
+          "relative_path": "insert_dft/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "insert_dft",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/insert_dft/fc.app_options_global.csv",
+          "relative_path": "insert_dft/fc.app_options_global.csv"
+        },
+        {
+          "stage": "insert_dft",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/insert_dft/fc.app_options_project.csv",
+          "relative_path": "insert_dft/fc.app_options_project.csv"
+        },
+        {
+          "stage": "insert_dft",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/insert_dft/fc.app_options_user.csv",
+          "relative_path": "insert_dft/fc.app_options_user.csv"
+        },
+        {
+          "stage": "route_auto",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/route_auto/fc.app_options_design_class.csv",
+          "relative_path": "route_auto/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "route_auto",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/route_auto/fc.app_options_global.csv",
+          "relative_path": "route_auto/fc.app_options_global.csv"
+        },
+        {
+          "stage": "route_auto",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/route_auto/fc.app_options_project.csv",
+          "relative_path": "route_auto/fc.app_options_project.csv"
+        },
+        {
+          "stage": "route_auto",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/route_auto/fc.app_options_user.csv",
+          "relative_path": "route_auto/fc.app_options_user.csv"
+        },
+        {
+          "stage": "route_opt",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/route_opt/fc.app_options_design_class.csv",
+          "relative_path": "route_opt/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "route_opt",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/route_opt/fc.app_options_global.csv",
+          "relative_path": "route_opt/fc.app_options_global.csv"
+        },
+        {
+          "stage": "route_opt",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/route_opt/fc.app_options_project.csv",
+          "relative_path": "route_opt/fc.app_options_project.csv"
+        },
+        {
+          "stage": "route_opt",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports/route_opt/fc.app_options_user.csv",
+          "relative_path": "route_opt/fc.app_options_user.csv"
+        }
+      ],
       "stages": [
         {
           "stage": "import_design",
@@ -3341,7 +4625,8 @@
           "size_bytes": 39487801,
           "stage_exists": true
         }
-      ]
+      ],
+      "app_options_manifest": "app_options/estimation/manifest.json"
     },
     {
       "label": "flatten_selective",
@@ -3351,6 +4636,7 @@
       "base_path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective",
       "logs_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs",
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/Indicators",
+      "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": null,
       "fc_latest_line": "",
       "overall_status": "not_started",
@@ -3370,6 +4656,8 @@
         "floorplan": {},
         "estimation": {}
       },
+      "app_options_report_count": 0,
+      "app_options_reports": [],
       "stages": [
         {
           "stage": "import_design",
@@ -3675,7 +4963,8 @@
           "size_bytes": 0,
           "stage_exists": false
         }
-      ]
+      ],
+      "app_options_manifest": "app_options/flatten-selective/manifest.json"
     }
   ],
   "stage_order": [
@@ -4028,6 +5317,10 @@
 		.replaceAll("'", '&#39;');
 	}
 
+	function safeId(text) {
+	  return (text || 'run').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'run';
+	}
+
 	function stageRows(run) {
 	  return run.stages.map(stage => `
 		<tr>
@@ -4050,7 +5343,7 @@
 	  const stages = ['conditioning', 'floorplan', 'estimation'];
 	  return `
 		<div class="table-wrap">
-		<table class="qor-table">
+		<table class="qor-table run-qor-table">
 		  <thead>
 			<tr>
 			  <th>QoR metric</th>
@@ -4070,13 +5363,150 @@
 	  `;
 	}
 
-	function crossComparisonCell(stage) {
-	  if (!stage || !stage.stage_exists) {
-		return '<span class="empty">N/A</span>';
+	async function fetchJson(path) {
+	  const response = await fetch(path);
+	  if (!response.ok) {
+		throw new Error(`Failed to load ${path} (${response.status})`);
 	  }
-	  const updated = stage.last_updated ? `<div class="small-note">updated: ${htmlEscape(stage.last_updated)}</div>` : '<div class="small-note">updated: --</div>';
-	  const line = stage.latest_line ? `<div class="small-note">${htmlEscape(stage.latest_line)}</div>` : '<div class="small-note">No recent line</div>';
-	  return `${badge(stage.status)}${updated}${line}`;
+	  return response.json();
+	}
+
+	const appOptionsState = new Map();
+
+	function getAppOptionsState(runId) {
+	  if (!appOptionsState.has(runId)) {
+		appOptionsState.set(runId, { manifest: null, reportCache: new Map() });
+	  }
+	  return appOptionsState.get(runId);
+	}
+
+	function renderAppOptionsRows(entries, selectedStage, selectedCategory) {
+	  if (!entries.length) {
+		return `<tr><td colspan="8" class="empty">No app options found for ${htmlEscape(selectedStage)} / ${htmlEscape(selectedCategory)}.</td></tr>`;
+	  }
+	  return entries.map(entry => `
+		<tr>
+		  <td>${htmlEscape(selectedStage)}</td>
+		  <td>${htmlEscape(selectedCategory)}</td>
+		  <td class="stage-name">${htmlEscape(entry.name)}</td>
+		  <td>${htmlEscape(entry.type || '--')}</td>
+		  <td class="qor-value">${htmlEscape(entry.value || entry.user_value || entry.system_default || '--')}</td>
+		  <td>${htmlEscape(entry.scope || '--')}</td>
+		  <td>${htmlEscape(entry.status || '--')}</td>
+		  <td>${htmlEscape(entry.source || '--')}</td>
+		</tr>
+	  `).join('');
+	}
+
+	function fillCategoryOptions(runId, manifest, selectedStage, preferredCategory) {
+	  const categorySelect = document.getElementById(`app-category-${runId}`);
+	  const reports = manifest.reports.filter(report => report.stage === selectedStage);
+	  categorySelect.innerHTML = reports.map(report => `<option value="${htmlEscape(report.category)}">${htmlEscape(report.category)} (${report.row_count})</option>`).join('');
+	  if (!reports.length) {
+		categorySelect.disabled = true;
+		return null;
+	  }
+	  categorySelect.disabled = false;
+	  const desired = reports.find(report => report.category === preferredCategory)?.category || reports.find(report => report.category === 'project')?.category || reports[0].category;
+	  categorySelect.value = desired;
+	  return desired;
+	}
+
+	async function renderSelectedAppOptions(run, runId) {
+	  const state = getAppOptionsState(runId);
+	  const stageSelect = document.getElementById(`app-stage-${runId}`);
+	  const categorySelect = document.getElementById(`app-category-${runId}`);
+	  const status = document.getElementById(`app-status-${runId}`);
+	  const body = document.getElementById(`app-body-${runId}`);
+	  if (!state.manifest) {
+		status.textContent = 'App options are not loaded yet.';
+		return;
+	  }
+	  const selectedStage = stageSelect.value;
+	  const selectedCategory = categorySelect.value;
+	  const report = state.manifest.reports.find(item => item.stage === selectedStage && item.category === selectedCategory);
+	  if (!report) {
+		body.innerHTML = `<tr><td colspan="8" class="empty">No app options report available.</td></tr>`;
+		status.textContent = 'No report available for the current selection.';
+		return;
+	  }
+	  const cacheKey = `${selectedStage}__${selectedCategory}`;
+	  if (!state.reportCache.has(cacheKey)) {
+		status.textContent = `Loading ${selectedStage} / ${selectedCategory} ...`;
+		state.reportCache.set(cacheKey, await fetchJson(report.file));
+	  }
+	  const entries = state.reportCache.get(cacheKey) || [];
+	  body.innerHTML = renderAppOptionsRows(entries, selectedStage, selectedCategory);
+	  status.textContent = `Showing ${entries.length} app options from ${selectedStage} / ${selectedCategory}.`;
+	}
+
+	async function loadAppOptions(run) {
+	  const runId = safeId(run.label);
+	  const state = getAppOptionsState(runId);
+	  const status = document.getElementById(`app-status-${runId}`);
+	  const stageSelect = document.getElementById(`app-stage-${runId}`);
+	  const categorySelect = document.getElementById(`app-category-${runId}`);
+	  if (!run.app_options_manifest) {
+		status.textContent = 'No app option reports available for this folder.';
+		return;
+	  }
+	  if (!state.manifest) {
+		status.textContent = 'Loading app option manifest...';
+		state.manifest = await fetchJson(run.app_options_manifest);
+	  }
+	  const reports = state.manifest.reports || [];
+	  if (!reports.length) {
+		status.textContent = 'No app option reports available for this folder.';
+		return;
+	  }
+	  const stages = [...new Set(reports.map(report => report.stage))];
+	  stageSelect.innerHTML = stages.map(stage => `<option value="${htmlEscape(stage)}">${htmlEscape(stage)}</option>`).join('');
+	  stageSelect.disabled = false;
+	  const preferredStage = reports.find(report => report.stage === 'floorplan')?.stage || stages[0];
+	  stageSelect.value = preferredStage;
+	  fillCategoryOptions(runId, state.manifest, preferredStage, 'project');
+	  categorySelect.disabled = false;
+	  await renderSelectedAppOptions(run, runId);
+	}
+
+	function renderAppOptionsSection(run) {
+	  const runId = safeId(run.label);
+	  const disabledText = run.app_options_report_count ? 'load app options' : 'no app options';
+	  const disabledAttr = run.app_options_report_count ? '' : 'disabled';
+	  return `
+		<div class="section">
+		  <div class="section-header">
+			<h3>App options</h3>
+			<div class="section-actions">
+			  <button class="section-btn" data-action="load-app-options" data-run-label="${htmlEscape(run.label)}" ${disabledAttr}>${disabledText}</button>
+			</div>
+		  </div>
+		  <div class="section-body">
+			<div class="app-options-controls">
+			  <label>Stage<select id="app-stage-${runId}" data-run-label="${htmlEscape(run.label)}" disabled><option>Load app options first</option></select></label>
+			  <label>Category<select id="app-category-${runId}" data-run-label="${htmlEscape(run.label)}" disabled><option>Load app options first</option></select></label>
+			</div>
+			<div class="app-options-meta small-note" id="app-status-${runId}">${run.app_options_report_count ? `${run.app_options_report_count} app option reports available.` : 'No app option reports available.'}</div>
+			<div class="table-wrap">
+			  <table class="app-options-table">
+				<thead>
+				  <tr>
+					<th>Stage</th>
+					<th>Category</th>
+					<th>Name</th>
+					<th>Type</th>
+					<th>Value</th>
+					<th>Scope</th>
+					<th>Status</th>
+					<th>Source</th>
+				  </tr>
+				</thead>
+				<tbody id="app-body-${runId}"><tr><td colspan="8" class="empty">Load app options to browse the full list for this folder.</td></tr></tbody>
+			  </table>
+			</div>
+		  </div>
+		</div>
+	  `;
 	}
 
 	function renderCrossComparison(snapshot) {
@@ -4096,7 +5526,7 @@
 			<div class="section">
 			  <h3>${htmlEscape(stage)}</h3>
 			  <div class="table-wrap">
-			  <table class="qor-table">
+			  <table class="qor-table cross-qor-table">
 				<thead>
 				  <tr>
 					<th>QoR metric</th>
@@ -4156,6 +5586,8 @@
 	}
 
 	function renderRun(run) {
+	  const runId = safeId(run.label);
+	  const qorSectionId = `qor-section-${runId}`;
 	  return `
 		<article class="card">
 		  <div class="card-header">
@@ -4173,7 +5605,7 @@
 			<div class="summary">${summaryPills(run)}</div>
 		  </div>
 		  <div class="section">
-			<h3>Stage status overview</h3>
+			<div class="section-header"><h3>Stage status overview</h3></div>
 			<div class="table-wrap">
 			<table class="status-table">
 			  <thead>
@@ -4190,11 +5622,20 @@
 			</table>
 			</div>
 		  </div>
-		  <div class="section">
-			<h3>QoR comparison: conditioning vs floorplan vs estimation</h3>
-			${renderRunQorTable(run)}
-			${detailBlocks(run)}
+		  <div class="section" id="${qorSectionId}">
+			<div class="section-header">
+			  <h3>QoR comparison: conditioning vs floorplan vs estimation</h3>
+			  <div class="section-actions">
+				<button class="section-btn" data-action="toggle-collapse" data-target="${qorSectionId}">minimize</button>
+				<button class="section-btn" data-action="toggle-maximize" data-target="${qorSectionId}">maximize</button>
+			  </div>
+			</div>
+			<div class="section-body">
+			  ${renderRunQorTable(run)}
+			  ${detailBlocks(run)}
+			</div>
 		  </div>
+		  ${renderAppOptionsSection(run)}
 		</article>
 	  `;
 	}
@@ -4220,6 +5661,55 @@
 		tabsElement.querySelectorAll('.tab-button').forEach(item => item.classList.toggle('active', item === button));
 		dashboardElement.querySelectorAll('.tab-panel').forEach(panel => panel.classList.toggle('active', panel.id === targetId));
 	  });
+	});
+
+	document.addEventListener('click', async event => {
+	  const button = event.target.closest('.section-btn');
+	  if (!button) return;
+	  const action = button.dataset.action;
+	  if (action === 'toggle-collapse') {
+		const section = document.getElementById(button.dataset.target);
+		const body = section?.querySelector('.section-body');
+		if (!body) return;
+		const hidden = body.classList.toggle('hidden');
+		button.textContent = hidden ? 'expand' : 'minimize';
+		return;
+	  }
+	  if (action === 'toggle-maximize') {
+		const section = document.getElementById(button.dataset.target);
+		if (!section) return;
+		const maximized = section.classList.toggle('maximized');
+		button.textContent = maximized ? 'restore' : 'maximize';
+		return;
+	  }
+	  if (action === 'load-app-options') {
+		const run = snapshot.runs.find(item => item.label === button.dataset.runLabel);
+		if (!run) return;
+		button.disabled = true;
+		try {
+		  await loadAppOptions(run);
+		  button.textContent = 'reload app options';
+		} catch (error) {
+		  const status = document.getElementById(`app-status-${safeId(run.label)}`);
+		  if (status) status.textContent = error.message || 'Failed to load app options.';
+		} finally {
+		  button.disabled = false;
+		}
+	  }
+	});
+
+	document.addEventListener('change', async event => {
+	  const target = event.target;
+	  if (!(target instanceof HTMLSelectElement)) return;
+	  const run = snapshot.runs.find(item => item.label === target.dataset.runLabel);
+	  if (!run) return;
+	  const runId = safeId(run.label);
+	  const state = getAppOptionsState(runId);
+	  if (!state.manifest) return;
+	  if (target.id === `app-stage-${runId}`) {
+		fillCategoryOptions(runId, state.manifest, target.value, 'project');
+	  }
+	  await renderSelectedAppOptions(run, runId);
 	});
   </script>
 </body>

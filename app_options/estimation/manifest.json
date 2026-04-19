@@ -1,0 +1,246 @@
+{
+  "folder": "estimation",
+  "report_count": 40,
+  "reports": [
+    {
+      "stage": "clock_route_opt",
+      "category": "design_class",
+      "row_count": 3023,
+      "file": "app_options/estimation/clock_route_opt__design_class.json"
+    },
+    {
+      "stage": "clock_route_opt",
+      "category": "global",
+      "row_count": 3022,
+      "file": "app_options/estimation/clock_route_opt__global.json"
+    },
+    {
+      "stage": "clock_route_opt",
+      "category": "project",
+      "row_count": 3023,
+      "file": "app_options/estimation/clock_route_opt__project.json"
+    },
+    {
+      "stage": "clock_route_opt",
+      "category": "user",
+      "row_count": 3023,
+      "file": "app_options/estimation/clock_route_opt__user.json"
+    },
+    {
+      "stage": "compile_final_opto",
+      "category": "design_class",
+      "row_count": 3022,
+      "file": "app_options/estimation/compile_final_opto__design_class.json"
+    },
+    {
+      "stage": "compile_final_opto",
+      "category": "global",
+      "row_count": 3022,
+      "file": "app_options/estimation/compile_final_opto__global.json"
+    },
+    {
+      "stage": "compile_final_opto",
+      "category": "project",
+      "row_count": 3022,
+      "file": "app_options/estimation/compile_final_opto__project.json"
+    },
+    {
+      "stage": "compile_final_opto",
+      "category": "user",
+      "row_count": 3022,
+      "file": "app_options/estimation/compile_final_opto__user.json"
+    },
+    {
+      "stage": "compile_initial_opto",
+      "category": "design_class",
+      "row_count": 3022,
+      "file": "app_options/estimation/compile_initial_opto__design_class.json"
+    },
+    {
+      "stage": "compile_initial_opto",
+      "category": "global",
+      "row_count": 3022,
+      "file": "app_options/estimation/compile_initial_opto__global.json"
+    },
+    {
+      "stage": "compile_initial_opto",
+      "category": "project",
+      "row_count": 3022,
+      "file": "app_options/estimation/compile_initial_opto__project.json"
+    },
+    {
+      "stage": "compile_initial_opto",
+      "category": "user",
+      "row_count": 3022,
+      "file": "app_options/estimation/compile_initial_opto__user.json"
+    },
+    {
+      "stage": "ctmesh",
+      "category": "design_class",
+      "row_count": 3022,
+      "file": "app_options/estimation/ctmesh__design_class.json"
+    },
+    {
+      "stage": "ctmesh",
+      "category": "global",
+      "row_count": 3022,
+      "file": "app_options/estimation/ctmesh__global.json"
+    },
+    {
+      "stage": "ctmesh",
+      "category": "project",
+      "row_count": 3022,
+      "file": "app_options/estimation/ctmesh__project.json"
+    },
+    {
+      "stage": "ctmesh",
+      "category": "user",
+      "row_count": 3022,
+      "file": "app_options/estimation/ctmesh__user.json"
+    },
+    {
+      "stage": "cts",
+      "category": "design_class",
+      "row_count": 3022,
+      "file": "app_options/estimation/cts__design_class.json"
+    },
+    {
+      "stage": "cts",
+      "category": "global",
+      "row_count": 3022,
+      "file": "app_options/estimation/cts__global.json"
+    },
+    {
+      "stage": "cts",
+      "category": "project",
+      "row_count": 3022,
+      "file": "app_options/estimation/cts__project.json"
+    },
+    {
+      "stage": "cts",
+      "category": "user",
+      "row_count": 3022,
+      "file": "app_options/estimation/cts__user.json"
+    },
+    {
+      "stage": "fill",
+      "category": "design_class",
+      "row_count": 3023,
+      "file": "app_options/estimation/fill__design_class.json"
+    },
+    {
+      "stage": "fill",
+      "category": "global",
+      "row_count": 3023,
+      "file": "app_options/estimation/fill__global.json"
+    },
+    {
+      "stage": "fill",
+      "category": "project",
+      "row_count": 3023,
+      "file": "app_options/estimation/fill__project.json"
+    },
+    {
+      "stage": "fill",
+      "category": "user",
+      "row_count": 3023,
+      "file": "app_options/estimation/fill__user.json"
+    },
+    {
+      "stage": "finish",
+      "category": "design_class",
+      "row_count": 3023,
+      "file": "app_options/estimation/finish__design_class.json"
+    },
+    {
+      "stage": "finish",
+      "category": "global",
+      "row_count": 3023,
+      "file": "app_options/estimation/finish__global.json"
+    },
+    {
+      "stage": "finish",
+      "category": "project",
+      "row_count": 3023,
+      "file": "app_options/estimation/finish__project.json"
+    },
+    {
+      "stage": "finish",
+      "category": "user",
+      "row_count": 3023,
+      "file": "app_options/estimation/finish__user.json"
+    },
+    {
+      "stage": "insert_dft",
+      "category": "design_class",
+      "row_count": 3021,
+      "file": "app_options/estimation/insert_dft__design_class.json"
+    },
+    {
+      "stage": "insert_dft",
+      "category": "global",
+      "row_count": 3021,
+      "file": "app_options/estimation/insert_dft__global.json"
+    },
+    {
+      "stage": "insert_dft",
+      "category": "project",
+      "row_count": 3021,
+      "file": "app_options/estimation/insert_dft__project.json"
+    },
+    {
+      "stage": "insert_dft",
+      "category": "user",
+      "row_count": 3021,
+      "file": "app_options/estimation/insert_dft__user.json"
+    },
+    {
+      "stage": "route_auto",
+      "category": "design_class",
+      "row_count": 3023,
+      "file": "app_options/estimation/route_auto__design_class.json"
+    },
+    {
+      "stage": "route_auto",
+      "category": "global",
+      "row_count": 3023,
+      "file": "app_options/estimation/route_auto__global.json"
+    },
+    {
+      "stage": "route_auto",
+      "category": "project",
+      "row_count": 3023,
+      "file": "app_options/estimation/route_auto__project.json"
+    },
+    {
+      "stage": "route_auto",
+      "category": "user",
+      "row_count": 3023,
+      "file": "app_options/estimation/route_auto__user.json"
+    },
+    {
+      "stage": "route_opt",
+      "category": "design_class",
+      "row_count": 3023,
+      "file": "app_options/estimation/route_opt__design_class.json"
+    },
+    {
+      "stage": "route_opt",
+      "category": "global",
+      "row_count": 3023,
+      "file": "app_options/estimation/route_opt__global.json"
+    },
+    {
+      "stage": "route_opt",
+      "category": "project",
+      "row_count": 3023,
+      "file": "app_options/estimation/route_opt__project.json"
+    },
+    {
+      "stage": "route_opt",
+      "category": "user",
+      "row_count": 3023,
+      "file": "app_options/estimation/route_opt__user.json"
+    }
+  ]
+}

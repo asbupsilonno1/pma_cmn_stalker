@@ -1,0 +1,414 @@
+{
+  "folder": "golden",
+  "report_count": 68,
+  "reports": [
+    {
+      "stage": "clock_route_opt",
+      "category": "design_class",
+      "row_count": 3019,
+      "file": "app_options/golden/clock_route_opt__design_class.json"
+    },
+    {
+      "stage": "clock_route_opt",
+      "category": "global",
+      "row_count": 3018,
+      "file": "app_options/golden/clock_route_opt__global.json"
+    },
+    {
+      "stage": "clock_route_opt",
+      "category": "project",
+      "row_count": 3019,
+      "file": "app_options/golden/clock_route_opt__project.json"
+    },
+    {
+      "stage": "clock_route_opt",
+      "category": "user",
+      "row_count": 3019,
+      "file": "app_options/golden/clock_route_opt__user.json"
+    },
+    {
+      "stage": "compile_final_opto",
+      "category": "design_class",
+      "row_count": 3018,
+      "file": "app_options/golden/compile_final_opto__design_class.json"
+    },
+    {
+      "stage": "compile_final_opto",
+      "category": "global",
+      "row_count": 3018,
+      "file": "app_options/golden/compile_final_opto__global.json"
+    },
+    {
+      "stage": "compile_final_opto",
+      "category": "project",
+      "row_count": 3018,
+      "file": "app_options/golden/compile_final_opto__project.json"
+    },
+    {
+      "stage": "compile_final_opto",
+      "category": "user",
+      "row_count": 3018,
+      "file": "app_options/golden/compile_final_opto__user.json"
+    },
+    {
+      "stage": "compile_initial_opto",
+      "category": "design_class",
+      "row_count": 3018,
+      "file": "app_options/golden/compile_initial_opto__design_class.json"
+    },
+    {
+      "stage": "compile_initial_opto",
+      "category": "global",
+      "row_count": 3018,
+      "file": "app_options/golden/compile_initial_opto__global.json"
+    },
+    {
+      "stage": "compile_initial_opto",
+      "category": "project",
+      "row_count": 3018,
+      "file": "app_options/golden/compile_initial_opto__project.json"
+    },
+    {
+      "stage": "compile_initial_opto",
+      "category": "user",
+      "row_count": 3018,
+      "file": "app_options/golden/compile_initial_opto__user.json"
+    },
+    {
+      "stage": "ctmesh",
+      "category": "design_class",
+      "row_count": 3018,
+      "file": "app_options/golden/ctmesh__design_class.json"
+    },
+    {
+      "stage": "ctmesh",
+      "category": "global",
+      "row_count": 3018,
+      "file": "app_options/golden/ctmesh__global.json"
+    },
+    {
+      "stage": "ctmesh",
+      "category": "project",
+      "row_count": 3018,
+      "file": "app_options/golden/ctmesh__project.json"
+    },
+    {
+      "stage": "ctmesh",
+      "category": "user",
+      "row_count": 3018,
+      "file": "app_options/golden/ctmesh__user.json"
+    },
+    {
+      "stage": "cts",
+      "category": "design_class",
+      "row_count": 3018,
+      "file": "app_options/golden/cts__design_class.json"
+    },
+    {
+      "stage": "cts",
+      "category": "global",
+      "row_count": 3018,
+      "file": "app_options/golden/cts__global.json"
+    },
+    {
+      "stage": "cts",
+      "category": "project",
+      "row_count": 3018,
+      "file": "app_options/golden/cts__project.json"
+    },
+    {
+      "stage": "cts",
+      "category": "user",
+      "row_count": 3018,
+      "file": "app_options/golden/cts__user.json"
+    },
+    {
+      "stage": "fill",
+      "category": "design_class",
+      "row_count": 3019,
+      "file": "app_options/golden/fill__design_class.json"
+    },
+    {
+      "stage": "fill",
+      "category": "global",
+      "row_count": 3019,
+      "file": "app_options/golden/fill__global.json"
+    },
+    {
+      "stage": "fill",
+      "category": "project",
+      "row_count": 3019,
+      "file": "app_options/golden/fill__project.json"
+    },
+    {
+      "stage": "fill",
+      "category": "user",
+      "row_count": 3019,
+      "file": "app_options/golden/fill__user.json"
+    },
+    {
+      "stage": "finish",
+      "category": "design_class",
+      "row_count": 3019,
+      "file": "app_options/golden/finish__design_class.json"
+    },
+    {
+      "stage": "finish",
+      "category": "global",
+      "row_count": 3019,
+      "file": "app_options/golden/finish__global.json"
+    },
+    {
+      "stage": "finish",
+      "category": "project",
+      "row_count": 3019,
+      "file": "app_options/golden/finish__project.json"
+    },
+    {
+      "stage": "finish",
+      "category": "user",
+      "row_count": 3019,
+      "file": "app_options/golden/finish__user.json"
+    },
+    {
+      "stage": "floorplan",
+      "category": "design_class",
+      "row_count": 3018,
+      "file": "app_options/golden/floorplan__design_class.json"
+    },
+    {
+      "stage": "floorplan",
+      "category": "global",
+      "row_count": 3018,
+      "file": "app_options/golden/floorplan__global.json"
+    },
+    {
+      "stage": "floorplan",
+      "category": "project",
+      "row_count": 3018,
+      "file": "app_options/golden/floorplan__project.json"
+    },
+    {
+      "stage": "floorplan",
+      "category": "user",
+      "row_count": 3018,
+      "file": "app_options/golden/floorplan__user.json"
+    },
+    {
+      "stage": "init_floorplan",
+      "category": "design_class",
+      "row_count": 3014,
+      "file": "app_options/golden/init_floorplan__design_class.json"
+    },
+    {
+      "stage": "init_floorplan",
+      "category": "global",
+      "row_count": 3014,
+      "file": "app_options/golden/init_floorplan__global.json"
+    },
+    {
+      "stage": "init_floorplan",
+      "category": "project",
+      "row_count": 3014,
+      "file": "app_options/golden/init_floorplan__project.json"
+    },
+    {
+      "stage": "init_floorplan",
+      "category": "user",
+      "row_count": 3014,
+      "file": "app_options/golden/init_floorplan__user.json"
+    },
+    {
+      "stage": "initial_map",
+      "category": "design_class",
+      "row_count": 3017,
+      "file": "app_options/golden/initial_map__design_class.json"
+    },
+    {
+      "stage": "initial_map",
+      "category": "global",
+      "row_count": 3017,
+      "file": "app_options/golden/initial_map__global.json"
+    },
+    {
+      "stage": "initial_map",
+      "category": "project",
+      "row_count": 3017,
+      "file": "app_options/golden/initial_map__project.json"
+    },
+    {
+      "stage": "initial_map",
+      "category": "user",
+      "row_count": 3017,
+      "file": "app_options/golden/initial_map__user.json"
+    },
+    {
+      "stage": "insert_dft",
+      "category": "design_class",
+      "row_count": 3018,
+      "file": "app_options/golden/insert_dft__design_class.json"
+    },
+    {
+      "stage": "insert_dft",
+      "category": "global",
+      "row_count": 3018,
+      "file": "app_options/golden/insert_dft__global.json"
+    },
+    {
+      "stage": "insert_dft",
+      "category": "project",
+      "row_count": 3018,
+      "file": "app_options/golden/insert_dft__project.json"
+    },
+    {
+      "stage": "insert_dft",
+      "category": "user",
+      "row_count": 3018,
+      "file": "app_options/golden/insert_dft__user.json"
+    },
+    {
+      "stage": "logic_opto",
+      "category": "design_class",
+      "row_count": 3018,
+      "file": "app_options/golden/logic_opto__design_class.json"
+    },
+    {
+      "stage": "logic_opto",
+      "category": "global",
+      "row_count": 3018,
+      "file": "app_options/golden/logic_opto__global.json"
+    },
+    {
+      "stage": "logic_opto",
+      "category": "project",
+      "row_count": 3018,
+      "file": "app_options/golden/logic_opto__project.json"
+    },
+    {
+      "stage": "logic_opto",
+      "category": "user",
+      "row_count": 3018,
+      "file": "app_options/golden/logic_opto__user.json"
+    },
+    {
+      "stage": "read_upf",
+      "category": "design_class",
+      "row_count": 3013,
+      "file": "app_options/golden/read_upf__design_class.json"
+    },
+    {
+      "stage": "read_upf",
+      "category": "global",
+      "row_count": 3011,
+      "file": "app_options/golden/read_upf__global.json"
+    },
+    {
+      "stage": "read_upf",
+      "category": "project",
+      "row_count": 3013,
+      "file": "app_options/golden/read_upf__project.json"
+    },
+    {
+      "stage": "read_upf",
+      "category": "user",
+      "row_count": 3014,
+      "file": "app_options/golden/read_upf__user.json"
+    },
+    {
+      "stage": "redefine",
+      "category": "design_class",
+      "row_count": 3014,
+      "file": "app_options/golden/redefine__design_class.json"
+    },
+    {
+      "stage": "redefine",
+      "category": "global",
+      "row_count": 3014,
+      "file": "app_options/golden/redefine__global.json"
+    },
+    {
+      "stage": "redefine",
+      "category": "project",
+      "row_count": 3014,
+      "file": "app_options/golden/redefine__project.json"
+    },
+    {
+      "stage": "redefine",
+      "category": "user",
+      "row_count": 3014,
+      "file": "app_options/golden/redefine__user.json"
+    },
+    {
+      "stage": "route_auto",
+      "category": "design_class",
+      "row_count": 3019,
+      "file": "app_options/golden/route_auto__design_class.json"
+    },
+    {
+      "stage": "route_auto",
+      "category": "global",
+      "row_count": 3019,
+      "file": "app_options/golden/route_auto__global.json"
+    },
+    {
+      "stage": "route_auto",
+      "category": "project",
+      "row_count": 3019,
+      "file": "app_options/golden/route_auto__project.json"
+    },
+    {
+      "stage": "route_auto",
+      "category": "user",
+      "row_count": 3019,
+      "file": "app_options/golden/route_auto__user.json"
+    },
+    {
+      "stage": "route_opt",
+      "category": "design_class",
+      "row_count": 3019,
+      "file": "app_options/golden/route_opt__design_class.json"
+    },
+    {
+      "stage": "route_opt",
+      "category": "global",
+      "row_count": 3019,
+      "file": "app_options/golden/route_opt__global.json"
+    },
+    {
+      "stage": "route_opt",
+      "category": "project",
+      "row_count": 3019,
+      "file": "app_options/golden/route_opt__project.json"
+    },
+    {
+      "stage": "route_opt",
+      "category": "user",
+      "row_count": 3019,
+      "file": "app_options/golden/route_opt__user.json"
+    },
+    {
+      "stage": "setup_timing",
+      "category": "design_class",
+      "row_count": 3014,
+      "file": "app_options/golden/setup_timing__design_class.json"
+    },
+    {
+      "stage": "setup_timing",
+      "category": "global",
+      "row_count": 3014,
+      "file": "app_options/golden/setup_timing__global.json"
+    },
+    {
+      "stage": "setup_timing",
+      "category": "project",
+      "row_count": 3014,
+      "file": "app_options/golden/setup_timing__project.json"
+    },
+    {
+      "stage": "setup_timing",
+      "category": "user",
+      "row_count": 3014,
+      "file": "app_options/golden/setup_timing__user.json"
+    }
+  ]
+}
