@@ -110,6 +110,9 @@
 	.cross-cell { min-width: 190px; }
 	.cross-cell .badge { margin-bottom: 6px; }
 	.small-note { font-size: 11px; color: var(--muted); line-height: 1.45; }
+	.details-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-top: 12px; }
+	.compact-log { border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: rgba(7, 11, 24, 0.45); }
+	.compact-log h4 { margin: 0 0 8px; font-size: 13px; }
 	.empty { color: var(--muted); font-style: italic; }
 	details { margin-top: 12px; }
 	details summary { cursor: pointer; color: #c6d2ef; font-weight: 600; }
@@ -131,7 +134,7 @@
   <div class="container">
 	<section class="hero">
 	  <h1>PMA CMN stalker</h1>
-	  <p>Generated at 2026-04-19T12:42:04</p>
+	  <p>Generated at 2026-04-19T12:44:01</p>
 	  <p>Monitoring APR FC flow stages only. RTLA-only stages are limited to conditioning and estimation when those logs are actually present.</p>
 	  <p>Auxiliary logs such as abutment-rule, spacing-rule, interactive, assembly, and merge helpers are intentionally excluded from the stage list.</p>
 	</section>
@@ -141,7 +144,7 @@
   </div>
   <script>
 	const snapshot = {
-  "generated_at": "2026-04-19T12:42:04",
+  "generated_at": "2026-04-19T12:44:01",
   "run_count": 5,
   "runs": [
     {
@@ -2109,12 +2112,31 @@
 	}
 
 	function detailBlocks(run) {
-	  return run.stages.filter(stage => stage.recent_lines && stage.recent_lines.length).map(stage => `
+	  const preferredStages = new Set(['conditioning', 'floorplan', 'estimation']);
+	  const selected = run.stages.filter(stage => stage.recent_lines && stage.recent_lines.length && (
+		preferredStages.has(stage.stage) ||
+		stage.status === 'running' ||
+		stage.status === 'failed' ||
+		stage.stage === run.running_stage
+	  ));
+
+	  if (!selected.length) {
+		return '';
+	  }
+
+	  return `
 		<details>
-		  <summary>${htmlEscape(stage.stage)} recent log lines</summary>
-		  <pre>${htmlEscape(stage.recent_lines.join('\n'))}</pre>
+		  <summary>Compact recent log snippets</summary>
+		  <div class="details-grid">
+			${selected.map(stage => `
+			  <div class="compact-log">
+				<h4>${htmlEscape(stage.stage)} · ${stage.stage_exists ? stage.status.replace('_', ' ') : 'N/A'}</h4>
+				<pre>${htmlEscape(stage.recent_lines.slice(-2).join('\n'))}</pre>
+			  </div>
+			`).join('')}
+		  </div>
 		</details>
-	  `).join('');
+	  `;
 	}
 
 	function summaryPills(run) {
