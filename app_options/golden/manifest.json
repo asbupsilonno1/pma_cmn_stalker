@@ -1,6 +1,6 @@
 {
   "folder": "golden",
-  "report_count": 68,
+  "report_count": 72,
   "reports": [
     {
       "stage": "clock_route_opt",
@@ -73,6 +73,30 @@
       "category": "user",
       "row_count": 3018,
       "file": "app_options/golden/compile_initial_opto__user.json"
+    },
+    {
+      "stage": "conditioning",
+      "category": "design_class",
+      "row_count": 3058,
+      "file": "app_options/golden/conditioning__design_class.json"
+    },
+    {
+      "stage": "conditioning",
+      "category": "global",
+      "row_count": 3058,
+      "file": "app_options/golden/conditioning__global.json"
+    },
+    {
+      "stage": "conditioning",
+      "category": "project",
+      "row_count": 3058,
+      "file": "app_options/golden/conditioning__project.json"
+    },
+    {
+      "stage": "conditioning",
+      "category": "user",
+      "row_count": 3058,
+      "file": "app_options/golden/conditioning__user.json"
     },
     {
       "stage": "ctmesh",
@@ -389,25 +413,25 @@
     {
       "stage": "setup_timing",
       "category": "design_class",
-      "row_count": 3014,
+      "row_count": 3055,
       "file": "app_options/golden/setup_timing__design_class.json"
     },
     {
       "stage": "setup_timing",
       "category": "global",
-      "row_count": 3014,
+      "row_count": 3055,
       "file": "app_options/golden/setup_timing__global.json"
     },
     {
       "stage": "setup_timing",
       "category": "project",
-      "row_count": 3014,
+      "row_count": 3055,
       "file": "app_options/golden/setup_timing__project.json"
     },
     {
       "stage": "setup_timing",
       "category": "user",
-      "row_count": 3014,
+      "row_count": 3055,
       "file": "app_options/golden/setup_timing__user.json"
     }
   ]

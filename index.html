@@ -175,7 +175,7 @@
   <div class="container">
 	<section class="hero">
 	  <h1>PMA CMN stalker</h1>
-	  <p>Generated at 2026-04-19T14:17:29</p>
+	  <p>Generated at 2026-04-19T14:47:35</p>
 	  <p>Monitoring APR FC flow stages only. RTLA-only stages are limited to conditioning and estimation when those logs are actually present.</p>
 	  <p>Auxiliary logs such as abutment-rule, spacing-rule, interactive, assembly, and merge helpers are intentionally excluded from the stage list.</p>
 	</section>
@@ -185,7 +185,7 @@
   </div>
   <script>
 	const snapshot = {
-  "generated_at": "2026-04-19T14:17:29",
+  "generated_at": "2026-04-19T14:47:35",
   "run_count": 5,
   "runs": [
     {
@@ -1770,24 +1770,24 @@
     },
     {
       "label": "golden",
-      "flow_type": "apr",
+      "flow_type": "rtla_plus_apr",
       "terminal_stage": "opt_signoff",
-      "has_rtla_stages": false,
+      "has_rtla_stages": true,
       "base_path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden",
       "logs_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs",
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "INTEL_INFO   : Found multiple copies of 'step_source_dp_collateral.tcl' file on the search path: /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/design_class/server_ip/snps/apr_fc/step_source_dp_collateral.tcl /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/global/snps/apr_fc/step_source_dp_collateral.tcl (::iproc_source) [Sun Apr 19 14:16:59 2026]",
+      "fc_latest_line": "net i_abutright_ctl_txs_txen_f_cross_lane length = 292.003 um, r = 1773.631 ohm, c = 40.119 ff, cc = 0.000 ff pinCount: 2 (ID: 710)",
       "overall_status": "running",
-      "running_stage": "init_floorplan",
-      "last_updated": "2026-04-19T14:17:24",
+      "running_stage": "conditioning",
+      "last_updated": "2026-04-19T14:47:12",
       "summary": {
-        "passed": 17,
+        "passed": 18,
         "failed": 0,
         "skipped": 0,
         "started": 1,
-        "not_started": 1
+        "not_started": 2
       },
       "has_activity": true,
       "complete": false,
@@ -2097,7 +2097,7 @@
         },
         "estimation": {}
       },
-      "app_options_report_count": 68,
+      "app_options_report_count": 72,
       "app_options_reports": [
         {
           "stage": "clock_route_opt",
@@ -2170,6 +2170,30 @@
           "category": "user",
           "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/compile_initial_opto/fc.app_options_user.csv",
           "relative_path": "compile_initial_opto/fc.app_options_user.csv"
+        },
+        {
+          "stage": "conditioning",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/conditioning/fc.app_options_design_class.csv",
+          "relative_path": "conditioning/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "conditioning",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/conditioning/fc.app_options_global.csv",
+          "relative_path": "conditioning/fc.app_options_global.csv"
+        },
+        {
+          "stage": "conditioning",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/conditioning/fc.app_options_project.csv",
+          "relative_path": "conditioning/fc.app_options_project.csv"
+        },
+        {
+          "stage": "conditioning",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/conditioning/fc.app_options_user.csv",
+          "relative_path": "conditioning/fc.app_options_user.csv"
         },
         {
           "stage": "ctmesh",
@@ -2541,16 +2565,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/read_upf.skipped_fail"
           },
-          "latest_line": "INTEL_INFO   : executing  proc sd_report_qor to generate reports (::sd_report_all) [Sun Apr 19 14:16:29 2026]",
+          "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
-            "INTEL_INFO   : Overriding ::ivar(reports,read_upf) = 'sd_report_utilization sd_report_utilization_per_va sd_report_qor sd_report_design  sd_report_check_mv_design sd_report_multibit sd_report_missing_port_constraints  sd_report_Unclocked_flip_flops sd_report_design_qor sd_report_ref_libs sd_report_threshold_voltage_groups sd_report_clock_gating sd_report_clock_names sd_report_app_options sd_report_ivars sd_reports_cpu_info sd_report_analyze_mv_feasibility sd_report_hier_upf_power_supplies {sd_reports_create_run_summary sd_report_ref_libs} sd_reports_cpu_info' (prev. value = 'sd_report_ref_libs sd_report_threshold_voltage_groups sd_report_clock_gating sd_report_clock_names sd_report_app_options sd_report_ivars sd_reports_cpu_info sd_report_analyze_mv_feasibility sd_report_hier_upf_power_supplies {sd_reports_create_run_summary sd_report_ref_libs} sd_reports_cpu_info') [Sun Apr 19 14:16:28 2026]",
-            "INTEL_INFO   : Overriding ::ivar(reports,read_upf) = 'sd_report_utilization sd_report_utilization_per_va sd_report_qor sd_report_design sd_report_check_mv_design sd_report_multibit sd_report_missing_port_constraints sd_report_Unclocked_flip_flops sd_report_design_qor sd_report_ref_libs sd_report_threshold_voltage_groups sd_report_clock_gating sd_report_clock_names sd_report_analyze_mv_feasibility sd_report_hier_upf_power_supplies {sd_reports_create_run_summary sd_report_ref_libs}' (prev. value = 'sd_report_utilization sd_report_utilization_per_va sd_report_qor sd_report_design  sd_report_check_mv_design sd_report_multibit sd_report_missing_port_constraints  sd_report_Unclocked_flip_flops sd_report_design_qor sd_report_ref_libs sd_report_threshold_voltage_groups sd_report_clock_gating sd_report_clock_names sd_report_app_options sd_report_ivars sd_reports_cpu_info sd_report_analyze_mv_feasibility sd_report_hier_upf_power_supplies {sd_reports_create_run_summary sd_report_ref_libs} sd_reports_cpu_info') [Sun Apr 19 14:16:28 2026]",
-            "INTEL_INFO   : executing  proc sd_report_utilization to generate reports (::sd_report_all) [Sun Apr 19 14:16:28 2026]",
-            "INTEL_INFO   : executing  proc sd_report_utilization_per_va to generate reports (::sd_report_all) [Sun Apr 19 14:16:28 2026]",
-            "INTEL_INFO   : executing  proc sd_report_qor to generate reports (::sd_report_all) [Sun Apr 19 14:16:29 2026]"
+            " 39356         36783 Mb   Sun Apr 19 14:19:08 2026    Sun Apr 19 14:19:38 2026    /nfs/site/disks/crt_tools_058/fusioncompiler/X-2025.06-SP1-T-20250911/linux64/nwtn/bin/dgcom_exec -shell fc -root_path /nfs/site/disks/crt_tools_058/fusioncompiler/X-2025.06-SP1-T-20250911 -f /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_g",
+            " 42426            18 Mb   Sun Apr 19 14:19:38 2026    Sun Apr 19 14:20:09 2026    /usr/intel/pkgs/gnumeric/1.12.45/.bin/ssconvert /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/read_upf/pma_cmn.qor_summary /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/",
+            "CPU usage for this session:    525 seconds (  0.15 hours)",
+            "Elapsed time for this session:   1323 seconds (  0.37 hours)",
+            "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-19T14:16:48",
-          "size_bytes": 28567473,
+          "last_updated": "2026-04-19T14:20:12",
+          "size_bytes": 28636423,
           "stage_exists": true
         },
         {
@@ -2563,38 +2587,38 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/redefine.skipped_fail"
           },
-          "latest_line": "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsiclk_svt/ndm/lib765_g1m_240h_50pp_dsiclk_svt.ndm' (FILE-007)",
+          "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsibase_lvt/ndm/lib765_g1m_240h_50pp_dsibase_lvt_layonly.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsibase_svt/ndm/lib765_g1m_240h_50pp_dsibase_svt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsibase_svt/ndm/lib765_g1m_240h_50pp_dsibase_svt_layonly.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsiclk_lvt/ndm/lib765_g1m_240h_50pp_dsiclk_lvt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsiclk_svt/ndm/lib765_g1m_240h_50pp_dsiclk_svt.ndm' (FILE-007)"
+            "Maximum memory usage for this session: 38277.34 MB",
+            "Maximum memory usage for this session including child processes: 38277.34 MB",
+            "CPU usage for this session:    602 seconds (  0.17 hours)",
+            "Elapsed time for this session:   1333 seconds (  0.37 hours)",
+            "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-19T14:17:24",
-          "size_bytes": 26386003,
+          "last_updated": "2026-04-19T14:30:39",
+          "size_bytes": 37450907,
           "stage_exists": true
         },
         {
           "stage": "init_floorplan",
-          "status": "running",
+          "status": "passed",
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.init_floorplan.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/init_floorplan.parallel_rpt_out.log",
-            "pass_file": null,
+            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/init_floorplan.pass",
             "fail_file": null,
-            "skipped_fail_file": null
+            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/init_floorplan.skipped_fail"
           },
           "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
-            "Maximum memory usage for this session: 38419.06 MB",
-            "Maximum memory usage for this session including child processes: 38419.06 MB",
-            "CPU usage for this session:    828 seconds (  0.23 hours)",
-            "Elapsed time for this session:   2431 seconds (  0.68 hours)",
+            "Maximum memory usage for this session: 38486.52 MB",
+            "Maximum memory usage for this session including child processes: 38486.52 MB",
+            "CPU usage for this session:    810 seconds (  0.22 hours)",
+            "Elapsed time for this session:   1430 seconds (  0.40 hours)",
             "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-19T14:16:59",
-          "size_bytes": 35774884,
+          "last_updated": "2026-04-19T14:42:18",
+          "size_bytes": 35856493,
           "stage_exists": true
         },
         {
@@ -2607,16 +2631,38 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/setup_timing.skipped_fail"
           },
-          "latest_line": "Thank you for using Fusion Compiler.",
+          "latest_line": "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsiclk_svt/ndm/lib765_g1m_240h_50pp_dsiclk_svt.ndm' (FILE-007)",
           "recent_lines": [
-            "PROCESS-ID    MEM-PEAK    START-TIME                  END-TIME                    PROCESS-NAME",
-            " 39996            17 Mb   Wed Apr 15 04:21:54 2026    running                     /usr/intel/pkgs/gnumeric/1.12.45/.bin/ssconvert /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/setup_timing/pma_cmn.qor_summary /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/r",
-            "CPU usage for this session:   2502 seconds (  0.69 hours)",
-            "Elapsed time for this session:   2695 seconds (  0.75 hours)",
-            "Thank you for using Fusion Compiler."
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsibase_lvt/ndm/lib765_g1m_240h_50pp_dsibase_lvt_layonly.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsibase_svt/ndm/lib765_g1m_240h_50pp_dsibase_svt.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsibase_svt/ndm/lib765_g1m_240h_50pp_dsibase_svt_layonly.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsiclk_lvt/ndm/lib765_g1m_240h_50pp_dsiclk_lvt.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsiclk_svt/ndm/lib765_g1m_240h_50pp_dsiclk_svt.ndm' (FILE-007)"
           ],
-          "last_updated": "2026-04-15T04:22:26",
-          "size_bytes": 27454008,
+          "last_updated": "2026-04-19T14:47:09",
+          "size_bytes": 25167802,
+          "stage_exists": true
+        },
+        {
+          "stage": "conditioning",
+          "status": "running",
+          "files": {
+            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.conditioning.log",
+            "parallel_log": null,
+            "pass_file": null,
+            "fail_file": null,
+            "skipped_fail_file": null
+          },
+          "latest_line": "net i_abutright_ctl_txs_txen_f_cross_lane length = 292.003 um, r = 1773.631 ohm, c = 40.119 ff, cc = 0.000 ff pinCount: 2 (ID: 710)",
+          "recent_lines": [
+            "net i_abutleft_ctl_txs_txen_f_cross_lane length = 292.003 um, r = 1773.631 ohm, c = 40.119 ff, cc = 0.000 ff pinCount: 2 (ID: 586)",
+            "net i_abutright_bs_td_tx length = 333.108 um, r = 2193.121 ohm, c = 45.605 ff, cc = 0.000 ff pinCount: 2 (ID: 637)",
+            "net i_abutleft_ctl_txen_f_cross_lane length = 290.671 um, r = 1772.077 ohm, c = 39.917 ff, cc = 0.000 ff pinCount: 2 (ID: 585)",
+            "net i_abutright_ctl_txen_f_cross_lane length = 290.671 um, r = 1772.077 ohm, c = 39.917 ff, cc = 0.000 ff pinCount: 2 (ID: 709)",
+            "net i_abutright_ctl_txs_txen_f_cross_lane length = 292.003 um, r = 1773.631 ohm, c = 40.119 ff, cc = 0.000 ff pinCount: 2 (ID: 710)"
+          ],
+          "last_updated": "2026-04-19T14:47:12",
+          "size_bytes": 13391606,
           "stage_exists": true
         },
         {
@@ -2640,6 +2686,22 @@
           "last_updated": "2026-04-15T06:13:11",
           "size_bytes": 43735249,
           "stage_exists": true
+        },
+        {
+          "stage": "estimation",
+          "status": "not_started",
+          "files": {
+            "fc_log": null,
+            "parallel_log": null,
+            "pass_file": null,
+            "fail_file": null,
+            "skipped_fail_file": null
+          },
+          "latest_line": "",
+          "recent_lines": [],
+          "last_updated": null,
+          "size_bytes": 0,
+          "stage_exists": false
         },
         {
           "stage": "initial_map",
@@ -2934,10 +2996,10 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsibase_lvt/ndm/lib765_g1m_240h_50pp_dsibase_lvt.ndm' (FILE-007)",
+      "fc_latest_line": "START_CMD: copy_lib            CPU:     21 s ( 0.01 hr) ELAPSE:     23 s ( 0.01 hr) MEM-PEAK:   476 Mb Sun Apr 19 14:45:25 2026",
       "overall_status": "running",
-      "running_stage": "init_floorplan",
-      "last_updated": "2026-04-19T14:17:25",
+      "running_stage": "conditioning",
+      "last_updated": "2026-04-19T14:47:19",
       "summary": {
         "passed": 7,
         "failed": 0,
@@ -3833,16 +3895,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/read_upf.skipped_fail"
           },
-          "latest_line": "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/seq_ulvt/ndm/lib765_g1m_240h_50pp_seq_ulvt.ndm' (FILE-007)",
+          "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/intel76rfad/ndm/intel76rfad.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/intel76edmlib/ndm/m17_6x_2ya_2yb_2yc_2yd_1ye_1ga_mim3x_1gb__bumpi/intel76edmlib.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/intel76esdlib/ndm/m17_6x_2ya_2yb_2yc_2yd_1ye_1ga_mim3x_1gb__bumpi/intel76esdlib.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/seq_svt/ndm/lib765_g1m_240h_50pp_seq_svt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/seq_ulvt/ndm/lib765_g1m_240h_50pp_seq_ulvt.ndm' (FILE-007)"
+            "PROCESS-ID    MEM-PEAK    START-TIME                  END-TIME                    PROCESS-NAME",
+            " 26604         36733 Mb   Sun Apr 19 14:24:58 2026    Sun Apr 19 14:25:29 2026    /nfs/site/disks/crt_tools_058/fusioncompiler/X-2025.06-SP1-T-20250911/linux64/nwtn/bin/dgcom_exec -shell fc -root_path /nfs/site/disks/crt_tools_058/fusioncompiler/X-2025.06-SP1-T-20250911 -f /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_f",
+            "CPU usage for this session:    594 seconds (  0.17 hours)",
+            "Elapsed time for this session:   1562 seconds (  0.43 hours)",
+            "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-19T14:17:25",
-          "size_bytes": 26270161,
+          "last_updated": "2026-04-19T14:26:13",
+          "size_bytes": 28663160,
           "stage_exists": true
         },
         {
@@ -3855,38 +3917,38 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/redefine.skipped_fail"
           },
-          "latest_line": "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/ds1_svt/ndm/lib765_g1m_240h_50pp_ds1_svt.ndm' (FILE-007)",
+          "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/base_lvt/ndm/lib765_g1m_240h_50pp_base_lvt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/base_svt/ndm/lib765_g1m_240h_50pp_base_svt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/clk_lvt/ndm/lib765_g1m_240h_50pp_clk_lvt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/clk_svt/ndm/lib765_g1m_240h_50pp_clk_svt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/ds1_svt/ndm/lib765_g1m_240h_50pp_ds1_svt.ndm' (FILE-007)"
+            "Maximum memory usage for this session: 38317.61 MB",
+            "Maximum memory usage for this session including child processes: 38317.61 MB",
+            "CPU usage for this session:    641 seconds (  0.18 hours)",
+            "Elapsed time for this session:   1569 seconds (  0.44 hours)",
+            "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-19T14:16:55",
-          "size_bytes": 26407223,
+          "last_updated": "2026-04-19T14:38:25",
+          "size_bytes": 37477006,
           "stage_exists": true
         },
         {
           "stage": "init_floorplan",
-          "status": "running",
+          "status": "passed",
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc.init_floorplan.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/init_floorplan.parallel_rpt_out.log",
-            "pass_file": null,
+            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/init_floorplan.pass",
             "fail_file": null,
-            "skipped_fail_file": null
+            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/init_floorplan.skipped_fail"
           },
-          "latest_line": "Thank you for using Fusion Compiler.",
+          "latest_line": "INTEL_INFO   : SCRIPT_START : /nfs/site/disks/crt_tools_099/eou_flow_global/2025.09.plus.p3/snps/apr_fc/automail.tcl (type=file, level=1) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/src/pma_cmn/1276.5/apr_fc/scripts/generate_rpt_out.tcl) [Sun Apr 19 14:47:18 2026]",
           "recent_lines": [
-            "Maximum memory usage for this session: 38489.25 MB",
-            "Maximum memory usage for this session including child processes: 38489.25 MB",
-            "CPU usage for this session:    924 seconds (  0.26 hours)",
-            "Elapsed time for this session:   1584 seconds (  0.44 hours)",
-            "Thank you for using Fusion Compiler."
+            "INTEL_INFO   : checking Errors (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/global/snps/apr_fc/scan_log.tcl) [Sun Apr 19 14:47:14 2026]",
+            "INTEL_INFO   : logscan PASSED (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/global/snps/apr_fc/scan_log.tcl) [Sun Apr 19 14:47:14 2026]",
+            "INTEL_INFO   : Check /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/init_floorplan.skipped_fail for skipped errors (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/global/snps/apr_fc/scan_log.tcl) [Sun Apr 19 14:47:14 2026]",
+            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_tools_099/eou_flow_global/2025.09.plus.p3/snps/apr_fc/scan_log.tcl (type=file, level=1, time=4 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/src/pma_cmn/1276.5/apr_fc/scripts/generate_rpt_out.tcl) [Sun Apr 19 14:47:18 2026]",
+            "INTEL_INFO   : SCRIPT_START : /nfs/site/disks/crt_tools_099/eou_flow_global/2025.09.plus.p3/snps/apr_fc/automail.tcl (type=file, level=1) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/src/pma_cmn/1276.5/apr_fc/scripts/generate_rpt_out.tcl) [Sun Apr 19 14:47:18 2026]"
           ],
-          "last_updated": "2026-04-19T14:17:23",
-          "size_bytes": 35363945,
+          "last_updated": "2026-04-19T14:47:19",
+          "size_bytes": 35876722,
           "stage_exists": true
         },
         {
@@ -3899,27 +3961,27 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/setup_timing.skipped_fail"
           },
-          "latest_line": "Thank you for using Fusion Compiler.",
+          "latest_line": "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/base_lvt/ndm/lib765_g1m_240h_50pp_base_lvt.ndm' (FILE-007)",
           "recent_lines": [
-            " 47833            16 Mb   Wed Apr 15 02:22:46 2026    Wed Apr 15 02:23:17 2026    /usr/intel/pkgs/gnumeric/1.12.45/.bin/ssconvert /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/setup_timing/pma_cmn.qor_summary /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flat",
-            " 41979             0 Mb   Wed Apr 15 02:21:44 2026    Wed Apr 15 02:22:15 2026",
-            "CPU usage for this session:   2747 seconds (  0.76 hours)",
-            "Elapsed time for this session:   2372 seconds (  0.66 hours)",
-            "Thank you for using Fusion Compiler."
+            "INTEL_INFO   : Optional file to be sourced not found; 'open_lib_pre_setup.tcl', skipping (::iproc_source) [Sun Apr 19 14:45:10 2026]",
+            "INTEL_INFO   : opening ndm for parallel outputs and reports_generation (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/global/snps/apr_fc/step_load.tcl) [Sun Apr 19 14:45:10 2026]",
+            "START_CMD: open_lib            CPU:     21 s ( 0.01 hr) ELAPSE:     27 s ( 0.01 hr) MEM-PEAK:   439 Mb Sun Apr 19 14:45:10 2026",
+            "Information: Loading library file '/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/outputs/setup_timing/pma_cmn_TMP_for_parallel_rpt_out_gen.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/base_lvt/ndm/lib765_g1m_240h_50pp_base_lvt.ndm' (FILE-007)"
           ],
-          "last_updated": "2026-04-15T02:23:21",
-          "size_bytes": 37855290,
+          "last_updated": "2026-04-19T14:45:29",
+          "size_bytes": 25191445,
           "stage_exists": true
         },
         {
           "stage": "conditioning",
-          "status": "passed",
+          "status": "running",
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc.conditioning.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/conditioning.parallel_rpt_out.log",
-            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/conditioning.pass",
+            "pass_file": null,
             "fail_file": null,
-            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/conditioning.skipped_fail"
+            "skipped_fail_file": null
           },
           "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
@@ -3929,8 +3991,8 @@
             "Elapsed time for this session:   2141 seconds (  0.59 hours)",
             "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-15T02:41:52",
-          "size_bytes": 26583648,
+          "last_updated": "2026-04-19T14:45:34",
+          "size_bytes": 24800300,
           "stage_exists": true
         },
         {
