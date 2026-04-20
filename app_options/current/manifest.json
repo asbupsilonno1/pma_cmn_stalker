@@ -197,25 +197,25 @@
     {
       "stage": "init_floorplan",
       "category": "design_class",
-      "row_count": 3015,
+      "row_count": 3056,
       "file": "app_options/current/init_floorplan__design_class.json"
     },
     {
       "stage": "init_floorplan",
       "category": "global",
-      "row_count": 3015,
+      "row_count": 3056,
       "file": "app_options/current/init_floorplan__global.json"
     },
     {
       "stage": "init_floorplan",
       "category": "project",
-      "row_count": 3015,
+      "row_count": 3056,
       "file": "app_options/current/init_floorplan__project.json"
     },
     {
       "stage": "init_floorplan",
       "category": "user",
-      "row_count": 3015,
+      "row_count": 3056,
       "file": "app_options/current/init_floorplan__user.json"
     },
     {
@@ -389,25 +389,25 @@
     {
       "stage": "setup_timing",
       "category": "design_class",
-      "row_count": 3015,
+      "row_count": 3056,
       "file": "app_options/current/setup_timing__design_class.json"
     },
     {
       "stage": "setup_timing",
       "category": "global",
-      "row_count": 3015,
+      "row_count": 3056,
       "file": "app_options/current/setup_timing__global.json"
     },
     {
       "stage": "setup_timing",
       "category": "project",
-      "row_count": 3015,
+      "row_count": 3056,
       "file": "app_options/current/setup_timing__project.json"
     },
     {
       "stage": "setup_timing",
       "category": "user",
-      "row_count": 3015,
+      "row_count": 3056,
       "file": "app_options/current/setup_timing__user.json"
     }
   ]
