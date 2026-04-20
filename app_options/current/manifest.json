@@ -149,25 +149,25 @@
     {
       "stage": "estimation",
       "category": "design_class",
-      "row_count": 3052,
+      "row_count": 3019,
       "file": "app_options/current/estimation__design_class.json"
     },
     {
       "stage": "estimation",
       "category": "global",
-      "row_count": 3051,
+      "row_count": 3019,
       "file": "app_options/current/estimation__global.json"
     },
     {
       "stage": "estimation",
       "category": "project",
-      "row_count": 3052,
+      "row_count": 3019,
       "file": "app_options/current/estimation__project.json"
     },
     {
       "stage": "estimation",
       "category": "user",
-      "row_count": 3053,
+      "row_count": 3019,
       "file": "app_options/current/estimation__user.json"
     },
     {
