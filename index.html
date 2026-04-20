@@ -133,6 +133,11 @@
 	.cross-cell { min-width: 190px; }
 	.cross-cell .badge { margin-bottom: 6px; }
 	.small-note { font-size: 11px; color: var(--muted); line-height: 1.45; }
+	.qor-groups { display: grid; gap: 16px; }
+	.qor-group { border: 1px solid rgba(42,53,88,0.7); border-radius: 14px; background: rgba(10, 16, 31, 0.4); overflow: hidden; }
+	.qor-group-header { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 16px; border-bottom: 1px solid rgba(42,53,88,0.55); background: rgba(18, 25, 44, 0.72); }
+	.qor-group-title { margin: 0; font-size: 14px; }
+	.qor-group-count { font-size: 11px; }
 	.qor-table { table-layout: fixed; }
 	.qor-table th:first-child, .qor-table td:first-child { position: sticky; left: 0; background: linear-gradient(90deg, rgba(18,25,44,0.99), rgba(18,25,44,0.99) 88%, rgba(18,25,44,0.88)); z-index: 1; word-break: break-word; box-shadow: 8px 0 14px rgba(3,8,20,0.22); }
 	.run-qor-table th:first-child, .run-qor-table td:first-child { width: 34%; min-width: 180px; }
@@ -140,6 +145,8 @@
 	.cross-qor-table th:first-child, .cross-qor-table td:first-child { width: 24%; min-width: 180px; }
 	.cross-qor-table th:not(:first-child), .cross-qor-table td:not(:first-child) { width: 15.2%; min-width: 120px; }
 	.qor-value { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #dbe6ff; white-space: normal; overflow-wrap: anywhere; word-break: break-word; }
+	.metric-label { display: grid; gap: 2px; }
+	.metric-context { font-size: 10px; color: #99a9d5; line-height: 1.35; }
 	.details-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-top: 12px; }
 	.compact-log { border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: rgba(7, 11, 24, 0.45); }
 	.compact-log h4 { margin: 0 0 8px; font-size: 13px; }
@@ -183,7 +190,7 @@
   <div class="container">
 	<section class="hero">
 	  <h1>PMA CMN stalker</h1>
-	  <p>Generated at 2026-04-20T01:57:55</p>
+	  <p>Generated at 2026-04-20T02:27:26</p>
 	  <p>Monitoring APR FC flow stages only. RTLA-only stages are limited to conditioning and estimation when those logs are actually present.</p>
 	  <p>Auxiliary logs such as abutment-rule, spacing-rule, interactive, assembly, and merge helpers are intentionally excluded from the stage list.</p>
 	</section>
@@ -193,7 +200,7 @@
   </div>
   <script>
 	const snapshot = {
-  "generated_at": "2026-04-20T01:57:55",
+  "generated_at": "2026-04-20T02:27:26",
   "run_count": 5,
   "runs": [
     {
@@ -206,19 +213,19 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "START_CMD: save_block          CPU:   4971 s ( 1.38 hr) ELAPSE:   1491 s ( 0.41 hr) MEM-PEAK: 51191 Mb Mon Apr 20 01:57:44 2026",
-      "overall_status": "running",
-      "running_stage": "floorplan",
-      "last_updated": "2026-04-20T01:57:46",
+      "fc_latest_line": "Thank you for using Fusion Compiler.",
+      "overall_status": "passed",
+      "running_stage": null,
+      "last_updated": "2026-04-20T02:26:20",
       "summary": {
-        "passed": 20,
+        "passed": 21,
         "failed": 0,
         "skipped": 0,
-        "started": 1,
+        "started": 0,
         "not_started": 0
       },
       "has_activity": true,
-      "complete": false,
+      "complete": true,
       "qor_by_stage": {
         "conditioning": {
           "run_directory": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc",
@@ -714,154 +721,11 @@
         },
         "estimation": {
           "run_directory": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc",
-          "setup_wns": "-3026.7087",
-          "setup_tns": "-94478.8300",
-          "setup_nvp": "455",
-          "hold_wns": "-9940.6475",
-          "hold_tns": "-1333739.3012",
-          "hold_nvp": "560",
-          "net_violations_total": "606",
-          "max_trans": "487",
-          "max_cap": "227",
-          "total_net_length": "0.0000",
-          "total_number_of_wires": "0",
-          "total_number_of_contacts": "2149073",
-          "multibit_banking_ratio(%)": "31.25",
-          "physical_cell_count": "43972",
-          "phy_only_area": "5474.6520",
-          "max_mem_usage": "104.390GB",
-          "elapsed_time": "01:50:55",
-          "cumulative_runtime (hr/mn/sec)": "01:50:55",
-          "hplvt(%)": "5.49",
-          "hplvt_count": "8859",
-          "hpsvt(%)": "94.51",
-          "hpsvt_count": "152608",
-          "undefined(%)": "0.0",
-          "undefined_count": "2",
-          "total_cell_count": "161504",
-          "dont_touch_cell_count": "11215",
-          "macro_cell_count": "12",
-          "comb_cell_count": "134406",
-          "buf_inv_cell_count": "32119",
-          "buf_count": "9723",
-          "clock_buff_count": "0",
-          "clock_inv_count": "10",
-          "total_clock_cell_count": "10",
-          "inv_count": "22396",
-          "filp_flop_count": "22784",
-          "scan_cell_count": "22012",
-          "total_port_count": "1862",
-          "total_net_count": "173724",
-          "unconstrained_flop_count": "0",
-          "unconstrained_latch_count": "0",
-          "ucr": "0",
-          "unconstrained_input_port_count": "739",
-          "unconstrained_output_port_count": "1130",
-          "total_design_area": "295257.600",
-          "std_cell_area": "20714.520",
-          "macro_area": "237719.520",
-          "std+macro_area": "258434.040",
-          "seq_cell_area": "11235.492",
-          "comb_cell_area": "9479.028",
-          "buf_inv_area": "1814.520",
-          "buf_area": "789.252",
-          "inv_area": "1025.268",
-          "hard_macro_area": "238206.816",
-          "power_switch_cells_area": "0.000",
-          "tap_cells_area": "0.000",
-          "gnac_cells_area": "0.000",
-          "halo_cells_area": "0.000",
-          "bonus_cells_area": "0.000",
-          "dcap_cells_area": "0.000",
-          "spacer_cells_area": "0.000",
-          "fiducial_cells_area": "0.000",
-          "level_shifter_cell_count": "0",
-          "isolation_cell_count": "1734",
-          "switch_cell_count": "0",
-          "always_on_cell_count": "0",
-          "retention_cell_count": "697",
-          "tie_off_cell_count": "1",
-          "std_cell_utilization(%)": "12.09",
-          "macro_utilization(%)": "89.2",
-          "power_domain_count": "6",
-          "voltage_areas": "6",
-          "total_opens": "0",
-          "total_shorts": "0",
-          "total_drc": "0",
-          "max_fanout": "45",
-          "tool_version": "V-2023.12-SP5-6-613-T-20250917",
-          "cell_power_internal###func.0p675-0p81-76dot5-max.S_M40.pcss3": "207.860(mW)",
-          "net_switching_power###func.0p675-0p81-76dot5-max.S_M40.pcss3": "646.530(mW)",
-          "total_dynamic_power###func.0p675-0p81-76dot5-max.S_M40.pcss3": "854.390(mW)",
-          "cell_leakage_power###func.0p675-0p81-76dot5-max.S_M40.pcss3": "13.566(uW)",
-          "cell_power_internal###dfx.0p675-0p81-76dot5-max.S_125.prcs3": "5.141(mW)",
-          "net_switching_power###dfx.0p675-0p81-76dot5-max.S_125.prcs3": "2.500(mW)",
-          "total_dynamic_power###dfx.0p675-0p81-76dot5-max.S_125.prcs3": "7.641(mW)",
-          "cell_leakage_power###dfx.0p675-0p81-76dot5-max.S_125.prcs3": "2042.600(uW)",
-          "cell_power_internal###dfx.0p675-0p81-76dot5-max.S_M40.pcss3": "4.652(mW)",
-          "net_switching_power###dfx.0p675-0p81-76dot5-max.S_M40.pcss3": "2.961(mW)",
-          "total_dynamic_power###dfx.0p675-0p81-76dot5-max.S_M40.pcss3": "7.613(mW)",
-          "cell_leakage_power###dfx.0p675-0p81-76dot5-max.S_M40.pcss3": "11.785(uW)",
-          "setup_int_wns###func.0p675-0p81-76dot5-max.S_M40.pcss3": "0.000",
-          "setup_int_tns###func.0p675-0p81-76dot5-max.S_M40.pcss3": "0.000",
-          "setup_int_nvp###func.0p675-0p81-76dot5-max.S_M40.pcss3": "0",
-          "setup_io_wns###func.0p675-0p81-76dot5-max.S_M40.pcss3": "0.000",
-          "setup_io_tns###func.0p675-0p81-76dot5-max.S_M40.pcss3": "0.000",
-          "setup_io_nvp###func.0p675-0p81-76dot5-max.S_M40.pcss3": "0",
-          "max_cap_violations###func.0p675-0p81-76dot5-max.S_M40.pcss3": "227",
-          "worst_cap_slack###func.0p675-0p81-76dot5-max.S_M40.pcss3": "-939.125",
-          "max_transition_violations###func.0p675-0p81-76dot5-max.S_M40.pcss3": "13",
-          "worst_transition_violations###func.0p675-0p81-76dot5-max.S_M40.pcss3": "-148.010",
-          "setup_int_wns###dfx.0p675-0p81-76dot5-max.S_125.prcs3": "-399.921",
-          "setup_int_tns###dfx.0p675-0p81-76dot5-max.S_125.prcs3": "-6537.553",
-          "setup_int_nvp###dfx.0p675-0p81-76dot5-max.S_125.prcs3": "18",
-          "setup_io_wns###dfx.0p675-0p81-76dot5-max.S_125.prcs3": "-3026.709",
-          "setup_io_tns###dfx.0p675-0p81-76dot5-max.S_125.prcs3": "-71823.416",
-          "setup_io_nvp###dfx.0p675-0p81-76dot5-max.S_125.prcs3": "363",
-          "max_cap_violations###dfx.0p675-0p81-76dot5-max.S_125.prcs3": "190",
-          "worst_cap_slack###dfx.0p675-0p81-76dot5-max.S_125.prcs3": "-862.668",
-          "max_transition_violations###dfx.0p675-0p81-76dot5-max.S_125.prcs3": "486",
-          "worst_transition_violations###dfx.0p675-0p81-76dot5-max.S_125.prcs3": "-386.314",
-          "setup_int_wns###dfx.0p675-0p81-76dot5-max.S_M40.pcss3": "-420.920",
-          "setup_int_tns###dfx.0p675-0p81-76dot5-max.S_M40.pcss3": "-6237.661",
-          "setup_int_nvp###dfx.0p675-0p81-76dot5-max.S_M40.pcss3": "18",
-          "setup_io_wns###dfx.0p675-0p81-76dot5-max.S_M40.pcss3": "-839.143",
-          "setup_io_tns###dfx.0p675-0p81-76dot5-max.S_M40.pcss3": "-30682.444",
-          "setup_io_nvp###dfx.0p675-0p81-76dot5-max.S_M40.pcss3": "164",
-          "max_cap_violations###dfx.0p675-0p81-76dot5-max.S_M40.pcss3": "227",
-          "worst_cap_slack###dfx.0p675-0p81-76dot5-max.S_M40.pcss3": "-939.125",
-          "max_transition_violations###dfx.0p675-0p81-76dot5-max.S_M40.pcss3": "14",
-          "worst_transition_violations###dfx.0p675-0p81-76dot5-max.S_M40.pcss3": "-247.650",
-          "hold_int_wns###dfx.0p825-1p02-76dot5-min.F_125.pcff3": "-9940.647",
-          "hold_int_tns###dfx.0p825-1p02-76dot5-min.F_125.pcff3": "-1333739.301",
-          "hold_int_nvp###dfx.0p825-1p02-76dot5-min.F_125.pcff3": "560",
-          "hold_io_wns###dfx.0p825-1p02-76dot5-min.F_125.pcff3": "0.000",
-          "hold_io_tns###dfx.0p825-1p02-76dot5-min.F_125.pcff3": "0.000",
-          "hold_io_nvp###dfx.0p825-1p02-76dot5-min.F_125.pcff3": "0",
-          "max_cap_violations###dfx.0p825-1p02-76dot5-min.F_125.pcff3": "187",
-          "worst_cap_slack###dfx.0p825-1p02-76dot5-min.F_125.pcff3": "-743.322",
-          "max_transition_violations###dfx.0p825-1p02-76dot5-min.F_125.pcff3": "15",
-          "worst_transition_violations###dfx.0p825-1p02-76dot5-min.F_125.pcff3": "-148.010",
-          "setup_int_wns###func.0p675-0p81-76dot5-max.S_125.prcs3": "0.000",
-          "setup_int_tns###func.0p675-0p81-76dot5-max.S_125.prcs3": "0.000",
-          "setup_int_nvp###func.0p675-0p81-76dot5-max.S_125.prcs3": "0",
-          "setup_io_wns###func.0p675-0p81-76dot5-max.S_125.prcs3": "0.000",
-          "setup_io_tns###func.0p675-0p81-76dot5-max.S_125.prcs3": "0.000",
-          "setup_io_nvp###func.0p675-0p81-76dot5-max.S_125.prcs3": "0",
-          "max_cap_violations###func.0p675-0p81-76dot5-max.S_125.prcs3": "190",
-          "worst_cap_slack###func.0p675-0p81-76dot5-max.S_125.prcs3": "-862.668",
-          "max_transition_violations###func.0p675-0p81-76dot5-max.S_125.prcs3": "14",
-          "worst_transition_violations###func.0p675-0p81-76dot5-max.S_125.prcs3": "-148.010",
-          "hold_int_wns###func.0p825-1p02-76dot5-min.F_125.pcff3": "0.000",
-          "hold_int_tns###func.0p825-1p02-76dot5-min.F_125.pcff3": "0.000",
-          "hold_int_nvp###func.0p825-1p02-76dot5-min.F_125.pcff3": "0",
-          "hold_io_wns###func.0p825-1p02-76dot5-min.F_125.pcff3": "0.000",
-          "hold_io_tns###func.0p825-1p02-76dot5-min.F_125.pcff3": "0.000",
-          "hold_io_nvp###func.0p825-1p02-76dot5-min.F_125.pcff3": "0",
-          "max_cap_violations###func.0p825-1p02-76dot5-min.F_125.pcff3": "187",
-          "worst_cap_slack###func.0p825-1p02-76dot5-min.F_125.pcff3": "-743.322",
-          "max_transition_violations###func.0p825-1p02-76dot5-min.F_125.pcff3": "14",
-          "worst_transition_violations###func.0p825-1p02-76dot5-min.F_125.pcff3": "-148.010",
+          "max_mem_usage": "1.685GB",
+          "elapsed_time": "00:00:14",
+          "cumulative_runtime (hr/mn/sec)": "00:00:14",
+          "stage_cputime": "00:00:21",
+          "cumulative_cputime (hr/mn/sec)": "00:00:21",
           "block_cfg_sv_presence": "yes",
           "hip_list_path": "not_present",
           "hip_list_presence": "no",
@@ -869,37 +733,25 @@
           "hip_tags_presence": "yes",
           "hip_vars_path": "not_present_in_bscripts",
           "hip_vars_presence": "no",
-          "log_errors": "0",
-          "log_warnings": "13",
-          "num_of_scenarios": "6",
-          "macro_area_percentage": "91.98",
-          "total_seq_bits_count": "33379",
-          "floorplan_style": "rectangular",
-          "number_of_edges": "4",
-          "x_y_ratio": "0.29",
-          "aspect_ratio": "0.29",
-          "design_complexity": "complex",
+          "log_errors": "7",
+          "log_warnings": "10",
+          "std_cell_version": "pdk10_r4v0p0_fv",
           "flow_errors": "0",
-          "num_mv_upf_err_errors": "0",
-          "num_mv_upf_warn_errors": "26",
-          "num_mv_erc_err_errors": "0",
-          "num_mv_erc_warn_errors": "26",
+          "machine_type": "Intel(R) Xeon(R) Gold 6336Y CPU @ 2.40GHz",
+          "total_disk_usage": "109G",
           "cpu_freq": "2.40GHz",
           "cpu_core": "24",
           "power_rls_scorePVXCOLONPVXCOLONPVXCOLONpower_score_report": "Not Run",
           "power_rls_scorePVXCOLONPVXCOLONPVXCOLONpower_score": "Not Run",
-          "cg_immediate_fanout": "19333",
-          "cg_total_fanout": "440893",
-          "total_constant_input_cells": "20",
+          "milestone": "NA",
+          "stepping": "A0",
+          "total_constant_input_cells": "0",
           "total_redundant_cell": "0",
-          "PDK_ver": "pdk765_r0.9.1_25ww20.1",
-          "LIB_g1m": "pdk09_r3v0p1_fv",
-          "bits_per_flop": "1.399",
-          "bits_per_latch": "1.016",
-          "sequential_states": "33370"
+          "PDK_ver": "pdk765_r1.0_1_26ww12.4",
+          "LIB_g1m": "pdk10_r4v0p0_fv"
         }
       },
-      "app_options_report_count": 72,
+      "app_options_report_count": 76,
       "app_options_reports": [
         {
           "stage": "clock_route_opt",
@@ -1044,6 +896,30 @@
           "category": "user",
           "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/cts/fc.app_options_user.csv",
           "relative_path": "cts/fc.app_options_user.csv"
+        },
+        {
+          "stage": "estimation",
+          "category": "design_class",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/estimation/fc.app_options_design_class.csv",
+          "relative_path": "estimation/fc.app_options_design_class.csv"
+        },
+        {
+          "stage": "estimation",
+          "category": "global",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/estimation/fc.app_options_global.csv",
+          "relative_path": "estimation/fc.app_options_global.csv"
+        },
+        {
+          "stage": "estimation",
+          "category": "project",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/estimation/fc.app_options_project.csv",
+          "relative_path": "estimation/fc.app_options_project.csv"
+        },
+        {
+          "stage": "estimation",
+          "category": "user",
+          "path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/estimation/fc.app_options_user.csv",
+          "relative_path": "estimation/fc.app_options_user.csv"
         },
         {
           "stage": "fill",
@@ -1455,6 +1331,28 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/conditioning.skipped_fail"
           },
+          "latest_line": "INTEL_INFO   : Calculating QOR for scenario func.0p675-0p81-76dot5-max.S_125.prcs3 (::sd_report_design_qor) [Mon Apr 20 02:25:51 2026]",
+          "recent_lines": [
+            "INTEL_INFO   : Calculating max_capacitance (::sd_report_design_qor) [Mon Apr 20 02:24:16 2026]",
+            "INTEL_INFO   : Calculating QOR for scenario dfx.0p825-1p02-76dot5-min.F_125.pcff3 (::sd_report_design_qor) [Mon Apr 20 02:24:16 2026]",
+            "INTEL_INFO   : Calculating max_transition (::sd_report_design_qor) [Mon Apr 20 02:25:50 2026]",
+            "INTEL_INFO   : Calculating max_capacitance (::sd_report_design_qor) [Mon Apr 20 02:25:51 2026]",
+            "INTEL_INFO   : Calculating QOR for scenario func.0p675-0p81-76dot5-max.S_125.prcs3 (::sd_report_design_qor) [Mon Apr 20 02:25:51 2026]"
+          ],
+          "last_updated": "2026-04-20T02:26:20",
+          "size_bytes": 37125183,
+          "stage_exists": true
+        },
+        {
+          "stage": "floorplan",
+          "status": "passed",
+          "files": {
+            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.floorplan.log",
+            "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/floorplan.parallel_rpt_out.log",
+            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/floorplan.pass",
+            "fail_file": null,
+            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/floorplan.skipped_fail"
+          },
           "latest_line": "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/seq_ulvt/ndm/lib765_g1m_240h_50pp_seq_ulvt.ndm' (FILE-007)",
           "recent_lines": [
             "Information: Loading library file '/nfs/site/disks/ipi7.arc.proj_archive/arc/g70idvd5bdigs50cdshipm4/ip_handoff/IPDEA0UV2RTL1IFC1V8/be/physical/ndm/g70idvd5bdigs50cdshipm4.ndm' (FILE-007)",
@@ -1463,30 +1361,8 @@
             "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/seq_svt/ndm/lib765_g1m_240h_50pp_seq_svt.ndm' (FILE-007)",
             "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/seq_ulvt/ndm/lib765_g1m_240h_50pp_seq_ulvt.ndm' (FILE-007)"
           ],
-          "last_updated": "2026-04-20T01:56:08",
-          "size_bytes": 36323698,
-          "stage_exists": true
-        },
-        {
-          "stage": "floorplan",
-          "status": "running",
-          "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.floorplan.log",
-            "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/floorplan.parallel_rpt_out.log",
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "Thank you for using Fusion Compiler.",
-          "recent_lines": [
-            " 26940             2 Mb   Thu Apr 16 04:20:34 2026    Thu Apr 16 04:21:05 2026    awk {print $1}",
-            " 26939             1 Mb   Thu Apr 16 04:20:34 2026    Thu Apr 16 04:21:05 2026    du -sh /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn",
-            "CPU usage for this session:  10902 seconds (  3.03 hours)",
-            "Elapsed time for this session:   4469 seconds (  1.24 hours)",
-            "Thank you for using Fusion Compiler."
-          ],
-          "last_updated": "2026-04-20T01:57:46",
-          "size_bytes": 52113071,
+          "last_updated": "2026-04-20T02:25:45",
+          "size_bytes": 51707371,
           "stage_exists": true
         },
         {
@@ -1501,14 +1377,14 @@
           },
           "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
-            "Maximum memory usage for this session: 61319.38 MB",
-            "Maximum memory usage for this session including child processes: 61319.38 MB",
-            "CPU usage for this session:   2561 seconds (  0.71 hours)",
-            "Elapsed time for this session:   3005 seconds (  0.83 hours)",
+            "Maximum memory usage for this session: 456.06 MB",
+            "Maximum memory usage for this session including child processes: 456.06 MB",
+            "CPU usage for this session:     17 seconds (  0.00 hours)",
+            "Elapsed time for this session:     42 seconds (  0.01 hours)",
             "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-03-24T09:00:24",
-          "size_bytes": 42487076,
+          "last_updated": "2026-04-20T02:03:10",
+          "size_bytes": 28537803,
           "stage_exists": true
         },
         {
@@ -5790,6 +5666,364 @@
     "clock_power_switching###func.0p825-1p02-76dot5-min.F_125.pcff3",
     "clock_power_leakage###func.0p825-1p02-76dot5-min.F_125.pcff3",
     "clock_power_total###func.0p825-1p02-76dot5-min.F_125.pcff3"
+  ],
+  "qor_metric_groups": [
+    {
+      "name": "Timing",
+      "metrics": [
+        "setup_wns",
+        "setup_tns",
+        "setup_nvp",
+        "hold_wns",
+        "hold_tns",
+        "hold_nvp",
+        "setup_int_wns###func.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "setup_int_tns###func.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "setup_int_nvp###func.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "setup_io_wns###func.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "setup_io_tns###func.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "setup_io_nvp###func.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "setup_int_wns###dfx.0p675-0p81-76dot5-max.S_125.prcs3",
+        "setup_int_tns###dfx.0p675-0p81-76dot5-max.S_125.prcs3",
+        "setup_int_nvp###dfx.0p675-0p81-76dot5-max.S_125.prcs3",
+        "setup_io_wns###dfx.0p675-0p81-76dot5-max.S_125.prcs3",
+        "setup_io_tns###dfx.0p675-0p81-76dot5-max.S_125.prcs3",
+        "setup_io_nvp###dfx.0p675-0p81-76dot5-max.S_125.prcs3",
+        "setup_int_wns###dfx.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "setup_int_tns###dfx.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "setup_int_nvp###dfx.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "setup_io_wns###dfx.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "setup_io_tns###dfx.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "setup_io_nvp###dfx.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "hold_int_wns###dfx.0p825-1p02-76dot5-min.F_125.pcff3",
+        "hold_int_tns###dfx.0p825-1p02-76dot5-min.F_125.pcff3",
+        "hold_int_nvp###dfx.0p825-1p02-76dot5-min.F_125.pcff3",
+        "hold_io_wns###dfx.0p825-1p02-76dot5-min.F_125.pcff3",
+        "hold_io_tns###dfx.0p825-1p02-76dot5-min.F_125.pcff3",
+        "hold_io_nvp###dfx.0p825-1p02-76dot5-min.F_125.pcff3",
+        "setup_int_wns###func.0p675-0p81-76dot5-max.S_125.prcs3",
+        "setup_int_tns###func.0p675-0p81-76dot5-max.S_125.prcs3",
+        "setup_int_nvp###func.0p675-0p81-76dot5-max.S_125.prcs3",
+        "setup_io_wns###func.0p675-0p81-76dot5-max.S_125.prcs3",
+        "setup_io_tns###func.0p675-0p81-76dot5-max.S_125.prcs3",
+        "setup_io_nvp###func.0p675-0p81-76dot5-max.S_125.prcs3",
+        "hold_int_wns###func.0p825-1p02-76dot5-min.F_125.pcff3",
+        "hold_int_tns###func.0p825-1p02-76dot5-min.F_125.pcff3",
+        "hold_int_nvp###func.0p825-1p02-76dot5-min.F_125.pcff3",
+        "hold_io_wns###func.0p825-1p02-76dot5-min.F_125.pcff3",
+        "hold_io_tns###func.0p825-1p02-76dot5-min.F_125.pcff3",
+        "hold_io_nvp###func.0p825-1p02-76dot5-min.F_125.pcff3",
+        "setup_r2r_wns",
+        "setup_r2r_tns",
+        "setup_r2r_nvp",
+        "setup_io_wns",
+        "setup_io_tns",
+        "setup_io_nvp",
+        "setup_i2r_wns",
+        "setup_i2r_tns",
+        "setup_i2r_nvp",
+        "setup_r2o_wns",
+        "setup_r2o_tns",
+        "setup_r2o_nvp",
+        "hold_r2r_wns",
+        "hold_r2r_tns",
+        "hold_r2r_nvp",
+        "hold_io_wns",
+        "hold_io_tns",
+        "hold_io_nvp",
+        "hold_i2r_wns",
+        "hold_i2r_tns",
+        "hold_i2r_nvp",
+        "timing_complexity"
+      ],
+      "count": 64
+    },
+    {
+      "name": "Design rule / electrical",
+      "metrics": [
+        "net_violations_total",
+        "max_trans",
+        "max_cap",
+        "ucr",
+        "total_opens",
+        "total_shorts",
+        "total_drc",
+        "max_fanout",
+        "max_cap_violations###func.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "worst_cap_slack###func.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "max_transition_violations###func.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "worst_transition_violations###func.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "max_cap_violations###dfx.0p675-0p81-76dot5-max.S_125.prcs3",
+        "worst_cap_slack###dfx.0p675-0p81-76dot5-max.S_125.prcs3",
+        "max_transition_violations###dfx.0p675-0p81-76dot5-max.S_125.prcs3",
+        "worst_transition_violations###dfx.0p675-0p81-76dot5-max.S_125.prcs3",
+        "max_cap_violations###dfx.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "worst_cap_slack###dfx.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "max_transition_violations###dfx.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "worst_transition_violations###dfx.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "max_cap_violations###dfx.0p825-1p02-76dot5-min.F_125.pcff3",
+        "worst_cap_slack###dfx.0p825-1p02-76dot5-min.F_125.pcff3",
+        "max_transition_violations###dfx.0p825-1p02-76dot5-min.F_125.pcff3",
+        "worst_transition_violations###dfx.0p825-1p02-76dot5-min.F_125.pcff3",
+        "max_cap_violations###func.0p675-0p81-76dot5-max.S_125.prcs3",
+        "worst_cap_slack###func.0p675-0p81-76dot5-max.S_125.prcs3",
+        "max_transition_violations###func.0p675-0p81-76dot5-max.S_125.prcs3",
+        "worst_transition_violations###func.0p675-0p81-76dot5-max.S_125.prcs3",
+        "max_cap_violations###func.0p825-1p02-76dot5-min.F_125.pcff3",
+        "worst_cap_slack###func.0p825-1p02-76dot5-min.F_125.pcff3",
+        "max_transition_violations###func.0p825-1p02-76dot5-min.F_125.pcff3",
+        "worst_transition_violations###func.0p825-1p02-76dot5-min.F_125.pcff3",
+        "cg_immediate_fanout",
+        "cg_total_fanout",
+        "cts_max_fanout",
+        "opt_max_fanout",
+        "cts_max_fanout_ivar",
+        "ctotal_vs_cmax_0",
+        "ctotal_vs_cmax_10",
+        "ctotal_vs_cmax_20",
+        "ctotal_vs_cmax_30",
+        "ctotal_vs_cmax_40",
+        "ctotal_vs_cmax_50",
+        "ctotal_vs_cmax_60",
+        "ctotal_vs_cmax_70",
+        "ctotal_vs_cmax_80",
+        "ctotal_vs_cmax_90",
+        "ctotal_vs_cmax_100",
+        "ctotal_vs_cmax_More",
+        "slope_vs_limit_0",
+        "slope_vs_limit_10",
+        "slope_vs_limit_20",
+        "slope_vs_limit_30",
+        "slope_vs_limit_40",
+        "slope_vs_limit_50",
+        "slope_vs_limit_60",
+        "slope_vs_limit_70",
+        "slope_vs_limit_80",
+        "slope_vs_limit_90",
+        "slope_vs_limit_100",
+        "slope_vs_limit_More"
+      ],
+      "count": 61
+    },
+    {
+      "name": "Area / utilization",
+      "metrics": [
+        "total_net_length",
+        "total_number_of_wires",
+        "total_number_of_contacts",
+        "phy_only_area",
+        "total_design_area",
+        "std_cell_area",
+        "macro_area",
+        "std+macro_area",
+        "seq_cell_area",
+        "comb_cell_area",
+        "buf_inv_area",
+        "buf_area",
+        "inv_area",
+        "hard_macro_area",
+        "tap_cells_area",
+        "gnac_cells_area",
+        "halo_cells_area",
+        "bonus_cells_area",
+        "dcap_cells_area",
+        "spacer_cells_area",
+        "fiducial_cells_area",
+        "std_cell_utilization(%)",
+        "macro_utilization(%)",
+        "voltage_areas",
+        "macro_area_percentage",
+        "floorplan_style",
+        "number_of_edges",
+        "x_y_ratio",
+        "aspect_ratio",
+        "design_complexity"
+      ],
+      "count": 30
+    },
+    {
+      "name": "Cell / netlist structure",
+      "metrics": [
+        "physical_cell_count",
+        "total_cell_count",
+        "dont_touch_cell_count",
+        "macro_cell_count",
+        "comb_cell_count",
+        "buf_inv_cell_count",
+        "buf_count",
+        "clock_buff_count",
+        "clock_inv_count",
+        "total_clock_cell_count",
+        "inv_count",
+        "filp_flop_count",
+        "scan_cell_count",
+        "total_port_count",
+        "total_net_count",
+        "unconstrained_flop_count",
+        "unconstrained_latch_count",
+        "unconstrained_input_port_count",
+        "unconstrained_output_port_count",
+        "level_shifter_cell_count",
+        "isolation_cell_count",
+        "switch_cell_count",
+        "always_on_cell_count",
+        "retention_cell_count",
+        "tie_off_cell_count",
+        "block_cfg_sv_presence",
+        "hip_list_presence",
+        "hip_tags_presence",
+        "hip_vars_presence",
+        "num_of_scenarios",
+        "sequential_states",
+        "number_of_clocks",
+        "sdp_enablement_status",
+        "boundary_opt",
+        "optimize_flop",
+        "qor_strategy"
+      ],
+      "count": 36
+    },
+    {
+      "name": "Multibit banking",
+      "metrics": [
+        "multibit_banking_ratio(%)",
+        "total_seq_bits_count",
+        "bits_per_flop",
+        "bits_per_latch",
+        "mbff_coverage(%)",
+        "mbff_count",
+        "total_multi_bit_count",
+        "mbff_4bit_count",
+        "mbff_8bit_count",
+        "multibit_opt_presence"
+      ],
+      "count": 10
+    },
+    {
+      "name": "Power",
+      "metrics": [
+        "hplvt(%)",
+        "hplvt_count",
+        "hpsvt(%)",
+        "hpsvt_count",
+        "undefined(%)",
+        "undefined_count",
+        "power_switch_cells_area",
+        "power_domain_count",
+        "cell_power_internal###func.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "net_switching_power###func.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "total_dynamic_power###func.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "cell_leakage_power###func.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "cell_power_internal###dfx.0p675-0p81-76dot5-max.S_125.prcs3",
+        "net_switching_power###dfx.0p675-0p81-76dot5-max.S_125.prcs3",
+        "total_dynamic_power###dfx.0p675-0p81-76dot5-max.S_125.prcs3",
+        "cell_leakage_power###dfx.0p675-0p81-76dot5-max.S_125.prcs3",
+        "cell_power_internal###dfx.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "net_switching_power###dfx.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "total_dynamic_power###dfx.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "cell_leakage_power###dfx.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "power_rls_scorePVXCOLONPVXCOLONPVXCOLONpower_score_report",
+        "power_rls_scorePVXCOLONPVXCOLONPVXCOLONpower_score",
+        "cg_cell_count",
+        "gated_registers(%)",
+        "cell_power_internal###func.0p825-1p02-76dot5-min.F_125.pcff3",
+        "net_switching_power###func.0p825-1p02-76dot5-min.F_125.pcff3",
+        "total_dynamic_power###func.0p825-1p02-76dot5-min.F_125.pcff3",
+        "cell_leakage_power###func.0p825-1p02-76dot5-min.F_125.pcff3",
+        "clock_style",
+        "auto_clock_gating",
+        "cg_cell_rtl",
+        "cg_cell_tool",
+        "rtl_vs_tool_cg",
+        "disable_elvt",
+        "disable_ulvt",
+        "cts_power_opt_mode",
+        "compile_en_pwr",
+        "place_opt_en_pwr",
+        "clock_opt_en_pwr",
+        "cts_enable_low_power",
+        "power_effort",
+        "vt_used",
+        "clock_power_internal###dfx.0p675-0p81-76dot5-max.S_125.prcs3",
+        "clock_power_switching###dfx.0p675-0p81-76dot5-max.S_125.prcs3",
+        "clock_power_leakage###dfx.0p675-0p81-76dot5-max.S_125.prcs3",
+        "clock_power_total###dfx.0p675-0p81-76dot5-max.S_125.prcs3",
+        "clock_power_internal###dfx.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "clock_power_switching###dfx.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "clock_power_leakage###dfx.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "clock_power_total###dfx.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "clock_power_internal###dfx.0p825-1p02-76dot5-min.F_125.pcff3",
+        "clock_power_switching###dfx.0p825-1p02-76dot5-min.F_125.pcff3",
+        "clock_power_leakage###dfx.0p825-1p02-76dot5-min.F_125.pcff3",
+        "clock_power_total###dfx.0p825-1p02-76dot5-min.F_125.pcff3",
+        "clock_power_internal###func.0p675-0p81-76dot5-max.S_125.prcs3",
+        "clock_power_switching###func.0p675-0p81-76dot5-max.S_125.prcs3",
+        "clock_power_leakage###func.0p675-0p81-76dot5-max.S_125.prcs3",
+        "clock_power_total###func.0p675-0p81-76dot5-max.S_125.prcs3",
+        "clock_power_internal###func.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "clock_power_switching###func.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "clock_power_leakage###func.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "clock_power_total###func.0p675-0p81-76dot5-max.S_M40.pcss3",
+        "clock_power_internal###func.0p825-1p02-76dot5-min.F_125.pcff3",
+        "clock_power_switching###func.0p825-1p02-76dot5-min.F_125.pcff3",
+        "clock_power_leakage###func.0p825-1p02-76dot5-min.F_125.pcff3",
+        "clock_power_total###func.0p825-1p02-76dot5-min.F_125.pcff3"
+      ],
+      "count": 66
+    },
+    {
+      "name": "Runtime / resource",
+      "metrics": [
+        "max_mem_usage",
+        "elapsed_time",
+        "cumulative_runtime (hr/mn/sec)",
+        "cpu_freq",
+        "cpu_core",
+        "stage_cputime",
+        "cumulative_cputime (hr/mn/sec)",
+        "num_cores",
+        "machine_type",
+        "total_disk_usage"
+      ],
+      "count": 10
+    },
+    {
+      "name": "Environment / metadata",
+      "metrics": [
+        "run_directory",
+        "tool_version",
+        "hip_list_path",
+        "hip_tags_path",
+        "hip_vars_path",
+        "log_errors",
+        "log_warnings",
+        "flow_errors",
+        "num_mv_upf_err_errors",
+        "num_mv_upf_warn_errors",
+        "num_mv_erc_err_errors",
+        "num_mv_erc_warn_errors",
+        "total_constant_input_cells",
+        "total_redundant_cell",
+        "PDK_ver",
+        "LIB_g1m",
+        "dft_skip",
+        "seq_cell_coverage(%)",
+        "designpackage",
+        "rtl_list_used",
+        "upf_used",
+        "saif_file",
+        "ccd_max_postpone",
+        "ccd_max_prepone",
+        "clock_opt_ccd",
+        "compile_ccd",
+        "route_opt_ccd",
+        "pdk_version",
+        "std_cell_version",
+        "milestone",
+        "stepping"
+      ],
+      "count": 31
+    }
   ]
 };
 
@@ -5824,34 +6058,68 @@
 	}
 
 	function qorValue(stageMetrics, metric) {
-	  if (!stageMetrics || !stageMetrics[metric]) {
+	  if (!stageMetrics || !Object.prototype.hasOwnProperty.call(stageMetrics, metric)) {
 		return '<span class="empty">N/A</span>';
 	  }
 	  return `<span class="qor-value">${htmlEscape(stageMetrics[metric])}</span>`;
 	}
 
-	function renderRunQorTable(run) {
-	  const stages = ['conditioning', 'floorplan', 'estimation'];
+	function hasMetric(stageMetrics, metric) {
+	  return Boolean(stageMetrics) && Object.prototype.hasOwnProperty.call(stageMetrics, metric);
+	}
+
+	function formatMetricLabel(metric) {
+	  const [name, scenario] = String(metric).split('###', 2);
 	  return `
-		<div class="table-wrap">
-		<table class="qor-table run-qor-table">
-		  <thead>
-			<tr>
-			  <th>QoR metric</th>
-			  ${stages.map(stage => `<th>${htmlEscape(stage)}</th>`).join('')}
-			</tr>
-		  </thead>
-		  <tbody>
-			${snapshot.qor_metrics.map(metric => `
-			  <tr>
-				<td class="stage-name">${htmlEscape(metric)}</td>
-				${stages.map(stage => `<td>${qorValue(run.qor_by_stage[stage], metric)}</td>`).join('')}
-			  </tr>
-			`).join('')}
-		  </tbody>
-		</table>
+		<div class="metric-label">
+		  <span class="stage-name">${htmlEscape(name)}</span>
+		  ${scenario ? `<span class="metric-context">${htmlEscape(scenario)}</span>` : ''}
 		</div>
 	  `;
+	}
+
+	function renderQorGroup(groupName, metrics, tableClass, headers, rowHtml) {
+	  return `
+		<div class="qor-group">
+		  <div class="qor-group-header">
+			<h4 class="qor-group-title">${htmlEscape(groupName)}</h4>
+			<span class="pill qor-group-count">${metrics.length} metrics</span>
+		  </div>
+		  <div class="table-wrap">
+			<table class="qor-table ${tableClass}">
+			  <thead>
+				<tr>
+				  <th>QoR metric</th>
+				  ${headers.map(header => `<th>${htmlEscape(header)}</th>`).join('')}
+				</tr>
+			  </thead>
+			  <tbody>
+				${metrics.map(metric => rowHtml(metric)).join('')}
+			  </tbody>
+			</table>
+		  </div>
+		</div>
+	  `;
+	}
+
+	function renderRunQorTable(run) {
+	  const stages = ['conditioning', 'floorplan', 'estimation'];
+	  const groups = snapshot.qor_metric_groups.filter(group => group.metrics.some(metric => stages.some(stage => hasMetric(run.qor_by_stage[stage], metric))));
+	  if (!groups.length) {
+		return '<div class="empty">No QoR metrics available for conditioning, floorplan, or estimation.</div>';
+	  }
+	  return `<div class="qor-groups">${groups.map(group => renderQorGroup(
+		group.name,
+		group.metrics,
+		'run-qor-table',
+		stages,
+		metric => `
+		  <tr>
+			<td>${formatMetricLabel(metric)}</td>
+			${stages.map(stage => `<td>${qorValue(run.qor_by_stage[stage], metric)}</td>`).join('')}
+		  </tr>
+		`
+	  )).join('')}</div>`;
 	}
 
 	async function fetchJson(path) {
@@ -6057,6 +6325,22 @@
 				  `).join('')}
 				</tbody>
 			  </table>
+			  </div>
+			  <div class="qor-groups">
+				${snapshot.qor_metric_groups
+				  .filter(group => group.metrics.some(metric => snapshot.runs.some(run => hasMetric(run.qor_by_stage[stage], metric))))
+				  .map(group => renderQorGroup(
+					group.name,
+					group.metrics,
+					'cross-qor-table',
+					snapshot.runs.map(run => run.label),
+					metric => `
+					  <tr>
+						<td>${formatMetricLabel(metric)}</td>
+						${snapshot.runs.map(run => `<td>${qorValue(run.qor_by_stage[stage], metric)}</td>`).join('')}
+					  </tr>
+					`
+				  )).join('') || '<div class="empty">No QoR metrics available for this stage.</div>'}
 			  </div>
 			</div>
 		  `).join('')}

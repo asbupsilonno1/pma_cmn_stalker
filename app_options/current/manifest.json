@@ -1,6 +1,6 @@
 {
   "folder": "current",
-  "report_count": 72,
+  "report_count": 76,
   "reports": [
     {
       "stage": "clock_route_opt",
@@ -77,25 +77,25 @@
     {
       "stage": "conditioning",
       "category": "design_class",
-      "row_count": 3059,
+      "row_count": 3019,
       "file": "app_options/current/conditioning__design_class.json"
     },
     {
       "stage": "conditioning",
       "category": "global",
-      "row_count": 3059,
+      "row_count": 3019,
       "file": "app_options/current/conditioning__global.json"
     },
     {
       "stage": "conditioning",
       "category": "project",
-      "row_count": 3059,
+      "row_count": 3019,
       "file": "app_options/current/conditioning__project.json"
     },
     {
       "stage": "conditioning",
       "category": "user",
-      "row_count": 3059,
+      "row_count": 3019,
       "file": "app_options/current/conditioning__user.json"
     },
     {
@@ -145,6 +145,30 @@
       "category": "user",
       "row_count": 3019,
       "file": "app_options/current/cts__user.json"
+    },
+    {
+      "stage": "estimation",
+      "category": "design_class",
+      "row_count": 3052,
+      "file": "app_options/current/estimation__design_class.json"
+    },
+    {
+      "stage": "estimation",
+      "category": "global",
+      "row_count": 3051,
+      "file": "app_options/current/estimation__global.json"
+    },
+    {
+      "stage": "estimation",
+      "category": "project",
+      "row_count": 3052,
+      "file": "app_options/current/estimation__project.json"
+    },
+    {
+      "stage": "estimation",
+      "category": "user",
+      "row_count": 3053,
+      "file": "app_options/current/estimation__user.json"
     },
     {
       "stage": "fill",
