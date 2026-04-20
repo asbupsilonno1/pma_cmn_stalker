@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T15:53:14",
+  "generated_at": "2026-04-20T16:23:54",
   "run_count": 5,
   "runs": [
     {
@@ -1339,10 +1339,10 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "NEX: extractor of pma_cmn freed",
+      "fc_latest_line": "Warning: Routing of p_vdd could be slow (ZRT-148)",
       "overall_status": "running",
       "running_stage": "estimation",
-      "last_updated": "2026-04-20T15:52:49",
+      "last_updated": "2026-04-20T16:22:54",
       "summary": {
         "passed": 19,
         "failed": 0,
@@ -2252,8 +2252,8 @@
           "log_error_count": 27,
           "has_log_errors": true,
           "log_error_samples": [
-            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
-            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)",
+            "Information: >>>>>>> 38 unique error and warning message tags while observing fast: (MSG-3100)",
+            "Information: >>>>>>> Summary: 24878 error&warning MSGs observed during fast (MSG-3103)",
             "Error: Unable to resolve reference to 'pma_cmn.import_design.opened.for.read_upf_14131.ndm:ip765hduspsr2048x52m4b2s13r2p1d0'. (LNK-081)"
           ],
           "files": {
@@ -2271,8 +2271,8 @@
             "Elapsed time for this session:   2676 seconds (  0.74 hours)",
             "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-20T15:52:49",
-          "size_bytes": 28345152,
+          "last_updated": "2026-04-20T16:22:54",
+          "size_bytes": 30151709,
           "stage_exists": true
         },
         {
@@ -2654,10 +2654,10 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "Warning: map_retention_cell of retention strategy retention_for_sus for power domain cmn_susg specifies unusable library cells : g1mfvzr03fc1d02x5 g1mfvzr03fc2d02x5 g1mfvzr03fc3d02x5 g1mfvzr03fb1d02x5 g1mfvzr03fb2d02x5 g1mfvzr03fb3d02x5 g1mfvzr03fb1d03x5 g1mfvzr03fb2d03x5 g1mfvzr03fb3d03x5 g1mfvzr03fb1d06x5 g1mfvzr03fb2d06x5 g1mfvzr03fb3d06x5 g1mfvzr03fb1d12x5 g1mfvzr03fb2d12x5 g1mfvzr03fb3d12x5 g1mfvzr03jc1d02x5 g1mfvzr03jc2d02x5 g1mfvzr03jc3d02x5 g1mfvzr0bfc1d02x5 g1mfvzr0bfc2d02x5 g1mfvzr0bfc3d02x5 g1mfvzr0bfb1d02x5 g1mfvzr0bfb2d02x5 g1mfvzr0bfb3d02x5 g1mfvzr0bfb1d03x5 g1mfvzr0bfb2d03x5 g1mfvzr0bfb3d03x5 g1mfvzr0bfb1d06x5 g1mfvzr0bfb2d06x5 g1mfvzr0bfb3d06x5 g1mfvzr0bjc1d02x5 g1mfvzr0bjc2d02x5 g1mfvzr0bjc3d02x5. (MV-112)",
+      "fc_latest_line": "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsibase_svt/ndm/lib765_g1m_240h_50pp_dsibase_svt.ndm' (FILE-007)",
       "overall_status": "running",
-      "running_stage": "floorplan",
-      "last_updated": "2026-04-20T15:52:03",
+      "running_stage": "estimation",
+      "last_updated": "2026-04-20T16:23:35",
       "summary": {
         "passed": 7,
         "failed": 0,
@@ -3500,7 +3500,7 @@
         {
           "stage": "conditioning",
           "status": "passed",
-          "log_error_count": 6,
+          "log_error_count": 8,
           "has_log_errors": true,
           "log_error_samples": [
             "Information: >>>>>>> 20 unique error and warning message tags while observing fast: (MSG-3100)",
@@ -3514,51 +3514,51 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/conditioning.skipped_fail"
           },
-          "latest_line": "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsibase_svt/ndm/lib765_g1m_240h_50pp_dsibase_svt.ndm' (FILE-007)",
+          "latest_line": "INTEL_INFO   : Calculating QOR for scenario func.0p675-0p81-76dot5-max.S_M40.pcss3 (::sd_report_design_qor) [Mon Apr 20 16:22:48 2026]",
           "recent_lines": [
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsi3_lvt/ndm/lib765_g1m_240h_50pp_dsi3_lvt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsi3_svt/ndm/lib765_g1m_240h_50pp_dsi3_svt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsibase_lvt/ndm/lib765_g1m_240h_50pp_dsibase_lvt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsibase_lvt/ndm/lib765_g1m_240h_50pp_dsibase_lvt_layonly.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsibase_svt/ndm/lib765_g1m_240h_50pp_dsibase_svt.ndm' (FILE-007)"
+            "INTEL_INFO   : Generating power reports for dfx.0p675-0p81-76dot5-max.S_M40.pcss3 (::sd_report_design_qor) [Mon Apr 20 16:21:48 2026]",
+            "INTEL_INFO   : Generating power reports for dfx.0p825-1p02-76dot5-min.F_125.pcff3 (::sd_report_design_qor) [Mon Apr 20 16:22:03 2026]",
+            "INTEL_INFO   : Generating power reports for func.0p675-0p81-76dot5-max.S_125.prcs3 (::sd_report_design_qor) [Mon Apr 20 16:22:18 2026]",
+            "INTEL_INFO   : Generating power reports for func.0p825-1p02-76dot5-min.F_125.pcff3 (::sd_report_design_qor) [Mon Apr 20 16:22:33 2026]",
+            "INTEL_INFO   : Calculating QOR for scenario func.0p675-0p81-76dot5-max.S_M40.pcss3 (::sd_report_design_qor) [Mon Apr 20 16:22:48 2026]"
           ],
-          "last_updated": "2026-04-20T15:51:50",
-          "size_bytes": 36396574,
+          "last_updated": "2026-04-20T16:23:19",
+          "size_bytes": 37195344,
           "stage_exists": true
         },
         {
           "stage": "floorplan",
-          "status": "running",
-          "log_error_count": 33,
+          "status": "passed",
+          "log_error_count": 4,
           "has_log_errors": true,
           "log_error_samples": [
-            "Error: Unable to resolve reference to 'pma_cmn.import_design.opened.for.read_upf_36398.ndm:ip765hduspsr2048x52m4b2s13r2p1d0'. (LNK-081)",
-            "Error: Unable to resolve reference to 'pma_cmn.import_design.opened.for.read_upf_36398.ndm:ltphy_cmnsynth'. (LNK-081)",
-            "Error: Unable to resolve reference to 'pma_cmn.import_design.opened.for.read_upf_36398.ndm:ltphydltop_pg_25ma_v2'. (LNK-081)"
+            "Information: FLOW error check completed. (FAE-4001)",
+            "Information: Flow error check: SUCCESS. (FAE-4001)",
+            "Error: could not open script file \"/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/src/pma_lane/1276.5/apr_fc/scripts/port_buffer.tcl\" (CMD-015)"
           ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc.floorplan.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/floorplan.parallel_rpt_out.log",
-            "pass_file": null,
+            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/floorplan.pass",
             "fail_file": null,
-            "skipped_fail_file": null
+            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/floorplan.skipped_fail"
           },
-          "latest_line": "Thank you for using Fusion Compiler.",
+          "latest_line": "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/base_svt/ndm/lib765_g1m_240h_50pp_base_svt.ndm' (FILE-007)",
           "recent_lines": [
-            "Maximum memory usage for this session: 66638.84 MB",
-            "Maximum memory usage for this session including child processes: 66638.84 MB",
-            "CPU usage for this session:   7394 seconds (  2.05 hours)",
-            "Elapsed time for this session:   4005 seconds (  1.11 hours)",
-            "Thank you for using Fusion Compiler."
+            "INTEL_INFO   : opening ndm for parallel outputs and reports_generation (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/global/snps/apr_fc/step_load.tcl) [Mon Apr 20 16:18:11 2026]",
+            "START_CMD: open_lib            CPU:     21 s ( 0.01 hr) ELAPSE:     28 s ( 0.01 hr) MEM-PEAK:   451 Mb Mon Apr 20 16:18:11 2026",
+            "Information: Loading library file '/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/outputs/floorplan/pma_cmn_TMP_for_parallel_rpt_out_gen.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/base_lvt/ndm/lib765_g1m_240h_50pp_base_lvt.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/base_svt/ndm/lib765_g1m_240h_50pp_base_svt.ndm' (FILE-007)"
           ],
-          "last_updated": "2026-04-20T15:52:03",
-          "size_bytes": 26766159,
+          "last_updated": "2026-04-20T16:21:27",
+          "size_bytes": 51830731,
           "stage_exists": true
         },
         {
           "stage": "estimation",
-          "status": "passed",
-          "log_error_count": 88,
+          "status": "running",
+          "log_error_count": 25,
           "has_log_errors": true,
           "log_error_samples": [
             "Error: Unable to resolve reference to 'pma_cmn.import_design.opened.for.read_upf_36398.ndm:ip765hduspsr2048x52m4b2s13r2p1d0'. (LNK-081)",
@@ -3568,9 +3568,9 @@
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc.estimation.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/estimation.parallel_rpt_out.log",
-            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/estimation.pass",
+            "pass_file": null,
             "fail_file": null,
-            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/estimation.skipped_fail"
+            "skipped_fail_file": null
           },
           "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
@@ -3580,32 +3580,32 @@
             "Elapsed time for this session:   2114 seconds (  0.59 hours)",
             "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-19T16:58:47",
-          "size_bytes": 25230508,
+          "last_updated": "2026-04-20T16:23:35",
+          "size_bytes": 26815421,
           "stage_exists": true
         }
       ]
     },
     {
       "label": "estimation",
-      "flow_type": "apr",
+      "flow_type": "rtla_plus_apr",
       "terminal_stage": "opt_signoff",
-      "has_rtla_stages": false,
+      "has_rtla_stages": true,
       "base_path": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation",
       "logs_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs",
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "Working On Max_tran settings for In Port: i_iddq_test_mode_all_gated",
+      "fc_latest_line": "Timing Update Completed: Mem-peak: 53755 MB / Date: Mon Apr 20 16:21:59 2026",
       "overall_status": "running",
-      "running_stage": "setup_timing",
-      "last_updated": "2026-04-20T15:53:03",
+      "running_stage": "conditioning",
+      "last_updated": "2026-04-20T16:23:40",
       "summary": {
-        "passed": 14,
+        "passed": 15,
         "failed": 0,
         "skipped": 0,
         "started": 1,
-        "not_started": 4
+        "not_started": 5
       },
       "has_activity": true,
       "complete": false,
@@ -3707,7 +3707,7 @@
         {
           "stage": "init_floorplan",
           "status": "passed",
-          "log_error_count": 3,
+          "log_error_count": 6,
           "has_log_errors": true,
           "log_error_samples": [
             "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
@@ -3721,49 +3721,96 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/init_floorplan.skipped_fail"
           },
-          "latest_line": "INTEL_INFO   : executing  proc sd_report_check_mv_design to generate reports (::sd_report_all) [Mon Apr 20 15:52:08 2026]",
+          "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
-            "INTEL_INFO   : executing  proc sd_report_utilization to generate reports (::sd_report_all) [Mon Apr 20 15:45:42 2026]",
-            "INTEL_INFO   : executing  proc sd_report_utilization_per_va to generate reports (::sd_report_all) [Mon Apr 20 15:45:45 2026]",
-            "INTEL_INFO   : executing  proc sd_report_qor to generate reports (::sd_report_all) [Mon Apr 20 15:45:47 2026]",
-            "INTEL_INFO   : executing  proc sd_report_design to generate reports (::sd_report_all) [Mon Apr 20 15:52:02 2026]",
-            "INTEL_INFO   : executing  proc sd_report_check_mv_design to generate reports (::sd_report_all) [Mon Apr 20 15:52:08 2026]"
+            "Maximum memory usage for this session: 39325.01 MB",
+            "Maximum memory usage for this session including child processes: 39325.01 MB",
+            "CPU usage for this session:   2059 seconds (  0.57 hours)",
+            "Elapsed time for this session:   1093 seconds (  0.30 hours)",
+            "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-20T15:52:32",
-          "size_bytes": 39847231,
+          "last_updated": "2026-04-20T15:57:00",
+          "size_bytes": 39926285,
           "stage_exists": true
         },
         {
           "stage": "setup_timing",
-          "status": "running",
+          "status": "passed",
           "log_error_count": 44,
           "has_log_errors": true,
           "log_error_samples": [
-            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
-            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)",
-            "INTEL_ERROR  : MCMM-E5: Could not find matching process label: lib765_rcss_pcss_cmax in lib: ltphy_lane  for corner: 0p675-0p81-76dot5-max.S_M40.pcss3, oc type S_M40, please check the library collaterals  for consistency with PDK / DP configuration or specify an override with  ivar(mcmm,process_label,S_M40,ltphy_lane) or ivar(mcmm,process_label,0p675-0p81-76dot5-max.S_M40.pcss3,ltphy_lane) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/global/snps/apr_fc/tech_set_op_conds_process_labels.tcl) [Mon Apr 20 15:47:29 2026]"
+            "INTEL_ERROR  : MCMM-E5: Could not find matching process label: lib765_rcss_pcss_cmax in lib: ltphy_lane  for corner: 0p675-0p81-76dot5-max.S_M40.pcss3, oc type S_M40, please check the library collaterals  for consistency with PDK / DP configuration or specify an override with  ivar(mcmm,process_label,S_M40,ltphy_lane) or ivar(mcmm,process_label,0p675-0p81-76dot5-max.S_M40.pcss3,ltphy_lane) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/global/snps/apr_fc/tech_set_op_conds_process_labels.tcl) [Mon Apr 20 15:47:29 2026]",
+            "INTEL_ERROR  : MCMM-E5: Could not find matching process label: lib765_rcss_pcss_cmax in lib: ltphy_cmnsynth  for corner: 0p675-0p81-76dot5-max.S_M40.pcss3, oc type S_M40, please check the library collaterals  for consistency with PDK / DP configuration or specify an override with  ivar(mcmm,process_label,S_M40,ltphy_cmnsynth) or ivar(mcmm,process_label,0p675-0p81-76dot5-max.S_M40.pcss3,ltphy_cmnsynth) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/global/snps/apr_fc/tech_set_op_conds_process_labels.tcl) [Mon Apr 20 15:47:29 2026]",
+            "INTEL_ERROR  : MCMM-E5: Could not find matching process label: lib765_rcss_pcss_cmax in lib: ltphydltop_pg_25ma_v1  for corner: 0p675-0p81-76dot5-max.S_M40.pcss3, oc type S_M40, please check the library collaterals  for consistency with PDK / DP configuration or specify an override with  ivar(mcmm,process_label,S_M40,ltphydltop_pg_25ma_v1) or ivar(mcmm,process_label,0p675-0p81-76dot5-max.S_M40.pcss3,ltphydltop_pg_25ma_v1) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/global/snps/apr_fc/tech_set_op_conds_process_labels.tcl) [Mon Apr 20 15:47:29 2026]"
           ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.setup_timing.log",
+            "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/setup_timing.parallel_rpt_out.log",
+            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/setup_timing.pass",
+            "fail_file": null,
+            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/setup_timing.skipped_fail"
+          },
+          "latest_line": "INTEL_INFO   : loading /p/hdk/cad/dp_contour/76p5/v1.0_1/pdk765_r1.0_1_26ww12.4/libraries/halo/ndm/common/postprocess/intel76halo_g1m_spacing_labels.tcl (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Mon Apr 20 16:23:24 2026]",
+          "recent_lines": [
+            "INTEL_INFO   : loading /p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/supspcl_lvt/ndm/postprocess/lib765_g1m_240h_50pp_supspcl_lvt_vertical_abutment_pattern.tcl (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Mon Apr 20 16:23:23 2026]",
+            "INTEL_INFO   : Processing library g1m_supspcl_svt, loading DP abutment_rules (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Mon Apr 20 16:23:24 2026]",
+            "INTEL_INFO   : loading /p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/supspcl_svt/ndm/postprocess/lib765_g1m_240h_50pp_supspcl_svt_vertical_abutment_pattern.tcl (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Mon Apr 20 16:23:24 2026]",
+            "INTEL_INFO   : Processing library halo, loading DP abutment_rules (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Mon Apr 20 16:23:24 2026]",
+            "INTEL_INFO   : loading /p/hdk/cad/dp_contour/76p5/v1.0_1/pdk765_r1.0_1_26ww12.4/libraries/halo/ndm/common/postprocess/intel76halo_g1m_spacing_labels.tcl (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Mon Apr 20 16:23:24 2026]"
+          ],
+          "last_updated": "2026-04-20T16:23:40",
+          "size_bytes": 30972033,
+          "stage_exists": true
+        },
+        {
+          "stage": "conditioning",
+          "status": "running",
+          "log_error_count": 4,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)"
+          ],
+          "files": {
+            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.conditioning.log",
             "parallel_log": null,
             "pass_file": null,
             "fail_file": null,
             "skipped_fail_file": null
           },
-          "latest_line": "Working On Max_tran settings for In Port: i_dfx_secure_visa_nt_[1]",
+          "latest_line": "Timing Update Completed: Mem-peak: 53755 MB / Date: Mon Apr 20 16:21:59 2026",
           "recent_lines": [
-            "Working On Max_tran settings for In Port: i_ck_uc_fijtag_tck",
-            "Transition Setting On CLOCK_IN PORT:i_ck_uc_fijtag_tck TRAN_VALUE:150,TRAN_ADJST_VALUE:2,CLK_NAME:i_ck_uc_fijtag_tck,PULSE_WIDTH:2500.0 Mon Apr 20 15:53:01 2026",
-            "Working On Max_tran settings for In Port: i_ck_ucjtag_tck",
-            "Transition Setting On CLOCK_IN PORT:i_ck_ucjtag_tck TRAN_VALUE:150,TRAN_ADJST_VALUE:2,CLK_NAME:i_ck_ucjtag_tck,PULSE_WIDTH:2500.0 Mon Apr 20 15:53:01 2026",
-            "Working On Max_tran settings for In Port: i_dfx_secure_visa_nt_[1]"
+            "Information: Starting rtl_opt / conditioning / Load Design (FLW-8000)",
+            "Information: Time: 2026-04-20 16:21:47 / Session:  00:14:55 / Command:  00:02:40 / CPU:  00:02:31 / Memory: 53625 MB (FLW-8100)",
+            "Information: Timer using 16 threads",
+            "Timing Update Started(Full_timing_update) : updateCount: 1 / Mem-peak : 53755 MB / Date: Mon Apr 20 16:21:50 2026",
+            "Timing Update Completed: Mem-peak: 53755 MB / Date: Mon Apr 20 16:21:59 2026"
           ],
-          "last_updated": "2026-04-20T15:53:03",
-          "size_bytes": 15281727,
+          "last_updated": "2026-04-20T16:22:04",
+          "size_bytes": 15895757,
           "stage_exists": true
         },
         {
           "stage": "floorplan",
+          "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
+          "files": {
+            "fc_log": null,
+            "parallel_log": null,
+            "pass_file": null,
+            "fail_file": null,
+            "skipped_fail_file": null
+          },
+          "latest_line": "",
+          "recent_lines": [],
+          "last_updated": null,
+          "size_bytes": 0,
+          "stage_exists": false
+        },
+        {
+          "stage": "estimation",
           "status": "not_started",
           "log_error_count": 0,
           "has_log_errors": false,
