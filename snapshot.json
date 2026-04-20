@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19T23:12:09",
+  "generated_at": "2026-04-19T23:27:25",
   "run_count": 5,
   "runs": [
     {
@@ -12,19 +12,19 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "fc_shell>",
-      "overall_status": "passed",
-      "running_stage": null,
-      "last_updated": "2026-04-18T11:03:44",
+      "fc_latest_line": "INTEL_INFO   : script_stop  : /nfs/site/disks/crt_tools_058/fusioncompiler/X-2025.06-SP1-T-20250911/auxx/DCRT/tcl/embd_dcrt_util.tcl.e (type=file, level=2, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/global/snps/apr_fc/step_elaborate.tcl) [Sun Apr 19 23:25:15 2026]",
+      "overall_status": "running",
+      "running_stage": "import_design",
+      "last_updated": "2026-04-19T23:25:20",
       "summary": {
-        "passed": 21,
+        "passed": 20,
         "failed": 0,
         "skipped": 0,
-        "started": 0,
+        "started": 1,
         "not_started": 0
       },
       "has_activity": true,
-      "complete": true,
+      "complete": false,
       "qor_by_stage": {
         "conditioning": {
           "run_directory": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc",
@@ -1119,13 +1119,13 @@
       "stages": [
         {
           "stage": "import_design",
-          "status": "passed",
+          "status": "running",
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.import_design.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/import_design.parallel_rpt_out.log",
-            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/import_design.pass",
+            "pass_file": null,
             "fail_file": null,
-            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/import_design.skipped_fail"
+            "skipped_fail_file": null
           },
           "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
@@ -1135,8 +1135,8 @@
             "Elapsed time for this session:   1471 seconds (  0.41 hours)",
             "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-16T00:44:54",
-          "size_bytes": 36298906,
+          "last_updated": "2026-04-19T23:25:20",
+          "size_bytes": 32882564,
           "stage_exists": true
         },
         {
