@@ -101,25 +101,25 @@
     {
       "stage": "read_upf",
       "category": "design_class",
-      "row_count": 3054,
+      "row_count": 0,
       "file": "app_options/flattenall/read_upf__design_class.json"
     },
     {
       "stage": "read_upf",
       "category": "global",
-      "row_count": 3052,
+      "row_count": 0,
       "file": "app_options/flattenall/read_upf__global.json"
     },
     {
       "stage": "read_upf",
       "category": "project",
-      "row_count": 3054,
+      "row_count": 0,
       "file": "app_options/flattenall/read_upf__project.json"
     },
     {
       "stage": "read_upf",
       "category": "user",
-      "row_count": 3055,
+      "row_count": 0,
       "file": "app_options/flattenall/read_upf__user.json"
     },
     {

@@ -77,25 +77,25 @@
     {
       "stage": "conditioning",
       "category": "design_class",
-      "row_count": 3018,
+      "row_count": 3059,
       "file": "app_options/golden/conditioning__design_class.json"
     },
     {
       "stage": "conditioning",
       "category": "global",
-      "row_count": 3018,
+      "row_count": 3059,
       "file": "app_options/golden/conditioning__global.json"
     },
     {
       "stage": "conditioning",
       "category": "project",
-      "row_count": 3018,
+      "row_count": 3059,
       "file": "app_options/golden/conditioning__project.json"
     },
     {
       "stage": "conditioning",
       "category": "user",
-      "row_count": 3018,
+      "row_count": 3059,
       "file": "app_options/golden/conditioning__user.json"
     },
     {
@@ -245,25 +245,25 @@
     {
       "stage": "init_floorplan",
       "category": "design_class",
-      "row_count": 3055,
+      "row_count": 3056,
       "file": "app_options/golden/init_floorplan__design_class.json"
     },
     {
       "stage": "init_floorplan",
       "category": "global",
-      "row_count": 3055,
+      "row_count": 3056,
       "file": "app_options/golden/init_floorplan__global.json"
     },
     {
       "stage": "init_floorplan",
       "category": "project",
-      "row_count": 3055,
+      "row_count": 3056,
       "file": "app_options/golden/init_floorplan__project.json"
     },
     {
       "stage": "init_floorplan",
       "category": "user",
-      "row_count": 3055,
+      "row_count": 3056,
       "file": "app_options/golden/init_floorplan__user.json"
     },
     {
@@ -341,49 +341,49 @@
     {
       "stage": "read_upf",
       "category": "design_class",
-      "row_count": 3054,
+      "row_count": 3055,
       "file": "app_options/golden/read_upf__design_class.json"
     },
     {
       "stage": "read_upf",
       "category": "global",
-      "row_count": 3052,
+      "row_count": 3053,
       "file": "app_options/golden/read_upf__global.json"
     },
     {
       "stage": "read_upf",
       "category": "project",
-      "row_count": 3054,
+      "row_count": 3055,
       "file": "app_options/golden/read_upf__project.json"
     },
     {
       "stage": "read_upf",
       "category": "user",
-      "row_count": 3055,
+      "row_count": 3056,
       "file": "app_options/golden/read_upf__user.json"
     },
     {
       "stage": "redefine",
       "category": "design_class",
-      "row_count": 3055,
+      "row_count": 3056,
       "file": "app_options/golden/redefine__design_class.json"
     },
     {
       "stage": "redefine",
       "category": "global",
-      "row_count": 3055,
+      "row_count": 3056,
       "file": "app_options/golden/redefine__global.json"
     },
     {
       "stage": "redefine",
       "category": "project",
-      "row_count": 3055,
+      "row_count": 3056,
       "file": "app_options/golden/redefine__project.json"
     },
     {
       "stage": "redefine",
       "category": "user",
-      "row_count": 3055,
+      "row_count": 3056,
       "file": "app_options/golden/redefine__user.json"
     },
     {
@@ -437,25 +437,25 @@
     {
       "stage": "setup_timing",
       "category": "design_class",
-      "row_count": 3055,
+      "row_count": 3056,
       "file": "app_options/golden/setup_timing__design_class.json"
     },
     {
       "stage": "setup_timing",
       "category": "global",
-      "row_count": 3055,
+      "row_count": 3056,
       "file": "app_options/golden/setup_timing__global.json"
     },
     {
       "stage": "setup_timing",
       "category": "project",
-      "row_count": 3055,
+      "row_count": 3056,
       "file": "app_options/golden/setup_timing__project.json"
     },
     {
       "stage": "setup_timing",
       "category": "user",
-      "row_count": 3055,
+      "row_count": 3056,
       "file": "app_options/golden/setup_timing__user.json"
     }
   ]

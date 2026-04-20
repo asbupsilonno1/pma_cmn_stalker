@@ -125,11 +125,19 @@
 	tr:hover td { background: rgba(255,255,255,0.02); }
 	.stage-name { font-weight: 700; }
 	.logline { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #d2daf0; max-width: 520px; white-space: normal; overflow-wrap: anywhere; word-break: break-word; }
+	.log-issues { min-width: 230px; }
+	.issue-chip { display: inline-flex; align-items: center; gap: 8px; padding: 5px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; border: 1px solid transparent; }
+	.issue-chip::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+	.issue-chip.clean { color: #8fb3ff; background: rgba(96, 165, 250, 0.1); border-color: rgba(96, 165, 250, 0.25); }
+	.issue-chip.errors { color: #fda4af; background: rgba(244, 63, 94, 0.12); border-color: rgba(244, 63, 94, 0.3); }
+	.issue-samples { margin-top: 8px; display: grid; gap: 4px; }
+	.issue-sample { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; color: #f8b4bf; line-height: 1.4; }
 	.status-table th:first-child, .status-table td:first-child { position: sticky; left: 0; background: linear-gradient(90deg, rgba(18,25,44,0.99), rgba(18,25,44,0.99) 88%, rgba(18,25,44,0.88)); z-index: 2; box-shadow: 8px 0 14px rgba(3,8,20,0.22); }
 	.status-table th:nth-child(1), .status-table td:nth-child(1) { min-width: 150px; width: 16%; }
 	.status-table th:nth-child(2), .status-table td:nth-child(2) { min-width: 120px; width: 14%; }
 	.status-table th:nth-child(3), .status-table td:nth-child(3) { min-width: 170px; width: 18%; }
-	.status-table th:nth-child(4), .status-table td:nth-child(4) { min-width: 320px; width: 52%; }
+	.status-table th:nth-child(4), .status-table td:nth-child(4) { min-width: 240px; width: 24%; }
+	.status-table th:nth-child(5), .status-table td:nth-child(5) { min-width: 320px; width: 28%; }
 	.cross-cell { min-width: 190px; }
 	.cross-cell .badge { margin-bottom: 6px; }
 	.small-note { font-size: 11px; color: var(--muted); line-height: 1.45; }
@@ -150,6 +158,10 @@
 	.details-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-top: 12px; }
 	.compact-log { border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: rgba(7, 11, 24, 0.45); }
 	.compact-log h4 { margin: 0 0 8px; font-size: 13px; }
+	.inventory-links { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 12px; }
+	.inventory-link { color: #8fb3ff; text-decoration: none; font-weight: 600; }
+	.inventory-link:hover { text-decoration: underline; }
+	.inventory-note { margin-bottom: 10px; }
 	.app-options-controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; margin-bottom: 12px; }
 	.app-options-controls label { display: grid; gap: 6px; color: var(--muted); font-size: 12px; }
 	.app-options-controls select, .app-options-controls input { min-width: 170px; background: rgba(15,23,42,0.9); color: var(--text); border: 1px solid var(--border); border-radius: 10px; padding: 8px 10px; }
@@ -190,7 +202,7 @@
   <div class="container">
 	<section class="hero">
 	  <h1>PMA CMN stalker</h1>
-	  <p>Generated at 2026-04-20T11:41:23</p>
+	  <p>Generated at 2026-04-20T13:37:19</p>
 	  <p>Monitoring APR FC flow stages only. RTLA-only stages are limited to conditioning and estimation when those logs are actually present.</p>
 	  <p>Auxiliary logs such as abutment-rule, spacing-rule, interactive, assembly, and merge helpers are intentionally excluded from the stage list.</p>
 	</section>
@@ -200,7 +212,7 @@
   </div>
   <script>
 	const snapshot = {
-  "generated_at": "2026-04-20T11:41:23",
+  "generated_at": "2026-04-20T13:37:19",
   "run_count": 5,
   "runs": [
     {
@@ -1379,6 +1391,13 @@
         {
           "stage": "import_design",
           "status": "passed",
+          "log_error_count": 13,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Sun Apr 19 23:20:31 2026]",
+            "Warning:  /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/release/latest/fe_collateral/subip/hip/lcpll_g4_11g/src/rtl/lcpll_g4_11g_plllc_plldigtop.sv:2317: Forward references to 'DCC' are non-standard. This may be treated as an error in the future. (VER-733)",
+            "Warning:  /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/release/latest/fe_collateral/subip/hip/lcpll_g4_16g/src/rtl/lcpll_g4_16g_plllc_plldigtop.sv:2317: Forward references to 'DCC' are non-standard. This may be treated as an error in the future. (VER-733)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.import_design.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/import_design.parallel_rpt_out.log",
@@ -1401,6 +1420,13 @@
         {
           "stage": "read_upf",
           "status": "passed",
+          "log_error_count": 9,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Sun Apr 19 23:33:20 2026]",
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Cannot find a fill cell to create fill shape in. (NDMUI-401)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.read_upf.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/read_upf.parallel_rpt_out.log",
@@ -1423,6 +1449,13 @@
         {
           "stage": "redefine",
           "status": "passed",
+          "log_error_count": 10,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Sun Apr 19 23:41:54 2026]",
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Cannot find a fill cell to create fill shape in. (NDMUI-401)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.redefine.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/redefine.parallel_rpt_out.log",
@@ -1445,6 +1478,13 @@
         {
           "stage": "init_floorplan",
           "status": "passed",
+          "log_error_count": 10,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Sun Apr 19 23:52:45 2026]",
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.init_floorplan.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/init_floorplan.parallel_rpt_out.log",
@@ -1467,6 +1507,13 @@
         {
           "stage": "setup_timing",
           "status": "passed",
+          "log_error_count": 54,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Mon Apr 20 00:03:25 2026]",
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.setup_timing.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/setup_timing.parallel_rpt_out.log",
@@ -1489,6 +1536,13 @@
         {
           "stage": "conditioning",
           "status": "passed",
+          "log_error_count": 15,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Mon Apr 20 00:21:50 2026]",
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.conditioning.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/conditioning.parallel_rpt_out.log",
@@ -1511,6 +1565,13 @@
         {
           "stage": "floorplan",
           "status": "passed",
+          "log_error_count": 21,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Mon Apr 20 01:33:05 2026]",
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.floorplan.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/floorplan.parallel_rpt_out.log",
@@ -1533,6 +1594,13 @@
         {
           "stage": "estimation",
           "status": "passed",
+          "log_error_count": 15,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Mon Apr 20 06:15:21 2026]",
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.estimation.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/estimation.parallel_rpt_out.log",
@@ -1555,6 +1623,13 @@
         {
           "stage": "initial_map",
           "status": "passed",
+          "log_error_count": 303,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)",
+            "Warning: Timer unexpected state: error code '3', state information: 'MG: Skip Scheduling arrival in scenario: dfx.0p825-1p02-76dot5-min.F_125.pcff3 for Term: i_cmnlogic/i_cmn/i_pg/unit_mux_gated_cmn/mux_body/visa2_registers_deserializer/C151/Z[1] because its level < level of fanin Term: i_cmnlogic/i_cmn/i_pg/unit_mux_gated_cmn/mux_body/visa2_registers_deserializer/C151/CONTROL2[0]"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.initial_map.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/initial_map.parallel_rpt_out.log",
@@ -1577,6 +1652,13 @@
         {
           "stage": "insert_dft",
           "status": "passed",
+          "log_error_count": 57,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)",
+            "Information: FLOW error check completed. (FAE-4001)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.insert_dft.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/insert_dft.parallel_rpt_out.log",
@@ -1599,6 +1681,13 @@
         {
           "stage": "logic_opto",
           "status": "passed",
+          "log_error_count": 193,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)",
+            "Error: Mode: dfx, Generated clock 'i_ck_jtag_tck_div4_as_sys_clkm_fast' has no path from master clock 'i_ck_jtag_tck_div2_as_sys'; zero source latency will be used. (GRF-014)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.logic_opto.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/logic_opto.parallel_rpt_out.log",
@@ -1621,6 +1710,13 @@
         {
           "stage": "compile_initial_opto",
           "status": "passed",
+          "log_error_count": 8693,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)",
+            "Error: Mode: dfx, Generated clock 'i_ck_jtag_tck_div4_as_sys_clkm_fast' has no path from master clock 'i_ck_jtag_tck_div2_as_sys'; zero source latency will be used. (GRF-014)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.compile_initial_opto.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/compile_initial_opto.parallel_rpt_out.log",
@@ -1643,6 +1739,13 @@
         {
           "stage": "compile_final_opto",
           "status": "passed",
+          "log_error_count": 41,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)",
+            "Information: >>>>>>> 36 unique error and warning message tags while observing compile_fusion / final_place: (MSG-3100)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.compile_final_opto.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.parallel_rpt_out.log",
@@ -1665,6 +1768,13 @@
         {
           "stage": "ctmesh",
           "status": "passed",
+          "log_error_count": 14,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)",
+            "Information: FLOW error check completed. (FAE-4001)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.ctmesh.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/ctmesh.parallel_rpt_out.log",
@@ -1687,6 +1797,13 @@
         {
           "stage": "cts",
           "status": "passed",
+          "log_error_count": 154,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)",
+            "Error: Nothing matched for -balance_points (SEL-005)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.cts.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/cts.parallel_rpt_out.log",
@@ -1709,6 +1826,13 @@
         {
           "stage": "clock_route_opt",
           "status": "passed",
+          "log_error_count": 38,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)",
+            "Error: Mode: func, Generated clock 'i_ck_jtag_tck_div4_as_sys_clkm_fast' has no path from master clock 'i_ck_jtag_tck_div2_as_sys'; zero source latency will be used. (GRF-014)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.clock_route_opt.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/clock_route_opt.parallel_rpt_out.log",
@@ -1731,6 +1855,13 @@
         {
           "stage": "route_auto",
           "status": "passed",
+          "log_error_count": 34,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)",
+            "Error: Power cell i_cmnlogic/i_cmn/snps_cmn_coreg__iso_cmn_core_out_snps_odat_pcs_bs_tdo_UPF_ISO is not associated with any power strategies or supply net connections. (UPF-097)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.route_auto.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/route_auto.parallel_rpt_out.log",
@@ -1753,6 +1884,13 @@
         {
           "stage": "route_opt",
           "status": "passed",
+          "log_error_count": 48,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)",
+            "Error: Power cell i_cmnlogic/i_cmn/snps_cmn_coreg__iso_cmn_core_out_snps_odat_pcs_bs_tdo_UPF_ISO is not associated with any power strategies or supply net connections. (UPF-097)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.route_opt.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/route_opt.parallel_rpt_out.log",
@@ -1775,6 +1913,13 @@
         {
           "stage": "opt_signoff",
           "status": "passed",
+          "log_error_count": 8,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Overriding ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' (same value) [Mon Mar  2 16:02:51 2026]",
+            "set ivar(error_patterns) \"^Error|^INTEL_ERROR|^Fatal|^ERROR|^INTEL_FATAL|^NEX.*ERROR\"",
+            "set ivar(error_patterns) \"^Error|^ERROR|^INTEL_ERROR|^Fatal|^FATAL|^INTEL_FATAL\""
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.opt_signoff.log",
             "parallel_log": null,
@@ -1797,6 +1942,13 @@
         {
           "stage": "fill",
           "status": "passed",
+          "log_error_count": 67,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)",
+            "INTEL_ERROR  : Need to define either heml or hpml layer for macro: tic76d4m14_diccdreg_cont_horz, please set ivar(heml,tic76d4m14_diccdreg_cont_horz) or ivar(hpml,tic76d4m14_diccdreg_cont_horz) in your block vars.tcl file and re-run. (::sd_get_keepout_cells) [Thu Apr 16 21:32:57 2026]"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.fill.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fill.parallel_rpt_out.log",
@@ -1819,6 +1971,13 @@
         {
           "stage": "finish",
           "status": "passed",
+          "log_error_count": 33,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)",
+            "Information: FLOW error check completed. (FAE-4001)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.finish.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/finish.parallel_rpt_out.log",
@@ -1851,15 +2010,15 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "Thank you for using Fusion Compiler.",
-      "overall_status": "started",
-      "running_stage": null,
-      "last_updated": "2026-04-19T16:57:00",
+      "fc_latest_line": "Information: CPU Load: 21%, Ram Free: 3 GB, Swap Free: 386 GB, Work Disk Free: 301 GB, Tmp Disk Free: 1241 GB (MSG-3995)",
+      "overall_status": "running",
+      "running_stage": "conditioning",
+      "last_updated": "2026-04-20T13:26:57",
       "summary": {
-        "passed": 20,
+        "passed": 19,
         "failed": 0,
         "skipped": 0,
-        "started": 0,
+        "started": 1,
         "not_started": 1
       },
       "has_activity": true,
@@ -3009,6 +3168,13 @@
         {
           "stage": "import_design",
           "status": "passed",
+          "log_error_count": 13,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Mon Apr 20 12:01:14 2026]",
+            "Warning:  /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/release/latest/fe_collateral/subip/hip/lcpll_g4_11g/src/rtl/lcpll_g4_11g_plllc_plldigtop.sv:2317: Forward references to 'DCC' are non-standard. This may be treated as an error in the future. (VER-733)",
+            "Warning:  /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/release/latest/fe_collateral/subip/hip/lcpll_g4_16g/src/rtl/lcpll_g4_16g_plllc_plldigtop.sv:2317: Forward references to 'DCC' are non-standard. This may be treated as an error in the future. (VER-733)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.import_design.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/import_design.parallel_rpt_out.log",
@@ -3018,19 +3184,26 @@
           },
           "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
-            "Maximum memory usage for this session: 38069.61 MB",
-            "Maximum memory usage for this session including child processes: 38069.61 MB",
-            "CPU usage for this session:    677 seconds (  0.19 hours)",
-            "Elapsed time for this session:   1346 seconds (  0.37 hours)",
+            " 36428             1 Mb   Mon Apr 20 12:30:46 2026    Mon Apr 20 12:31:18 2026    grep -v functionality",
+            " 36429             1 Mb   Mon Apr 20 12:30:46 2026    Mon Apr 20 12:31:18 2026    wc -l",
+            "CPU usage for this session:    454 seconds (  0.13 hours)",
+            "Elapsed time for this session:   1098 seconds (  0.31 hours)",
             "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-19T14:12:26",
-          "size_bytes": 30903156,
+          "last_updated": "2026-04-20T12:31:43",
+          "size_bytes": 34873016,
           "stage_exists": true
         },
         {
           "stage": "read_upf",
           "status": "passed",
+          "log_error_count": 9,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Mon Apr 20 12:13:44 2026]",
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Cannot find a fill cell to create fill shape in. (NDMUI-401)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.read_upf.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/read_upf.parallel_rpt_out.log",
@@ -3040,19 +3213,26 @@
           },
           "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
-            " 39356         36783 Mb   Sun Apr 19 14:19:08 2026    Sun Apr 19 14:19:38 2026    /nfs/site/disks/crt_tools_058/fusioncompiler/X-2025.06-SP1-T-20250911/linux64/nwtn/bin/dgcom_exec -shell fc -root_path /nfs/site/disks/crt_tools_058/fusioncompiler/X-2025.06-SP1-T-20250911 -f /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_g",
-            " 42426            18 Mb   Sun Apr 19 14:19:38 2026    Sun Apr 19 14:20:09 2026    /usr/intel/pkgs/gnumeric/1.12.45/.bin/ssconvert /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports/read_upf/pma_cmn.qor_summary /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/",
-            "CPU usage for this session:    525 seconds (  0.15 hours)",
-            "Elapsed time for this session:   1323 seconds (  0.37 hours)",
+            "PROCESS-ID    MEM-PEAK    START-TIME                  END-TIME                    PROCESS-NAME",
+            " 31042         37659 Mb   Mon Apr 20 12:43:40 2026    Mon Apr 20 12:44:10 2026    /nfs/site/disks/crt_tools_058/fusioncompiler/X-2025.06-SP1-T-20250911/linux64/nwtn/bin/dgcom_exec -shell fc -root_path /nfs/site/disks/crt_tools_058/fusioncompiler/X-2025.06-SP1-T-20250911 -f /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_g",
+            "CPU usage for this session:    555 seconds (  0.15 hours)",
+            "Elapsed time for this session:   1369 seconds (  0.38 hours)",
             "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-19T14:20:12",
-          "size_bytes": 28636423,
+          "last_updated": "2026-04-20T12:45:01",
+          "size_bytes": 32675924,
           "stage_exists": true
         },
         {
           "stage": "redefine",
           "status": "passed",
+          "log_error_count": 10,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Mon Apr 20 12:22:23 2026]",
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Cannot find a fill cell to create fill shape in. (NDMUI-401)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.redefine.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/redefine.parallel_rpt_out.log",
@@ -3062,19 +3242,26 @@
           },
           "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
-            "Maximum memory usage for this session: 38277.34 MB",
-            "Maximum memory usage for this session including child processes: 38277.34 MB",
-            "CPU usage for this session:    602 seconds (  0.17 hours)",
-            "Elapsed time for this session:   1333 seconds (  0.37 hours)",
+            "Maximum memory usage for this session: 39170.58 MB",
+            "Maximum memory usage for this session including child processes: 39170.58 MB",
+            "CPU usage for this session:    836 seconds (  0.23 hours)",
+            "Elapsed time for this session:   1902 seconds (  0.53 hours)",
             "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-19T14:30:39",
-          "size_bytes": 37450907,
+          "last_updated": "2026-04-20T13:04:47",
+          "size_bytes": 41475364,
           "stage_exists": true
         },
         {
           "stage": "init_floorplan",
           "status": "passed",
+          "log_error_count": 10,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Mon Apr 20 12:33:21 2026]",
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.init_floorplan.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/init_floorplan.parallel_rpt_out.log",
@@ -3084,19 +3271,26 @@
           },
           "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
-            "Maximum memory usage for this session: 38486.52 MB",
-            "Maximum memory usage for this session including child processes: 38486.52 MB",
-            "CPU usage for this session:    810 seconds (  0.22 hours)",
-            "Elapsed time for this session:   1430 seconds (  0.40 hours)",
+            "Maximum memory usage for this session: 39326.98 MB",
+            "Maximum memory usage for this session including child processes: 39326.98 MB",
+            "CPU usage for this session:   2364 seconds (  0.66 hours)",
+            "Elapsed time for this session:   1986 seconds (  0.55 hours)",
             "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-19T14:42:18",
-          "size_bytes": 35856493,
+          "last_updated": "2026-04-20T13:16:50",
+          "size_bytes": 39900170,
           "stage_exists": true
         },
         {
           "stage": "setup_timing",
           "status": "passed",
+          "log_error_count": 50,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Mon Apr 20 12:44:06 2026]",
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.setup_timing.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/setup_timing.parallel_rpt_out.log",
@@ -3104,27 +3298,34 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/setup_timing.skipped_fail"
           },
-          "latest_line": "Thank you for using Fusion Compiler.",
+          "latest_line": "net w_idv_enable length = 398.750 um, r = 5688.507 ohm, c = 67.545 ff, cc = 0.000 ff pinCount: 2 (ID: 2139)",
           "recent_lines": [
-            " 14856            53 Mb   Sun Apr 19 15:19:54 2026    Sun Apr 19 15:20:25 2026    /p/hdk/pu_tu/prd/eou_system/2025.09.plus/bin/../py/venv/bin/python /p/hdk/pu_tu/prd/eou_system/2025.09.plus/bin/../py/splunk_be_upload.py -c /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/Indicators/gen_apr",
-            " 14854             2 Mb   Sun Apr 19 15:19:54 2026    Sun Apr 19 15:20:25 2026    /bin/bash /p/hdk/pu_tu/prd/eou_system/2025.09.plus/bin/splunk_be_upload -c /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/Indicators/gen_apr_fc_hc.csv -metadata ward=/nfs/site/disks/zsc11_hsio_ave18_SD_0000",
-            "CPU usage for this session:   2658 seconds (  0.74 hours)",
-            "Elapsed time for this session:   2702 seconds (  0.75 hours)",
-            "Thank you for using Fusion Compiler."
+            "net w_idv_tdi length = 402.947 um, r = 5790.652 ohm, c = 68.289 ff, cc = 0.000 ff pinCount: 2 (ID: 2147)",
+            "net w_rst_idv_trst length = 404.852 um, r = 5883.253 ohm, c = 68.882 ff, cc = 0.000 ff pinCount: 2 (ID: 2148)",
+            "net w_idv_update length = 406.076 um, r = 5907.043 ohm, c = 69.094 ff, cc = 0.000 ff pinCount: 2 (ID: 2149)",
+            "net w_idv_capture length = 402.724 um, r = 5801.375 ohm, c = 68.259 ff, cc = 0.000 ff pinCount: 2 (ID: 2138)",
+            "net w_idv_enable length = 398.750 um, r = 5688.507 ohm, c = 67.545 ff, cc = 0.000 ff pinCount: 2 (ID: 2139)"
           ],
-          "last_updated": "2026-04-19T15:21:02",
-          "size_bytes": 36284915,
+          "last_updated": "2026-04-20T13:26:57",
+          "size_bytes": 40275560,
           "stage_exists": true
         },
         {
           "stage": "conditioning",
-          "status": "passed",
+          "status": "running",
+          "log_error_count": 31,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Mon Apr 20 13:02:44 2026]",
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.conditioning.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/conditioning.parallel_rpt_out.log",
-            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/conditioning.pass",
+            "pass_file": null,
             "fail_file": null,
-            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/conditioning.skipped_fail"
+            "skipped_fail_file": null
           },
           "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
@@ -3134,13 +3335,20 @@
             "Elapsed time for this session:   2220 seconds (  0.62 hours)",
             "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-19T15:31:57",
-          "size_bytes": 26554027,
+          "last_updated": "2026-04-20T13:17:50",
+          "size_bytes": 28530221,
           "stage_exists": true
         },
         {
           "stage": "floorplan",
           "status": "passed",
+          "log_error_count": 57,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Sun Apr 19 14:55:25 2026]",
+            "Error: Unable to resolve reference to 'pma_cmn.import_design.opened.for.read_upf_14131.ndm:ip765hduspsr2048x52m4b2s13r2p1d0'. (LNK-081)",
+            "Error: Unable to resolve reference to 'pma_cmn.import_design.opened.for.read_upf_14131.ndm:ltphy_cmnsynth'. (LNK-081)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.floorplan.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/floorplan.parallel_rpt_out.log",
@@ -3163,6 +3371,13 @@
         {
           "stage": "estimation",
           "status": "passed",
+          "log_error_count": 190,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Sun Apr 19 15:36:13 2026]",
+            "Error: Unable to resolve reference to 'pma_cmn.import_design.opened.for.read_upf_14131.ndm:ip765hduspsr2048x52m4b2s13r2p1d0'. (LNK-081)",
+            "Error: Unable to resolve reference to 'pma_cmn.import_design.opened.for.read_upf_14131.ndm:ltphy_cmnsynth'. (LNK-081)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.estimation.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/estimation.parallel_rpt_out.log",
@@ -3185,6 +3400,13 @@
         {
           "stage": "initial_map",
           "status": "passed",
+          "log_error_count": 2173,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Unable to resolve reference to 'ip765hduspsr2048x52m4b2s13r2p1d0'. (LNK-081)",
+            "Error: Unable to resolve reference to 'ltphy_cmnsynth'. (LNK-081)",
+            "Error: Unable to resolve reference to 'ltphydltop_pg_25ma_v2'. (LNK-081)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.initial_map.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/initial_map.parallel_rpt_out.log",
@@ -3207,6 +3429,13 @@
         {
           "stage": "insert_dft",
           "status": "passed",
+          "log_error_count": 93,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Unable to resolve reference to 'ip765hduspsr2048x52m4b2s13r2p1d0'. (LNK-081)",
+            "Error: Unable to resolve reference to 'ltphy_cmnsynth'. (LNK-081)",
+            "Error: Unable to resolve reference to 'ltphydltop_pg_25ma_v2'. (LNK-081)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.insert_dft.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/insert_dft.parallel_rpt_out.log",
@@ -3229,6 +3458,13 @@
         {
           "stage": "logic_opto",
           "status": "passed",
+          "log_error_count": 147,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Unable to resolve reference to 'ip765hduspsr2048x52m4b2s13r2p1d0'. (LNK-081)",
+            "Error: Unable to resolve reference to 'ltphy_cmnsynth'. (LNK-081)",
+            "Error: Unable to resolve reference to 'ltphydltop_pg_25ma_v2'. (LNK-081)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.logic_opto.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/logic_opto.parallel_rpt_out.log",
@@ -3251,6 +3487,13 @@
         {
           "stage": "compile_initial_opto",
           "status": "passed",
+          "log_error_count": 10811,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Unable to resolve reference to 'ip765hduspsr2048x52m4b2s13r2p1d0'. (LNK-081)",
+            "Error: Unable to resolve reference to 'ltphy_cmnsynth'. (LNK-081)",
+            "Error: Unable to resolve reference to 'ltphydltop_pg_25ma_v2'. (LNK-081)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.compile_initial_opto.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/compile_initial_opto.parallel_rpt_out.log",
@@ -3273,6 +3516,13 @@
         {
           "stage": "compile_final_opto",
           "status": "passed",
+          "log_error_count": 151,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Unable to resolve reference to 'ip765hduspsr2048x52m4b2s13r2p1d0'. (LNK-081)",
+            "Error: Unable to resolve reference to 'ltphy_cmnsynth'. (LNK-081)",
+            "Error: Unable to resolve reference to 'ltphydltop_pg_25ma_v2'. (LNK-081)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.compile_final_opto.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.parallel_rpt_out.log",
@@ -3295,6 +3545,13 @@
         {
           "stage": "ctmesh",
           "status": "passed",
+          "log_error_count": 51,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Unable to resolve reference to 'ip765hduspsr2048x52m4b2s13r2p1d0'. (LNK-081)",
+            "Error: Unable to resolve reference to 'ltphy_cmnsynth'. (LNK-081)",
+            "Error: Unable to resolve reference to 'ltphydltop_pg_25ma_v2'. (LNK-081)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.ctmesh.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/ctmesh.parallel_rpt_out.log",
@@ -3317,6 +3574,13 @@
         {
           "stage": "cts",
           "status": "passed",
+          "log_error_count": 262,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Unable to resolve reference to 'ip765hduspsr2048x52m4b2s13r2p1d0'. (LNK-081)",
+            "Error: Unable to resolve reference to 'ltphy_cmnsynth'. (LNK-081)",
+            "Error: Unable to resolve reference to 'ltphydltop_pg_25ma_v2'. (LNK-081)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.cts.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/cts.parallel_rpt_out.log",
@@ -3339,6 +3603,13 @@
         {
           "stage": "clock_route_opt",
           "status": "passed",
+          "log_error_count": 79,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Unable to resolve reference to 'ip765hduspsr2048x52m4b2s13r2p1d0'. (LNK-081)",
+            "Error: Unable to resolve reference to 'ltphy_cmnsynth'. (LNK-081)",
+            "Error: Unable to resolve reference to 'ltphydltop_pg_25ma_v2'. (LNK-081)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.clock_route_opt.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/clock_route_opt.parallel_rpt_out.log",
@@ -3361,6 +3632,13 @@
         {
           "stage": "route_auto",
           "status": "passed",
+          "log_error_count": 80,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Unable to resolve reference to 'ip765hduspsr2048x52m4b2s13r2p1d0'. (LNK-081)",
+            "Error: Unable to resolve reference to 'ltphy_cmnsynth'. (LNK-081)",
+            "Error: Unable to resolve reference to 'ltphydltop_pg_25ma_v2'. (LNK-081)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.route_auto.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/route_auto.parallel_rpt_out.log",
@@ -3383,6 +3661,13 @@
         {
           "stage": "route_opt",
           "status": "passed",
+          "log_error_count": 95,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Unable to resolve reference to 'ip765hduspsr2048x52m4b2s13r2p1d0'. (LNK-081)",
+            "Error: Unable to resolve reference to 'ltphy_cmnsynth'. (LNK-081)",
+            "Error: Unable to resolve reference to 'ltphydltop_pg_25ma_v2'. (LNK-081)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.route_opt.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/route_opt.parallel_rpt_out.log",
@@ -3405,6 +3690,9 @@
         {
           "stage": "opt_signoff",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -3421,6 +3709,13 @@
         {
           "stage": "fill",
           "status": "passed",
+          "log_error_count": 113,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Unable to resolve reference to 'ip765hduspsr2048x52m4b2s13r2p1d0'. (LNK-081)",
+            "Error: Unable to resolve reference to 'ltphy_cmnsynth'. (LNK-081)",
+            "Error: Unable to resolve reference to 'ltphydltop_pg_25ma_v2'. (LNK-081)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.fill.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fill.parallel_rpt_out.log",
@@ -3443,6 +3738,13 @@
         {
           "stage": "finish",
           "status": "passed",
+          "log_error_count": 286759,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Unable to resolve reference to 'ip765hduspsr2048x52m4b2s13r2p1d0'. (LNK-081)",
+            "Error: Unable to resolve reference to 'ltphy_cmnsynth'. (LNK-081)",
+            "Error: Unable to resolve reference to 'ltphydltop_pg_25ma_v2'. (LNK-081)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc.finish.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/finish.parallel_rpt_out.log",
@@ -3475,19 +3777,19 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "Thank you for using Fusion Compiler.",
-      "overall_status": "passed",
-      "running_stage": null,
-      "last_updated": "2026-04-19T17:01:05",
+      "fc_latest_line": "START_CMD: copy_lib            CPU:     22 s ( 0.01 hr) ELAPSE:     24 s ( 0.01 hr) MEM-PEAK:   486 Mb Mon Apr 20 13:30:30 2026",
+      "overall_status": "running",
+      "running_stage": "read_upf",
+      "last_updated": "2026-04-20T13:30:43",
       "summary": {
-        "passed": 8,
+        "passed": 7,
         "failed": 0,
         "skipped": 0,
-        "started": 0,
+        "started": 1,
         "not_started": 0
       },
       "has_activity": true,
-      "complete": true,
+      "complete": false,
       "qor_by_stage": {
         "conditioning": {
           "run_directory": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc",
@@ -4345,6 +4647,13 @@
         {
           "stage": "import_design",
           "status": "passed",
+          "log_error_count": 6,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Mon Apr 20 13:16:22 2026]",
+            "Warning:  /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/release/latest/fe_collateral/subip/hip/lcpll_g4_11g/src/rtl/lcpll_g4_11g_plllc_plldigtop.sv:2317: Forward references to 'DCC' are non-standard. This may be treated as an error in the future. (VER-733)",
+            "Warning:  /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/release/latest/fe_collateral/subip/hip/lcpll_g4_16g/src/rtl/lcpll_g4_16g_plllc_plldigtop.sv:2317: Forward references to 'DCC' are non-standard. This may be treated as an error in the future. (VER-733)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc.import_design.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/import_design.parallel_rpt_out.log",
@@ -4352,27 +4661,34 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/import_design.skipped_fail"
           },
-          "latest_line": "Thank you for using Fusion Compiler.",
+          "latest_line": "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/base_lvt/ndm/lib765_g1m_240h_50pp_base_lvt.ndm' (FILE-007)",
           "recent_lines": [
-            " 38197            59 Mb   Sun Apr 19 14:09:51 2026    Sun Apr 19 14:10:21 2026    /p/hdk/pu_tu/prd/eou_system/2025.09.plus/bin/../py/venv/bin/python /p/hdk/pu_tu/prd/eou_system/2025.09.plus/bin/../py/splunk_be_upload.py -c /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/Indicators/gen",
-            " 38194             2 Mb   Sun Apr 19 14:09:50 2026    Sun Apr 19 14:10:21 2026    /bin/bash /p/hdk/pu_tu/prd/eou_system/2025.09.plus/bin/splunk_be_upload -c /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/Indicators/gen_apr_fc_hc.csv -metadata ward=/nfs/site/disks/zsc11_hsio_ave18_SD_",
-            "CPU usage for this session:    620 seconds (  0.17 hours)",
-            "Elapsed time for this session:   1222 seconds (  0.34 hours)",
-            "Thank you for using Fusion Compiler."
+            "INTEL_INFO   : Optional file to be sourced not found; 'open_lib_pre_setup.tcl', skipping (::iproc_source) [Mon Apr 20 13:30:10 2026]",
+            "INTEL_INFO   : opening ndm for parallel outputs and reports_generation (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/global/snps/apr_fc/step_load.tcl) [Mon Apr 20 13:30:10 2026]",
+            "START_CMD: open_lib            CPU:     21 s ( 0.01 hr) ELAPSE:     26 s ( 0.01 hr) MEM-PEAK:   451 Mb Mon Apr 20 13:30:10 2026",
+            "Information: Loading library file '/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/outputs/import_design/pma_cmn_TMP_for_parallel_rpt_out_gen.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/base_lvt/ndm/lib765_g1m_240h_50pp_base_lvt.ndm' (FILE-007)"
           ],
-          "last_updated": "2026-04-19T14:10:45",
-          "size_bytes": 30957272,
+          "last_updated": "2026-04-20T13:30:33",
+          "size_bytes": 32953858,
           "stage_exists": true
         },
         {
           "stage": "read_upf",
-          "status": "passed",
+          "status": "running",
+          "log_error_count": 22,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Mon Apr 20 13:30:20 2026]",
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Sun Apr 19 14:00:22 2026]",
+            "Error: Unable to resolve reference to 'pma_cmn.import_design.opened.for.read_upf_36398.ndm:ip765hduspsr2048x52m4b2s13r2p1d0'. (LNK-081)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc.read_upf.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/read_upf.parallel_rpt_out.log",
-            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/read_upf.pass",
+            "pass_file": null,
             "fail_file": null,
-            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/read_upf.skipped_fail"
+            "skipped_fail_file": null
           },
           "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
@@ -4382,13 +4698,20 @@
             "Elapsed time for this session:   1562 seconds (  0.43 hours)",
             "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-19T14:26:13",
-          "size_bytes": 28663160,
+          "last_updated": "2026-04-20T13:30:43",
+          "size_bytes": 28699495,
           "stage_exists": true
         },
         {
           "stage": "redefine",
           "status": "passed",
+          "log_error_count": 40,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Sun Apr 19 14:00:33 2026]",
+            "Error: Unable to resolve reference to 'pma_cmn.import_design.opened.for.read_upf_36398.ndm:ip765hduspsr2048x52m4b2s13r2p1d0'. (LNK-081)",
+            "Error: Unable to resolve reference to 'pma_cmn.import_design.opened.for.read_upf_36398.ndm:ltphy_cmnsynth'. (LNK-081)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc.redefine.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/redefine.parallel_rpt_out.log",
@@ -4411,6 +4734,13 @@
         {
           "stage": "init_floorplan",
           "status": "passed",
+          "log_error_count": 40,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Sun Apr 19 14:12:40 2026]",
+            "Error: Unable to resolve reference to 'pma_cmn.import_design.opened.for.read_upf_36398.ndm:ip765hduspsr2048x52m4b2s13r2p1d0'. (LNK-081)",
+            "Error: Unable to resolve reference to 'pma_cmn.import_design.opened.for.read_upf_36398.ndm:ltphy_cmnsynth'. (LNK-081)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc.init_floorplan.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/init_floorplan.parallel_rpt_out.log",
@@ -4433,6 +4763,13 @@
         {
           "stage": "setup_timing",
           "status": "passed",
+          "log_error_count": 60,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Sun Apr 19 14:24:35 2026]",
+            "Error: Unable to resolve reference to 'pma_cmn.import_design.opened.for.read_upf_36398.ndm:ip765hduspsr2048x52m4b2s13r2p1d0'. (LNK-081)",
+            "Error: Unable to resolve reference to 'pma_cmn.import_design.opened.for.read_upf_36398.ndm:ltphy_cmnsynth'. (LNK-081)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc.setup_timing.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/setup_timing.parallel_rpt_out.log",
@@ -4455,6 +4792,13 @@
         {
           "stage": "conditioning",
           "status": "passed",
+          "log_error_count": 90,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Sun Apr 19 14:45:16 2026]",
+            "Error: Unable to resolve reference to 'pma_cmn.import_design.opened.for.read_upf_36398.ndm:ip765hduspsr2048x52m4b2s13r2p1d0'. (LNK-081)",
+            "Error: Unable to resolve reference to 'pma_cmn.import_design.opened.for.read_upf_36398.ndm:ltphy_cmnsynth'. (LNK-081)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc.conditioning.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/conditioning.parallel_rpt_out.log",
@@ -4477,6 +4821,13 @@
         {
           "stage": "floorplan",
           "status": "passed",
+          "log_error_count": 57,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Sun Apr 19 15:07:55 2026]",
+            "Error: Unable to resolve reference to 'pma_cmn.import_design.opened.for.read_upf_36398.ndm:ip765hduspsr2048x52m4b2s13r2p1d0'. (LNK-081)",
+            "Error: Unable to resolve reference to 'pma_cmn.import_design.opened.for.read_upf_36398.ndm:ltphy_cmnsynth'. (LNK-081)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc.floorplan.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/floorplan.parallel_rpt_out.log",
@@ -4499,6 +4850,13 @@
         {
           "stage": "estimation",
           "status": "passed",
+          "log_error_count": 90,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Sun Apr 19 15:55:08 2026]",
+            "Error: Unable to resolve reference to 'pma_cmn.import_design.opened.for.read_upf_36398.ndm:ip765hduspsr2048x52m4b2s13r2p1d0'. (LNK-081)",
+            "Error: Unable to resolve reference to 'pma_cmn.import_design.opened.for.read_upf_36398.ndm:ltphy_cmnsynth'. (LNK-081)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc.estimation.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/estimation.parallel_rpt_out.log",
@@ -4531,16 +4889,16 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "fc_shell>",
-      "overall_status": "started",
-      "running_stage": null,
-      "last_updated": "2026-04-15T14:07:27",
+      "fc_latest_line": "INTEL_INFO   : loading /p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/clk_svt/ndm/postprocess/lib765_g1m_240h_50pp_clk_svt_vertical_abutment_pattern.tcl (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/tech/1276.5/snps/apr_fc/lib_cell_usage.tcl) [Mon Apr 20 13:37:16 2026]",
+      "overall_status": "running",
+      "running_stage": "import_design",
+      "last_updated": "2026-04-20T13:30:44",
       "summary": {
         "passed": 10,
         "failed": 0,
         "skipped": 0,
-        "started": 0,
-        "not_started": 9
+        "started": 1,
+        "not_started": 8
       },
       "has_activity": true,
       "complete": false,
@@ -4795,23 +5153,39 @@
       "stages": [
         {
           "stage": "import_design",
-          "status": "not_started",
+          "status": "running",
+          "log_error_count": 3,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Mon Apr 20 13:09:59 2026]",
+            "Warning:  /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/release/latest/fe_collateral/subip/hip/lcpll_g4_11g/src/rtl/lcpll_g4_11g_plllc_plldigtop.sv:2317: Forward references to 'DCC' are non-standard. This may be treated as an error in the future. (VER-733)",
+            "Warning:  /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/release/latest/fe_collateral/subip/hip/lcpll_g4_16g/src/rtl/lcpll_g4_16g_plllc_plldigtop.sv:2317: Forward references to 'DCC' are non-standard. This may be treated as an error in the future. (VER-733)"
+          ],
           "files": {
-            "fc_log": null,
+            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.import_design.log",
             "parallel_log": null,
             "pass_file": null,
             "fail_file": null,
             "skipped_fail_file": null
           },
-          "latest_line": "",
-          "recent_lines": [],
-          "last_updated": null,
-          "size_bytes": 0,
-          "stage_exists": false
+          "latest_line": "INTEL_INFO   : script_stop  : /nfs/site/disks/crt_tools_058/fusioncompiler/X-2025.06-SP1-T-20250911/auxx/DCRT/tcl/embd_dcrt_util.tcl.e (type=file, level=2, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/global/snps/apr_fc/step_elaborate.tcl) [Mon Apr 20 13:30:39 2026]",
+          "recent_lines": [
+            "SNPSee_e21312b5d1bb31af6d56873ec9b55a2a4cca5196c8a53f759bef601c926788fe                 bool       true                 true                       true                       false          global     unlisted   /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/design_class/server_ip/snps/apr_fc/fc.app_options.rtl.design_class.tcl:20",
+            "hdlin.sverilog.packages                                                                 string     chain                chain                      chain                      dont_chain     global     normal     /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/global/snps/apr_fc/fc.app_options.rtl.global.tcl:32",
+            "--------------------------------------------------------------------------------------- ---------- -------------------- -------------------------- -------------------------- -------------- ---------- ---------- ----------------------------------------------------------------------------------------------------",
+            "INTEL_INFO   : script_start : /nfs/site/disks/crt_tools_058/fusioncompiler/X-2025.06-SP1-T-20250911/auxx/DCRT/tcl/embd_dcrt_util.tcl.e (type=file, level=2) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/global/snps/apr_fc/step_elaborate.tcl) [Mon Apr 20 13:30:39 2026]",
+            "INTEL_INFO   : script_stop  : /nfs/site/disks/crt_tools_058/fusioncompiler/X-2025.06-SP1-T-20250911/auxx/DCRT/tcl/embd_dcrt_util.tcl.e (type=file, level=2, time=0 seconds) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/global/snps/apr_fc/step_elaborate.tcl) [Mon Apr 20 13:30:39 2026]"
+          ],
+          "last_updated": "2026-04-20T13:30:44",
+          "size_bytes": 16888799,
+          "stage_exists": true
         },
         {
           "stage": "read_upf",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -4828,6 +5202,9 @@
         {
           "stage": "redefine",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -4844,6 +5221,9 @@
         {
           "stage": "init_floorplan",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -4860,6 +5240,9 @@
         {
           "stage": "setup_timing",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -4876,6 +5259,9 @@
         {
           "stage": "floorplan",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -4892,6 +5278,9 @@
         {
           "stage": "initial_map",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -4908,6 +5297,13 @@
         {
           "stage": "insert_dft",
           "status": "passed",
+          "log_error_count": 18,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "INTEL_INFO   : Initializing ::ivar(error_patterns) = '^Error|^INTEL_ERROR|^Fatal|^INTEL_FATAL|^Segmentation' [Tue Apr 14 04:53:49 2026]",
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.insert_dft.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/insert_dft.parallel_rpt_out.log",
@@ -4930,6 +5326,9 @@
         {
           "stage": "logic_opto",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -4946,6 +5345,13 @@
         {
           "stage": "compile_initial_opto",
           "status": "passed",
+          "log_error_count": 8109,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)",
+            "Error: Command cannot use analysis block pma_cmn.logic_opto.opened.for.insert_dft_16661.ndm:pma_cmn.design. (DES-222)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.compile_initial_opto.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/compile_initial_opto.parallel_rpt_out.log",
@@ -4968,6 +5374,13 @@
         {
           "stage": "compile_final_opto",
           "status": "passed",
+          "log_error_count": 39,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)",
+            "Error: Command cannot use analysis block pma_cmn.logic_opto.opened.for.insert_dft_16661.ndm:pma_cmn.design. (DES-222)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.compile_final_opto.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.parallel_rpt_out.log",
@@ -4990,6 +5403,13 @@
         {
           "stage": "ctmesh",
           "status": "passed",
+          "log_error_count": 18,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)",
+            "Information: FLOW error check completed. (FAE-4001)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.ctmesh.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/ctmesh.parallel_rpt_out.log",
@@ -5012,6 +5432,13 @@
         {
           "stage": "cts",
           "status": "passed",
+          "log_error_count": 61,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)",
+            "Error: Nothing matched for -balance_points (SEL-005)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.cts.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/cts.parallel_rpt_out.log",
@@ -5034,6 +5461,13 @@
         {
           "stage": "clock_route_opt",
           "status": "passed",
+          "log_error_count": 21,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)",
+            "Error: Command cannot use analysis block pma_cmn.logic_opto.opened.for.insert_dft_16661.ndm:pma_cmn.design. (DES-222)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.clock_route_opt.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/clock_route_opt.parallel_rpt_out.log",
@@ -5056,6 +5490,13 @@
         {
           "stage": "route_auto",
           "status": "passed",
+          "log_error_count": 21,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)",
+            "Error: Command cannot use analysis block pma_cmn.logic_opto.opened.for.insert_dft_16661.ndm:pma_cmn.design. (DES-222)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.route_auto.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/route_auto.parallel_rpt_out.log",
@@ -5078,6 +5519,13 @@
         {
           "stage": "route_opt",
           "status": "passed",
+          "log_error_count": 26,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)",
+            "Error: Command cannot use analysis block pma_cmn.logic_opto.opened.for.insert_dft_16661.ndm:pma_cmn.design. (DES-222)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.route_opt.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/route_opt.parallel_rpt_out.log",
@@ -5100,6 +5548,9 @@
         {
           "stage": "opt_signoff",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -5116,6 +5567,13 @@
         {
           "stage": "fill",
           "status": "passed",
+          "log_error_count": 50,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)",
+            "INTEL_ERROR  : Need to define either heml or hpml layer for macro: tic76d4m14_diccdreg_cont_horz, please set ivar(heml,tic76d4m14_diccdreg_cont_horz) or ivar(hpml,tic76d4m14_diccdreg_cont_horz) in your block vars.tcl file and re-run. (::sd_get_keepout_cells) [Tue Apr 14 07:27:33 2026]"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.fill.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fill.parallel_rpt_out.log",
@@ -5138,6 +5596,13 @@
         {
           "stage": "finish",
           "status": "passed",
+          "log_error_count": 24,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)",
+            "Error: Command cannot use analysis block pma_cmn. (DES-222)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.finish.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/finish.parallel_rpt_out.log",
@@ -5194,6 +5659,9 @@
         {
           "stage": "import_design",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -5210,6 +5678,9 @@
         {
           "stage": "read_upf",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -5226,6 +5697,9 @@
         {
           "stage": "redefine",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -5242,6 +5716,9 @@
         {
           "stage": "init_floorplan",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -5258,6 +5735,9 @@
         {
           "stage": "setup_timing",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -5274,6 +5754,9 @@
         {
           "stage": "floorplan",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -5290,6 +5773,9 @@
         {
           "stage": "initial_map",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -5306,6 +5792,9 @@
         {
           "stage": "insert_dft",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -5322,6 +5811,9 @@
         {
           "stage": "logic_opto",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -5338,6 +5830,9 @@
         {
           "stage": "compile_initial_opto",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -5354,6 +5849,9 @@
         {
           "stage": "compile_final_opto",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -5370,6 +5868,9 @@
         {
           "stage": "ctmesh",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -5386,6 +5887,9 @@
         {
           "stage": "cts",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -5402,6 +5906,9 @@
         {
           "stage": "clock_route_opt",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -5418,6 +5925,9 @@
         {
           "stage": "route_auto",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -5434,6 +5944,9 @@
         {
           "stage": "route_opt",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -5450,6 +5963,9 @@
         {
           "stage": "opt_signoff",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -5466,6 +5982,9 @@
         {
           "stage": "fill",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -5482,6 +6001,9 @@
         {
           "stage": "finish",
           "status": "not_started",
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": null,
             "parallel_log": null,
@@ -6189,7 +6711,346 @@
       ],
       "count": 31
     }
-  ]
+  ],
+  "app_options_inventory": {
+    "summary_file": "app_options_inventory_summary.json",
+    "csv_file": "app_options_inventory.csv",
+    "summary": {
+      "rows": 616558,
+      "folders": {
+        "current": {
+          "stages": {
+            "clock_route_opt": {
+              "design_class": 3020,
+              "global": 3019,
+              "project": 3020,
+              "user": 3020
+            },
+            "compile_final_opto": {
+              "design_class": 3019,
+              "global": 3019,
+              "project": 3019,
+              "user": 3019
+            },
+            "compile_initial_opto": {
+              "design_class": 3019,
+              "global": 3019,
+              "project": 3019,
+              "user": 3019
+            },
+            "ctmesh": {
+              "design_class": 3019,
+              "global": 3019,
+              "project": 3019,
+              "user": 3019
+            },
+            "cts": {
+              "design_class": 3019,
+              "global": 3019,
+              "project": 3019,
+              "user": 3019
+            },
+            "fill": {
+              "design_class": 3020,
+              "global": 3020,
+              "project": 3020,
+              "user": 3020
+            },
+            "finish": {
+              "design_class": 3020,
+              "global": 3020,
+              "project": 3020,
+              "user": 3020
+            },
+            "floorplan": {
+              "design_class": 3019,
+              "global": 3019,
+              "project": 3019,
+              "user": 3019
+            },
+            "init_floorplan": {
+              "design_class": 3015,
+              "global": 3015,
+              "project": 3015,
+              "user": 3015
+            },
+            "initial_map": {
+              "design_class": 3018,
+              "global": 3018,
+              "project": 3018,
+              "user": 3018
+            },
+            "insert_dft": {
+              "design_class": 3019,
+              "global": 3019,
+              "project": 3019,
+              "user": 3019
+            },
+            "logic_opto": {
+              "design_class": 3019,
+              "global": 3019,
+              "project": 3019,
+              "user": 3019
+            },
+            "read_upf": {
+              "design_class": 3014,
+              "global": 3012,
+              "project": 3014,
+              "user": 3015
+            },
+            "redefine": {
+              "design_class": 3015,
+              "global": 3015,
+              "project": 3015,
+              "user": 3015
+            },
+            "route_auto": {
+              "design_class": 3020,
+              "global": 3020,
+              "project": 3020,
+              "user": 3020
+            },
+            "route_opt": {
+              "design_class": 3020,
+              "global": 3020,
+              "project": 3020,
+              "user": 3020
+            },
+            "setup_timing": {
+              "design_class": 3015,
+              "global": 3015,
+              "project": 3015,
+              "user": 3015
+            }
+          },
+          "csv_count": 68
+        },
+        "golden": {
+          "stages": {
+            "clock_route_opt": {
+              "design_class": 3019,
+              "global": 3018,
+              "project": 3019,
+              "user": 3019
+            },
+            "compile_final_opto": {
+              "design_class": 3018,
+              "global": 3018,
+              "project": 3018,
+              "user": 3018
+            },
+            "compile_initial_opto": {
+              "design_class": 3018,
+              "global": 3018,
+              "project": 3018,
+              "user": 3018
+            },
+            "ctmesh": {
+              "design_class": 3018,
+              "global": 3018,
+              "project": 3018,
+              "user": 3018
+            },
+            "cts": {
+              "design_class": 3018,
+              "global": 3018,
+              "project": 3018,
+              "user": 3018
+            },
+            "fill": {
+              "design_class": 3019,
+              "global": 3019,
+              "project": 3019,
+              "user": 3019
+            },
+            "finish": {
+              "design_class": 3019,
+              "global": 3019,
+              "project": 3019,
+              "user": 3019
+            },
+            "floorplan": {
+              "design_class": 3018,
+              "global": 3018,
+              "project": 3018,
+              "user": 3018
+            },
+            "init_floorplan": {
+              "design_class": 3014,
+              "global": 3014,
+              "project": 3014,
+              "user": 3014
+            },
+            "initial_map": {
+              "design_class": 3017,
+              "global": 3017,
+              "project": 3017,
+              "user": 3017
+            },
+            "insert_dft": {
+              "design_class": 3018,
+              "global": 3018,
+              "project": 3018,
+              "user": 3018
+            },
+            "logic_opto": {
+              "design_class": 3018,
+              "global": 3018,
+              "project": 3018,
+              "user": 3018
+            },
+            "read_upf": {
+              "design_class": 3013,
+              "global": 3011,
+              "project": 3013,
+              "user": 3014
+            },
+            "redefine": {
+              "design_class": 3014,
+              "global": 3014,
+              "project": 3014,
+              "user": 3014
+            },
+            "route_auto": {
+              "design_class": 3019,
+              "global": 3019,
+              "project": 3019,
+              "user": 3019
+            },
+            "route_opt": {
+              "design_class": 3019,
+              "global": 3019,
+              "project": 3019,
+              "user": 3019
+            },
+            "setup_timing": {
+              "design_class": 3014,
+              "global": 3014,
+              "project": 3014,
+              "user": 3014
+            }
+          },
+          "csv_count": 68
+        },
+        "flattenall": {
+          "stages": {
+            "conditioning": {
+              "design_class": 3018,
+              "global": 3018,
+              "project": 3018,
+              "user": 3018
+            },
+            "estimation": {
+              "design_class": 3018,
+              "global": 3018,
+              "project": 3018,
+              "user": 3018
+            },
+            "floorplan": {
+              "design_class": 3059,
+              "global": 3059,
+              "project": 3059,
+              "user": 3059
+            },
+            "init_floorplan": {
+              "design_class": 3055,
+              "global": 3055,
+              "project": 3055,
+              "user": 3055
+            },
+            "read_upf": {
+              "design_class": 3054,
+              "global": 3052,
+              "project": 3054,
+              "user": 3055
+            },
+            "redefine": {
+              "design_class": 3055,
+              "global": 3055,
+              "project": 3055,
+              "user": 3055
+            },
+            "setup_timing": {
+              "design_class": 3055,
+              "global": 3055,
+              "project": 3055,
+              "user": 3055
+            }
+          },
+          "csv_count": 28
+        },
+        "estimation": {
+          "stages": {
+            "clock_route_opt": {
+              "design_class": 3023,
+              "global": 3022,
+              "project": 3023,
+              "user": 3023
+            },
+            "compile_final_opto": {
+              "design_class": 3022,
+              "global": 3022,
+              "project": 3022,
+              "user": 3022
+            },
+            "compile_initial_opto": {
+              "design_class": 3022,
+              "global": 3022,
+              "project": 3022,
+              "user": 3022
+            },
+            "ctmesh": {
+              "design_class": 3022,
+              "global": 3022,
+              "project": 3022,
+              "user": 3022
+            },
+            "cts": {
+              "design_class": 3022,
+              "global": 3022,
+              "project": 3022,
+              "user": 3022
+            },
+            "fill": {
+              "design_class": 3023,
+              "global": 3023,
+              "project": 3023,
+              "user": 3023
+            },
+            "finish": {
+              "design_class": 3023,
+              "global": 3023,
+              "project": 3023,
+              "user": 3023
+            },
+            "insert_dft": {
+              "design_class": 3021,
+              "global": 3021,
+              "project": 3021,
+              "user": 3021
+            },
+            "route_auto": {
+              "design_class": 3023,
+              "global": 3023,
+              "project": 3023,
+              "user": 3023
+            },
+            "route_opt": {
+              "design_class": 3023,
+              "global": 3023,
+              "project": 3023,
+              "user": 3023
+            }
+          },
+          "csv_count": 40
+        },
+        "flatten_selective": {
+          "stages": {},
+          "csv_count": 0
+        }
+      }
+    }
+  }
 };
 
 	function badge(status) {
@@ -6211,12 +7072,28 @@
 	  return (text || 'run').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'run';
 	}
 
+	function renderLogIssues(stage) {
+	  if (!stage.has_log_errors) {
+		return '<span class="issue-chip clean">clean</span>';
+	  }
+	  const sampleHtml = (stage.log_error_samples || [])
+		.map(line => `<div class="issue-sample">${htmlEscape(line)}</div>`)
+		.join('');
+	  return `
+		<div>
+		  <span class="issue-chip errors">${stage.log_error_count} log error${stage.log_error_count === 1 ? '' : 's'}</span>
+		  ${sampleHtml ? `<div class="issue-samples">${sampleHtml}</div>` : ''}
+		</div>
+	  `;
+	}
+
 	function stageRows(run) {
 	  return run.stages.map(stage => `
 		<tr>
 		  <td class="stage-name">${htmlEscape(stage.stage)}</td>
 		  <td>${badge(stage.status)}</td>
 		  <td>${stage.last_updated ? htmlEscape(stage.last_updated) : '<span class="empty">--</span>'}</td>
+		  <td class="log-issues">${renderLogIssues(stage)}</td>
 		  <td class="logline">${stage.latest_line ? htmlEscape(stage.latest_line) : '<span class="empty">No recent line</span>'}</td>
 		</tr>
 	  `).join('');
@@ -6457,6 +7334,50 @@
 	  `;
 	}
 
+	function renderInventorySection(run, snapshot) {
+	  const inventory = snapshot.app_options_inventory;
+	  const summary = inventory?.summary;
+	  const folderData = summary?.folders?.[run.label];
+	  if (!folderData) {
+		return '';
+	  }
+	  const stageEntries = Object.entries(folderData.stages || {});
+	  const preferredCategories = ['global', 'project', 'design_class', 'user'];
+	  const categories = preferredCategories.filter(category =>
+		stageEntries.some(([, counts]) => Object.prototype.hasOwnProperty.call(counts || {}, category))
+	  );
+	  const csvLink = inventory?.csv_file ? `<a class="inventory-link" href="${htmlEscape(inventory.csv_file)}" target="_blank" rel="noopener">download inventory csv</a>` : '';
+	  const summaryLink = inventory?.summary_file ? `<a class="inventory-link" href="${htmlEscape(inventory.summary_file)}" target="_blank" rel="noopener">open summary json</a>` : '';
+	  const colspan = Math.max(categories.length + 1, 1);
+	  return `
+		<div class="section">
+		  <div class="section-header"><h3>App options inventory</h3></div>
+		  <div class="section-body">
+			<div class="inventory-links">${[csvLink, summaryLink].filter(Boolean).join('')}</div>
+			<div class="small-note inventory-note">${folderData.csv_count || 0} app option csv files discovered for this folder. Inventory rows across all folders: ${summary?.rows || 0}.</div>
+			<div class="table-wrap">
+			  <table>
+				<thead>
+				  <tr>
+					<th>Stage</th>
+					${categories.map(category => `<th>${htmlEscape(category.replace('_', ' '))}</th>`).join('')}
+				  </tr>
+				</thead>
+				<tbody>
+				  ${stageEntries.length ? stageEntries.map(([stageName, counts]) => `
+					<tr>
+					  <td class="stage-name">${htmlEscape(stageName)}</td>
+					  ${categories.map(category => `<td>${htmlEscape(String((counts && counts[category] != null) ? counts[category] : '--'))}</td>`).join('')}
+					</tr>
+				  `).join('') : `<tr><td colspan="${colspan}" class="empty">No inventory summary available for this folder.</td></tr>`}
+				</tbody>
+			  </table>
+			</div>
+		  </div>
+		</div>
+	  `;
+	}
+
 	function renderCrossComparison(snapshot) {
 	  const stages = ['conditioning', 'floorplan', 'estimation'];
 	  return `
@@ -6531,7 +7452,7 @@
 	  return parts.join('');
 	}
 
-	function renderRun(run) {
+	function renderRun(run, snapshot) {
 	  const runId = safeId(run.label);
 	  const qorSectionId = `qor-section-${runId}`;
 	  return `
@@ -6559,6 +7480,7 @@
 				  <th>Stage</th>
 				  <th>Status</th>
 				  <th>Last updated</th>
+				  <th>Log issues</th>
 				  <th>Recent line</th>
 				</tr>
 			  </thead>
@@ -6581,6 +7503,7 @@
 			</div>
 		  </div>
 		  ${renderAppOptionsSection(run)}
+		  ${renderInventorySection(run, snapshot)}
 		</article>
 	  `;
 	}
@@ -6592,7 +7515,7 @@
 
 	function renderTabPanel(run, index) {
 	  const activeClass = index === 0 ? 'active' : '';
-	  return `<section class="tab-panel ${activeClass}" id="run-${index}">${renderRun(run)}</section>`;
+	  return `<section class="tab-panel ${activeClass}" id="run-${index}">${renderRun(run, snapshot)}</section>`;
 	}
 
 	const tabsElement = document.getElementById('tabs');
