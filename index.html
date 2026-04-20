@@ -117,6 +117,7 @@
 	.section-btn:hover { border-color: #5e7dd1; }
 	.section-body.hidden { display: none; }
 	.table-wrap { width: 100%; overflow-x: auto; overflow-y: hidden; }
+	.table-wrap { scrollbar-color: #3f5388 rgba(11,16,32,0.55); }
 	table { width: 100%; border-collapse: collapse; }
 	th, td { text-align: left; padding: 10px 8px; font-size: 13px; vertical-align: top; border-bottom: 1px solid rgba(42,53,88,0.7); white-space: normal; overflow-wrap: anywhere; word-break: break-word; }
 	th { color: var(--muted); font-weight: 700; position: sticky; top: 0; background: rgba(21,28,49,0.98); }
@@ -124,7 +125,7 @@
 	tr:hover td { background: rgba(255,255,255,0.02); }
 	.stage-name { font-weight: 700; }
 	.logline { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #d2daf0; max-width: 520px; white-space: normal; overflow-wrap: anywhere; word-break: break-word; }
-	.status-table th:first-child, .status-table td:first-child { position: sticky; left: 0; background: rgba(21,28,49,0.98); z-index: 2; }
+	.status-table th:first-child, .status-table td:first-child { position: sticky; left: 0; background: linear-gradient(90deg, rgba(18,25,44,0.99), rgba(18,25,44,0.99) 88%, rgba(18,25,44,0.88)); z-index: 2; box-shadow: 8px 0 14px rgba(3,8,20,0.22); }
 	.status-table th:nth-child(1), .status-table td:nth-child(1) { min-width: 150px; width: 16%; }
 	.status-table th:nth-child(2), .status-table td:nth-child(2) { min-width: 120px; width: 14%; }
 	.status-table th:nth-child(3), .status-table td:nth-child(3) { min-width: 170px; width: 18%; }
@@ -133,7 +134,7 @@
 	.cross-cell .badge { margin-bottom: 6px; }
 	.small-note { font-size: 11px; color: var(--muted); line-height: 1.45; }
 	.qor-table { table-layout: fixed; }
-	.qor-table th:first-child, .qor-table td:first-child { position: sticky; left: 0; background: rgba(21,28,49,0.98); z-index: 1; word-break: break-word; }
+	.qor-table th:first-child, .qor-table td:first-child { position: sticky; left: 0; background: linear-gradient(90deg, rgba(18,25,44,0.99), rgba(18,25,44,0.99) 88%, rgba(18,25,44,0.88)); z-index: 1; word-break: break-word; box-shadow: 8px 0 14px rgba(3,8,20,0.22); }
 	.run-qor-table th:first-child, .run-qor-table td:first-child { width: 34%; min-width: 180px; }
 	.run-qor-table th:not(:first-child), .run-qor-table td:not(:first-child) { width: 22%; min-width: 120px; }
 	.cross-qor-table th:first-child, .cross-qor-table td:first-child { width: 24%; min-width: 180px; }
@@ -148,7 +149,7 @@
 	.app-options-controls input { width: min(320px, 100%); }
 	.app-options-meta { margin-bottom: 10px; white-space: normal; overflow-wrap: anywhere; }
 	.app-options-table { table-layout: fixed; }
-	.app-options-table th:first-child, .app-options-table td:first-child { position: sticky; left: 0; background: rgba(21,28,49,0.98); z-index: 2; }
+	.app-options-table th:first-child, .app-options-table td:first-child { position: sticky; left: 0; background: linear-gradient(90deg, rgba(18,25,44,0.99), rgba(18,25,44,0.99) 88%, rgba(18,25,44,0.88)); z-index: 2; box-shadow: 8px 0 14px rgba(3,8,20,0.22); }
 	.app-options-table th:nth-child(1), .app-options-table td:nth-child(1) { width: 12%; min-width: 110px; }
 	.app-options-table th:nth-child(2), .app-options-table td:nth-child(2) { width: 10%; min-width: 90px; }
 	.app-options-table th:nth-child(3), .app-options-table td:nth-child(3) { width: 24%; min-width: 220px; word-break: break-word; }
@@ -160,6 +161,10 @@
 	.empty { color: var(--muted); font-style: italic; }
 	details { margin-top: 12px; }
 	details summary { cursor: pointer; color: #c6d2ef; font-weight: 600; }
+	.table-wrap::-webkit-scrollbar { height: 11px; width: 11px; }
+	.table-wrap::-webkit-scrollbar-track { background: rgba(11,16,32,0.55); border-radius: 999px; }
+	.table-wrap::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #4764a8, #314572); border-radius: 999px; border: 2px solid rgba(11,16,32,0.55); }
+	.table-wrap::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, #5b78bd, #3b5286); }
 	pre {
 	  margin: 12px 0 0;
 	  padding: 14px;
@@ -178,7 +183,7 @@
   <div class="container">
 	<section class="hero">
 	  <h1>PMA CMN stalker</h1>
-	  <p>Generated at 2026-04-19T23:07:27</p>
+	  <p>Generated at 2026-04-19T23:12:09</p>
 	  <p>Monitoring APR FC flow stages only. RTLA-only stages are limited to conditioning and estimation when those logs are actually present.</p>
 	  <p>Auxiliary logs such as abutment-rule, spacing-rule, interactive, assembly, and merge helpers are intentionally excluded from the stage list.</p>
 	</section>
@@ -188,7 +193,7 @@
   </div>
   <script>
 	const snapshot = {
-  "generated_at": "2026-04-19T23:07:27",
+  "generated_at": "2026-04-19T23:12:09",
   "run_count": 5,
   "runs": [
     {
