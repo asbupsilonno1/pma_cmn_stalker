@@ -1,6 +1,6 @@
 {
   "folder": "current",
-  "report_count": 68,
+  "report_count": 72,
   "reports": [
     {
       "stage": "clock_route_opt",
@@ -73,6 +73,30 @@
       "category": "user",
       "row_count": 3019,
       "file": "app_options/current/compile_initial_opto__user.json"
+    },
+    {
+      "stage": "conditioning",
+      "category": "design_class",
+      "row_count": 3059,
+      "file": "app_options/current/conditioning__design_class.json"
+    },
+    {
+      "stage": "conditioning",
+      "category": "global",
+      "row_count": 3059,
+      "file": "app_options/current/conditioning__global.json"
+    },
+    {
+      "stage": "conditioning",
+      "category": "project",
+      "row_count": 3059,
+      "file": "app_options/current/conditioning__project.json"
+    },
+    {
+      "stage": "conditioning",
+      "category": "user",
+      "row_count": 3059,
+      "file": "app_options/current/conditioning__user.json"
     },
     {
       "stage": "ctmesh",
