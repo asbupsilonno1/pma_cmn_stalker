@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T00:57:43",
+  "generated_at": "2026-04-20T01:27:49",
   "run_count": 5,
   "runs": [
     {
@@ -12,10 +12,10 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "Information: Muxed clock exclusivity enabled for mode dfx with 2 exclusive pins. (TIM-034)",
+      "fc_latest_line": "NEX: Tlup has emulate fill setup",
       "overall_status": "running",
       "running_stage": "conditioning",
-      "last_updated": "2026-04-20T00:57:23",
+      "last_updated": "2026-04-20T01:27:36",
       "summary": {
         "passed": 20,
         "failed": 0,
@@ -1239,16 +1239,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/setup_timing.skipped_fail"
           },
-          "latest_line": "INTEL_INFO   : Generating power reports for func.0p675-0p81-76dot5-max.S_125.prcs3 (::sd_report_design_qor) [Mon Apr 20 00:56:36 2026]",
+          "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
-            "INTEL_INFO   : Generating power reports for func.0p825-1p02-76dot5-min.F_125.pcff3 (::sd_report_design_qor) [Mon Apr 20 00:53:04 2026]",
-            "INTEL_INFO   : Generating power reports for dfx.0p675-0p81-76dot5-max.S_125.prcs3 (::sd_report_design_qor) [Mon Apr 20 00:53:39 2026]",
-            "INTEL_INFO   : Generating power reports for dfx.0p675-0p81-76dot5-max.S_M40.pcss3 (::sd_report_design_qor) [Mon Apr 20 00:54:35 2026]",
-            "INTEL_INFO   : Generating power reports for dfx.0p825-1p02-76dot5-min.F_125.pcff3 (::sd_report_design_qor) [Mon Apr 20 00:55:33 2026]",
-            "INTEL_INFO   : Generating power reports for func.0p675-0p81-76dot5-max.S_125.prcs3 (::sd_report_design_qor) [Mon Apr 20 00:56:36 2026]"
+            " 22522             2 Mb   Mon Apr 20 01:10:55 2026    Mon Apr 20 01:11:26 2026    awk {print $1}",
+            " 22521             1 Mb   Mon Apr 20 01:10:55 2026    Mon Apr 20 01:11:26 2026    du -sh /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn",
+            "CPU usage for this session:   9477 seconds (  2.63 hours)",
+            "Elapsed time for this session:   3030 seconds (  0.84 hours)",
+            "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-20T00:57:07",
-          "size_bytes": 40238188,
+          "last_updated": "2026-04-20T01:11:50",
+          "size_bytes": 40318566,
           "stage_exists": true
         },
         {
@@ -1269,8 +1269,8 @@
             "Elapsed time for this session:   4472 seconds (  1.24 hours)",
             "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-20T00:57:23",
-          "size_bytes": 35595165,
+          "last_updated": "2026-04-20T01:27:36",
+          "size_bytes": 41796324,
           "stage_exists": true
         },
         {
