@@ -1,0 +1,335 @@
+{
+  "rows": 616558,
+  "folders": {
+    "current": {
+      "stages": {
+        "clock_route_opt": {
+          "design_class": 3020,
+          "global": 3019,
+          "project": 3020,
+          "user": 3020
+        },
+        "compile_final_opto": {
+          "design_class": 3019,
+          "global": 3019,
+          "project": 3019,
+          "user": 3019
+        },
+        "compile_initial_opto": {
+          "design_class": 3019,
+          "global": 3019,
+          "project": 3019,
+          "user": 3019
+        },
+        "ctmesh": {
+          "design_class": 3019,
+          "global": 3019,
+          "project": 3019,
+          "user": 3019
+        },
+        "cts": {
+          "design_class": 3019,
+          "global": 3019,
+          "project": 3019,
+          "user": 3019
+        },
+        "fill": {
+          "design_class": 3020,
+          "global": 3020,
+          "project": 3020,
+          "user": 3020
+        },
+        "finish": {
+          "design_class": 3020,
+          "global": 3020,
+          "project": 3020,
+          "user": 3020
+        },
+        "floorplan": {
+          "design_class": 3019,
+          "global": 3019,
+          "project": 3019,
+          "user": 3019
+        },
+        "init_floorplan": {
+          "design_class": 3015,
+          "global": 3015,
+          "project": 3015,
+          "user": 3015
+        },
+        "initial_map": {
+          "design_class": 3018,
+          "global": 3018,
+          "project": 3018,
+          "user": 3018
+        },
+        "insert_dft": {
+          "design_class": 3019,
+          "global": 3019,
+          "project": 3019,
+          "user": 3019
+        },
+        "logic_opto": {
+          "design_class": 3019,
+          "global": 3019,
+          "project": 3019,
+          "user": 3019
+        },
+        "read_upf": {
+          "design_class": 3014,
+          "global": 3012,
+          "project": 3014,
+          "user": 3015
+        },
+        "redefine": {
+          "design_class": 3015,
+          "global": 3015,
+          "project": 3015,
+          "user": 3015
+        },
+        "route_auto": {
+          "design_class": 3020,
+          "global": 3020,
+          "project": 3020,
+          "user": 3020
+        },
+        "route_opt": {
+          "design_class": 3020,
+          "global": 3020,
+          "project": 3020,
+          "user": 3020
+        },
+        "setup_timing": {
+          "design_class": 3015,
+          "global": 3015,
+          "project": 3015,
+          "user": 3015
+        }
+      },
+      "csv_count": 68
+    },
+    "golden": {
+      "stages": {
+        "clock_route_opt": {
+          "design_class": 3019,
+          "global": 3018,
+          "project": 3019,
+          "user": 3019
+        },
+        "compile_final_opto": {
+          "design_class": 3018,
+          "global": 3018,
+          "project": 3018,
+          "user": 3018
+        },
+        "compile_initial_opto": {
+          "design_class": 3018,
+          "global": 3018,
+          "project": 3018,
+          "user": 3018
+        },
+        "ctmesh": {
+          "design_class": 3018,
+          "global": 3018,
+          "project": 3018,
+          "user": 3018
+        },
+        "cts": {
+          "design_class": 3018,
+          "global": 3018,
+          "project": 3018,
+          "user": 3018
+        },
+        "fill": {
+          "design_class": 3019,
+          "global": 3019,
+          "project": 3019,
+          "user": 3019
+        },
+        "finish": {
+          "design_class": 3019,
+          "global": 3019,
+          "project": 3019,
+          "user": 3019
+        },
+        "floorplan": {
+          "design_class": 3018,
+          "global": 3018,
+          "project": 3018,
+          "user": 3018
+        },
+        "init_floorplan": {
+          "design_class": 3014,
+          "global": 3014,
+          "project": 3014,
+          "user": 3014
+        },
+        "initial_map": {
+          "design_class": 3017,
+          "global": 3017,
+          "project": 3017,
+          "user": 3017
+        },
+        "insert_dft": {
+          "design_class": 3018,
+          "global": 3018,
+          "project": 3018,
+          "user": 3018
+        },
+        "logic_opto": {
+          "design_class": 3018,
+          "global": 3018,
+          "project": 3018,
+          "user": 3018
+        },
+        "read_upf": {
+          "design_class": 3013,
+          "global": 3011,
+          "project": 3013,
+          "user": 3014
+        },
+        "redefine": {
+          "design_class": 3014,
+          "global": 3014,
+          "project": 3014,
+          "user": 3014
+        },
+        "route_auto": {
+          "design_class": 3019,
+          "global": 3019,
+          "project": 3019,
+          "user": 3019
+        },
+        "route_opt": {
+          "design_class": 3019,
+          "global": 3019,
+          "project": 3019,
+          "user": 3019
+        },
+        "setup_timing": {
+          "design_class": 3014,
+          "global": 3014,
+          "project": 3014,
+          "user": 3014
+        }
+      },
+      "csv_count": 68
+    },
+    "flattenall": {
+      "stages": {
+        "conditioning": {
+          "design_class": 3018,
+          "global": 3018,
+          "project": 3018,
+          "user": 3018
+        },
+        "estimation": {
+          "design_class": 3018,
+          "global": 3018,
+          "project": 3018,
+          "user": 3018
+        },
+        "floorplan": {
+          "design_class": 3059,
+          "global": 3059,
+          "project": 3059,
+          "user": 3059
+        },
+        "init_floorplan": {
+          "design_class": 3055,
+          "global": 3055,
+          "project": 3055,
+          "user": 3055
+        },
+        "read_upf": {
+          "design_class": 3054,
+          "global": 3052,
+          "project": 3054,
+          "user": 3055
+        },
+        "redefine": {
+          "design_class": 3055,
+          "global": 3055,
+          "project": 3055,
+          "user": 3055
+        },
+        "setup_timing": {
+          "design_class": 3055,
+          "global": 3055,
+          "project": 3055,
+          "user": 3055
+        }
+      },
+      "csv_count": 28
+    },
+    "estimation": {
+      "stages": {
+        "clock_route_opt": {
+          "design_class": 3023,
+          "global": 3022,
+          "project": 3023,
+          "user": 3023
+        },
+        "compile_final_opto": {
+          "design_class": 3022,
+          "global": 3022,
+          "project": 3022,
+          "user": 3022
+        },
+        "compile_initial_opto": {
+          "design_class": 3022,
+          "global": 3022,
+          "project": 3022,
+          "user": 3022
+        },
+        "ctmesh": {
+          "design_class": 3022,
+          "global": 3022,
+          "project": 3022,
+          "user": 3022
+        },
+        "cts": {
+          "design_class": 3022,
+          "global": 3022,
+          "project": 3022,
+          "user": 3022
+        },
+        "fill": {
+          "design_class": 3023,
+          "global": 3023,
+          "project": 3023,
+          "user": 3023
+        },
+        "finish": {
+          "design_class": 3023,
+          "global": 3023,
+          "project": 3023,
+          "user": 3023
+        },
+        "insert_dft": {
+          "design_class": 3021,
+          "global": 3021,
+          "project": 3021,
+          "user": 3021
+        },
+        "route_auto": {
+          "design_class": 3023,
+          "global": 3023,
+          "project": 3023,
+          "user": 3023
+        },
+        "route_opt": {
+          "design_class": 3023,
+          "global": 3023,
+          "project": 3023,
+          "user": 3023
+        }
+      },
+      "csv_count": 40
+    },
+    "flatten_selective": {
+      "stages": {},
+      "csv_count": 0
+    }
+  }
+}
