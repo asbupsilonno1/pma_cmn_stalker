@@ -293,49 +293,49 @@
     {
       "stage": "read_upf",
       "category": "design_class",
-      "row_count": 3014,
+      "row_count": 3055,
       "file": "app_options/current/read_upf__design_class.json"
     },
     {
       "stage": "read_upf",
       "category": "global",
-      "row_count": 3012,
+      "row_count": 3053,
       "file": "app_options/current/read_upf__global.json"
     },
     {
       "stage": "read_upf",
       "category": "project",
-      "row_count": 3014,
+      "row_count": 3055,
       "file": "app_options/current/read_upf__project.json"
     },
     {
       "stage": "read_upf",
       "category": "user",
-      "row_count": 3015,
+      "row_count": 3056,
       "file": "app_options/current/read_upf__user.json"
     },
     {
       "stage": "redefine",
       "category": "design_class",
-      "row_count": 3015,
+      "row_count": 3056,
       "file": "app_options/current/redefine__design_class.json"
     },
     {
       "stage": "redefine",
       "category": "global",
-      "row_count": 3015,
+      "row_count": 3056,
       "file": "app_options/current/redefine__global.json"
     },
     {
       "stage": "redefine",
       "category": "project",
-      "row_count": 3015,
+      "row_count": 3056,
       "file": "app_options/current/redefine__project.json"
     },
     {
       "stage": "redefine",
       "category": "user",
-      "row_count": 3015,
+      "row_count": 3056,
       "file": "app_options/current/redefine__user.json"
     },
     {
