@@ -197,25 +197,25 @@
     {
       "stage": "floorplan",
       "category": "design_class",
-      "row_count": 3019,
+      "row_count": 3060,
       "file": "app_options/current/floorplan__design_class.json"
     },
     {
       "stage": "floorplan",
       "category": "global",
-      "row_count": 3019,
+      "row_count": 3060,
       "file": "app_options/current/floorplan__global.json"
     },
     {
       "stage": "floorplan",
       "category": "project",
-      "row_count": 3019,
+      "row_count": 3060,
       "file": "app_options/current/floorplan__project.json"
     },
     {
       "stage": "floorplan",
       "category": "user",
-      "row_count": 3019,
+      "row_count": 3060,
       "file": "app_options/current/floorplan__user.json"
     },
     {

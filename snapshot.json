@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T01:27:49",
+  "generated_at": "2026-04-20T01:57:55",
   "run_count": 5,
   "runs": [
     {
@@ -12,10 +12,10 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "NEX: Tlup has emulate fill setup",
+      "fc_latest_line": "START_CMD: save_block          CPU:   4971 s ( 1.38 hr) ELAPSE:   1491 s ( 0.41 hr) MEM-PEAK: 51191 Mb Mon Apr 20 01:57:44 2026",
       "overall_status": "running",
-      "running_stage": "conditioning",
-      "last_updated": "2026-04-20T01:27:36",
+      "running_stage": "floorplan",
+      "last_updated": "2026-04-20T01:57:46",
       "summary": {
         "passed": 20,
         "failed": 0,
@@ -1253,35 +1253,35 @@
         },
         {
           "stage": "conditioning",
-          "status": "running",
+          "status": "passed",
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.conditioning.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/conditioning.parallel_rpt_out.log",
-            "pass_file": null,
+            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/conditioning.pass",
             "fail_file": null,
-            "skipped_fail_file": null
+            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/conditioning.skipped_fail"
           },
-          "latest_line": "Thank you for using Fusion Compiler.",
+          "latest_line": "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/seq_ulvt/ndm/lib765_g1m_240h_50pp_seq_ulvt.ndm' (FILE-007)",
           "recent_lines": [
-            "PROCESS-ID    MEM-PEAK    START-TIME                  END-TIME                    PROCESS-NAME",
-            " 11573            18 Mb   Tue Mar 24 05:00:33 2026    Tue Mar 24 05:01:05 2026    /usr/intel/bin/perl5.34.0 /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/global/common/email.pl /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/reports/conditioning/conditioning_qor_mail.html  QOR Re",
-            "CPU usage for this session:  13066 seconds (  3.63 hours)",
-            "Elapsed time for this session:   4472 seconds (  1.24 hours)",
-            "Thank you for using Fusion Compiler."
+            "Information: Loading library file '/nfs/site/disks/ipi7.arc.proj_archive/arc/g70idvd5bdigs50cdshipm4/ip_handoff/IPDEA0UV2RTL1IFC1V8/be/physical/ndm/g70idvd5bdigs50cdshipm4.ndm' (FILE-007)",
+            "Information: Loading library file '/nfs/site/disks/ipi7.arc.proj_archive/arc/ip765hduspsr2048x39m4b2s0r2p1d0/ip_handoff/IPDEA0UV2RTL1IFC1V5/be/physical/ndm/ip765hduspsr2048x39m4b2s0r2p1d0.ndm' (FILE-007)",
+            "Information: Loading library file '/nfs/site/disks/ipi7.arc.proj_archive/arc/ip765hduspsr2048x52m4b2s13r2p1d0/ip_handoff/IPDEA0UV2RTL1IFC1V5/be/physical/ndm/ip765hduspsr2048x52m4b2s13r2p1d0.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/seq_svt/ndm/lib765_g1m_240h_50pp_seq_svt.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/seq_ulvt/ndm/lib765_g1m_240h_50pp_seq_ulvt.ndm' (FILE-007)"
           ],
-          "last_updated": "2026-04-20T01:27:36",
-          "size_bytes": 41796324,
+          "last_updated": "2026-04-20T01:56:08",
+          "size_bytes": 36323698,
           "stage_exists": true
         },
         {
           "stage": "floorplan",
-          "status": "passed",
+          "status": "running",
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/fc.floorplan.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/floorplan.parallel_rpt_out.log",
-            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/floorplan.pass",
+            "pass_file": null,
             "fail_file": null,
-            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn/runs/pma_cmn/1276.5/apr_fc/logs/floorplan.skipped_fail"
+            "skipped_fail_file": null
           },
           "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
@@ -1291,8 +1291,8 @@
             "Elapsed time for this session:   4469 seconds (  1.24 hours)",
             "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-16T04:21:11",
-          "size_bytes": 40174959,
+          "last_updated": "2026-04-20T01:57:46",
+          "size_bytes": 52113071,
           "stage_exists": true
         },
         {
