@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T03:40:05",
+  "generated_at": "2026-04-21T04:10:54",
   "run_count": 5,
   "runs": [
     {
@@ -4903,10 +4903,10 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "if {([sizeof_collection [get_clocks -quiet {pod_hs_clk_16ui_l0 pod_hs_clk_16ui_l0_ft_* pod_hs_clk_16ui_l0_VIRTUAL*}]] && [sizeof_collection [get",
+      "fc_latest_line": "Information: Setting up cell instances...",
       "overall_status": "running",
       "running_stage": "compile_initial_opto",
-      "last_updated": "2026-04-21T03:40:04",
+      "last_updated": "2026-04-21T04:10:51",
       "summary": {
         "passed": 9,
         "failed": 0,
@@ -5420,22 +5420,22 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/initial_map.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU:  16665 s ( 4.63 hr) ELAPSE:   7565 s ( 2.10 hr) MEM-PEAK: 52020 Mb Tue Apr 21 03:39:20 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU:  18576 s ( 5.16 hr) ELAPSE:   9434 s ( 2.62 hr) MEM-PEAK: 52023 Mb Tue Apr 21 04:10:29 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU:  16622 s ( 4.62 hr) ELAPSE:   7523 s ( 2.09 hr) MEM-PEAK: 52020 Mb Tue Apr 21 03:38:38 2026",
-            "END_CMD: get_timing_paths      CPU:  16643 s ( 4.62 hr) ELAPSE:   7544 s ( 2.10 hr) MEM-PEAK: 52020 Mb Tue Apr 21 03:38:59 2026",
-            "START_CMD: get_timing_paths    CPU:  16643 s ( 4.62 hr) ELAPSE:   7544 s ( 2.10 hr) MEM-PEAK: 52020 Mb Tue Apr 21 03:38:59 2026",
-            "END_CMD: get_timing_paths      CPU:  16665 s ( 4.63 hr) ELAPSE:   7565 s ( 2.10 hr) MEM-PEAK: 52020 Mb Tue Apr 21 03:39:20 2026",
-            "START_CMD: get_timing_paths    CPU:  16665 s ( 4.63 hr) ELAPSE:   7565 s ( 2.10 hr) MEM-PEAK: 52020 Mb Tue Apr 21 03:39:20 2026"
+            "START_CMD: get_timing_paths    CPU:  18529 s ( 5.15 hr) ELAPSE:   9388 s ( 2.61 hr) MEM-PEAK: 52023 Mb Tue Apr 21 04:09:43 2026",
+            "END_CMD: get_timing_paths      CPU:  18553 s ( 5.15 hr) ELAPSE:   9411 s ( 2.61 hr) MEM-PEAK: 52023 Mb Tue Apr 21 04:10:06 2026",
+            "START_CMD: get_timing_paths    CPU:  18553 s ( 5.15 hr) ELAPSE:   9411 s ( 2.61 hr) MEM-PEAK: 52023 Mb Tue Apr 21 04:10:06 2026",
+            "END_CMD: get_timing_paths      CPU:  18576 s ( 5.16 hr) ELAPSE:   9434 s ( 2.62 hr) MEM-PEAK: 52023 Mb Tue Apr 21 04:10:29 2026",
+            "START_CMD: get_timing_paths    CPU:  18576 s ( 5.16 hr) ELAPSE:   9434 s ( 2.62 hr) MEM-PEAK: 52023 Mb Tue Apr 21 04:10:29 2026"
           ],
-          "last_updated": "2026-04-21T03:39:29",
-          "size_bytes": 218722912,
+          "last_updated": "2026-04-21T04:10:37",
+          "size_bytes": 218758987,
           "stage_exists": true
         },
         {
           "stage": "insert_dft",
           "status": "passed",
-          "log_error_count": 47,
+          "log_error_count": 52,
           "has_log_errors": true,
           "log_error_samples": [
             "Information: FLOW error check completed. (FAE-4001)",
@@ -5449,16 +5449,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/insert_dft.skipped_fail"
           },
-          "latest_line": "Key: core2h, value: 0x8c5c7dd10",
+          "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
-            "INTEL_INFO   : executing  proc sd_report_check_mv_design to generate reports (::sd_report_all) [Tue Apr 21 03:39:38 2026]",
-            "INTEL_INFO   : executing  proc sd_report_multibit to generate reports (::sd_report_all) [Tue Apr 21 03:39:46 2026]",
-            "Key: bonuscore, value: 0x8c5c7c3c0",
-            "Key: core, value: 0x8c5c7d860",
-            "Key: core2h, value: 0x8c5c7dd10"
+            "PROCESS-ID    MEM-PEAK    START-TIME                  END-TIME                    PROCESS-NAME",
+            " 42334            17 Mb   Tue Apr 21 03:55:02 2026    Tue Apr 21 03:55:32 2026    /usr/intel/pkgs/gnumeric/1.12.45/.bin/ssconvert pma_cmn_data2compare pma_cmn_data2compare.xls",
+            "CPU usage for this session:   3206 seconds (  0.89 hours)",
+            "Elapsed time for this session:   3673 seconds (  1.02 hours)",
+            "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-21T03:39:57",
-          "size_bytes": 31625800,
+          "last_updated": "2026-04-21T03:55:39",
+          "size_bytes": 33231583,
           "stage_exists": true
         },
         {
@@ -5493,9 +5493,13 @@
         {
           "stage": "compile_initial_opto",
           "status": "running",
-          "log_error_count": 0,
-          "has_log_errors": false,
-          "log_error_samples": [],
+          "log_error_count": 112,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Mode: dfx, Generated clock 'i_ck_jtag_tck_div4_as_sys_clkm_fast' has no path from master clock 'i_ck_jtag_tck_div2_as_sys'; zero source latency will be used. (GRF-014)",
+            "Error: Mode: dfx, Generated clock 'i_ck_jtag_tck_div4_as_sys_clkm_slow' has no path from master clock 'i_ck_jtag_tck_div2_as_sys'; zero source latency will be used. (GRF-014)",
+            "Error: Mode: dfx, Generated clock 'ick_main_synthlcfast_div2' has no path from master clock 'i_ck_sys'; zero source latency will be used. (GRF-014)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc.compile_initial_opto.log",
             "parallel_log": null,
@@ -5503,16 +5507,16 @@
             "fail_file": null,
             "skipped_fail_file": null
           },
-          "latest_line": "if {([sizeof_collection [get_clocks -quiet {pod_hs_clk_16ui_l0 pod_hs_clk_16ui_l0_ft_* pod_hs_clk_16ui_l0_VIRTUAL*}]] && [sizeof_collection [get",
+          "latest_line": "Information: Setting up cell instances...",
           "recent_lines": [
-            "set_clock_uncertainty -setup -from [get_clocks -quiet {pod_hs_clk_16ui_l0 pod_hs_clk_16ui_l0_ft_* pod_hs_clk_16ui_l0_VIRTUAL*}] -to [get_clocks -quiet {scan_shift_i_ck_pclk_l0 scan_shift_i_ck_pclk_l0_ft_* scan_shift_i_ck_pclk_l0_VIRTUAL*}] [expr 0 + 80 * $G_PRECTS / 2 + 80 * $G_PRECTS / 2]",
-            "set_clock_uncertainty -hold -from [get_clocks -quiet {pod_hs_clk_16ui_l0 pod_hs_clk_16ui_l0_ft_* pod_hs_clk_16ui_l0_VIRTUAL*}] -to [get_clocks -quiet {scan_shift_i_ck_pclk_l0 scan_shift_i_ck_pclk_l0_ft_* scan_shift_i_ck_pclk_l0_VIRTUAL*}] [expr 10 + 80 * $G_PRECTS / 2 + 80 * $G_PRECTS / 2]",
-            "}",
-            "#####from pod_hs_clk_16ui_l0 pod_hs_clk_16ui_l0_ft_* pod_hs_clk_16ui_l0_VIRTUAL* to scan_shift_i_ck_pclk_l1 scan_shift_i_ck_pclk_l1_ft_* scan_shift_i_ck_pclk_l1_VIRTUAL*#####",
-            "if {([sizeof_collection [get_clocks -quiet {pod_hs_clk_16ui_l0 pod_hs_clk_16ui_l0_ft_* pod_hs_clk_16ui_l0_VIRTUAL*}]] && [sizeof_collection [get"
+            "Information: Lib cells of site halo have their ground pins at bottom",
+            "Information: Lib cells of site bonuscore have their ground pins at bottom",
+            "Information: Is half inbound case ? no",
+            "Information: Legalizer threading is enabled with high effort (LGL-130)",
+            "Information: Setting up cell instances..."
           ],
-          "last_updated": "2026-04-21T03:40:04",
-          "size_bytes": 117555200,
+          "last_updated": "2026-04-21T04:10:51",
+          "size_bytes": 198888240,
           "stage_exists": true
         },
         {
