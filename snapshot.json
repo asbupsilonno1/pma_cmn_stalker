@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T14:27:49",
+  "generated_at": "2026-04-21T14:58:42",
   "run_count": 5,
   "runs": [
     {
@@ -4903,16 +4903,16 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "Routed  35088/51606 Partitions, Violations =    97838",
+      "fc_latest_line": "NEX: ICC2-StarRC fusion extracting partition# 71",
       "overall_status": "running",
-      "running_stage": "route_auto",
-      "last_updated": "2026-04-21T14:27:46",
+      "running_stage": "route_opt",
+      "last_updated": "2026-04-21T14:58:35",
       "summary": {
-        "passed": 14,
+        "passed": 15,
         "failed": 0,
         "skipped": 0,
         "started": 1,
-        "not_started": 4
+        "not_started": 3
       },
       "has_activity": true,
       "complete": false,
@@ -5420,16 +5420,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/initial_map.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU:  56496 s (15.69 hr) ELAPSE:  46451 s (12.90 hr) MEM-PEAK: 52027 Mb Tue Apr 21 14:27:27 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU:  58394 s (16.22 hr) ELAPSE:  48305 s (13.42 hr) MEM-PEAK: 52027 Mb Tue Apr 21 14:58:20 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU:  56453 s (15.68 hr) ELAPSE:  46409 s (12.89 hr) MEM-PEAK: 52027 Mb Tue Apr 21 14:26:44 2026",
-            "END_CMD: get_timing_paths      CPU:  56475 s (15.69 hr) ELAPSE:  46431 s (12.90 hr) MEM-PEAK: 52027 Mb Tue Apr 21 14:27:06 2026",
-            "START_CMD: get_timing_paths    CPU:  56475 s (15.69 hr) ELAPSE:  46431 s (12.90 hr) MEM-PEAK: 52027 Mb Tue Apr 21 14:27:06 2026",
-            "END_CMD: get_timing_paths      CPU:  56496 s (15.69 hr) ELAPSE:  46451 s (12.90 hr) MEM-PEAK: 52027 Mb Tue Apr 21 14:27:27 2026",
-            "START_CMD: get_timing_paths    CPU:  56496 s (15.69 hr) ELAPSE:  46451 s (12.90 hr) MEM-PEAK: 52027 Mb Tue Apr 21 14:27:27 2026"
+            "START_CMD: get_timing_paths    CPU:  58351 s (16.21 hr) ELAPSE:  48263 s (13.41 hr) MEM-PEAK: 52027 Mb Tue Apr 21 14:57:38 2026",
+            "END_CMD: get_timing_paths      CPU:  58373 s (16.21 hr) ELAPSE:  48284 s (13.41 hr) MEM-PEAK: 52027 Mb Tue Apr 21 14:57:59 2026",
+            "START_CMD: get_timing_paths    CPU:  58373 s (16.21 hr) ELAPSE:  48284 s (13.41 hr) MEM-PEAK: 52027 Mb Tue Apr 21 14:57:59 2026",
+            "END_CMD: get_timing_paths      CPU:  58394 s (16.22 hr) ELAPSE:  48305 s (13.42 hr) MEM-PEAK: 52027 Mb Tue Apr 21 14:58:20 2026",
+            "START_CMD: get_timing_paths    CPU:  58394 s (16.22 hr) ELAPSE:  48305 s (13.42 hr) MEM-PEAK: 52027 Mb Tue Apr 21 14:58:20 2026"
           ],
-          "last_updated": "2026-04-21T14:27:36",
-          "size_bytes": 219423841,
+          "last_updated": "2026-04-21T14:58:30",
+          "size_bytes": 219459014,
           "stage_exists": true
         },
         {
@@ -5536,16 +5536,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU:  23284 s ( 6.47 hr) ELAPSE:  19880 s ( 5.52 hr) MEM-PEAK: 58137 Mb Tue Apr 21 14:27:21 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU:  25209 s ( 7.00 hr) ELAPSE:  21753 s ( 6.04 hr) MEM-PEAK: 58137 Mb Tue Apr 21 14:58:33 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU:  23251 s ( 6.46 hr) ELAPSE:  19848 s ( 5.51 hr) MEM-PEAK: 58137 Mb Tue Apr 21 14:26:49 2026",
-            "END_CMD: get_timing_paths      CPU:  23267 s ( 6.46 hr) ELAPSE:  19864 s ( 5.52 hr) MEM-PEAK: 58137 Mb Tue Apr 21 14:27:05 2026",
-            "START_CMD: get_timing_paths    CPU:  23267 s ( 6.46 hr) ELAPSE:  19864 s ( 5.52 hr) MEM-PEAK: 58137 Mb Tue Apr 21 14:27:05 2026",
-            "END_CMD: get_timing_paths      CPU:  23284 s ( 6.47 hr) ELAPSE:  19880 s ( 5.52 hr) MEM-PEAK: 58137 Mb Tue Apr 21 14:27:21 2026",
-            "START_CMD: get_timing_paths    CPU:  23284 s ( 6.47 hr) ELAPSE:  19880 s ( 5.52 hr) MEM-PEAK: 58137 Mb Tue Apr 21 14:27:21 2026"
+            "START_CMD: get_timing_paths    CPU:  25179 s ( 6.99 hr) ELAPSE:  21723 s ( 6.03 hr) MEM-PEAK: 58137 Mb Tue Apr 21 14:58:04 2026",
+            "END_CMD: get_timing_paths      CPU:  25194 s ( 7.00 hr) ELAPSE:  21738 s ( 6.04 hr) MEM-PEAK: 58137 Mb Tue Apr 21 14:58:19 2026",
+            "START_CMD: get_timing_paths    CPU:  25194 s ( 7.00 hr) ELAPSE:  21738 s ( 6.04 hr) MEM-PEAK: 58137 Mb Tue Apr 21 14:58:19 2026",
+            "END_CMD: get_timing_paths      CPU:  25209 s ( 7.00 hr) ELAPSE:  21753 s ( 6.04 hr) MEM-PEAK: 58137 Mb Tue Apr 21 14:58:33 2026",
+            "START_CMD: get_timing_paths    CPU:  25209 s ( 7.00 hr) ELAPSE:  21753 s ( 6.04 hr) MEM-PEAK: 58137 Mb Tue Apr 21 14:58:33 2026"
           ],
-          "last_updated": "2026-04-21T14:27:35",
-          "size_bytes": 69385651,
+          "last_updated": "2026-04-21T14:58:35",
+          "size_bytes": 69422132,
           "stage_exists": true
         },
         {
@@ -5594,22 +5594,22 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/cts.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU:  14247 s ( 3.96 hr) ELAPSE:  11522 s ( 3.20 hr) MEM-PEAK: 61714 Mb Tue Apr 21 14:27:28 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU:  16147 s ( 4.49 hr) ELAPSE:  13383 s ( 3.72 hr) MEM-PEAK: 61714 Mb Tue Apr 21 14:58:29 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU:  14201 s ( 3.94 hr) ELAPSE:  11478 s ( 3.19 hr) MEM-PEAK: 61714 Mb Tue Apr 21 14:26:43 2026",
-            "END_CMD: get_timing_paths      CPU:  14224 s ( 3.95 hr) ELAPSE:  11500 s ( 3.19 hr) MEM-PEAK: 61714 Mb Tue Apr 21 14:27:06 2026",
-            "START_CMD: get_timing_paths    CPU:  14224 s ( 3.95 hr) ELAPSE:  11500 s ( 3.19 hr) MEM-PEAK: 61714 Mb Tue Apr 21 14:27:06 2026",
-            "END_CMD: get_timing_paths      CPU:  14247 s ( 3.96 hr) ELAPSE:  11522 s ( 3.20 hr) MEM-PEAK: 61714 Mb Tue Apr 21 14:27:28 2026",
-            "START_CMD: get_timing_paths    CPU:  14247 s ( 3.96 hr) ELAPSE:  11522 s ( 3.20 hr) MEM-PEAK: 61714 Mb Tue Apr 21 14:27:28 2026"
+            "START_CMD: get_timing_paths    CPU:  16121 s ( 4.48 hr) ELAPSE:  13358 s ( 3.71 hr) MEM-PEAK: 61714 Mb Tue Apr 21 14:58:04 2026",
+            "END_CMD: get_timing_paths      CPU:  16134 s ( 4.48 hr) ELAPSE:  13371 s ( 3.71 hr) MEM-PEAK: 61714 Mb Tue Apr 21 14:58:16 2026",
+            "START_CMD: get_timing_paths    CPU:  16134 s ( 4.48 hr) ELAPSE:  13371 s ( 3.71 hr) MEM-PEAK: 61714 Mb Tue Apr 21 14:58:16 2026",
+            "END_CMD: get_timing_paths      CPU:  16147 s ( 4.49 hr) ELAPSE:  13383 s ( 3.72 hr) MEM-PEAK: 61714 Mb Tue Apr 21 14:58:29 2026",
+            "START_CMD: get_timing_paths    CPU:  16147 s ( 4.49 hr) ELAPSE:  13383 s ( 3.72 hr) MEM-PEAK: 61714 Mb Tue Apr 21 14:58:29 2026"
           ],
-          "last_updated": "2026-04-21T14:27:33",
-          "size_bytes": 1355497075,
+          "last_updated": "2026-04-21T14:58:34",
+          "size_bytes": 1355525454,
           "stage_exists": true
         },
         {
           "stage": "clock_route_opt",
           "status": "passed",
-          "log_error_count": 5,
+          "log_error_count": 7,
           "has_log_errors": true,
           "log_error_samples": [
             "Information: >>>>>>> 39 unique error and warning message tags while observing clock_opt / final_opto: (MSG-3100)",
@@ -5623,61 +5623,71 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/clock_route_opt.skipped_fail"
           },
-          "latest_line": "net i_cmnlogic/i_cmn/i_pg/i_rtl/i_cal/ctmn_227021 length = 1.735 um, r = 435.925 ohm, c = 0.501 ff, cc = 0.000 ff pinCount: 2 (ID: 12)",
+          "latest_line": "INTEL_INFO   : Dumping out all timing violation clock group based... (::sd_reports_vio_all_icc) [Tue Apr 21 14:57:50 2026]",
           "recent_lines": [
-            "net i_spare_cmn_a[4] length = 7.628 um, r = 401.824 ohm, c = 1.303 ff, cc = 0.000 ff pinCount: 2 (ID: 6)",
-            "net i_spare_cmn_a[2] length = 4.150 um, r = 514.101 ohm, c = 1.110 ff, cc = 0.000 ff pinCount: 2 (ID: 8)",
-            "net i_pvdd_refclk_pwrgood length = 304.027 um, r = 2142.171 ohm, c = 44.998 ff, cc = 0.000 ff pinCount: 2 (ID: 0)",
-            "net i_cmnlogic/i_cmn/i_fw/i_uc_top/Xttop/Xtensa/TIE/TIE_scalar_semantic_slot0_xt_mul32/iTIEcall_p0_tmp3_C1/booth15/ctmn_269405 length = 0.667 um, r = 318.213 ohm, c = 0.388 ff, cc = 0.000 ff pinCount: 3 (ID: 11)",
-            "net i_cmnlogic/i_cmn/i_pg/i_rtl/i_cal/ctmn_227021 length = 1.735 um, r = 435.925 ohm, c = 0.501 ff, cc = 0.000 ff pinCount: 2 (ID: 12)"
+            "Warning: duplicate option '-compress' overrides previous value. (CMD-018)",
+            "INTEL_INFO   : executing  proc sd_report_check_legality to generate reports (::sd_report_all) [Tue Apr 21 14:56:50 2026]",
+            "INTEL_INFO   : executing  proc sd_report_shields to generate reports (::sd_report_all) [Tue Apr 21 14:57:29 2026]",
+            "INTEL_INFO   : executing  proc sd_reports_vio_all_icc to generate reports (::sd_report_all) [Tue Apr 21 14:57:50 2026]",
+            "INTEL_INFO   : Dumping out all timing violation clock group based... (::sd_reports_vio_all_icc) [Tue Apr 21 14:57:50 2026]"
           ],
-          "last_updated": "2026-04-21T14:26:15",
-          "size_bytes": 76772555,
+          "last_updated": "2026-04-21T14:58:01",
+          "size_bytes": 86927584,
           "stage_exists": true
         },
         {
           "stage": "route_auto",
+          "status": "passed",
+          "log_error_count": 3,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Information: FLOW error check completed. (FAE-4001)",
+            "Information: Flow error check: SUCCESS. (FAE-4001)",
+            "Error: Cannot find a fill cell to create fill shape in. (NDMUI-401)"
+          ],
+          "files": {
+            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc.route_auto.log",
+            "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/route_auto.parallel_rpt_out.log",
+            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/route_auto.pass",
+            "fail_file": null,
+            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/route_auto.skipped_fail"
+          },
+          "latest_line": "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/ds1_svt/ndm/lib765_g1m_240h_50pp_ds1_svt.ndm' (FILE-007)",
+          "recent_lines": [
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/base_lvt/ndm/lib765_g1m_240h_50pp_base_lvt.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/base_svt/ndm/lib765_g1m_240h_50pp_base_svt.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/clk_lvt/ndm/lib765_g1m_240h_50pp_clk_lvt.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/clk_svt/ndm/lib765_g1m_240h_50pp_clk_svt.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/ds1_svt/ndm/lib765_g1m_240h_50pp_ds1_svt.ndm' (FILE-007)"
+          ],
+          "last_updated": "2026-04-21T14:58:21",
+          "size_bytes": 24856958,
+          "stage_exists": true
+        },
+        {
+          "stage": "route_opt",
           "status": "running",
           "log_error_count": 0,
           "has_log_errors": false,
           "log_error_samples": [],
           "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc.route_auto.log",
+            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc.route_opt.log",
             "parallel_log": null,
             "pass_file": null,
             "fail_file": null,
             "skipped_fail_file": null
           },
-          "latest_line": "Routed  35088/51606 Partitions, Violations =    97838",
+          "latest_line": "NEX: ICC2-StarRC fusion extracting partition# 71",
           "recent_lines": [
-            "Routed  34056/51606 Partitions, Violations =    99063",
-            "Routed  34314/51606 Partitions, Violations =    98732",
-            "Routed  34572/51606 Partitions, Violations =    98273",
-            "Routed  34830/51606 Partitions, Violations =    98013",
-            "Routed  35088/51606 Partitions, Violations =    97838"
+            "NEX: ICC2-StarRC fusion extracting partition# 35",
+            "NEX: Partition# 70(3, 15), Xin checksum: AFDADEF6",
+            "NEX: ICC2-StarRC fusion extracting partition# 70",
+            "NEX: Partition# 71(3, 16), Xin checksum: CF9E6218",
+            "NEX: ICC2-StarRC fusion extracting partition# 71"
           ],
-          "last_updated": "2026-04-21T14:27:46",
-          "size_bytes": 10171068,
+          "last_updated": "2026-04-21T14:58:31",
+          "size_bytes": 9247586,
           "stage_exists": true
-        },
-        {
-          "stage": "route_opt",
-          "status": "not_started",
-          "log_error_count": 0,
-          "has_log_errors": false,
-          "log_error_samples": [],
-          "files": {
-            "fc_log": null,
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "",
-          "recent_lines": [],
-          "last_updated": null,
-          "size_bytes": 0,
-          "stage_exists": false
         },
         {
           "stage": "opt_signoff",
