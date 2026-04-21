@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T19:28:05",
+  "generated_at": "2026-04-20T19:58:47",
   "run_count": 5,
   "runs": [
     {
@@ -3606,10 +3606,10 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "compile optimization Phase 0 Iter  2    3241785.25  2951729.00         -         -     261743.25    13428.27      200966              1.48    108620",
+      "fc_latest_line": "END_CMD: get_timing_paths      CPU:  18966 s ( 5.27 hr) ELAPSE:   7069 s ( 1.96 hr) MEM-PEAK: 111068 Mb Mon Apr 20 19:54:49 2026",
       "overall_status": "running",
       "running_stage": "estimation",
-      "last_updated": "2026-04-20T19:25:38",
+      "last_updated": "2026-04-20T19:54:54",
       "summary": {
         "passed": 17,
         "failed": 0,
@@ -4338,16 +4338,16 @@
             "fail_file": null,
             "skipped_fail_file": null
           },
-          "latest_line": "compile optimization Phase 0 Iter  2    3241785.25  2951729.00         -         -     261743.25    13428.27      200966              1.48    108620",
+          "latest_line": "END_CMD: get_timing_paths      CPU:  18966 s ( 5.27 hr) ELAPSE:   7069 s ( 1.96 hr) MEM-PEAK: 111068 Mb Mon Apr 20 19:54:49 2026",
           "recent_lines": [
-            "Walltime in multi-threaded power beat: 6.6e-08s",
-            "Walltime in multi-threaded power beat: 6.3e-08s",
-            "compile optimization Phase 0 Iter  1    3242152.25  2952040.25         -         -     261995.22    13770.14      200966              1.43    108620",
-            "Walltime in multi-threaded power beat: 7.4e-08s",
-            "compile optimization Phase 0 Iter  2    3241785.25  2951729.00         -         -     261743.25    13428.27      200966              1.48    108620"
+            "TNZ_UTIL :: Writing endpoint_data",
+            "START_CMD: get_timing_paths    CPU:  18705 s ( 5.20 hr) ELAPSE:   6814 s ( 1.89 hr) MEM-PEAK: 108887 Mb Mon Apr 20 19:50:34 2026",
+            "Warning: Scenario dfx.0p825-1p02-76dot5-min.F_125.pcff3 is not configured for setup analysis: skipping. (UIC-058)",
+            "Warning: Scenario func.0p825-1p02-76dot5-min.F_125.pcff3 is not configured for setup analysis: skipping. (UIC-058)",
+            "END_CMD: get_timing_paths      CPU:  18966 s ( 5.27 hr) ELAPSE:   7069 s ( 1.96 hr) MEM-PEAK: 111068 Mb Mon Apr 20 19:54:49 2026"
           ],
-          "last_updated": "2026-04-20T19:25:38",
-          "size_bytes": 17137742,
+          "last_updated": "2026-04-20T19:54:54",
+          "size_bytes": 41201767,
           "stage_exists": true
         },
         {
