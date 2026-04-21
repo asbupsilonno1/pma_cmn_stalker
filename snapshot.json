@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T16:00:27",
+  "generated_at": "2026-04-21T16:31:20",
   "run_count": 5,
   "runs": [
     {
@@ -4906,7 +4906,7 @@
       "fc_latest_line": "NEX: warning, extractTotalVia input with the wrong layer order: lowerLayerName m1, upperLayerName m1",
       "overall_status": "running",
       "running_stage": "route_opt",
-      "last_updated": "2026-04-21T16:00:26",
+      "last_updated": "2026-04-21T16:31:11",
       "summary": {
         "passed": 15,
         "failed": 0,
@@ -5420,16 +5420,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/initial_map.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU:  62190 s (17.27 hr) ELAPSE:  52012 s (14.45 hr) MEM-PEAK: 52027 Mb Tue Apr 21 16:00:07 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU:  64043 s (17.79 hr) ELAPSE:  53824 s (14.95 hr) MEM-PEAK: 52027 Mb Tue Apr 21 16:30:19 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU:  62151 s (17.26 hr) ELAPSE:  51973 s (14.44 hr) MEM-PEAK: 52027 Mb Tue Apr 21 15:59:28 2026",
-            "END_CMD: get_timing_paths      CPU:  62171 s (17.27 hr) ELAPSE:  51993 s (14.44 hr) MEM-PEAK: 52027 Mb Tue Apr 21 15:59:48 2026",
-            "START_CMD: get_timing_paths    CPU:  62171 s (17.27 hr) ELAPSE:  51993 s (14.44 hr) MEM-PEAK: 52027 Mb Tue Apr 21 15:59:48 2026",
-            "END_CMD: get_timing_paths      CPU:  62190 s (17.27 hr) ELAPSE:  52012 s (14.45 hr) MEM-PEAK: 52027 Mb Tue Apr 21 16:00:07 2026",
-            "START_CMD: get_timing_paths    CPU:  62190 s (17.27 hr) ELAPSE:  52012 s (14.45 hr) MEM-PEAK: 52027 Mb Tue Apr 21 16:00:07 2026"
+            "START_CMD: get_timing_paths    CPU:  63988 s (17.77 hr) ELAPSE:  53771 s (14.94 hr) MEM-PEAK: 52027 Mb Tue Apr 21 16:29:26 2026",
+            "END_CMD: get_timing_paths      CPU:  64015 s (17.78 hr) ELAPSE:  53798 s (14.94 hr) MEM-PEAK: 52027 Mb Tue Apr 21 16:29:53 2026",
+            "START_CMD: get_timing_paths    CPU:  64015 s (17.78 hr) ELAPSE:  53798 s (14.94 hr) MEM-PEAK: 52027 Mb Tue Apr 21 16:29:53 2026",
+            "END_CMD: get_timing_paths      CPU:  64043 s (17.79 hr) ELAPSE:  53824 s (14.95 hr) MEM-PEAK: 52027 Mb Tue Apr 21 16:30:19 2026",
+            "START_CMD: get_timing_paths    CPU:  64043 s (17.79 hr) ELAPSE:  53824 s (14.95 hr) MEM-PEAK: 52027 Mb Tue Apr 21 16:30:19 2026"
           ],
-          "last_updated": "2026-04-21T16:00:18",
-          "size_bytes": 219529382,
+          "last_updated": "2026-04-21T16:30:23",
+          "size_bytes": 219566501,
           "stage_exists": true
         },
         {
@@ -5536,16 +5536,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU:  28975 s ( 8.05 hr) ELAPSE:  25423 s ( 7.06 hr) MEM-PEAK: 58137 Mb Tue Apr 21 15:59:44 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU:  30894 s ( 8.58 hr) ELAPSE:  27296 s ( 7.58 hr) MEM-PEAK: 58137 Mb Tue Apr 21 16:30:56 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU:  28949 s ( 8.04 hr) ELAPSE:  25399 s ( 7.06 hr) MEM-PEAK: 58137 Mb Tue Apr 21 15:59:19 2026",
-            "END_CMD: get_timing_paths      CPU:  28963 s ( 8.05 hr) ELAPSE:  25411 s ( 7.06 hr) MEM-PEAK: 58137 Mb Tue Apr 21 15:59:32 2026",
-            "START_CMD: get_timing_paths    CPU:  28963 s ( 8.05 hr) ELAPSE:  25411 s ( 7.06 hr) MEM-PEAK: 58137 Mb Tue Apr 21 15:59:32 2026",
-            "END_CMD: get_timing_paths      CPU:  28975 s ( 8.05 hr) ELAPSE:  25423 s ( 7.06 hr) MEM-PEAK: 58137 Mb Tue Apr 21 15:59:44 2026",
-            "START_CMD: get_timing_paths    CPU:  28975 s ( 8.05 hr) ELAPSE:  25423 s ( 7.06 hr) MEM-PEAK: 58137 Mb Tue Apr 21 15:59:44 2026"
+            "START_CMD: get_timing_paths    CPU:  30869 s ( 8.57 hr) ELAPSE:  27272 s ( 7.58 hr) MEM-PEAK: 58137 Mb Tue Apr 21 16:30:32 2026",
+            "END_CMD: get_timing_paths      CPU:  30882 s ( 8.58 hr) ELAPSE:  27284 s ( 7.58 hr) MEM-PEAK: 58137 Mb Tue Apr 21 16:30:44 2026",
+            "START_CMD: get_timing_paths    CPU:  30882 s ( 8.58 hr) ELAPSE:  27284 s ( 7.58 hr) MEM-PEAK: 58137 Mb Tue Apr 21 16:30:44 2026",
+            "END_CMD: get_timing_paths      CPU:  30894 s ( 8.58 hr) ELAPSE:  27296 s ( 7.58 hr) MEM-PEAK: 58137 Mb Tue Apr 21 16:30:56 2026",
+            "START_CMD: get_timing_paths    CPU:  30894 s ( 8.58 hr) ELAPSE:  27296 s ( 7.58 hr) MEM-PEAK: 58137 Mb Tue Apr 21 16:30:56 2026"
           ],
-          "last_updated": "2026-04-21T15:59:50",
-          "size_bytes": 69498140,
+          "last_updated": "2026-04-21T16:31:03",
+          "size_bytes": 69545211,
           "stage_exists": true
         },
         {
@@ -5594,16 +5594,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/cts.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU:  19933 s ( 5.54 hr) ELAPSE:  17089 s ( 4.75 hr) MEM-PEAK: 61714 Mb Tue Apr 21 16:00:15 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU:  21823 s ( 6.06 hr) ELAPSE:  18941 s ( 5.26 hr) MEM-PEAK: 61714 Mb Tue Apr 21 16:31:06 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU:  19905 s ( 5.53 hr) ELAPSE:  17062 s ( 4.74 hr) MEM-PEAK: 61714 Mb Tue Apr 21 15:59:47 2026",
-            "END_CMD: get_timing_paths      CPU:  19918 s ( 5.53 hr) ELAPSE:  17076 s ( 4.74 hr) MEM-PEAK: 61714 Mb Tue Apr 21 16:00:01 2026",
-            "START_CMD: get_timing_paths    CPU:  19918 s ( 5.53 hr) ELAPSE:  17076 s ( 4.74 hr) MEM-PEAK: 61714 Mb Tue Apr 21 16:00:01 2026",
-            "END_CMD: get_timing_paths      CPU:  19933 s ( 5.54 hr) ELAPSE:  17089 s ( 4.75 hr) MEM-PEAK: 61714 Mb Tue Apr 21 16:00:15 2026",
-            "START_CMD: get_timing_paths    CPU:  19933 s ( 5.54 hr) ELAPSE:  17089 s ( 4.75 hr) MEM-PEAK: 61714 Mb Tue Apr 21 16:00:15 2026"
+            "START_CMD: get_timing_paths    CPU:  21797 s ( 6.05 hr) ELAPSE:  18915 s ( 5.25 hr) MEM-PEAK: 61714 Mb Tue Apr 21 16:30:41 2026",
+            "END_CMD: get_timing_paths      CPU:  21810 s ( 6.06 hr) ELAPSE:  18928 s ( 5.26 hr) MEM-PEAK: 61714 Mb Tue Apr 21 16:30:53 2026",
+            "START_CMD: get_timing_paths    CPU:  21810 s ( 6.06 hr) ELAPSE:  18928 s ( 5.26 hr) MEM-PEAK: 61714 Mb Tue Apr 21 16:30:53 2026",
+            "END_CMD: get_timing_paths      CPU:  21823 s ( 6.06 hr) ELAPSE:  18941 s ( 5.26 hr) MEM-PEAK: 61714 Mb Tue Apr 21 16:31:06 2026",
+            "START_CMD: get_timing_paths    CPU:  21823 s ( 6.06 hr) ELAPSE:  18941 s ( 5.26 hr) MEM-PEAK: 61714 Mb Tue Apr 21 16:31:06 2026"
           ],
-          "last_updated": "2026-04-21T16:00:20",
-          "size_bytes": 1355608404,
+          "last_updated": "2026-04-21T16:31:11",
+          "size_bytes": 1355648512,
           "stage_exists": true
         },
         {
@@ -5623,22 +5623,22 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/clock_route_opt.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU:  10279 s ( 2.86 hr) ELAPSE:   6900 s ( 1.92 hr) MEM-PEAK: 61613 Mb Tue Apr 21 16:00:08 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU:  12184 s ( 3.38 hr) ELAPSE:   8754 s ( 2.43 hr) MEM-PEAK: 61613 Mb Tue Apr 21 16:31:01 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU:  10251 s ( 2.85 hr) ELAPSE:   6873 s ( 1.91 hr) MEM-PEAK: 61613 Mb Tue Apr 21 15:59:40 2026",
-            "END_CMD: get_timing_paths      CPU:  10265 s ( 2.85 hr) ELAPSE:   6887 s ( 1.91 hr) MEM-PEAK: 61613 Mb Tue Apr 21 15:59:54 2026",
-            "START_CMD: get_timing_paths    CPU:  10265 s ( 2.85 hr) ELAPSE:   6887 s ( 1.91 hr) MEM-PEAK: 61613 Mb Tue Apr 21 15:59:54 2026",
-            "END_CMD: get_timing_paths      CPU:  10279 s ( 2.86 hr) ELAPSE:   6900 s ( 1.92 hr) MEM-PEAK: 61613 Mb Tue Apr 21 16:00:08 2026",
-            "START_CMD: get_timing_paths    CPU:  10279 s ( 2.86 hr) ELAPSE:   6900 s ( 1.92 hr) MEM-PEAK: 61613 Mb Tue Apr 21 16:00:08 2026"
+            "START_CMD: get_timing_paths    CPU:  12153 s ( 3.38 hr) ELAPSE:   8724 s ( 2.42 hr) MEM-PEAK: 61613 Mb Tue Apr 21 16:30:31 2026",
+            "END_CMD: get_timing_paths      CPU:  12169 s ( 3.38 hr) ELAPSE:   8738 s ( 2.43 hr) MEM-PEAK: 61613 Mb Tue Apr 21 16:30:46 2026",
+            "START_CMD: get_timing_paths    CPU:  12169 s ( 3.38 hr) ELAPSE:   8738 s ( 2.43 hr) MEM-PEAK: 61613 Mb Tue Apr 21 16:30:46 2026",
+            "END_CMD: get_timing_paths      CPU:  12184 s ( 3.38 hr) ELAPSE:   8754 s ( 2.43 hr) MEM-PEAK: 61613 Mb Tue Apr 21 16:31:01 2026",
+            "START_CMD: get_timing_paths    CPU:  12184 s ( 3.38 hr) ELAPSE:   8754 s ( 2.43 hr) MEM-PEAK: 61613 Mb Tue Apr 21 16:31:01 2026"
           ],
-          "last_updated": "2026-04-21T16:00:11",
-          "size_bytes": 91485554,
+          "last_updated": "2026-04-21T16:31:01",
+          "size_bytes": 91520998,
           "stage_exists": true
         },
         {
           "stage": "route_auto",
           "status": "passed",
-          "log_error_count": 4,
+          "log_error_count": 9,
           "has_log_errors": true,
           "log_error_samples": [
             "Information: FLOW error check completed. (FAE-4001)",
@@ -5652,16 +5652,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/route_auto.skipped_fail"
           },
-          "latest_line": "INTEL_INFO   : executing  proc sd_report_clock_qor to generate reports (::sd_report_all) [Tue Apr 21 15:57:33 2026]",
+          "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
-            "INTEL_INFO   : executing  proc sd_report_vio_min_no_clock_expanded_nworst_100 to generate reports (::sd_report_all) [Tue Apr 21 15:57:33 2026]",
-            "INTEL_INFO   : In sd_report_vio_min_no_clock_expanded_nworst_100, cannot write out timing reports as no active scenarios exist with clocks defined (::sd_report_vio_min_no_clock_expanded_nworst_100) [Tue Apr 21 15:57:33 2026]",
-            "INTEL_INFO   : executing  proc sd_report_vio_min_nworst_100 to generate reports (::sd_report_all) [Tue Apr 21 15:57:33 2026]",
-            "INTEL_INFO   : In sd_report_vio_min_nworst_100, cannot write out timing reports as no active scenarios exist with clocks defined (::sd_report_vio_min_nworst_100) [Tue Apr 21 15:57:33 2026]",
-            "INTEL_INFO   : executing  proc sd_report_clock_qor to generate reports (::sd_report_all) [Tue Apr 21 15:57:33 2026]"
+            "Maximum memory usage for this session: 70777.78 MB",
+            "Maximum memory usage for this session including child processes: 70777.78 MB",
+            "CPU usage for this session:  16861 seconds (  4.68 hours)",
+            "Elapsed time for this session:   4865 seconds (  1.35 hours)",
+            "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-21T15:58:08",
-          "size_bytes": 37288749,
+          "last_updated": "2026-04-21T16:14:56",
+          "size_bytes": 37445363,
           "stage_exists": true
         },
         {
@@ -5685,8 +5685,8 @@
             "NEX: warning, extractTotalVia input with the wrong layer order: lowerLayerName m1, upperLayerName m0",
             "NEX: warning, extractTotalVia input with the wrong layer order: lowerLayerName m1, upperLayerName m1"
           ],
-          "last_updated": "2026-04-21T16:00:26",
-          "size_bytes": 58053686,
+          "last_updated": "2026-04-21T16:31:08",
+          "size_bytes": 82374776,
           "stage_exists": true
         },
         {
