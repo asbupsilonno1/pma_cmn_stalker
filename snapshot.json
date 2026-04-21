@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T09:19:12",
+  "generated_at": "2026-04-21T09:50:04",
   "run_count": 5,
   "runs": [
     {
@@ -4903,10 +4903,10 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "Information: Net estimation statistics: timing graph nets = 214860, routed nets = 5, across physical hierarchy nets = 0, parasitics cached nets = 212179, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 53. (TIM-112)",
+      "fc_latest_line": "NEX failed to build VGR numPin < 2",
       "overall_status": "running",
       "running_stage": "cts",
-      "last_updated": "2026-04-21T09:19:02",
+      "last_updated": "2026-04-21T09:49:57",
       "summary": {
         "passed": 12,
         "failed": 0,
@@ -5420,16 +5420,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/initial_map.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU:  37505 s (10.42 hr) ELAPSE:  27904 s ( 7.75 hr) MEM-PEAK: 52027 Mb Tue Apr 21 09:18:19 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU:  39443 s (10.96 hr) ELAPSE:  29796 s ( 8.28 hr) MEM-PEAK: 52027 Mb Tue Apr 21 09:49:51 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU:  37458 s (10.40 hr) ELAPSE:  27859 s ( 7.74 hr) MEM-PEAK: 52027 Mb Tue Apr 21 09:17:34 2026",
-            "END_CMD: get_timing_paths      CPU:  37481 s (10.41 hr) ELAPSE:  27881 s ( 7.74 hr) MEM-PEAK: 52027 Mb Tue Apr 21 09:17:56 2026",
-            "START_CMD: get_timing_paths    CPU:  37481 s (10.41 hr) ELAPSE:  27881 s ( 7.74 hr) MEM-PEAK: 52027 Mb Tue Apr 21 09:17:56 2026",
-            "END_CMD: get_timing_paths      CPU:  37505 s (10.42 hr) ELAPSE:  27904 s ( 7.75 hr) MEM-PEAK: 52027 Mb Tue Apr 21 09:18:19 2026",
-            "START_CMD: get_timing_paths    CPU:  37505 s (10.42 hr) ELAPSE:  27904 s ( 7.75 hr) MEM-PEAK: 52027 Mb Tue Apr 21 09:18:19 2026"
+            "START_CMD: get_timing_paths    CPU:  39392 s (10.94 hr) ELAPSE:  29746 s ( 8.26 hr) MEM-PEAK: 52027 Mb Tue Apr 21 09:49:01 2026",
+            "END_CMD: get_timing_paths      CPU:  39418 s (10.95 hr) ELAPSE:  29771 s ( 8.27 hr) MEM-PEAK: 52027 Mb Tue Apr 21 09:49:26 2026",
+            "START_CMD: get_timing_paths    CPU:  39418 s (10.95 hr) ELAPSE:  29771 s ( 8.27 hr) MEM-PEAK: 52027 Mb Tue Apr 21 09:49:26 2026",
+            "END_CMD: get_timing_paths      CPU:  39443 s (10.96 hr) ELAPSE:  29796 s ( 8.28 hr) MEM-PEAK: 52027 Mb Tue Apr 21 09:49:51 2026",
+            "START_CMD: get_timing_paths    CPU:  39443 s (10.96 hr) ELAPSE:  29796 s ( 8.28 hr) MEM-PEAK: 52027 Mb Tue Apr 21 09:49:51 2026"
           ],
-          "last_updated": "2026-04-21T09:18:27",
-          "size_bytes": 219093609,
+          "last_updated": "2026-04-21T09:49:57",
+          "size_bytes": 219125858,
           "stage_exists": true
         },
         {
@@ -5522,7 +5522,7 @@
         {
           "stage": "compile_final_opto",
           "status": "passed",
-          "log_error_count": 9,
+          "log_error_count": 10,
           "has_log_errors": true,
           "log_error_samples": [
             "Information: >>>>>>> 36 unique error and warning message tags while observing compile_fusion / final_opto: (MSG-3100)",
@@ -5536,22 +5536,22 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.skipped_fail"
           },
-          "latest_line": "NEX: num of gcell = 217 x 649,  cellSizeX 1.562500, cellSizeY 1.562500, bbox (x1 -23.300000, x2 314.900000, y1 0.000000, y2 1013.760000)",
+          "latest_line": "INTEL_INFO (DFT): Rule 12: ss and si pin of scan flop which are not part of Scan Chain should be connected to constant [Tue Apr 21 09:49:36 2026]",
           "recent_lines": [
-            "net i_dpma_cmn_abut/aps_rename_46 length = 111.050 um, r = 941.251 ohm, c = 19.027 ff, cc = 0.000 ff pinCount: 2 (ID: 1354404)",
-            "net i_dpma_cmn_abut/aps_rename_77 length = 195.560 um, r = 1460.500 ohm, c = 30.656 ff, cc = 0.000 ff pinCount: 2 (ID: 1354434)",
-            "net aps_rename_3976 length = 123.610 um, r = 2346.138 ohm, c = 21.811 ff, cc = 0.000 ff pinCount: 2 (ID: 1030)",
-            "net i_dpma_cmn_abut/aps_rename_100 length = 57.535 um, r = 2484.579 ohm, c = 10.511 ff, cc = 0.000 ff pinCount: 2 (ID: 1354494)",
-            "NEX: num of gcell = 217 x 649,  cellSizeX 1.562500, cellSizeY 1.562500, bbox (x1 -23.300000, x2 314.900000, y1 0.000000, y2 1013.760000)"
+            "INTEL_INFO (DFT): No scan cells found in non-scan designs",
+            "INTEL_INFO (DFT): Rule 10: Done [Tue Apr 21 09:49:31 2026]",
+            "INTEL_INFO (DFT): Rule 11: Checking for If si pin of scan flop tied to constant,then ss/ssb pin of scan flop should also be connected to constant [Tue Apr 21 09:49:31 2026]",
+            "INTEL_INFO (DFT): Rule 11: Done [Tue Apr 21 09:49:36 2026]",
+            "INTEL_INFO (DFT): Rule 12: ss and si pin of scan flop which are not part of Scan Chain should be connected to constant [Tue Apr 21 09:49:36 2026]"
           ],
-          "last_updated": "2026-04-21T09:17:36",
-          "size_bytes": 63414061,
+          "last_updated": "2026-04-21T09:49:36",
+          "size_bytes": 65163144,
           "stage_exists": true
         },
         {
           "stage": "ctmesh",
           "status": "passed",
-          "log_error_count": 5,
+          "log_error_count": 6,
           "has_log_errors": true,
           "log_error_samples": [
             "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
@@ -5565,28 +5565,24 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/ctmesh.skipped_fail"
           },
-          "latest_line": "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/seq_lvt/ndm/lib765_g1m_240h_50pp_seq_lvt.ndm' (FILE-007)",
+          "latest_line": "INTEL_INFO   : executing  proc sd_report_clock_qor to generate reports (::sd_report_all) [Tue Apr 21 09:41:19 2026]",
           "recent_lines": [
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/lvl_lvt/ndm/lib765_g1m_240h_50pp_lvl_lvt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/lvl_svt/ndm/lib765_g1m_240h_50pp_lvl_svt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/pwm_lvt/ndm/lib765_g1m_240h_50pp_pwm_lvt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/pwm_svt/ndm/lib765_g1m_240h_50pp_pwm_svt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/seq_lvt/ndm/lib765_g1m_240h_50pp_seq_lvt.ndm' (FILE-007)"
+            "INTEL_INFO   : Running proc - sd_rpt_dangling_regs_chk_wrpr for Dangling Registers (::sd_report_be_qual) [Tue Apr 21 09:41:17 2026]",
+            "INTEL_WARNING: sd_report_design_qor error message: domain error: argument not in valid range (::sd_report_all) [Tue Apr 21 09:41:18 2026]",
+            "INTEL_INFO   : executing  proc sd_report_ref_libs to generate reports (::sd_report_all) [Tue Apr 21 09:41:18 2026]",
+            "INTEL_INFO   : executing  proc sd_report_clocks to generate reports (::sd_report_all) [Tue Apr 21 09:41:18 2026]",
+            "INTEL_INFO   : executing  proc sd_report_clock_qor to generate reports (::sd_report_all) [Tue Apr 21 09:41:19 2026]"
           ],
-          "last_updated": "2026-04-21T09:17:45",
-          "size_bytes": 17117471,
+          "last_updated": "2026-04-21T09:41:40",
+          "size_bytes": 20955823,
           "stage_exists": true
         },
         {
           "stage": "cts",
           "status": "running",
-          "log_error_count": 7,
-          "has_log_errors": true,
-          "log_error_samples": [
-            "Error: Value for list 'object_list' must have more than zero elements. (CMD-036)",
-            "Error: Mode: func, Generated clock 'i_ck_jtag_tck_div4_as_sys_clkm_fast' has no path from master clock 'i_ck_jtag_tck_div2_as_sys'; zero source latency will be used. (GRF-014)",
-            "Error: Mode: func, Generated clock 'i_ck_jtag_tck_div4_as_sys_clkm_slow' has no path from master clock 'i_ck_jtag_tck_div2_as_sys'; zero source latency will be used. (GRF-014)"
-          ],
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc.cts.log",
             "parallel_log": null,
@@ -5594,16 +5590,16 @@
             "fail_file": null,
             "skipped_fail_file": null
           },
-          "latest_line": "Information: Net estimation statistics: timing graph nets = 214860, routed nets = 5, across physical hierarchy nets = 0, parasitics cached nets = 212179, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 53. (TIM-112)",
+          "latest_line": "  NEX failed to build VGR numPin < 2",
           "recent_lines": [
-            "Information: 5 nets are successfully extracted. (NEX-028)",
-            "NEX: CTO mode extraction runtime user:0.82s, system:1.60s, elapsed:0.30s",
-            "Information: Crosstalk analysis has been disabled. (TIM-114)",
-            "Information: Update timing completed net estimation for all the timing graph nets (TIM-111)",
-            "Information: Net estimation statistics: timing graph nets = 214860, routed nets = 5, across physical hierarchy nets = 0, parasitics cached nets = 212179, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 53. (TIM-112)"
+            "        # Sg speed up                     =     1.3425",
+            "        # The rest of flow speed up       =     1.3560",
+            "-------------------------------------------------",
+            "  NEX VGR failid due to term size 0,   numOfPins 2,  numOfSegments 0,  numOfViaShapes 0",
+            "  NEX failed to build VGR numPin < 2"
           ],
-          "last_updated": "2026-04-21T09:19:02",
-          "size_bytes": 13868447,
+          "last_updated": "2026-04-21T09:49:45",
+          "size_bytes": 1310849452,
           "stage_exists": true
         },
         {
