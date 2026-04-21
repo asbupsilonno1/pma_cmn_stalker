@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T18:26:41",
+  "generated_at": "2026-04-20T18:57:23",
   "run_count": 5,
   "runs": [
     {
@@ -2656,19 +2656,19 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "START_CMD: save_block          CPU:  20392 s ( 5.66 hr) ELAPSE:   7677 s ( 2.13 hr) MEM-PEAK: 110288 Mb Mon Apr 20 18:26:08 2026",
-      "overall_status": "running",
-      "running_stage": "estimation",
-      "last_updated": "2026-04-20T18:26:13",
+      "fc_latest_line": "Thank you for using Fusion Compiler.",
+      "overall_status": "passed",
+      "running_stage": null,
+      "last_updated": "2026-04-20T18:56:10",
       "summary": {
-        "passed": 7,
+        "passed": 8,
         "failed": 0,
         "skipped": 0,
-        "started": 1,
+        "started": 0,
         "not_started": 0
       },
       "has_activity": true,
-      "complete": false,
+      "complete": true,
       "qor_by_stage": {
         "conditioning": {
           "run_directory": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc",
@@ -3565,8 +3565,8 @@
         },
         {
           "stage": "estimation",
-          "status": "running",
-          "log_error_count": 28,
+          "status": "passed",
+          "log_error_count": 5,
           "has_log_errors": true,
           "log_error_samples": [
             "Information: FLOW error check completed. (FAE-4001)",
@@ -3576,20 +3576,20 @@
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc.estimation.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/estimation.parallel_rpt_out.log",
-            "pass_file": null,
+            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/estimation.pass",
             "fail_file": null,
-            "skipped_fail_file": null
+            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/estimation.skipped_fail"
           },
-          "latest_line": "Thank you for using Fusion Compiler.",
+          "latest_line": "Information: build GR coup map successfully (NEX-012)",
           "recent_lines": [
-            "PROCESS-ID    MEM-PEAK    START-TIME                  END-TIME                    PROCESS-NAME",
-            "  6422            17 Mb   Sun Apr 19 16:58:17 2026    running                     /usr/intel/pkgs/gnumeric/1.12.45/.bin/ssconvert /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports/estimation/pma_cmn.qor_summary /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatte",
-            "CPU usage for this session:   2267 seconds (  0.63 hours)",
-            "Elapsed time for this session:   2114 seconds (  0.59 hours)",
-            "Thank you for using Fusion Compiler."
+            "NEX: gr/dr coup map average coverRate for layer#19: 0.000000",
+            "NEX: gr/dr coup map average coverRate for layer#20: 0.603922",
+            "NEX: gr/dr coup map average coverRate for layer#21: 0.090196",
+            "Information: GR coup map takes 8.94 seconds, elapse 3.34 seconds (NEX-015)",
+            "Information: build GR coup map successfully (NEX-012)"
           ],
-          "last_updated": "2026-04-20T18:26:13",
-          "size_bytes": 47106855,
+          "last_updated": "2026-04-20T18:56:10",
+          "size_bytes": 48994525,
           "stage_exists": true
         }
       ]
@@ -3604,10 +3604,10 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "Information: CPU Load: 18%, Ram Free: 14 GB, Swap Free: 496 GB, Work Disk Free: 297 GB, Tmp Disk Free: 3805 GB (MSG-3995)",
+      "fc_latest_line": "Information: Setting up cell instances...",
       "overall_status": "running",
       "running_stage": "estimation",
-      "last_updated": "2026-04-20T18:25:50",
+      "last_updated": "2026-04-20T18:57:15",
       "summary": {
         "passed": 17,
         "failed": 0,
@@ -3992,7 +3992,7 @@
         {
           "stage": "floorplan",
           "status": "passed",
-          "log_error_count": 8,
+          "log_error_count": 10,
           "has_log_errors": true,
           "log_error_samples": [
             "Information: FLOW error check completed. (FAE-4001)",
@@ -4006,16 +4006,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/floorplan.skipped_fail"
           },
-          "latest_line": "net ick_ref_xmbot_dp length = 304.530 um, r = 288.562 ohm, c = 61.029 ff, cc = 0.000 ff pinCount: 2 (ID: 834)",
+          "latest_line": "INTEL_INFO   : executing  proc sd_report_min_pulse_width to generate reports (::sd_report_all) [Mon Apr 20 18:54:47 2026]",
           "recent_lines": [
-            "net w_idv_ctrl length = 403.547 um, r = 6951.702 ohm, c = 70.416 ff, cc = 0.000 ff pinCount: 2 (ID: 2146)",
-            "net w_idv_tdi length = 402.947 um, r = 6878.341 ohm, c = 70.276 ff, cc = 0.000 ff pinCount: 2 (ID: 2147)",
-            "net w_rst_idv_trst length = 404.852 um, r = 6966.607 ohm, c = 70.638 ff, cc = 0.000 ff pinCount: 2 (ID: 2148)",
-            "net w_idv_update length = 406.076 um, r = 7090.404 ohm, c = 71.096 ff, cc = 0.000 ff pinCount: 2 (ID: 2149)",
-            "net ick_ref_xmbot_dp length = 304.530 um, r = 288.562 ohm, c = 61.029 ff, cc = 0.000 ff pinCount: 2 (ID: 834)"
+            "INTEL_INFO   : executing  proc sd_report_lib_cells to generate reports (::sd_report_all) [Mon Apr 20 18:54:44 2026]",
+            "INTEL_INFO   : executing  proc sd_report_scenarios to generate reports (::sd_report_all) [Mon Apr 20 18:54:44 2026]",
+            "INTEL_INFO   : executing  proc sd_report_size_only to generate reports (::sd_report_all) [Mon Apr 20 18:54:44 2026]",
+            "INTEL_INFO   : executing  proc sd_report_mv_cells to generate reports (::sd_report_all) [Mon Apr 20 18:54:47 2026]",
+            "INTEL_INFO   : executing  proc sd_report_min_pulse_width to generate reports (::sd_report_all) [Mon Apr 20 18:54:47 2026]"
           ],
-          "last_updated": "2026-04-20T18:25:43",
-          "size_bytes": 52139233,
+          "last_updated": "2026-04-20T18:54:53",
+          "size_bytes": 52179949,
           "stage_exists": true
         },
         {
@@ -4034,16 +4034,16 @@
             "fail_file": null,
             "skipped_fail_file": null
           },
-          "latest_line": "Information: CPU Load: 18%, Ram Free: 14 GB, Swap Free: 496 GB, Work Disk Free: 297 GB, Tmp Disk Free: 3805 GB (MSG-3995)",
+          "latest_line": "Information: Setting up cell instances...",
           "recent_lines": [
-            "Information: r = 0.001142 ohm, c = 0.000000 ff (mlv) (NEX-010)",
-            "Information: VR congestion map with 16 threads (NEX-014)",
-            "Information: VR cong map takes 5.42 seconds, elapse 0.89 seconds (NEX-015)",
-            "Still running [1] (Session: 0.47 hr / Command: 0.19 hr / Memory: 85374.05 MB) (MSG-3999)",
-            "Information: CPU Load: 18%, Ram Free: 14 GB, Swap Free: 496 GB, Work Disk Free: 297 GB, Tmp Disk Free: 3805 GB (MSG-3995)"
+            "Information: Lib cells of site halo have their ground pins at bottom",
+            "Information: Lib cells of site bonuscore have their ground pins at bottom",
+            "Information: Is half inbound case ? no",
+            "Information: Legalizer threading is enabled with high effort (LGL-130)",
+            "Information: Setting up cell instances..."
           ],
-          "last_updated": "2026-04-20T18:25:35",
-          "size_bytes": 14545953,
+          "last_updated": "2026-04-20T18:57:15",
+          "size_bytes": 15616967,
           "stage_exists": true
         },
         {
