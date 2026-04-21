@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T05:43:22",
+  "generated_at": "2026-04-21T06:14:11",
   "run_count": 5,
   "runs": [
     {
@@ -4903,10 +4903,10 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "NEX: start of threading: 16 threads.",
+      "fc_latest_line": "Warning: The estimated activity has calculated toggle rate being inf or nan or negative number. Tool will use default probability and toggle rate as estimated activity value. (POW-109)",
       "overall_status": "running",
       "running_stage": "compile_initial_opto",
-      "last_updated": "2026-04-21T05:43:20",
+      "last_updated": "2026-04-21T06:14:04",
       "summary": {
         "passed": 9,
         "failed": 0,
@@ -5420,16 +5420,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/initial_map.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU:  24246 s ( 6.74 hr) ELAPSE:  14961 s ( 4.16 hr) MEM-PEAK: 52023 Mb Tue Apr 21 05:42:36 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU:  26171 s ( 7.27 hr) ELAPSE:  16835 s ( 4.68 hr) MEM-PEAK: 52027 Mb Tue Apr 21 06:13:50 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU:  24205 s ( 6.72 hr) ELAPSE:  14921 s ( 4.14 hr) MEM-PEAK: 52023 Mb Tue Apr 21 05:41:56 2026",
-            "END_CMD: get_timing_paths      CPU:  24226 s ( 6.73 hr) ELAPSE:  14941 s ( 4.15 hr) MEM-PEAK: 52023 Mb Tue Apr 21 05:42:16 2026",
-            "START_CMD: get_timing_paths    CPU:  24226 s ( 6.73 hr) ELAPSE:  14941 s ( 4.15 hr) MEM-PEAK: 52023 Mb Tue Apr 21 05:42:16 2026",
-            "END_CMD: get_timing_paths      CPU:  24246 s ( 6.74 hr) ELAPSE:  14961 s ( 4.16 hr) MEM-PEAK: 52023 Mb Tue Apr 21 05:42:36 2026",
-            "START_CMD: get_timing_paths    CPU:  24246 s ( 6.74 hr) ELAPSE:  14961 s ( 4.16 hr) MEM-PEAK: 52023 Mb Tue Apr 21 05:42:36 2026"
+            "START_CMD: get_timing_paths    CPU:  26117 s ( 7.25 hr) ELAPSE:  16783 s ( 4.66 hr) MEM-PEAK: 52027 Mb Tue Apr 21 06:12:58 2026",
+            "END_CMD: get_timing_paths      CPU:  26144 s ( 7.26 hr) ELAPSE:  16809 s ( 4.67 hr) MEM-PEAK: 52027 Mb Tue Apr 21 06:13:24 2026",
+            "START_CMD: get_timing_paths    CPU:  26144 s ( 7.26 hr) ELAPSE:  16809 s ( 4.67 hr) MEM-PEAK: 52027 Mb Tue Apr 21 06:13:24 2026",
+            "END_CMD: get_timing_paths      CPU:  26171 s ( 7.27 hr) ELAPSE:  16835 s ( 4.68 hr) MEM-PEAK: 52027 Mb Tue Apr 21 06:13:50 2026",
+            "START_CMD: get_timing_paths    CPU:  26171 s ( 7.27 hr) ELAPSE:  16835 s ( 4.68 hr) MEM-PEAK: 52027 Mb Tue Apr 21 06:13:50 2026"
           ],
-          "last_updated": "2026-04-21T05:42:46",
-          "size_bytes": 218853124,
+          "last_updated": "2026-04-21T06:13:55",
+          "size_bytes": 218885764,
           "stage_exists": true
         },
         {
@@ -5503,16 +5503,16 @@
             "fail_file": null,
             "skipped_fail_file": null
           },
-          "latest_line": "NEX: start of threading: 16 threads.",
+          "latest_line": "Warning: The estimated activity has calculated toggle rate being inf or nan or negative number. Tool will use default probability and toggle rate as estimated activity value. (POW-109)",
           "recent_lines": [
-            " host.max_cores                   : 16",
-            " extract.connect_open           : true",
-            "Extracting design: pma_cmn",
-            "Incr Extraction modNet : 25 design pma_cmn",
-            "NEX: start of threading: 16 threads."
+            "Warning: The estimated activity has calculated toggle rate being inf or nan or negative number. Tool will use default probability and toggle rate as estimated activity value. (POW-109)",
+            "Compile-fusion optimization Phase 38 Iter  1   14162863.00  12084423.00         -      3017     261994.73     2615.52      188873              6.70    123840",
+            "ISR-INFO: dsizeFilter CandPruners: dSizeVTGroupCandPruner dSizeFootprintCandPruner dSizeOrigVariantCandPruner",
+            "ISR-INFO: dsizeFilter ResultPruners: tpo_cost_rp delay_scale_rp arn_tran_rp mog_mcmm_delay_rp",
+            "Warning: The estimated activity has calculated toggle rate being inf or nan or negative number. Tool will use default probability and toggle rate as estimated activity value. (POW-109)"
           ],
-          "last_updated": "2026-04-21T05:43:20",
-          "size_bytes": 204034778,
+          "last_updated": "2026-04-21T06:14:04",
+          "size_bytes": 206633065,
           "stage_exists": true
         },
         {
