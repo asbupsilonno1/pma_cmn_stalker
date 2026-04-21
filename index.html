@@ -202,7 +202,7 @@
   <div class="container">
 	<section class="hero">
 	  <h1>PMA CMN stalker</h1>
-	  <p>Generated at 2026-04-21T07:15:50</p>
+	  <p>Generated at 2026-04-21T07:46:40</p>
 	  <p>Monitoring APR FC flow stages only. RTLA-only stages are limited to conditioning and estimation when those logs are actually present.</p>
 	  <p>Auxiliary logs such as abutment-rule, spacing-rule, interactive, assembly, and merge helpers are intentionally excluded from the stage list.</p>
 	</section>
@@ -212,7 +212,7 @@
   </div>
   <script>
 	const snapshot = {
-  "generated_at": "2026-04-21T07:15:50",
+  "generated_at": "2026-04-21T07:46:40",
   "run_count": 5,
   "runs": [
     {
@@ -5116,10 +5116,10 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "Average cell width 0.4635, cell height 0.2517, cell area 0.1279 for total 191902 placed and application fixed cells",
+      "fc_latest_line": "Compile-fusion optimization Phase 15 Iter  1   2471106.25  2073668.00         -      6784     262285.88     2638.99      191841              8.24    125253",
       "overall_status": "running",
       "running_stage": "compile_final_opto",
-      "last_updated": "2026-04-21T07:15:26",
+      "last_updated": "2026-04-21T07:46:34",
       "summary": {
         "passed": 10,
         "failed": 0,
@@ -5633,16 +5633,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/initial_map.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU:  29934 s ( 8.31 hr) ELAPSE:  20510 s ( 5.70 hr) MEM-PEAK: 52027 Mb Tue Apr 21 07:15:05 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU:  31851 s ( 8.85 hr) ELAPSE:  22383 s ( 6.22 hr) MEM-PEAK: 52027 Mb Tue Apr 21 07:46:18 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU:  29897 s ( 8.30 hr) ELAPSE:  20474 s ( 5.69 hr) MEM-PEAK: 52027 Mb Tue Apr 21 07:14:29 2026",
-            "END_CMD: get_timing_paths      CPU:  29916 s ( 8.31 hr) ELAPSE:  20492 s ( 5.69 hr) MEM-PEAK: 52027 Mb Tue Apr 21 07:14:47 2026",
-            "START_CMD: get_timing_paths    CPU:  29916 s ( 8.31 hr) ELAPSE:  20492 s ( 5.69 hr) MEM-PEAK: 52027 Mb Tue Apr 21 07:14:47 2026",
-            "END_CMD: get_timing_paths      CPU:  29934 s ( 8.31 hr) ELAPSE:  20510 s ( 5.70 hr) MEM-PEAK: 52027 Mb Tue Apr 21 07:15:05 2026",
-            "START_CMD: get_timing_paths    CPU:  29934 s ( 8.31 hr) ELAPSE:  20510 s ( 5.70 hr) MEM-PEAK: 52027 Mb Tue Apr 21 07:15:05 2026"
+            "START_CMD: get_timing_paths    CPU:  31814 s ( 8.84 hr) ELAPSE:  22347 s ( 6.21 hr) MEM-PEAK: 52027 Mb Tue Apr 21 07:45:42 2026",
+            "END_CMD: get_timing_paths      CPU:  31832 s ( 8.84 hr) ELAPSE:  22365 s ( 6.21 hr) MEM-PEAK: 52027 Mb Tue Apr 21 07:46:00 2026",
+            "START_CMD: get_timing_paths    CPU:  31832 s ( 8.84 hr) ELAPSE:  22365 s ( 6.21 hr) MEM-PEAK: 52027 Mb Tue Apr 21 07:46:00 2026",
+            "END_CMD: get_timing_paths      CPU:  31851 s ( 8.85 hr) ELAPSE:  22383 s ( 6.22 hr) MEM-PEAK: 52027 Mb Tue Apr 21 07:46:18 2026",
+            "START_CMD: get_timing_paths    CPU:  31851 s ( 8.85 hr) ELAPSE:  22383 s ( 6.22 hr) MEM-PEAK: 52027 Mb Tue Apr 21 07:46:18 2026"
           ],
-          "last_updated": "2026-04-21T07:15:18",
-          "size_bytes": 218958844,
+          "last_updated": "2026-04-21T07:46:31",
+          "size_bytes": 218998305,
           "stage_exists": true
         },
         {
@@ -5706,7 +5706,7 @@
         {
           "stage": "compile_initial_opto",
           "status": "passed",
-          "log_error_count": 5,
+          "log_error_count": 9,
           "has_log_errors": true,
           "log_error_samples": [
             "# Generally, clock gating is not applicable is scan mode. Non-static nets controling the clock network is a DFT DRC error",
@@ -5720,27 +5720,24 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/compile_initial_opto.skipped_fail"
           },
-          "latest_line": "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/seq_lvt/ndm/lib765_g1m_240h_50pp_seq_lvt.ndm' (FILE-007)",
+          "latest_line": "Information: Running write_qor_data for label 'compile_initial_opto' and report 'report_constraints'  (RPT-190)",
           "recent_lines": [
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/lvl_lvt/ndm/lib765_g1m_240h_50pp_lvl_lvt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/lvl_svt/ndm/lib765_g1m_240h_50pp_lvl_svt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/pwm_lvt/ndm/lib765_g1m_240h_50pp_pwm_lvt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/pwm_svt/ndm/lib765_g1m_240h_50pp_pwm_svt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/seq_lvt/ndm/lib765_g1m_240h_50pp_seq_lvt.ndm' (FILE-007)"
+            "Information: Running write_qor_data for label 'compile_initial_opto' and report 'report_threshold_voltage_groups'  (RPT-190)",
+            "Information: Running write_qor_data for label 'compile_initial_opto' and report 'report_utilization'  (RPT-190)",
+            "Information: Running write_qor_data for label 'compile_initial_opto' and report 'report_qor'  (RPT-190)",
+            "Information: Running write_qor_data for label 'compile_initial_opto' and report 'report_global_timing'  (RPT-190)",
+            "Information: Running write_qor_data for label 'compile_initial_opto' and report 'report_constraints'  (RPT-190)"
           ],
-          "last_updated": "2026-04-21T07:15:26",
-          "size_bytes": 416849105,
+          "last_updated": "2026-04-21T07:46:09",
+          "size_bytes": 418971076,
           "stage_exists": true
         },
         {
           "stage": "compile_final_opto",
           "status": "running",
-          "log_error_count": 2,
-          "has_log_errors": true,
-          "log_error_samples": [
-            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
-            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)"
-          ],
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc.compile_final_opto.log",
             "parallel_log": null,
@@ -5748,16 +5745,16 @@
             "fail_file": null,
             "skipped_fail_file": null
           },
-          "latest_line": "Average cell width 0.4635, cell height 0.2517, cell area 0.1279 for total 191902 placed and application fixed cells",
+          "latest_line": "Compile-fusion optimization Phase 15 Iter  1   2471106.25  2073668.00         -      6784     262285.88     2638.99      191841              8.24    125253",
           "recent_lines": [
-            "INFO: creating 1408(r) x 405(c) GridCells YDim 0.72 XDim 0.72",
-            "INFO: number of GridCells (pma_cmn): 570240",
-            "Total 3.2623 seconds to load 244452 cell instances into cellmap, 93 cells are off site row",
-            "Moveable cells: 191902; Application fixed cells: 0; Macro cells: 8641; User fixed cells: 43909",
-            "Average cell width 0.4635, cell height 0.2517, cell area 0.1279 for total 191902 placed and application fixed cells"
+            "Information: 1839 out of 1844 LGL-151 messages were not printed due to limit 5 (after 'compile_fusion' at step_compile_final_place.tcl:37) (MSG-3913)",
+            "Information: 694 out of 699 LGL-336 messages were not printed due to limit 5 (after 'compile_fusion' at step_compile_final_place.tcl:37) (MSG-3913)",
+            "Information: 902 out of 912 POW-080 messages were not printed due to limit 10 (after 'compile_fusion' at step_compile_final_place.tcl:37) (MSG-3913)",
+            "Information: 2 out of 12 ZRT-045 messages were not printed due to limit 10 (after 'compile_fusion' at step_compile_final_place.tcl:37) (MSG-3913)",
+            "Compile-fusion optimization Phase 15 Iter  1   2471106.25  2073668.00         -      6784     262285.88     2638.99      191841              8.24    125253"
           ],
-          "last_updated": "2026-04-21T07:13:12",
-          "size_bytes": 3126989,
+          "last_updated": "2026-04-21T07:46:34",
+          "size_bytes": 42446676,
           "stage_exists": true
         },
         {
