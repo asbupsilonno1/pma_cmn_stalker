@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T19:58:47",
+  "generated_at": "2026-04-20T20:29:30",
   "run_count": 5,
   "runs": [
     {
@@ -3606,15 +3606,15 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "END_CMD: get_timing_paths      CPU:  18966 s ( 5.27 hr) ELAPSE:   7069 s ( 1.96 hr) MEM-PEAK: 111068 Mb Mon Apr 20 19:54:49 2026",
-      "overall_status": "running",
-      "running_stage": "estimation",
-      "last_updated": "2026-04-20T19:54:54",
+      "fc_latest_line": "Thank you for using Fusion Compiler.",
+      "overall_status": "started",
+      "running_stage": null,
+      "last_updated": "2026-04-20T20:28:57",
       "summary": {
-        "passed": 17,
+        "passed": 18,
         "failed": 0,
         "skipped": 0,
-        "started": 1,
+        "started": 0,
         "not_started": 3
       },
       "has_activity": true,
@@ -4327,27 +4327,31 @@
         },
         {
           "stage": "estimation",
-          "status": "running",
-          "log_error_count": 0,
-          "has_log_errors": false,
-          "log_error_samples": [],
+          "status": "passed",
+          "log_error_count": 3,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Information: FLOW error check completed. (FAE-4001)",
+            "Information: Flow error check: SUCCESS. (FAE-4001)",
+            "Error: Cannot find a fill cell to create fill shape in. (NDMUI-401)"
+          ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.estimation.log",
-            "parallel_log": null,
-            "pass_file": null,
+            "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/estimation.parallel_rpt_out.log",
+            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/estimation.pass",
             "fail_file": null,
-            "skipped_fail_file": null
+            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/estimation.skipped_fail"
           },
-          "latest_line": "END_CMD: get_timing_paths      CPU:  18966 s ( 5.27 hr) ELAPSE:   7069 s ( 1.96 hr) MEM-PEAK: 111068 Mb Mon Apr 20 19:54:49 2026",
+          "latest_line": "        g1mfvzr0bfb1d03x5 g1mfvzr0bfb2d03x5 g1mfvzr0bfb3d03x5 g1mfvzr0bfb1d06x5 g1mfvzr0bfb2d06x5 g1mfvzr0bfb3d06x5 g1mfvzr0bjc1d02x5 g1mfvzr0bjc2d02x5 g1mfvzr0bjc3d02x5 g1mfvzr0bjc1d03x5 g1mfvzr0bjc2d03x5 g1mfvzr0bjc3d03x5 g1mfvzr0bjc1d06x5 g1mfvzr0bjc2d06x5 g1mfvzr0bjc3d06x5. (MV-112)",
           "recent_lines": [
-            "TNZ_UTIL :: Writing endpoint_data",
-            "START_CMD: get_timing_paths    CPU:  18705 s ( 5.20 hr) ELAPSE:   6814 s ( 1.89 hr) MEM-PEAK: 108887 Mb Mon Apr 20 19:50:34 2026",
-            "Warning: Scenario dfx.0p825-1p02-76dot5-min.F_125.pcff3 is not configured for setup analysis: skipping. (UIC-058)",
-            "Warning: Scenario func.0p825-1p02-76dot5-min.F_125.pcff3 is not configured for setup analysis: skipping. (UIC-058)",
-            "END_CMD: get_timing_paths      CPU:  18966 s ( 5.27 hr) ELAPSE:   7069 s ( 1.96 hr) MEM-PEAK: 111068 Mb Mon Apr 20 19:54:49 2026"
+            "        g1mfvzr0bfb1d03x5 g1mfvzr0bfb2d03x5 g1mfvzr0bfb3d03x5 g1mfvzr0bfb1d06x5 g1mfvzr0bfb2d06x5 g1mfvzr0bfb3d06x5 g1mfvzr0bjc1d02x5 g1mfvzr0bjc2d02x5 g1mfvzr0bjc3d02x5 g1mfvzr0bjc1d03x5 g1mfvzr0bjc2d03x5 g1mfvzr0bjc3d03x5 g1mfvzr0bjc1d06x5 g1mfvzr0bjc2d06x5 g1mfvzr0bjc3d06x5. (MV-112)",
+            "Warning: map_retention_cell of retention strategy retention_for_fw for power domain cmn_coreg specifies unusable library cells : g1mfvzr03fc1d02x5 g1mfvzr03fc2d02x5 g1mfvzr03fc3d02x5 g1mfvzr03fc1d03x5 g1mfvzr03fc2d03x5 g1mfvzr03fc3d03x5 g1mfvzr03fc1d06x5 g1mfvzr03fc2d06x5 g1mfvzr03fc3d06x5 g1mfvzr03fc1d12x5 g1mfvzr03fc2d12x5 g1mfvzr03fc3d12x5 g1mfvzr03fb1d02x5 g1mfvzr03fb2d02x5 g1mfvzr03fb3d02x5 g1mfvzr03fb1d03x5 g1mfvzr03fb2d03x5 g1mfvzr03fb3d03x5 g1mfvzr03fb1d06x5 g1mfvzr03fb2d06x5 g1mfvzr03fb3d06x5 g1mfvzr03fb1d12x5 g1mfvzr03fb2d12x5 g1mfvzr03fb3d12x5 g1mfvzr03jc1d02x5 g1mfvzr03jc2d02x5 g1mfvzr03jc3d02x5 g1mfvzr03jc1d03x5 g1mfvzr03jc2d03x5 g1mfvzr03jc3d03x5 g1mfvzr03jc1d06x5 g1mfvzr03jc2d06x5 g1mfvzr03jc3d06x5 g1mfvzr03jc1d12x5 g1mfvzr03jc2d12x5 g1mfvzr03jc3d12x5 g1mfvzr0bfc1d02x5 g1mfvzr0bfc2d02x5 g1mfvzr0bfc3d02x5 g1mfvzr0bfc1d03x5 g1mfvzr0bfc2d03x5 g1mfvzr0bfc3d03x5 g1mfvzr0bfc1d06x5 g1mfvzr0bfc2d06x5 g1mfvzr0bfc3d06x5 g1mfvzr0bfb1d02x5 g1mfvzr0bfb2d02x5 g1mfvzr0bfb3d02x5",
+            "        g1mfvzr0bfb1d03x5 g1mfvzr0bfb2d03x5 g1mfvzr0bfb3d03x5 g1mfvzr0bfb1d06x5 g1mfvzr0bfb2d06x5 g1mfvzr0bfb3d06x5 g1mfvzr0bjc1d02x5 g1mfvzr0bjc2d02x5 g1mfvzr0bjc3d02x5 g1mfvzr0bjc1d03x5 g1mfvzr0bjc2d03x5 g1mfvzr0bjc3d03x5 g1mfvzr0bjc1d06x5 g1mfvzr0bjc2d06x5 g1mfvzr0bjc3d06x5. (MV-112)",
+            "Warning: map_retention_cell of retention strategy retention_for_sus for power domain cmn_susg specifies unusable library cells : g1mfvzr03fc1d02x5 g1mfvzr03fc2d02x5 g1mfvzr03fc3d02x5 g1mfvzr03fc1d03x5 g1mfvzr03fc2d03x5 g1mfvzr03fc3d03x5 g1mfvzr03fc1d06x5 g1mfvzr03fc2d06x5 g1mfvzr03fc3d06x5 g1mfvzr03fc1d12x5 g1mfvzr03fc2d12x5 g1mfvzr03fc3d12x5 g1mfvzr03fb1d02x5 g1mfvzr03fb2d02x5 g1mfvzr03fb3d02x5 g1mfvzr03fb1d03x5 g1mfvzr03fb2d03x5 g1mfvzr03fb3d03x5 g1mfvzr03fb1d06x5 g1mfvzr03fb2d06x5 g1mfvzr03fb3d06x5 g1mfvzr03fb1d12x5 g1mfvzr03fb2d12x5 g1mfvzr03fb3d12x5 g1mfvzr03jc1d02x5 g1mfvzr03jc2d02x5 g1mfvzr03jc3d02x5 g1mfvzr03jc1d03x5 g1mfvzr03jc2d03x5 g1mfvzr03jc3d03x5 g1mfvzr03jc1d06x5 g1mfvzr03jc2d06x5 g1mfvzr03jc3d06x5 g1mfvzr03jc1d12x5 g1mfvzr03jc2d12x5 g1mfvzr03jc3d12x5 g1mfvzr0bfc1d02x5 g1mfvzr0bfc2d02x5 g1mfvzr0bfc3d02x5 g1mfvzr0bfc1d03x5 g1mfvzr0bfc2d03x5 g1mfvzr0bfc3d03x5 g1mfvzr0bfc1d06x5 g1mfvzr0bfc2d06x5 g1mfvzr0bfc3d06x5 g1mfvzr0bfb1d02x5 g1mfvzr0bfb2d02x5 g1mfvzr0bfb3d02x5",
+            "        g1mfvzr0bfb1d03x5 g1mfvzr0bfb2d03x5 g1mfvzr0bfb3d03x5 g1mfvzr0bfb1d06x5 g1mfvzr0bfb2d06x5 g1mfvzr0bfb3d06x5 g1mfvzr0bjc1d02x5 g1mfvzr0bjc2d02x5 g1mfvzr0bjc3d02x5 g1mfvzr0bjc1d03x5 g1mfvzr0bjc2d03x5 g1mfvzr0bjc3d03x5 g1mfvzr0bjc1d06x5 g1mfvzr0bjc2d06x5 g1mfvzr0bjc3d06x5. (MV-112)"
           ],
-          "last_updated": "2026-04-20T19:54:54",
-          "size_bytes": 41201767,
+          "last_updated": "2026-04-20T20:28:57",
+          "size_bytes": 55469558,
           "stage_exists": true
         },
         {
