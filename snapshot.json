@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T03:09:16",
+  "generated_at": "2026-04-21T03:40:05",
   "run_count": 5,
   "runs": [
     {
@@ -4903,10 +4903,10 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "Information: CPU Load: 44%, Ram Free: 24 GB, Swap Free: 463 GB, Work Disk Free: 292 GB, Tmp Disk Free: 3093 GB (MSG-3995)",
+      "fc_latest_line": "if {([sizeof_collection [get_clocks -quiet {pod_hs_clk_16ui_l0 pod_hs_clk_16ui_l0_ft_* pod_hs_clk_16ui_l0_VIRTUAL*}]] && [sizeof_collection [get",
       "overall_status": "running",
       "running_stage": "compile_initial_opto",
-      "last_updated": "2026-04-21T03:09:09",
+      "last_updated": "2026-04-21T03:40:04",
       "summary": {
         "passed": 9,
         "failed": 0,
@@ -5420,22 +5420,22 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/initial_map.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU:  14799 s ( 4.11 hr) ELAPSE:   5737 s ( 1.59 hr) MEM-PEAK: 52010 Mb Tue Apr 21 03:08:52 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU:  16665 s ( 4.63 hr) ELAPSE:   7565 s ( 2.10 hr) MEM-PEAK: 52020 Mb Tue Apr 21 03:39:20 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU:  14768 s ( 4.10 hr) ELAPSE:   5706 s ( 1.59 hr) MEM-PEAK: 52010 Mb Tue Apr 21 03:08:21 2026",
-            "END_CMD: get_timing_paths      CPU:  14784 s ( 4.11 hr) ELAPSE:   5722 s ( 1.59 hr) MEM-PEAK: 52010 Mb Tue Apr 21 03:08:37 2026",
-            "START_CMD: get_timing_paths    CPU:  14784 s ( 4.11 hr) ELAPSE:   5722 s ( 1.59 hr) MEM-PEAK: 52010 Mb Tue Apr 21 03:08:37 2026",
-            "END_CMD: get_timing_paths      CPU:  14799 s ( 4.11 hr) ELAPSE:   5737 s ( 1.59 hr) MEM-PEAK: 52010 Mb Tue Apr 21 03:08:52 2026",
-            "START_CMD: get_timing_paths    CPU:  14799 s ( 4.11 hr) ELAPSE:   5737 s ( 1.59 hr) MEM-PEAK: 52010 Mb Tue Apr 21 03:08:52 2026"
+            "START_CMD: get_timing_paths    CPU:  16622 s ( 4.62 hr) ELAPSE:   7523 s ( 2.09 hr) MEM-PEAK: 52020 Mb Tue Apr 21 03:38:38 2026",
+            "END_CMD: get_timing_paths      CPU:  16643 s ( 4.62 hr) ELAPSE:   7544 s ( 2.10 hr) MEM-PEAK: 52020 Mb Tue Apr 21 03:38:59 2026",
+            "START_CMD: get_timing_paths    CPU:  16643 s ( 4.62 hr) ELAPSE:   7544 s ( 2.10 hr) MEM-PEAK: 52020 Mb Tue Apr 21 03:38:59 2026",
+            "END_CMD: get_timing_paths      CPU:  16665 s ( 4.63 hr) ELAPSE:   7565 s ( 2.10 hr) MEM-PEAK: 52020 Mb Tue Apr 21 03:39:20 2026",
+            "START_CMD: get_timing_paths    CPU:  16665 s ( 4.63 hr) ELAPSE:   7565 s ( 2.10 hr) MEM-PEAK: 52020 Mb Tue Apr 21 03:39:20 2026"
           ],
-          "last_updated": "2026-04-21T03:08:52",
-          "size_bytes": 218685044,
+          "last_updated": "2026-04-21T03:39:29",
+          "size_bytes": 218722912,
           "stage_exists": true
         },
         {
           "stage": "insert_dft",
           "status": "passed",
-          "log_error_count": 3,
+          "log_error_count": 47,
           "has_log_errors": true,
           "log_error_samples": [
             "Information: FLOW error check completed. (FAE-4001)",
@@ -5449,22 +5449,22 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/insert_dft.skipped_fail"
           },
-          "latest_line": "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsibase_svt/ndm/lib765_g1m_240h_50pp_dsibase_svt.ndm' (FILE-007)",
+          "latest_line": "Key: core2h, value: 0x8c5c7dd10",
           "recent_lines": [
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsi3_lvt/ndm/lib765_g1m_240h_50pp_dsi3_lvt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsi3_svt/ndm/lib765_g1m_240h_50pp_dsi3_svt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsibase_lvt/ndm/lib765_g1m_240h_50pp_dsibase_lvt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsibase_lvt/ndm/lib765_g1m_240h_50pp_dsibase_lvt_layonly.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsibase_svt/ndm/lib765_g1m_240h_50pp_dsibase_svt.ndm' (FILE-007)"
+            "INTEL_INFO   : executing  proc sd_report_check_mv_design to generate reports (::sd_report_all) [Tue Apr 21 03:39:38 2026]",
+            "INTEL_INFO   : executing  proc sd_report_multibit to generate reports (::sd_report_all) [Tue Apr 21 03:39:46 2026]",
+            "Key: bonuscore, value: 0x8c5c7c3c0",
+            "Key: core, value: 0x8c5c7d860",
+            "Key: core2h, value: 0x8c5c7dd10"
           ],
-          "last_updated": "2026-04-21T03:07:31",
-          "size_bytes": 18889289,
+          "last_updated": "2026-04-21T03:39:57",
+          "size_bytes": 31625800,
           "stage_exists": true
         },
         {
           "stage": "logic_opto",
           "status": "passed",
-          "log_error_count": 177,
+          "log_error_count": 204,
           "has_log_errors": true,
           "log_error_samples": [
             "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
@@ -5478,28 +5478,24 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/logic_opto.skipped_fail"
           },
-          "latest_line": "net o_abutright_cio40_26_sum_tfr_rload_trim_cm_e[5] length = 179.470 um, r = 8398.694 ohm, c = 33.763 ff, cc = 0.000 ff pinCount: 2 (ID: 1362)",
+          "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
-            "net o_abutleft_ctl_termcal_sp3txpu_nt_[1] length = 107.074 um, r = 6216.936 ohm, c = 19.425 ff, cc = 0.000 ff pinCount: 2 (ID: 1193)",
-            "net o_abutleft_ctl_uc_apb_paddr_[0] length = 152.436 um, r = 5133.072 ohm, c = 27.728 ff, cc = 0.000 ff pinCount: 2 (ID: 1243)",
-            "net o_abutleft_ctl_uc_apb_pwdata_[14] length = 150.971 um, r = 5030.329 ohm, c = 27.771 ff, cc = 0.000 ff pinCount: 2 (ID: 1270)",
-            "net o_abutleft_soc_dccoupled_a length = 39.170 um, r = 2224.781 ohm, c = 7.155 ff, cc = 0.000 ff pinCount: 2 (ID: 1318)",
-            "net o_abutright_cio40_26_sum_tfr_rload_trim_cm_e[5] length = 179.470 um, r = 8398.694 ohm, c = 33.763 ff, cc = 0.000 ff pinCount: 2 (ID: 1362)"
+            "  7074             2 Mb   Tue Apr 21 03:10:00 2026    Tue Apr 21 03:10:32 2026    /bin/sh /p/hdk/cad/formality/W-2024.09-SP5-VAL-20250711/bin/fm_shell -x set ivar(svf_integrate_in_ndm) 1; set ivar(dst_dir) /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/outputs/logic_opto; set",
+            "  7075             1 Mb   Tue Apr 21 03:10:00 2026    Tue Apr 21 03:10:32 2026    tee -i /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fm.logic_opto.log",
+            "CPU usage for this session:   3584 seconds (  1.00 hours)",
+            "Elapsed time for this session:   2921 seconds (  0.81 hours)",
+            "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-21T03:08:53",
-          "size_bytes": 19035736,
+          "last_updated": "2026-04-21T03:28:37",
+          "size_bytes": 19244573,
           "stage_exists": true
         },
         {
           "stage": "compile_initial_opto",
           "status": "running",
-          "log_error_count": 68,
-          "has_log_errors": true,
-          "log_error_samples": [
-            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
-            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)",
-            "Error: Mode: dfx, Generated clock 'i_ck_jtag_tck_div4_as_sys_clkm_fast' has no path from master clock 'i_ck_jtag_tck_div2_as_sys'; zero source latency will be used. (GRF-014)"
-          ],
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc.compile_initial_opto.log",
             "parallel_log": null,
@@ -5507,16 +5503,16 @@
             "fail_file": null,
             "skipped_fail_file": null
           },
-          "latest_line": "Information: CPU Load: 44%, Ram Free: 24 GB, Swap Free: 463 GB, Work Disk Free: 292 GB, Tmp Disk Free: 3093 GB (MSG-3995)",
+          "latest_line": "if {([sizeof_collection [get_clocks -quiet {pod_hs_clk_16ui_l0 pod_hs_clk_16ui_l0_ft_* pod_hs_clk_16ui_l0_VIRTUAL*}]] && [sizeof_collection [get",
           "recent_lines": [
-            "Information: Time: 2026-04-21 03:09:08 / Session:  03:37:14 / Command:  00:12:14 / CPU:  00:32:28 / Memory: 117869 MB (FLW-8100)",
-            "Information: CPU Load: 44%, Ram Free: 24 GB, Swap Free: 463 GB, Work Disk Free: 292 GB, Tmp Disk Free: 3093 GB (MSG-3995)",
-            "Information: Starting compile_fusion / initial_place / pre-placement setup (FLW-8000)",
-            "Information: Time: 2026-04-21 03:09:08 / Session:  03:37:14 / Command:  00:12:14 / CPU:  00:32:28 / Memory: 117869 MB (FLW-8100)",
-            "Information: CPU Load: 44%, Ram Free: 24 GB, Swap Free: 463 GB, Work Disk Free: 292 GB, Tmp Disk Free: 3093 GB (MSG-3995)"
+            "set_clock_uncertainty -setup -from [get_clocks -quiet {pod_hs_clk_16ui_l0 pod_hs_clk_16ui_l0_ft_* pod_hs_clk_16ui_l0_VIRTUAL*}] -to [get_clocks -quiet {scan_shift_i_ck_pclk_l0 scan_shift_i_ck_pclk_l0_ft_* scan_shift_i_ck_pclk_l0_VIRTUAL*}] [expr 0 + 80 * $G_PRECTS / 2 + 80 * $G_PRECTS / 2]",
+            "set_clock_uncertainty -hold -from [get_clocks -quiet {pod_hs_clk_16ui_l0 pod_hs_clk_16ui_l0_ft_* pod_hs_clk_16ui_l0_VIRTUAL*}] -to [get_clocks -quiet {scan_shift_i_ck_pclk_l0 scan_shift_i_ck_pclk_l0_ft_* scan_shift_i_ck_pclk_l0_VIRTUAL*}] [expr 10 + 80 * $G_PRECTS / 2 + 80 * $G_PRECTS / 2]",
+            "}",
+            "#####from pod_hs_clk_16ui_l0 pod_hs_clk_16ui_l0_ft_* pod_hs_clk_16ui_l0_VIRTUAL* to scan_shift_i_ck_pclk_l1 scan_shift_i_ck_pclk_l1_ft_* scan_shift_i_ck_pclk_l1_VIRTUAL*#####",
+            "if {([sizeof_collection [get_clocks -quiet {pod_hs_clk_16ui_l0 pod_hs_clk_16ui_l0_ft_* pod_hs_clk_16ui_l0_VIRTUAL*}]] && [sizeof_collection [get"
           ],
-          "last_updated": "2026-04-21T03:09:09",
-          "size_bytes": 3084861,
+          "last_updated": "2026-04-21T03:40:04",
+          "size_bytes": 117555200,
           "stage_exists": true
         },
         {
