@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T12:55:14",
+  "generated_at": "2026-04-21T13:26:06",
   "run_count": 5,
   "runs": [
     {
@@ -4903,10 +4903,10 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "Clock-opt optimization Phase 33 Iter  1   2582306.00  2199665.75  813154.94      1553     260516.92    13567.09      189362             13.38    135892",
+      "fc_latest_line": "NEX failed to build VGR numPin < 2",
       "overall_status": "running",
       "running_stage": "clock_route_opt",
-      "last_updated": "2026-04-21T12:55:12",
+      "last_updated": "2026-04-21T13:26:04",
       "summary": {
         "passed": 13,
         "failed": 0,
@@ -5420,16 +5420,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/initial_map.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU:  50799 s (14.11 hr) ELAPSE:  40886 s (11.36 hr) MEM-PEAK: 52027 Mb Tue Apr 21 12:54:41 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU:  52679 s (14.63 hr) ELAPSE:  42723 s (11.87 hr) MEM-PEAK: 52027 Mb Tue Apr 21 13:25:18 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU:  50763 s (14.10 hr) ELAPSE:  40851 s (11.35 hr) MEM-PEAK: 52027 Mb Tue Apr 21 12:54:06 2026",
-            "END_CMD: get_timing_paths      CPU:  50781 s (14.11 hr) ELAPSE:  40868 s (11.35 hr) MEM-PEAK: 52027 Mb Tue Apr 21 12:54:24 2026",
-            "START_CMD: get_timing_paths    CPU:  50781 s (14.11 hr) ELAPSE:  40868 s (11.35 hr) MEM-PEAK: 52027 Mb Tue Apr 21 12:54:24 2026",
-            "END_CMD: get_timing_paths      CPU:  50799 s (14.11 hr) ELAPSE:  40886 s (11.36 hr) MEM-PEAK: 52027 Mb Tue Apr 21 12:54:41 2026",
-            "START_CMD: get_timing_paths    CPU:  50799 s (14.11 hr) ELAPSE:  40886 s (11.36 hr) MEM-PEAK: 52027 Mb Tue Apr 21 12:54:41 2026"
+            "START_CMD: get_timing_paths    CPU:  52639 s (14.62 hr) ELAPSE:  42685 s (11.86 hr) MEM-PEAK: 52027 Mb Tue Apr 21 13:24:41 2026",
+            "END_CMD: get_timing_paths      CPU:  52659 s (14.63 hr) ELAPSE:  42704 s (11.86 hr) MEM-PEAK: 52027 Mb Tue Apr 21 13:24:59 2026",
+            "START_CMD: get_timing_paths    CPU:  52659 s (14.63 hr) ELAPSE:  42704 s (11.86 hr) MEM-PEAK: 52027 Mb Tue Apr 21 13:24:59 2026",
+            "END_CMD: get_timing_paths      CPU:  52679 s (14.63 hr) ELAPSE:  42723 s (11.87 hr) MEM-PEAK: 52027 Mb Tue Apr 21 13:25:18 2026",
+            "START_CMD: get_timing_paths    CPU:  52679 s (14.63 hr) ELAPSE:  42723 s (11.87 hr) MEM-PEAK: 52027 Mb Tue Apr 21 13:25:18 2026"
           ],
-          "last_updated": "2026-04-21T12:54:54",
-          "size_bytes": 219324545,
+          "last_updated": "2026-04-21T13:25:30",
+          "size_bytes": 219362039,
           "stage_exists": true
         },
         {
@@ -5536,16 +5536,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU:  17590 s ( 4.89 hr) ELAPSE:  14329 s ( 3.98 hr) MEM-PEAK: 58137 Mb Tue Apr 21 12:54:49 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU:  19506 s ( 5.42 hr) ELAPSE:  16196 s ( 4.50 hr) MEM-PEAK: 58137 Mb Tue Apr 21 13:25:57 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU:  17548 s ( 4.87 hr) ELAPSE:  14288 s ( 3.97 hr) MEM-PEAK: 58137 Mb Tue Apr 21 12:54:08 2026",
-            "END_CMD: get_timing_paths      CPU:  17568 s ( 4.88 hr) ELAPSE:  14308 s ( 3.97 hr) MEM-PEAK: 58137 Mb Tue Apr 21 12:54:29 2026",
-            "START_CMD: get_timing_paths    CPU:  17568 s ( 4.88 hr) ELAPSE:  14308 s ( 3.97 hr) MEM-PEAK: 58137 Mb Tue Apr 21 12:54:29 2026",
-            "END_CMD: get_timing_paths      CPU:  17590 s ( 4.89 hr) ELAPSE:  14329 s ( 3.98 hr) MEM-PEAK: 58137 Mb Tue Apr 21 12:54:49 2026",
-            "START_CMD: get_timing_paths    CPU:  17590 s ( 4.89 hr) ELAPSE:  14329 s ( 3.98 hr) MEM-PEAK: 58137 Mb Tue Apr 21 12:54:49 2026"
+            "START_CMD: get_timing_paths    CPU:  19479 s ( 5.41 hr) ELAPSE:  16171 s ( 4.49 hr) MEM-PEAK: 58137 Mb Tue Apr 21 13:25:31 2026",
+            "END_CMD: get_timing_paths      CPU:  19492 s ( 5.41 hr) ELAPSE:  16184 s ( 4.50 hr) MEM-PEAK: 58137 Mb Tue Apr 21 13:25:44 2026",
+            "START_CMD: get_timing_paths    CPU:  19492 s ( 5.41 hr) ELAPSE:  16184 s ( 4.50 hr) MEM-PEAK: 58137 Mb Tue Apr 21 13:25:44 2026",
+            "END_CMD: get_timing_paths      CPU:  19506 s ( 5.42 hr) ELAPSE:  16196 s ( 4.50 hr) MEM-PEAK: 58137 Mb Tue Apr 21 13:25:57 2026",
+            "START_CMD: get_timing_paths    CPU:  19506 s ( 5.42 hr) ELAPSE:  16196 s ( 4.50 hr) MEM-PEAK: 58137 Mb Tue Apr 21 13:25:57 2026"
           ],
-          "last_updated": "2026-04-21T12:54:59",
-          "size_bytes": 69255718,
+          "last_updated": "2026-04-21T13:26:02",
+          "size_bytes": 69299630,
           "stage_exists": true
         },
         {
@@ -5594,16 +5594,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/cts.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU:   8589 s ( 2.39 hr) ELAPSE:   5981 s ( 1.66 hr) MEM-PEAK: 61714 Mb Tue Apr 21 12:55:07 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU:  10479 s ( 2.91 hr) ELAPSE:   7832 s ( 2.18 hr) MEM-PEAK: 61714 Mb Tue Apr 21 13:25:58 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU:   8554 s ( 2.38 hr) ELAPSE:   5947 s ( 1.65 hr) MEM-PEAK: 61714 Mb Tue Apr 21 12:54:33 2026",
-            "END_CMD: get_timing_paths      CPU:   8571 s ( 2.38 hr) ELAPSE:   5964 s ( 1.66 hr) MEM-PEAK: 61714 Mb Tue Apr 21 12:54:50 2026",
-            "START_CMD: get_timing_paths    CPU:   8571 s ( 2.38 hr) ELAPSE:   5964 s ( 1.66 hr) MEM-PEAK: 61714 Mb Tue Apr 21 12:54:50 2026",
-            "END_CMD: get_timing_paths      CPU:   8589 s ( 2.39 hr) ELAPSE:   5981 s ( 1.66 hr) MEM-PEAK: 61714 Mb Tue Apr 21 12:55:07 2026",
-            "START_CMD: get_timing_paths    CPU:   8589 s ( 2.39 hr) ELAPSE:   5981 s ( 1.66 hr) MEM-PEAK: 61714 Mb Tue Apr 21 12:55:07 2026"
+            "START_CMD: get_timing_paths    CPU:  10445 s ( 2.90 hr) ELAPSE:   7799 s ( 2.17 hr) MEM-PEAK: 61714 Mb Tue Apr 21 13:25:24 2026",
+            "END_CMD: get_timing_paths      CPU:  10462 s ( 2.91 hr) ELAPSE:   7815 s ( 2.17 hr) MEM-PEAK: 61714 Mb Tue Apr 21 13:25:41 2026",
+            "START_CMD: get_timing_paths    CPU:  10462 s ( 2.91 hr) ELAPSE:   7815 s ( 2.17 hr) MEM-PEAK: 61714 Mb Tue Apr 21 13:25:41 2026",
+            "END_CMD: get_timing_paths      CPU:  10479 s ( 2.91 hr) ELAPSE:   7832 s ( 2.18 hr) MEM-PEAK: 61714 Mb Tue Apr 21 13:25:58 2026",
+            "START_CMD: get_timing_paths    CPU:  10479 s ( 2.91 hr) ELAPSE:   7832 s ( 2.18 hr) MEM-PEAK: 61714 Mb Tue Apr 21 13:25:58 2026"
           ],
-          "last_updated": "2026-04-21T12:55:12",
-          "size_bytes": 1355386927,
+          "last_updated": "2026-04-21T13:26:03",
+          "size_bytes": 1355419554,
           "stage_exists": true
         },
         {
@@ -5619,16 +5619,16 @@
             "fail_file": null,
             "skipped_fail_file": null
           },
-          "latest_line": "Clock-opt optimization Phase 33 Iter  1   2582306.00  2199665.75  813154.94      1553     260516.92    13567.09      189362             13.38    135892",
+          "latest_line": "  NEX failed to build VGR numPin < 2",
           "recent_lines": [
-            "INFO: cellmap features:  adv-rules=(Y), pdc=(Y), clock-rules=(N)",
-            "Probability threshold is set currently as 0.200000",
-            "Clock-opt optimization Phase 32 Iter  1   2582306.00  2199665.75  813154.94      1553     260586.78    13207.50      189362             13.37    135892",
-            "Probability threshold is set currently as 0.200000",
-            "Clock-opt optimization Phase 33 Iter  1   2582306.00  2199665.75  813154.94      1553     260516.92    13567.09      189362             13.38    135892"
+            "  NEX failed to build VGR numPin < 2",
+            "  NEX VGR failid due to term size 0,   numOfPins 2,  numOfSegments 0,  numOfViaShapes 0",
+            "  NEX failed to build VGR numPin < 2",
+            "  NEX VGR failid due to term size 0,   numOfPins 2,  numOfSegments 0,  numOfViaShapes 0",
+            "  NEX failed to build VGR numPin < 2"
           ],
-          "last_updated": "2026-04-21T12:55:05",
-          "size_bytes": 46592610,
+          "last_updated": "2026-04-21T13:26:04",
+          "size_bytes": 50685333,
           "stage_exists": true
         },
         {
