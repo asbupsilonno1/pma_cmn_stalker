@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T05:12:33",
+  "generated_at": "2026-04-21T05:43:22",
   "run_count": 5,
   "runs": [
     {
@@ -4906,7 +4906,7 @@
       "fc_latest_line": "NEX: start of threading: 16 threads.",
       "overall_status": "running",
       "running_stage": "compile_initial_opto",
-      "last_updated": "2026-04-21T05:12:22",
+      "last_updated": "2026-04-21T05:43:20",
       "summary": {
         "passed": 9,
         "failed": 0,
@@ -5420,16 +5420,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/initial_map.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU:  22373 s ( 6.21 hr) ELAPSE:  13138 s ( 3.65 hr) MEM-PEAK: 52023 Mb Tue Apr 21 05:12:13 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU:  24246 s ( 6.74 hr) ELAPSE:  14961 s ( 4.16 hr) MEM-PEAK: 52023 Mb Tue Apr 21 05:42:36 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU:  22355 s ( 6.21 hr) ELAPSE:  13119 s ( 3.64 hr) MEM-PEAK: 52023 Mb Tue Apr 21 05:11:54 2026",
-            "END_CMD: get_timing_paths      CPU:  22364 s ( 6.21 hr) ELAPSE:  13128 s ( 3.65 hr) MEM-PEAK: 52023 Mb Tue Apr 21 05:12:03 2026",
-            "START_CMD: get_timing_paths    CPU:  22364 s ( 6.21 hr) ELAPSE:  13128 s ( 3.65 hr) MEM-PEAK: 52023 Mb Tue Apr 21 05:12:03 2026",
-            "END_CMD: get_timing_paths      CPU:  22373 s ( 6.21 hr) ELAPSE:  13138 s ( 3.65 hr) MEM-PEAK: 52023 Mb Tue Apr 21 05:12:13 2026",
-            "START_CMD: get_timing_paths    CPU:  22373 s ( 6.21 hr) ELAPSE:  13138 s ( 3.65 hr) MEM-PEAK: 52023 Mb Tue Apr 21 05:12:13 2026"
+            "START_CMD: get_timing_paths    CPU:  24205 s ( 6.72 hr) ELAPSE:  14921 s ( 4.14 hr) MEM-PEAK: 52023 Mb Tue Apr 21 05:41:56 2026",
+            "END_CMD: get_timing_paths      CPU:  24226 s ( 6.73 hr) ELAPSE:  14941 s ( 4.15 hr) MEM-PEAK: 52023 Mb Tue Apr 21 05:42:16 2026",
+            "START_CMD: get_timing_paths    CPU:  24226 s ( 6.73 hr) ELAPSE:  14941 s ( 4.15 hr) MEM-PEAK: 52023 Mb Tue Apr 21 05:42:16 2026",
+            "END_CMD: get_timing_paths      CPU:  24246 s ( 6.74 hr) ELAPSE:  14961 s ( 4.16 hr) MEM-PEAK: 52023 Mb Tue Apr 21 05:42:36 2026",
+            "START_CMD: get_timing_paths    CPU:  24246 s ( 6.74 hr) ELAPSE:  14961 s ( 4.16 hr) MEM-PEAK: 52023 Mb Tue Apr 21 05:42:36 2026"
           ],
-          "last_updated": "2026-04-21T05:12:15",
-          "size_bytes": 218822276,
+          "last_updated": "2026-04-21T05:42:46",
+          "size_bytes": 218853124,
           "stage_exists": true
         },
         {
@@ -5493,13 +5493,9 @@
         {
           "stage": "compile_initial_opto",
           "status": "running",
-          "log_error_count": 44,
-          "has_log_errors": true,
-          "log_error_samples": [
-            "Error: Mode: dfx, Generated clock 'i_ck_jtag_tck_div4_as_sys_clkm_fast' has no path from master clock 'i_ck_jtag_tck_div2_as_sys'; zero source latency will be used. (GRF-014)",
-            "Error: Mode: dfx, Generated clock 'i_ck_jtag_tck_div4_as_sys_clkm_slow' has no path from master clock 'i_ck_jtag_tck_div2_as_sys'; zero source latency will be used. (GRF-014)",
-            "Error: Mode: dfx, Generated clock 'ick_main_synthlcfast_div2' has no path from master clock 'i_ck_sys'; zero source latency will be used. (GRF-014)"
-          ],
+          "log_error_count": 0,
+          "has_log_errors": false,
+          "log_error_samples": [],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc.compile_initial_opto.log",
             "parallel_log": null,
@@ -5512,11 +5508,11 @@
             " host.max_cores                   : 16",
             " extract.connect_open           : true",
             "Extracting design: pma_cmn",
-            "Incr Extraction modNet : 92 design pma_cmn",
+            "Incr Extraction modNet : 25 design pma_cmn",
             "NEX: start of threading: 16 threads."
           ],
-          "last_updated": "2026-04-21T05:12:22",
-          "size_bytes": 200825560,
+          "last_updated": "2026-04-21T05:43:20",
+          "size_bytes": 204034778,
           "stage_exists": true
         },
         {
