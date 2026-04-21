@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T16:54:35",
+  "generated_at": "2026-04-20T17:25:17",
   "run_count": 5,
   "runs": [
     {
@@ -1342,7 +1342,7 @@
       "fc_latest_line": "Thank you for using Fusion Compiler.",
       "overall_status": "started",
       "running_stage": null,
-      "last_updated": "2026-04-20T16:53:06",
+      "last_updated": "2026-04-20T17:24:37",
       "summary": {
         "passed": 20,
         "failed": 0,
@@ -2263,16 +2263,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/estimation.skipped_fail"
           },
-          "latest_line": "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/base_lvt/ndm/lib765_g1m_240h_50pp_base_lvt.ndm' (FILE-007)",
+          "latest_line": "Information: Net estimation statistics: timing graph nets = 171593, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 0, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)",
           "recent_lines": [
-            "INTEL_INFO   : Optional file to be sourced not found; 'open_lib_pre_setup.tcl', skipping (::iproc_source) [Mon Apr 20 16:52:43 2026]",
-            "INTEL_INFO   : opening ndm for parallel outputs and reports_generation (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/global/snps/apr_fc/step_load.tcl) [Mon Apr 20 16:52:43 2026]",
-            "START_CMD: open_lib            CPU:     21 s ( 0.01 hr) ELAPSE:     29 s ( 0.01 hr) MEM-PEAK:   451 Mb Mon Apr 20 16:52:43 2026",
-            "Information: Loading library file '/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/outputs/estimation/pma_cmn_TMP_for_parallel_rpt_out_gen.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/base_lvt/ndm/lib765_g1m_240h_50pp_base_lvt.ndm' (FILE-007)"
+            "Warning: Offset latency can only be specified for clock-sink pins or clock-pin of ICG cell. Object 'i_cmnlogic/i_cmn/dpma_1lane_vrc/ser_clk_mux/ctech_lib_clk_mux_2to1_dcszo/clk2' is neither a clock sink pin nor a clock-pin of ICG and hence offset latency is dropped for analysis purpose. (UIC-105)",
+            "Warning: Offset latency can only be specified for clock-sink pins or clock-pin of ICG cell. Object 'i_cmnlogic/i_cmn/i_fw/i_uc_top/uc_clk_ctl/uc_reg_clk_clkmux/intc_ctech_ckmux/ctech_lib_clk_mux_2to1_dcszo/clk1' is neither a clock sink pin nor a clock-pin of ICG and hence offset latency is dropped for analysis purpose. (UIC-105)",
+            "Warning: Offset latency can only be specified for clock-sink pins or clock-pin of ICG cell. Object 'i_cmnlogic/i_cmn/dpma_1lane_vrc/ser_clk_mux/ctech_lib_clk_mux_2to1_dcszo/clk2' is neither a clock sink pin nor a clock-pin of ICG and hence offset latency is dropped for analysis purpose. (UIC-105)",
+            "Information: Update timing completed net estimation for all the timing graph nets (TIM-111)",
+            "Information: Net estimation statistics: timing graph nets = 171593, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 0, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)"
           ],
-          "last_updated": "2026-04-20T16:53:06",
-          "size_bytes": 51070507,
+          "last_updated": "2026-04-20T17:24:37",
+          "size_bytes": 70662802,
           "stage_exists": true
         },
         {
@@ -2654,10 +2654,10 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "Information: rtl_activity_annotaiton is set to on. annotation_status=3",
+      "fc_latest_line": "Size of partitions: 160 gCells x 160 gCells",
       "overall_status": "running",
       "running_stage": "estimation",
-      "last_updated": "2026-04-20T16:54:22",
+      "last_updated": "2026-04-20T17:24:30",
       "summary": {
         "passed": 7,
         "failed": 0,
@@ -3545,16 +3545,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flattenall/runs/pma_cmn/1276.5/apr_fc/logs/floorplan.skipped_fail"
           },
-          "latest_line": "END_CMD: update_timing         CPU:   1347 s ( 0.37 hr) ELAPSE:   2083 s ( 0.58 hr) MEM-PEAK: 62347 Mb Mon Apr 20 16:52:27 2026",
+          "latest_line": "INTEL_INFO   : executing  proc sd_report_min_pulse_width to generate reports (::sd_report_all) [Mon Apr 20 17:22:41 2026]",
           "recent_lines": [
-            "Information: Update timing completed net estimation for all the timing graph nets (TIM-111)",
-            "Information: Net estimation statistics: timing graph nets = 147499, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 0, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)",
-            "Information: Ending   'update_timing' (FLW-8001)",
-            "Information: Time: 2026-04-20 16:52:27 / Session:  00:34:43 / Command:  00:00:35 / CPU:  00:03:23 / Memory: 62347 MB (FLW-8100)",
-            "END_CMD: update_timing         CPU:   1347 s ( 0.37 hr) ELAPSE:   2083 s ( 0.58 hr) MEM-PEAK: 62347 Mb Mon Apr 20 16:52:27 2026"
+            "INTEL_INFO   : executing  proc sd_report_lib_cells to generate reports (::sd_report_all) [Mon Apr 20 17:22:39 2026]",
+            "INTEL_INFO   : executing  proc sd_report_scenarios to generate reports (::sd_report_all) [Mon Apr 20 17:22:39 2026]",
+            "INTEL_INFO   : executing  proc sd_report_size_only to generate reports (::sd_report_all) [Mon Apr 20 17:22:39 2026]",
+            "INTEL_INFO   : executing  proc sd_report_mv_cells to generate reports (::sd_report_all) [Mon Apr 20 17:22:41 2026]",
+            "INTEL_INFO   : executing  proc sd_report_min_pulse_width to generate reports (::sd_report_all) [Mon Apr 20 17:22:41 2026]"
           ],
-          "last_updated": "2026-04-20T16:52:32",
-          "size_bytes": 52154870,
+          "last_updated": "2026-04-20T17:22:47",
+          "size_bytes": 52179688,
           "stage_exists": true
         },
         {
@@ -3582,8 +3582,8 @@
             "Elapsed time for this session:   2114 seconds (  0.59 hours)",
             "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-20T16:54:22",
-          "size_bytes": 27229438,
+          "last_updated": "2026-04-20T17:24:30",
+          "size_bytes": 28300890,
           "stage_exists": true
         }
       ]
@@ -3598,16 +3598,16 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "Warning: Net 'i_cmnsynth_wrapper/ioa_aprobe_external_xmleft' is already connected to pin 'i_cmnsynth_wrapper/i_cmnsynth/ioa_aprobe_external_xmleft'. It may cause loss of switching activity. (POW-116)",
+      "fc_latest_line": "START_CMD: copy_lib            CPU:     19 s ( 0.01 hr) ELAPSE:     23 s ( 0.01 hr) MEM-PEAK:   488 Mb Mon Apr 20 17:20:10 2026",
       "overall_status": "running",
-      "running_stage": "conditioning",
-      "last_updated": "2026-04-20T16:54:14",
+      "running_stage": "floorplan",
+      "last_updated": "2026-04-20T17:23:16",
       "summary": {
-        "passed": 15,
+        "passed": 16,
         "failed": 0,
         "skipped": 0,
         "started": 1,
-        "not_started": 5
+        "not_started": 4
       },
       "has_activity": true,
       "complete": false,
@@ -3738,7 +3738,7 @@
         {
           "stage": "setup_timing",
           "status": "passed",
-          "log_error_count": 44,
+          "log_error_count": 48,
           "has_log_errors": true,
           "log_error_samples": [
             "INTEL_ERROR  : MCMM-E5: Could not find matching process label: lib765_rcss_pcss_cmax in lib: ltphy_lane  for corner: 0p675-0p81-76dot5-max.S_M40.pcss3, oc type S_M40, please check the library collaterals  for consistency with PDK / DP configuration or specify an override with  ivar(mcmm,process_label,S_M40,ltphy_lane) or ivar(mcmm,process_label,0p675-0p81-76dot5-max.S_M40.pcss3,ltphy_lane) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/global/snps/apr_fc/tech_set_op_conds_process_labels.tcl) [Mon Apr 20 15:47:29 2026]",
@@ -3752,61 +3752,71 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/setup_timing.skipped_fail"
           },
-          "latest_line": "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_tools_099/eou_flow_global/2025.09.plus.p3/snps/apr_fc/summary_report.tcl (type=file, level=1, time=0 seconds) (::sd_report_design_qor) [Mon Apr 20 16:53:56 2026]",
+          "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
-            "Warning: No clock objects matched '*' (SEL-004)",
-            "Warning: No clock objects matched '*' (SEL-004)",
-            "INTEL_INFO   : Calculating Wire length, shorts, opens and DRCs (::sd_report_design_qor) [Mon Apr 20 16:53:56 2026]",
-            "INTEL_INFO   : SCRIPT_START : /nfs/site/disks/crt_tools_099/eou_flow_global/2025.09.plus.p3/snps/apr_fc/summary_report.tcl (type=file, level=1) (::sd_report_design_qor) [Mon Apr 20 16:53:56 2026]",
-            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/crt_tools_099/eou_flow_global/2025.09.plus.p3/snps/apr_fc/summary_report.tcl (type=file, level=1, time=0 seconds) (::sd_report_design_qor) [Mon Apr 20 16:53:56 2026]"
+            "Maximum memory usage for this session: 52769.76 MB",
+            "Maximum memory usage for this session including child processes: 52769.76 MB",
+            "CPU usage for this session:   9849 seconds (  2.74 hours)",
+            "Elapsed time for this session:   3057 seconds (  0.85 hours)",
+            "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-20T16:54:14",
-          "size_bytes": 41888824,
+          "last_updated": "2026-04-20T16:57:37",
+          "size_bytes": 41967693,
           "stage_exists": true
         },
         {
           "stage": "conditioning",
+          "status": "passed",
+          "log_error_count": 5,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Information: >>>>>>> 19 unique error and warning message tags while observing fast: (MSG-3100)",
+            "Information: >>>>>>> Summary: 108928 error&warning MSGs observed during fast (MSG-3103)",
+            "Information: FLOW error check completed. (FAE-4001)"
+          ],
+          "files": {
+            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.conditioning.log",
+            "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/conditioning.parallel_rpt_out.log",
+            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/conditioning.pass",
+            "fail_file": null,
+            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/conditioning.skipped_fail"
+          },
+          "latest_line": "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/base_svt/ndm/lib765_g1m_240h_50pp_base_svt.ndm' (FILE-007)",
+          "recent_lines": [
+            "INTEL_INFO   : opening ndm for parallel outputs and reports_generation (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/global/snps/apr_fc/step_load.tcl) [Mon Apr 20 17:20:04 2026]",
+            "START_CMD: open_lib            CPU:     26 s ( 0.01 hr) ELAPSE:     43 s ( 0.01 hr) MEM-PEAK:   452 Mb Mon Apr 20 17:20:04 2026",
+            "Information: Loading library file '/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/outputs/conditioning/pma_cmn_TMP_for_parallel_rpt_out_gen.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/base_lvt/ndm/lib765_g1m_240h_50pp_base_lvt.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/base_svt/ndm/lib765_g1m_240h_50pp_base_svt.ndm' (FILE-007)"
+          ],
+          "last_updated": "2026-04-20T17:23:16",
+          "size_bytes": 34661119,
+          "stage_exists": true
+        },
+        {
+          "stage": "floorplan",
           "status": "running",
           "log_error_count": 0,
           "has_log_errors": false,
           "log_error_samples": [],
           "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.conditioning.log",
+            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/logs/fc.floorplan.log",
             "parallel_log": null,
             "pass_file": null,
             "fail_file": null,
             "skipped_fail_file": null
           },
-          "latest_line": "Information: Identified 1 crossbars in module 'pma_cmn_Xm_ave_v1_2020w35_tieDebug'. 0 out of 0 potentially congested crossbars amongst these are candidates for mux tree implementation. (MUX-6091)",
+          "latest_line": "START_CMD: copy_lib            CPU:     19 s ( 0.01 hr) ELAPSE:     23 s ( 0.01 hr) MEM-PEAK:   488 Mb Mon Apr 20 17:20:10 2026",
           "recent_lines": [
-            "Warning: Found 912 multibit sequential library cells that have missing/added attributes or have restrictions that prevent them from banking. (SQM-1053)",
-            "912 sequential multibit library cells have restrictions (dont_use or dont_touch).",
-            "0 sequential multibit library cells have missing sequential mapping relevant attributes",
-            "Use check_multibit_library command to identify these multibit library cells.",
-            "Information: Identified 1 crossbars in module 'pma_cmn_Xm_ave_v1_2020w35_tieDebug'. 0 out of 0 potentially congested crossbars amongst these are candidates for mux tree implementation. (MUX-6091)"
+            "INTEL_INFO   : SCRIPT_STOP  : /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/src/pma_cmn/1276.5/apr_fc/scripts/set_pvt_configuration.tcl (type=file, level=2, time=0 seconds) (::iproc_open_ndm) [Mon Apr 20 17:20:09 2026]",
+            "INTEL_INFO   : ndm_general: design.on_disk_operation = true (::iproc_open_ndm) [Mon Apr 20 17:20:09 2026]",
+            "INTEL_INFO   : Overriding ::ivar(tmp_opened_ndm_database) = '/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/outputs/pma_cmn.conditioning.opened.for.floorplan_31076.ndm' (prev. value = '') [Mon Apr 20 17:20:09 2026]",
+            "INTEL_INFO   : Copying NDM.... from --->  /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/outputs/conditioning/pma_cmn.ndm to ---> /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_estimation/runs/pma_cmn/1276.5/apr_fc/outputs/pma_cmn.conditioning.opened.for.floorplan_31076.ndm .... (::iproc_open_ndm) [Mon Apr 20 17:20:09 2026]",
+            "START_CMD: copy_lib            CPU:     19 s ( 0.01 hr) ELAPSE:     23 s ( 0.01 hr) MEM-PEAK:   488 Mb Mon Apr 20 17:20:10 2026"
           ],
-          "last_updated": "2026-04-20T16:53:59",
-          "size_bytes": 19099461,
+          "last_updated": "2026-04-20T17:20:20",
+          "size_bytes": 14158638,
           "stage_exists": true
-        },
-        {
-          "stage": "floorplan",
-          "status": "not_started",
-          "log_error_count": 0,
-          "has_log_errors": false,
-          "log_error_samples": [],
-          "files": {
-            "fc_log": null,
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "",
-          "recent_lines": [],
-          "last_updated": null,
-          "size_bytes": 0,
-          "stage_exists": false
         },
         {
           "stage": "estimation",
