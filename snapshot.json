@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T01:06:03",
+  "generated_at": "2026-04-21T01:36:51",
   "run_count": 5,
   "runs": [
     {
@@ -4903,16 +4903,16 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "Information: Muxed clock exclusivity enabled for mode dfx with 2 exclusive pins. (TIM-034)",
+      "fc_latest_line": "INTEL_INFO   : SCRIPT_START : /nfs/site/disks/crt_tools_0103/eou_tech_modules_1276/2025.09.plus.p1/intel/common/snps/create_pg_strategy.tcl (type=file, level=2) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/tech/1276.5/snps/common/step_pwrgrid.tcl) [Tue Apr 21 01:36:46 2026]",
       "overall_status": "running",
-      "running_stage": "initial_map",
-      "last_updated": "2026-04-21T01:05:11",
+      "running_stage": "floorplan",
+      "last_updated": "2026-04-21T01:36:45",
       "summary": {
-        "passed": 5,
+        "passed": 6,
         "failed": 0,
         "skipped": 0,
         "started": 1,
-        "not_started": 13
+        "not_started": 12
       },
       "has_activity": true,
       "complete": false,
@@ -5043,7 +5043,7 @@
         {
           "stage": "setup_timing",
           "status": "passed",
-          "log_error_count": 16,
+          "log_error_count": 20,
           "has_log_errors": true,
           "log_error_samples": [
             "INTEL_ERROR  : MCMM-E5: Could not find matching process label: lib765_rcss_pcss_cmax in lib: ltphy_lane  for corner: 0p675-0p81-76dot5-max.S_125.prcs3, oc type S_125, please check the library collaterals  for consistency with PDK / DP configuration or specify an override with  ivar(mcmm,process_label,S_125,ltphy_lane) or ivar(mcmm,process_label,0p675-0p81-76dot5-max.S_125.prcs3,ltphy_lane) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/global/snps/apr_fc/tech_set_op_conds_process_labels.tcl) [Tue Apr 21 00:08:47 2026]",
@@ -5057,64 +5057,74 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/setup_timing.skipped_fail"
           },
-          "latest_line": "INTEL_INFO   : Generating power reports for dfx.0p825-1p02-76dot5-min.F_125.pcff3 (::sd_report_design_qor) [Tue Apr 21 01:04:40 2026]",
+          "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
-            "INTEL_INFO   : Calculating macro utilization (::sd_report_design_qor) [Tue Apr 21 01:01:47 2026]",
-            "INTEL_INFO   : Generating power reports for func.0p825-1p02-76dot5-min.F_125.pcff3 (::sd_report_design_qor) [Tue Apr 21 01:01:50 2026]",
-            "INTEL_INFO   : Generating power reports for dfx.0p675-0p81-76dot5-max.S_125.prcs3 (::sd_report_design_qor) [Tue Apr 21 01:02:30 2026]",
-            "INTEL_INFO   : Generating power reports for dfx.0p675-0p81-76dot5-max.S_M40.pcss3 (::sd_report_design_qor) [Tue Apr 21 01:03:34 2026]",
-            "INTEL_INFO   : Generating power reports for dfx.0p825-1p02-76dot5-min.F_125.pcff3 (::sd_report_design_qor) [Tue Apr 21 01:04:40 2026]"
+            "Maximum memory usage for this session: 52705.75 MB",
+            "Maximum memory usage for this session including child processes: 52705.75 MB",
+            "CPU usage for this session:  10421 seconds (  2.89 hours)",
+            "Elapsed time for this session:   3466 seconds (  0.96 hours)",
+            "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-21T01:05:11",
-          "size_bytes": 29737823,
+          "last_updated": "2026-04-21T01:22:43",
+          "size_bytes": 29824212,
           "stage_exists": true
         },
         {
           "stage": "floorplan",
-          "status": "not_started",
-          "log_error_count": 0,
-          "has_log_errors": false,
-          "log_error_samples": [],
-          "files": {
-            "fc_log": null,
-            "parallel_log": null,
-            "pass_file": null,
-            "fail_file": null,
-            "skipped_fail_file": null
-          },
-          "latest_line": "",
-          "recent_lines": [],
-          "last_updated": null,
-          "size_bytes": 0,
-          "stage_exists": false
-        },
-        {
-          "stage": "initial_map",
           "status": "running",
-          "log_error_count": 51,
+          "log_error_count": 3,
           "has_log_errors": true,
           "log_error_samples": [
             "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
             "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)",
-            "Warning: Timer unexpected state: error code '3', state information: 'MG: Skip Scheduling arrival in scenario: dfx.0p825-1p02-76dot5-min.F_125.pcff3 for Term: unit_mux_top/mux_body/visa2_registers_deserializer/C159/Z[1] because its level < level of fanin Term: unit_mux_top/mux_body/visa2_registers_deserializer/C159/CONTROL2[0]"
+            "INTEL_ERROR  : Need to define HPML layer for macro: tic76d4m14_diccdreg_cont_horz, please set ivar(hpml,tic76d4m14_diccdreg_cont_horz) in your block vars.tcl file and re-run (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/tech/1276.5/snps/common/tech_macro_twire_lego_fix.tcl) [Tue Apr 21 01:36:24 2026]"
           ],
           "files": {
-            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc.initial_map.log",
+            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc.floorplan.log",
             "parallel_log": null,
             "pass_file": null,
             "fail_file": null,
             "skipped_fail_file": null
           },
-          "latest_line": "Information: Muxed clock exclusivity enabled for mode dfx with 2 exclusive pins. (TIM-034)",
+          "latest_line": "Checking DRC for 2138 stacked vias:: 0%",
           "recent_lines": [
-            "Still running [2] (Session: 1.45 hr / Command: 0.39 hr / Memory: 100155.34 MB) (MSG-3999)",
-            "Information: CPU Load: 27%, Ram Free: 6 GB, Swap Free: 465 GB, Work Disk Free: 293 GB, Tmp Disk Free: 3093 GB (MSG-3995)",
-            "Warning: The exclusivity set with '-type mux' option on the output pin 'i_cmnlogic/i_synthlcfast/i_pg/i_rtl/i_lcfast_rtl/i_ckm/i_ckdiv_ref/i_mux/intc_ctech_ckmux/ctech_lib_clk_mux_2to1_dcszo/clkout' is ignored, due to the violation of condition 5. (TIM-030)",
-            "Warning: The exclusivity set with '-type mux' option on the output pin 'i_cmnlogic/i_synthlcslow/i_pg/i_rtl/i_lcslow_rtl/i_ckm/i_ckdiv_ref/i_mux/intc_ctech_ckmux/ctech_lib_clk_mux_2to1_dcszo/clkout' is ignored, due to the violation of condition 5. (TIM-030)",
-            "Information: Muxed clock exclusivity enabled for mode dfx with 2 exclusive pins. (TIM-034)"
+            "Checking DRC for 2138 stacked vias:: 0% 100%",
+            "Checking DRC for 2138 stacked vias:: 0% 100%",
+            "Checking DRC for 2138 stacked vias:: 0% 100%",
+            "Checking DRC for 2138 stacked vias:: 0% 100%",
+            "Checking DRC for 2138 stacked vias:: 0%"
           ],
-          "last_updated": "2026-04-21T01:02:09",
-          "size_bytes": 4639302,
+          "last_updated": "2026-04-21T01:36:45",
+          "size_bytes": 3743922,
+          "stage_exists": true
+        },
+        {
+          "stage": "initial_map",
+          "status": "passed",
+          "log_error_count": 80,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Mode: dfx, Generated clock 'i_ck_jtag_tck_div4_as_sys_clkm_fast' has no path from master clock 'i_ck_jtag_tck_div2_as_sys'; zero source latency will be used. (GRF-014)",
+            "Error: Mode: dfx, Generated clock 'i_ck_jtag_tck_div4_as_sys_clkm_slow' has no path from master clock 'i_ck_jtag_tck_div2_as_sys'; zero source latency will be used. (GRF-014)",
+            "Error: Mode: dfx, Generated clock 'ick_main_synthlcfast_div2' has no path from master clock 'i_ck_sys'; zero source latency will be used. (GRF-014)"
+          ],
+          "files": {
+            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc.initial_map.log",
+            "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/initial_map.parallel_rpt_out.log",
+            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/initial_map.pass",
+            "fail_file": null,
+            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/initial_map.skipped_fail"
+          },
+          "latest_line": "INTEL_INFO   : script_start : /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/outputs/initial_map/pma_cmn_TMP_for_parallel_rpt_out_gen.ndm/attach/lib.setLibDataCmd (type=file, level=2) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/global/snps/apr_fc/step_load.tcl) [Tue Apr 21 01:36:21 2026]",
+          "recent_lines": [
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/seq_svt/ndm/lib765_g1m_240h_50pp_seq_svt.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/seq_ulvt/ndm/lib765_g1m_240h_50pp_seq_ulvt.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/spcl_ulvt/ndm/lib765_g1m_240h_50pp_spcl_ulvt.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/spcl_ulvt/ndm/lib765_g1m_240h_50pp_spcl_ulvt_layonly.ndm' (FILE-007)",
+            "INTEL_INFO   : script_start : /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/outputs/initial_map/pma_cmn_TMP_for_parallel_rpt_out_gen.ndm/attach/lib.setLibDataCmd (type=file, level=2) (/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/global/snps/apr_fc/step_load.tcl) [Tue Apr 21 01:36:21 2026]"
+          ],
+          "last_updated": "2026-04-21T01:36:30",
+          "size_bytes": 218276063,
           "stage_exists": true
         },
         {
