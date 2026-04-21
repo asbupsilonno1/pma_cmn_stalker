@@ -202,7 +202,7 @@
   <div class="container">
 	<section class="hero">
 	  <h1>PMA CMN stalker</h1>
-	  <p>Generated at 2026-04-21T00:35:15</p>
+	  <p>Generated at 2026-04-21T01:06:03</p>
 	  <p>Monitoring APR FC flow stages only. RTLA-only stages are limited to conditioning and estimation when those logs are actually present.</p>
 	  <p>Auxiliary logs such as abutment-rule, spacing-rule, interactive, assembly, and merge helpers are intentionally excluded from the stage list.</p>
 	</section>
@@ -212,7 +212,7 @@
   </div>
   <script>
 	const snapshot = {
-  "generated_at": "2026-04-21T00:35:15",
+  "generated_at": "2026-04-21T01:06:03",
   "run_count": 5,
   "runs": [
     {
@@ -5116,10 +5116,10 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "Running incremental spacing model update ...",
+      "fc_latest_line": "Information: Muxed clock exclusivity enabled for mode dfx with 2 exclusive pins. (TIM-034)",
       "overall_status": "running",
       "running_stage": "initial_map",
-      "last_updated": "2026-04-21T00:35:08",
+      "last_updated": "2026-04-21T01:05:11",
       "summary": {
         "passed": 5,
         "failed": 0,
@@ -5227,7 +5227,7 @@
         {
           "stage": "init_floorplan",
           "status": "passed",
-          "log_error_count": 3,
+          "log_error_count": 6,
           "has_log_errors": true,
           "log_error_samples": [
             "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
@@ -5241,16 +5241,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/init_floorplan.skipped_fail"
           },
-          "latest_line": "INTEL_INFO   : executing  proc sd_report_qor to generate reports (::sd_report_all) [Tue Apr 21 00:30:53 2026]",
+          "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
-            "INTEL_INFO   : Overriding ::ivar(reports,init_floorplan) = 'sd_report_utilization sd_report_utilization_per_va sd_report_qor sd_report_design  sd_report_check_mv_design sd_report_multibit sd_report_missing_port_constraints  sd_report_Unclocked_flip_flops sd_report_design_qor sd_report_ref_libs sd_report_dont_touch sd_report_threshold_voltage_groups sd_report_clock_gating sd_report_clock_names sd_report_app_options sd_report_ivars sd_reports_cpu_info {sd_reports_create_run_summary sd_report_ref_libs} sd_reports_cpu_info' (prev. value = 'sd_report_ref_libs sd_report_dont_touch sd_report_threshold_voltage_groups sd_report_clock_gating sd_report_clock_names sd_report_app_options sd_report_ivars sd_reports_cpu_info {sd_reports_create_run_summary sd_report_ref_libs} sd_reports_cpu_info') [Tue Apr 21 00:30:47 2026]",
-            "INTEL_INFO   : Overriding ::ivar(reports,init_floorplan) = 'sd_report_utilization sd_report_utilization_per_va sd_report_qor sd_report_design sd_report_check_mv_design sd_report_multibit sd_report_missing_port_constraints sd_report_Unclocked_flip_flops sd_report_design_qor sd_report_ref_libs sd_report_dont_touch sd_report_threshold_voltage_groups sd_report_clock_gating sd_report_clock_names {sd_reports_create_run_summary sd_report_ref_libs}' (prev. value = 'sd_report_utilization sd_report_utilization_per_va sd_report_qor sd_report_design  sd_report_check_mv_design sd_report_multibit sd_report_missing_port_constraints  sd_report_Unclocked_flip_flops sd_report_design_qor sd_report_ref_libs sd_report_dont_touch sd_report_threshold_voltage_groups sd_report_clock_gating sd_report_clock_names sd_report_app_options sd_report_ivars sd_reports_cpu_info {sd_reports_create_run_summary sd_report_ref_libs} sd_reports_cpu_info') [Tue Apr 21 00:30:47 2026]",
-            "INTEL_INFO   : executing  proc sd_report_utilization to generate reports (::sd_report_all) [Tue Apr 21 00:30:47 2026]",
-            "INTEL_INFO   : executing  proc sd_report_utilization_per_va to generate reports (::sd_report_all) [Tue Apr 21 00:30:51 2026]",
-            "INTEL_INFO   : executing  proc sd_report_qor to generate reports (::sd_report_all) [Tue Apr 21 00:30:53 2026]"
+            "Maximum memory usage for this session: 39252.02 MB",
+            "Maximum memory usage for this session including child processes: 39252.02 MB",
+            "CPU usage for this session:   2242 seconds (  0.62 hours)",
+            "Elapsed time for this session:   2104 seconds (  0.58 hours)",
+            "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-21T00:31:21",
-          "size_bytes": 27609031,
+          "last_updated": "2026-04-21T00:43:03",
+          "size_bytes": 27691206,
           "stage_exists": true
         },
         {
@@ -5270,16 +5270,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/setup_timing.skipped_fail"
           },
-          "latest_line": "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsseq_svt/ndm/lib765_g1m_240h_50pp_dsseq_svt.ndm' (FILE-007)",
+          "latest_line": "INTEL_INFO   : Generating power reports for dfx.0p825-1p02-76dot5-min.F_125.pcff3 (::sd_report_design_qor) [Tue Apr 21 01:04:40 2026]",
           "recent_lines": [
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsiclk_svt/ndm/lib765_g1m_240h_50pp_dsiclk_svt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsispcl_lvt/ndm/lib765_g1m_240h_50pp_dsispcl_lvt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsispcl_svt/ndm/lib765_g1m_240h_50pp_dsispcl_svt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dspwm_svt/ndm/lib765_g1m_240h_50pp_dspwm_svt.ndm' (FILE-007)",
-            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/dsseq_svt/ndm/lib765_g1m_240h_50pp_dsseq_svt.ndm' (FILE-007)"
+            "INTEL_INFO   : Calculating macro utilization (::sd_report_design_qor) [Tue Apr 21 01:01:47 2026]",
+            "INTEL_INFO   : Generating power reports for func.0p825-1p02-76dot5-min.F_125.pcff3 (::sd_report_design_qor) [Tue Apr 21 01:01:50 2026]",
+            "INTEL_INFO   : Generating power reports for dfx.0p675-0p81-76dot5-max.S_125.prcs3 (::sd_report_design_qor) [Tue Apr 21 01:02:30 2026]",
+            "INTEL_INFO   : Generating power reports for dfx.0p675-0p81-76dot5-max.S_M40.pcss3 (::sd_report_design_qor) [Tue Apr 21 01:03:34 2026]",
+            "INTEL_INFO   : Generating power reports for dfx.0p825-1p02-76dot5-min.F_125.pcff3 (::sd_report_design_qor) [Tue Apr 21 01:04:40 2026]"
           ],
-          "last_updated": "2026-04-21T00:34:34",
-          "size_bytes": 18705001,
+          "last_updated": "2026-04-21T01:05:11",
+          "size_bytes": 29737823,
           "stage_exists": true
         },
         {
@@ -5318,16 +5318,16 @@
             "fail_file": null,
             "skipped_fail_file": null
           },
-          "latest_line": "Running incremental spacing model update ...",
+          "latest_line": "Information: Muxed clock exclusivity enabled for mode dfx with 2 exclusive pins. (TIM-034)",
           "recent_lines": [
-            "        place.common.use_placement_model : true",
-            "        place.common.enable_advanced_placement_model : true",
-            "        cts.placement.cell_spacing_rule_style : maximum",
-            "Total 1.9499 seconds to build cellmap data including placement model analysis 0.0774 seconds",
-            "Running incremental spacing model update ..."
+            "Still running [2] (Session: 1.45 hr / Command: 0.39 hr / Memory: 100155.34 MB) (MSG-3999)",
+            "Information: CPU Load: 27%, Ram Free: 6 GB, Swap Free: 465 GB, Work Disk Free: 293 GB, Tmp Disk Free: 3093 GB (MSG-3995)",
+            "Warning: The exclusivity set with '-type mux' option on the output pin 'i_cmnlogic/i_synthlcfast/i_pg/i_rtl/i_lcfast_rtl/i_ckm/i_ckdiv_ref/i_mux/intc_ctech_ckmux/ctech_lib_clk_mux_2to1_dcszo/clkout' is ignored, due to the violation of condition 5. (TIM-030)",
+            "Warning: The exclusivity set with '-type mux' option on the output pin 'i_cmnlogic/i_synthlcslow/i_pg/i_rtl/i_lcslow_rtl/i_ckm/i_ckdiv_ref/i_mux/intc_ctech_ckmux/ctech_lib_clk_mux_2to1_dcszo/clkout' is ignored, due to the violation of condition 5. (TIM-030)",
+            "Information: Muxed clock exclusivity enabled for mode dfx with 2 exclusive pins. (TIM-034)"
           ],
-          "last_updated": "2026-04-21T00:35:08",
-          "size_bytes": 4376964,
+          "last_updated": "2026-04-21T01:02:09",
+          "size_bytes": 4639302,
           "stage_exists": true
         },
         {
