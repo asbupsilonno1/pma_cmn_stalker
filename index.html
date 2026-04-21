@@ -202,7 +202,7 @@
   <div class="container">
 	<section class="hero">
 	  <h1>PMA CMN stalker</h1>
-	  <p>Generated at 2026-04-21T04:10:54</p>
+	  <p>Generated at 2026-04-21T04:41:44</p>
 	  <p>Monitoring APR FC flow stages only. RTLA-only stages are limited to conditioning and estimation when those logs are actually present.</p>
 	  <p>Auxiliary logs such as abutment-rule, spacing-rule, interactive, assembly, and merge helpers are intentionally excluded from the stage list.</p>
 	</section>
@@ -212,7 +212,7 @@
   </div>
   <script>
 	const snapshot = {
-  "generated_at": "2026-04-21T04:10:54",
+  "generated_at": "2026-04-21T04:41:44",
   "run_count": 5,
   "runs": [
     {
@@ -5116,10 +5116,10 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "Information: Setting up cell instances...",
+      "fc_latest_line": "NEX: warning, extractTotalVia input with the wrong layer order: lowerLayerName m1, upperLayerName m1",
       "overall_status": "running",
       "running_stage": "compile_initial_opto",
-      "last_updated": "2026-04-21T04:10:51",
+      "last_updated": "2026-04-21T04:41:43",
       "summary": {
         "passed": 9,
         "failed": 0,
@@ -5633,16 +5633,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/initial_map.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU:  18576 s ( 5.16 hr) ELAPSE:   9434 s ( 2.62 hr) MEM-PEAK: 52023 Mb Tue Apr 21 04:10:29 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU:  20446 s ( 5.68 hr) ELAPSE:  11258 s ( 3.13 hr) MEM-PEAK: 52023 Mb Tue Apr 21 04:40:53 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU:  18529 s ( 5.15 hr) ELAPSE:   9388 s ( 2.61 hr) MEM-PEAK: 52023 Mb Tue Apr 21 04:09:43 2026",
-            "END_CMD: get_timing_paths      CPU:  18553 s ( 5.15 hr) ELAPSE:   9411 s ( 2.61 hr) MEM-PEAK: 52023 Mb Tue Apr 21 04:10:06 2026",
-            "START_CMD: get_timing_paths    CPU:  18553 s ( 5.15 hr) ELAPSE:   9411 s ( 2.61 hr) MEM-PEAK: 52023 Mb Tue Apr 21 04:10:06 2026",
-            "END_CMD: get_timing_paths      CPU:  18576 s ( 5.16 hr) ELAPSE:   9434 s ( 2.62 hr) MEM-PEAK: 52023 Mb Tue Apr 21 04:10:29 2026",
-            "START_CMD: get_timing_paths    CPU:  18576 s ( 5.16 hr) ELAPSE:   9434 s ( 2.62 hr) MEM-PEAK: 52023 Mb Tue Apr 21 04:10:29 2026"
+            "START_CMD: get_timing_paths    CPU:  20406 s ( 5.67 hr) ELAPSE:  11219 s ( 3.12 hr) MEM-PEAK: 52023 Mb Tue Apr 21 04:40:14 2026",
+            "END_CMD: get_timing_paths      CPU:  20426 s ( 5.67 hr) ELAPSE:  11239 s ( 3.12 hr) MEM-PEAK: 52023 Mb Tue Apr 21 04:40:34 2026",
+            "START_CMD: get_timing_paths    CPU:  20426 s ( 5.67 hr) ELAPSE:  11239 s ( 3.12 hr) MEM-PEAK: 52023 Mb Tue Apr 21 04:40:34 2026",
+            "END_CMD: get_timing_paths      CPU:  20446 s ( 5.68 hr) ELAPSE:  11258 s ( 3.13 hr) MEM-PEAK: 52023 Mb Tue Apr 21 04:40:53 2026",
+            "START_CMD: get_timing_paths    CPU:  20446 s ( 5.68 hr) ELAPSE:  11258 s ( 3.13 hr) MEM-PEAK: 52023 Mb Tue Apr 21 04:40:53 2026"
           ],
-          "last_updated": "2026-04-21T04:10:37",
-          "size_bytes": 218758987,
+          "last_updated": "2026-04-21T04:41:05",
+          "size_bytes": 218793092,
           "stage_exists": true
         },
         {
@@ -5706,7 +5706,7 @@
         {
           "stage": "compile_initial_opto",
           "status": "running",
-          "log_error_count": 112,
+          "log_error_count": 44,
           "has_log_errors": true,
           "log_error_samples": [
             "Error: Mode: dfx, Generated clock 'i_ck_jtag_tck_div4_as_sys_clkm_fast' has no path from master clock 'i_ck_jtag_tck_div2_as_sys'; zero source latency will be used. (GRF-014)",
@@ -5720,16 +5720,16 @@
             "fail_file": null,
             "skipped_fail_file": null
           },
-          "latest_line": "Information: Setting up cell instances...",
+          "latest_line": "NEX: warning, extractTotalVia input with the wrong layer order: lowerLayerName m1, upperLayerName m1",
           "recent_lines": [
-            "Information: Lib cells of site halo have their ground pins at bottom",
-            "Information: Lib cells of site bonuscore have their ground pins at bottom",
-            "Information: Is half inbound case ? no",
-            "Information: Legalizer threading is enabled with high effort (LGL-130)",
-            "Information: Setting up cell instances..."
+            "NEX: via vs wire R of corner#2: 0.970",
+            "NEX: extractor of pma_cmn allocated",
+            "NEX: Tlup has emulate fill setup",
+            "NEX: warning, extractTotalVia input with the wrong layer order: lowerLayerName m1, upperLayerName m0",
+            "NEX: warning, extractTotalVia input with the wrong layer order: lowerLayerName m1, upperLayerName m1"
           ],
-          "last_updated": "2026-04-21T04:10:51",
-          "size_bytes": 198888240,
+          "last_updated": "2026-04-21T04:41:43",
+          "size_bytes": 200151914,
           "stage_exists": true
         },
         {
