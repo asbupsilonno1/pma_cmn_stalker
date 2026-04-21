@@ -202,7 +202,7 @@
   <div class="container">
 	<section class="hero">
 	  <h1>PMA CMN stalker</h1>
-	  <p>Generated at 2026-04-21T08:48:20</p>
+	  <p>Generated at 2026-04-21T09:19:12</p>
 	  <p>Monitoring APR FC flow stages only. RTLA-only stages are limited to conditioning and estimation when those logs are actually present.</p>
 	  <p>Auxiliary logs such as abutment-rule, spacing-rule, interactive, assembly, and merge helpers are intentionally excluded from the stage list.</p>
 	</section>
@@ -212,7 +212,7 @@
   </div>
   <script>
 	const snapshot = {
-  "generated_at": "2026-04-21T08:48:20",
+  "generated_at": "2026-04-21T09:19:12",
   "run_count": 5,
   "runs": [
     {
@@ -5116,16 +5116,16 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "NEX: num of gcell = 217 x 649,  cellSizeX 1.562500, cellSizeY 1.562500, bbox (x1 -23.300000, x2 314.900000, y1 0.000000, y2 1013.760000)",
+      "fc_latest_line": "Information: Net estimation statistics: timing graph nets = 214860, routed nets = 5, across physical hierarchy nets = 0, parasitics cached nets = 212179, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 53. (TIM-112)",
       "overall_status": "running",
-      "running_stage": "compile_final_opto",
-      "last_updated": "2026-04-21T08:48:14",
+      "running_stage": "cts",
+      "last_updated": "2026-04-21T09:19:02",
       "summary": {
-        "passed": 10,
+        "passed": 12,
         "failed": 0,
         "skipped": 0,
         "started": 1,
-        "not_started": 8
+        "not_started": 6
       },
       "has_activity": true,
       "complete": false,
@@ -5633,16 +5633,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/initial_map.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU:  35631 s ( 9.90 hr) ELAPSE:  26075 s ( 7.24 hr) MEM-PEAK: 52027 Mb Tue Apr 21 08:47:50 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU:  37505 s (10.42 hr) ELAPSE:  27904 s ( 7.75 hr) MEM-PEAK: 52027 Mb Tue Apr 21 09:18:19 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU:  35614 s ( 9.89 hr) ELAPSE:  26058 s ( 7.24 hr) MEM-PEAK: 52027 Mb Tue Apr 21 08:47:33 2026",
-            "END_CMD: get_timing_paths      CPU:  35622 s ( 9.90 hr) ELAPSE:  26067 s ( 7.24 hr) MEM-PEAK: 52027 Mb Tue Apr 21 08:47:42 2026",
-            "START_CMD: get_timing_paths    CPU:  35622 s ( 9.90 hr) ELAPSE:  26067 s ( 7.24 hr) MEM-PEAK: 52027 Mb Tue Apr 21 08:47:42 2026",
-            "END_CMD: get_timing_paths      CPU:  35631 s ( 9.90 hr) ELAPSE:  26075 s ( 7.24 hr) MEM-PEAK: 52027 Mb Tue Apr 21 08:47:50 2026",
-            "START_CMD: get_timing_paths    CPU:  35631 s ( 9.90 hr) ELAPSE:  26075 s ( 7.24 hr) MEM-PEAK: 52027 Mb Tue Apr 21 08:47:50 2026"
+            "START_CMD: get_timing_paths    CPU:  37458 s (10.40 hr) ELAPSE:  27859 s ( 7.74 hr) MEM-PEAK: 52027 Mb Tue Apr 21 09:17:34 2026",
+            "END_CMD: get_timing_paths      CPU:  37481 s (10.41 hr) ELAPSE:  27881 s ( 7.74 hr) MEM-PEAK: 52027 Mb Tue Apr 21 09:17:56 2026",
+            "START_CMD: get_timing_paths    CPU:  37481 s (10.41 hr) ELAPSE:  27881 s ( 7.74 hr) MEM-PEAK: 52027 Mb Tue Apr 21 09:17:56 2026",
+            "END_CMD: get_timing_paths      CPU:  37505 s (10.42 hr) ELAPSE:  27904 s ( 7.75 hr) MEM-PEAK: 52027 Mb Tue Apr 21 09:18:19 2026",
+            "START_CMD: get_timing_paths    CPU:  37505 s (10.42 hr) ELAPSE:  27904 s ( 7.75 hr) MEM-PEAK: 52027 Mb Tue Apr 21 09:18:19 2026"
           ],
-          "last_updated": "2026-04-21T08:47:55",
-          "size_bytes": 219063109,
+          "last_updated": "2026-04-21T09:18:27",
+          "size_bytes": 219093609,
           "stage_exists": true
         },
         {
@@ -5734,69 +5734,90 @@
         },
         {
           "stage": "compile_final_opto",
-          "status": "running",
-          "log_error_count": 2,
+          "status": "passed",
+          "log_error_count": 9,
           "has_log_errors": true,
           "log_error_samples": [
             "Information: >>>>>>> 36 unique error and warning message tags while observing compile_fusion / final_opto: (MSG-3100)",
-            "Information: >>>>>>> Summary: 37600 error&warning MSGs observed during compile_fusion / final_opto (MSG-3103)"
+            "Information: >>>>>>> Summary: 37600 error&warning MSGs observed during compile_fusion / final_opto (MSG-3103)",
+            "Information: >>>>>>> 38 unique error and warning message tags while observing fusion: (MSG-3100)"
           ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc.compile_final_opto.log",
-            "parallel_log": null,
-            "pass_file": null,
+            "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.parallel_rpt_out.log",
+            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.pass",
             "fail_file": null,
-            "skipped_fail_file": null
+            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.skipped_fail"
           },
           "latest_line": "NEX: num of gcell = 217 x 649,  cellSizeX 1.562500, cellSizeY 1.562500, bbox (x1 -23.300000, x2 314.900000, y1 0.000000, y2 1013.760000)",
           "recent_lines": [
-            "Extracting design: pma_cmn",
-            "NEX: start of threading: 16 threads.",
-            "Information: 5 nets are successfully extracted. (NEX-028)",
-            "NEX: CTO mode extraction runtime user:0.70s, system:0.69s, elapsed:0.15s",
+            "net i_dpma_cmn_abut/aps_rename_46 length = 111.050 um, r = 941.251 ohm, c = 19.027 ff, cc = 0.000 ff pinCount: 2 (ID: 1354404)",
+            "net i_dpma_cmn_abut/aps_rename_77 length = 195.560 um, r = 1460.500 ohm, c = 30.656 ff, cc = 0.000 ff pinCount: 2 (ID: 1354434)",
+            "net aps_rename_3976 length = 123.610 um, r = 2346.138 ohm, c = 21.811 ff, cc = 0.000 ff pinCount: 2 (ID: 1030)",
+            "net i_dpma_cmn_abut/aps_rename_100 length = 57.535 um, r = 2484.579 ohm, c = 10.511 ff, cc = 0.000 ff pinCount: 2 (ID: 1354494)",
             "NEX: num of gcell = 217 x 649,  cellSizeX 1.562500, cellSizeY 1.562500, bbox (x1 -23.300000, x2 314.900000, y1 0.000000, y2 1013.760000)"
           ],
-          "last_updated": "2026-04-21T08:48:14",
-          "size_bytes": 48699274,
+          "last_updated": "2026-04-21T09:17:36",
+          "size_bytes": 63414061,
           "stage_exists": true
         },
         {
           "stage": "ctmesh",
-          "status": "not_started",
-          "log_error_count": 0,
-          "has_log_errors": false,
-          "log_error_samples": [],
+          "status": "passed",
+          "log_error_count": 5,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: Could not find the family 'ctech_lib_doublesync_rst'. The family of library cells should be defined first using define_libcell_subset. (LCS-1012)",
+            "Information: FLOW error check completed. (FAE-4001)"
+          ],
           "files": {
-            "fc_log": null,
-            "parallel_log": null,
-            "pass_file": null,
+            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc.ctmesh.log",
+            "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/ctmesh.parallel_rpt_out.log",
+            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/ctmesh.pass",
             "fail_file": null,
-            "skipped_fail_file": null
+            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/ctmesh.skipped_fail"
           },
-          "latest_line": "",
-          "recent_lines": [],
-          "last_updated": null,
-          "size_bytes": 0,
-          "stage_exists": false
+          "latest_line": "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/seq_lvt/ndm/lib765_g1m_240h_50pp_seq_lvt.ndm' (FILE-007)",
+          "recent_lines": [
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/lvl_lvt/ndm/lib765_g1m_240h_50pp_lvl_lvt.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/lvl_svt/ndm/lib765_g1m_240h_50pp_lvl_svt.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/pwm_lvt/ndm/lib765_g1m_240h_50pp_pwm_lvt.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/pwm_svt/ndm/lib765_g1m_240h_50pp_pwm_svt.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/seq_lvt/ndm/lib765_g1m_240h_50pp_seq_lvt.ndm' (FILE-007)"
+          ],
+          "last_updated": "2026-04-21T09:17:45",
+          "size_bytes": 17117471,
+          "stage_exists": true
         },
         {
           "stage": "cts",
-          "status": "not_started",
-          "log_error_count": 0,
-          "has_log_errors": false,
-          "log_error_samples": [],
+          "status": "running",
+          "log_error_count": 7,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Error: Value for list 'object_list' must have more than zero elements. (CMD-036)",
+            "Error: Mode: func, Generated clock 'i_ck_jtag_tck_div4_as_sys_clkm_fast' has no path from master clock 'i_ck_jtag_tck_div2_as_sys'; zero source latency will be used. (GRF-014)",
+            "Error: Mode: func, Generated clock 'i_ck_jtag_tck_div4_as_sys_clkm_slow' has no path from master clock 'i_ck_jtag_tck_div2_as_sys'; zero source latency will be used. (GRF-014)"
+          ],
           "files": {
-            "fc_log": null,
+            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc.cts.log",
             "parallel_log": null,
             "pass_file": null,
             "fail_file": null,
             "skipped_fail_file": null
           },
-          "latest_line": "",
-          "recent_lines": [],
-          "last_updated": null,
-          "size_bytes": 0,
-          "stage_exists": false
+          "latest_line": "Information: Net estimation statistics: timing graph nets = 214860, routed nets = 5, across physical hierarchy nets = 0, parasitics cached nets = 212179, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 53. (TIM-112)",
+          "recent_lines": [
+            "Information: 5 nets are successfully extracted. (NEX-028)",
+            "NEX: CTO mode extraction runtime user:0.82s, system:1.60s, elapsed:0.30s",
+            "Information: Crosstalk analysis has been disabled. (TIM-114)",
+            "Information: Update timing completed net estimation for all the timing graph nets (TIM-111)",
+            "Information: Net estimation statistics: timing graph nets = 214860, routed nets = 5, across physical hierarchy nets = 0, parasitics cached nets = 212179, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 53. (TIM-112)"
+          ],
+          "last_updated": "2026-04-21T09:19:02",
+          "size_bytes": 13868447,
+          "stage_exists": true
         },
         {
           "stage": "clock_route_opt",
