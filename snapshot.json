@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T08:17:30",
+  "generated_at": "2026-04-21T08:48:20",
   "run_count": 5,
   "runs": [
     {
@@ -4903,10 +4903,10 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "NEX: start of threading: 16 threads.",
+      "fc_latest_line": "NEX: num of gcell = 217 x 649,  cellSizeX 1.562500, cellSizeY 1.562500, bbox (x1 -23.300000, x2 314.900000, y1 0.000000, y2 1013.760000)",
       "overall_status": "running",
       "running_stage": "compile_final_opto",
-      "last_updated": "2026-04-21T08:17:27",
+      "last_updated": "2026-04-21T08:48:14",
       "summary": {
         "passed": 10,
         "failed": 0,
@@ -5420,16 +5420,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/initial_map.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU:  33729 s ( 9.37 hr) ELAPSE:  24218 s ( 6.73 hr) MEM-PEAK: 52027 Mb Tue Apr 21 08:16:53 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU:  35631 s ( 9.90 hr) ELAPSE:  26075 s ( 7.24 hr) MEM-PEAK: 52027 Mb Tue Apr 21 08:47:50 2026",
           "recent_lines": [
-            "END_CMD: get_timing_paths      CPU:  33719 s ( 9.37 hr) ELAPSE:  24208 s ( 6.72 hr) MEM-PEAK: 52027 Mb Tue Apr 21 08:16:43 2026",
-            "START_CMD: get_timing_paths    CPU:  33719 s ( 9.37 hr) ELAPSE:  24208 s ( 6.72 hr) MEM-PEAK: 52027 Mb Tue Apr 21 08:16:43 2026",
-            "END_CMD: get_timing_paths      CPU:  33729 s ( 9.37 hr) ELAPSE:  24218 s ( 6.73 hr) MEM-PEAK: 52027 Mb Tue Apr 21 08:16:53 2026",
-            "i_ck_scan_postclk_lowfreqlogic_synthlcfast\t 10000.000000\t i_ck_scan_postclk_lowfreqlogic_synthlcfast\t M\t i_ck_bscan i_bscan_d6init i_ck_jtag_pma_tck i_ck_jtag_tck_div2_as_sys i_ck_jtag_tck_div4_as_sys_clkm_fast i_ck_jtag_tck_div4_as_sys_clkm_slow i_ck_jtag_tck_jtag2apb i_ck_scan_postclk_highfreqlogic_synthlcfast i_ck_scan_postclk_highfreqlogic_synthlcslow i_ck_scan_postclk_lowfreqlogic_synthlcfast i_ck_scan_postclk_lowfreqlogic_synthlcslow i_ck_scan_postclk_ref i_ck_scan_postclk_uc i_ck_sys ick_main_synthlcfast_div2 ick_main_synthlcfast_div2_gen ick_main_synthlcfast_gen ick_main_synthlcslow_div2 ick_main_synthlcslow_div2_gen ick_main_synthlcslow_gen i_ck_uc_fijtag_tck i_ck_ucjtag_tck i_visa_serial_cfg_in0 ick_apb oc_plldivoutclk2_synthlcfast oc_plldivoutclk2_synthlcslow ock_pipe_mac_clk_div2_slow_l0 ock_pipe_mac_clk_div2_slow_l1 ock_cmnadcout ock_cmnsynthlcadcout ock_cpkeepalive ock_uc_apbclk_keepalive_div2 ock_dpmakeepalive ock_keepalive_as_visa_serial ock_keepalive_div2_visa_serial ock_refdpma_fast ock_refdpma_slow ock_synthlcslowpcspostdiv ock_uc_apbclk_synthlc_div3 synthLC_fast_pll_visa_lane0 synthLC_fast_pll_visa_lane1 synthLC_slow_pll_visa_lane0 synthLC_slow_pll_visa_lane1 ock_calkeepalive idvtclki idvfreqai idvfreqbi ock_pcspostdiv_dppll_hdmi_ls ock_pcspostdiv_usbpll_hdmi_ls i_bisr_clock ick_se_soc_cmos pll_12g_ic_refclk pll_16g_ic_refclk pll_16g_plldivoutclk1 pv_VISA_PRI_I_PMA_LANE1__I_DPMA_LANE__UNIT_MUX_LANE_TOP_0__1__CLK pv_VISA_PRI_I_PMA_LANE1__I_DPMA_LANE__UNIT_MUX_LANE_TOP_0__0__CLK pv_VISA_PRI_I_PMA_LANE0__I_DPMA_LANE__UNIT_MUX_LANE_TOP_0__1__CLK pv_VISA_PRI_I_PMA_LANE0__I_DPMA_LANE__UNIT_MUX_LANE_TOP_0__0__CLK pv_VISA_PRI_I_PMA_CMN__UNIT_MUX_TOP__1__CLK pv_VISA_PRI_I_PMA_CMN__UNIT_MUX_TOP__0__CLK VISA_PRI_INTERNAL_I_CMNLOGIC__I_CMN__I_PG__UNIT_MUX_GATED_CMN__0__CLK VISA_PRI_I_CMNLOGIC__I_CMN__I_PG__UNIT_MUX_GATED_CMN__0__CLK VISA_PRI_STEPDOWN_2_I_CMNLOGIC__I_CMN__I_PG__UNIT_MUX_GATED_CMN__0__CLK VISA_PRI_INTERNAL_I_CMNLOGIC__I_CMN__I_PG__UNIT_MUX_GATED_CMN__1__CLK VISA_PRI_I_CMNLOGIC__I_CMN__I_PG__UNIT_MUX_GATED_CMN__1__CLK VISA_PRI_STEPDOWN_2_I_CMNLOGIC__I_CMN__I_PG__UNIT_MUX_GATED_CMN__1__CLK VISA_PRI_INTERNAL_I_CMNLOGIC__I_CMN__I_FW__I_UC_TOP__UNIT_MUX_UC_0__0__CLK VISA_PRI_I_CMNLOGIC__I_CMN__I_FW__I_UC_TOP__UNIT_MUX_UC_0__0__CLK VISA_PRI_STEPDOWN_2_I_CMNLOGIC__I_CMN__I_FW__I_UC_TOP__UNIT_MUX_UC_0__0__CLK VISA_PRI_INTERNAL_I_CMNLOGIC__I_CMN__I_FW__I_UC_TOP__UNIT_MUX_UC_0__1__CLK VISA_PRI_I_CMNLOGIC__I_CMN__I_FW__I_UC_TOP__UNIT_MUX_UC_0__1__CLK VISA_PRI_STEPDOWN_2_I_CMNLOGIC__I_CMN__I_FW__I_UC_TOP__UNIT_MUX_UC_0__1__CLK VISA_PRI_INTERNAL_I_CMNLOGIC__I_CMN__I_FW__I_UC_TOP__UNIT_MUX_UC_1__0__CLK VISA_PRI_I_CMNLOGIC__I_CMN__I_FW__I_UC_TOP__UNIT_MUX_UC_1__0__CLK VISA_PRI_STEPDOWN_2_I_CMNLOGIC__I_CMN__I_FW__I_UC_TOP__UNIT_MUX_UC_1__0__CLK VISA_PRI_INTERNAL_I_CMNLOGIC__I_CMN__I_FW__I_UC_TOP__UNIT_MUX_UC_1__1__CLK VISA_PRI_I_CMNLOGIC__I_CMN__I_FW__I_UC_TOP__UNIT_MUX_UC_1__1__CLK VISA_PRI_STEPDOWN_2_I_CMNLOGIC__I_CMN__I_FW__I_UC_TOP__UNIT_MUX_UC_1__1__CLK VISA_PRI_INTERNAL_I_CMNLOGIC__I_SYNTHLCSLOW__I_PG__UNIT_MUX_SYNTHLCSLOW__0__CLK VISA_PRI_I_CMNLOGIC__I_SYNTHLCSLOW__I_PG__UNIT_MUX_SYNTHLCSLOW__0__CLK VISA_PRI_STEPDOWN_2_I_CMNLOGIC__I_SYNTHLCSLOW__I_PG__UNIT_MUX_SYNTHLCSLOW__0__CLK VISA_PRI_INTERNAL_I_CMNLOGIC__I_SYNTHLCSLOW__I_PG__UNIT_MUX_SYNTHLCSLOW__1__CLK VISA_PRI_I_CMNLOGIC__I_SYNTHLCSLOW__I_PG__UNIT_MUX_SYNTHLCSLOW__1__CLK VISA_PRI_STEPDOWN_2_I_CMNLOGIC__I_SYNTHLCSLOW__I_PG__UNIT_MUX_SYNTHLCSLOW__1__CLK VISA_PRI_INTERNAL_I_CMNLOGIC__I_SYNTHLCFAST__I_PG__UNIT_MUX_SYNTHLCFAST__0__CLK VISA_PRI_I_CMNLOGIC__I_SYNTHLCFAST__I_PG__UNIT_MUX_SYNTHLCFAST__0__CLK VISA_PRI_STEPDOWN_2_I_CMNLOGIC__I_SYNTHLCFAST__I_PG__UNIT_MUX_SYNTHLCFAST__0__CLK VISA_PRI_INTERNAL_I_CMNLOGIC__I_SYNTHLCFAST__I_PG__UNIT_MUX_SYNTHLCFAST__1__CLK VISA_PRI_I_CMNLOGIC__I_SYNTHLCFAST__I_PG__UNIT_MUX_SYNTHLCFAST__1__CLK VISA_PRI_STEPDOWN_2_I_CMNLOGIC__I_SYNTHLCFAST__I_PG__UNIT_MUX_SYNTHLCFAST__1__CLK VISA_PRI_UNIT_MUX_TOP__0__CLK VISA_PRI_UNIT_MUX_TOP__1__CLK scan_capture_i_ck_apb scan_capture_i_ck_scan_postclk_highfreqlogic_synthlcfast scan_capture_i_ck_scan_postclk_highfreqlogic_synthlcslow scan_capture_i_ck_scan_postclk_lowfreqlogic_synthlcfast scan_capture_i_ck_scan_postclk_lowfreqlogic_synthlcslow scan_capture_i_ck_scan_postclk_ref scan_capture_i_ck_scan_postclk_uc scan_capture_i_ck_sys scan_shift_i_ck_apb scan_shift_i_ck_scan_postclk_highfreqlogic_synthlcfast scan_shift_i_ck_scan_postclk_highfreqlogic_synthlcslow scan_shift_i_ck_scan_postclk_lowfreqlogic_synthlcfast scan_shift_i_ck_scan_postclk_lowfreqlogic_synthlcslow scan_shift_i_ck_scan_postclk_ref scan_shift_i_ck_scan_postclk_uc scan_shift_i_ck_sys scan_capture_oc_plldivoutclk2_synthlcslow scan_capture_ock_pipe_mac_clk_l0_div2_scan_slow scan_capture_ock_pipe_mac_clk_l1_div2_scan_slow scan_capture_oc_plldivoutclk2_synthlcfast scan_capture_ock_pipe_mac_clk_l0_div2_scan_fast scan_capture_ock_pipe_mac_clk_l1_div2_scan_fast scan_capture_ock_refdpma_fast scan_capture_ock_refdpma_slow scan_capture_i_ck_scan_postclk_ref_VIRTUAL scan_shift_i_ck_scan_postclk_ref_VIRTUAL scan_capture_i_ck_sys_VIRTUAL scan_shift_i_ck_sys_VIRTUAL scan_capture_i_ck_apb_VIRTUAL scan_shift_i_ck_apb_VIRTUAL scan_capture_i_ck_scan_postclk_uc_VIRTUAL scan_shift_i_ck_scan_postclk_uc_VIRTUAL scan_capture_oc_plldivoutclk2_synthlcslow_VIRTUAL scan_capture_oc_plldivoutclk2_synthlcfast_VIRTUAL scan_capture_i_ck_scan_postclk_lowfreqlogic_synthlcslow_VIRTUAL scan_shift_i_ck_scan_postclk_lowfreqlogic_synthlcslow_VIRTUAL scan_capture_i_ck_scan_postclk_highfreqlogic_synthlcslow_VIRTUAL scan_shift_i_ck_scan_postclk_highfreqlogic_synthlcslow_VIRTUAL scan_capture_i_ck_scan_postclk_highfreqlogic_synthlcfast_VIRTUAL scan_shift_i_ck_scan_postclk_highfreqlogic_synthlcfast_VIRTUAL scan_capture_i_ck_scan_postclk_lowfreqlogic_synthlcfast_VIRTUAL scan_shift_i_ck_scan_postclk_lowfreqlogic_synthlcfast_VIRTUAL ck_feedthru dummy_clock",
-            "START_CMD: get_timing_paths    CPU:  33729 s ( 9.37 hr) ELAPSE:  24218 s ( 6.73 hr) MEM-PEAK: 52027 Mb Tue Apr 21 08:16:53 2026"
+            "START_CMD: get_timing_paths    CPU:  35614 s ( 9.89 hr) ELAPSE:  26058 s ( 7.24 hr) MEM-PEAK: 52027 Mb Tue Apr 21 08:47:33 2026",
+            "END_CMD: get_timing_paths      CPU:  35622 s ( 9.90 hr) ELAPSE:  26067 s ( 7.24 hr) MEM-PEAK: 52027 Mb Tue Apr 21 08:47:42 2026",
+            "START_CMD: get_timing_paths    CPU:  35622 s ( 9.90 hr) ELAPSE:  26067 s ( 7.24 hr) MEM-PEAK: 52027 Mb Tue Apr 21 08:47:42 2026",
+            "END_CMD: get_timing_paths      CPU:  35631 s ( 9.90 hr) ELAPSE:  26075 s ( 7.24 hr) MEM-PEAK: 52027 Mb Tue Apr 21 08:47:50 2026",
+            "START_CMD: get_timing_paths    CPU:  35631 s ( 9.90 hr) ELAPSE:  26075 s ( 7.24 hr) MEM-PEAK: 52027 Mb Tue Apr 21 08:47:50 2026"
           ],
-          "last_updated": "2026-04-21T08:17:04",
-          "size_bytes": 219035205,
+          "last_updated": "2026-04-21T08:47:55",
+          "size_bytes": 219063109,
           "stage_exists": true
         },
         {
@@ -5493,7 +5493,7 @@
         {
           "stage": "compile_initial_opto",
           "status": "passed",
-          "log_error_count": 7,
+          "log_error_count": 9,
           "has_log_errors": true,
           "log_error_samples": [
             "# Generally, clock gating is not applicable is scan mode. Non-static nets controling the clock network is a DFT DRC error",
@@ -5507,27 +5507,26 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/compile_initial_opto.skipped_fail"
           },
-          "latest_line": "INTEL_INFO   : executing  proc sd_report_congestion to generate reports (::sd_report_all) [Tue Apr 21 08:05:26 2026]",
+          "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
-            "Information: Time: 2026-04-21 08:05:26 / Session:  01:01:36 / Command:  00:15:48 / CPU:  00:15:46 / Memory: 56336 MB (FLW-8100)",
-            "INTEL_INFO   : executing  proc sd_indesign_vclp_report to generate reports (::sd_report_all) [Tue Apr 21 08:05:26 2026]",
-            "INTEL_INFO   : ivar(enable_indesign_vclp) is set to 0, skipping indesign VCLP execution (::sd_indesign_vclp_report) [Tue Apr 21 08:05:26 2026]",
-            "INTEL_INFO   : executing  proc sd_reports_ctl_validation to generate reports (::sd_report_all) [Tue Apr 21 08:05:26 2026]",
-            "INTEL_INFO   : executing  proc sd_report_congestion to generate reports (::sd_report_all) [Tue Apr 21 08:05:26 2026]"
+            " 28023             2 Mb   Tue Apr 21 07:25:50 2026    Tue Apr 21 07:26:21 2026    /bin/sh /p/hdk/cad/formality/W-2024.09-SP5-VAL-20250711/bin/fm_shell -x set ivar(svf_integrate_in_ndm) 1; set ivar(dst_dir) /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/outputs/compile_initial_",
+            " 28025             1 Mb   Tue Apr 21 07:25:50 2026    Tue Apr 21 07:26:21 2026    tee -i /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fm.compile_initial_opto.log",
+            "CPU usage for this session:   8557 seconds (  2.38 hours)",
+            "Elapsed time for this session:   4942 seconds (  1.37 hours)",
+            "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-21T08:05:56",
-          "size_bytes": 419372935,
+          "last_updated": "2026-04-21T08:26:14",
+          "size_bytes": 419491516,
           "stage_exists": true
         },
         {
           "stage": "compile_final_opto",
           "status": "running",
-          "log_error_count": 22,
+          "log_error_count": 2,
           "has_log_errors": true,
           "log_error_samples": [
-            "Information: >>>>>>> 36 unique error and warning message tags while observing compile_fusion / final_place: (MSG-3100)",
-            "Information: >>>>>>> Summary: 21053 error&warning MSGs observed during compile_fusion / final_place (MSG-3103)",
-            "Information: >>>>>>> 40 unique error and warning message tags while observing fusion: (MSG-3100)"
+            "Information: >>>>>>> 36 unique error and warning message tags while observing compile_fusion / final_opto: (MSG-3100)",
+            "Information: >>>>>>> Summary: 37600 error&warning MSGs observed during compile_fusion / final_opto (MSG-3103)"
           ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc.compile_final_opto.log",
@@ -5536,16 +5535,16 @@
             "fail_file": null,
             "skipped_fail_file": null
           },
-          "latest_line": "NEX: start of threading: 16 threads.",
+          "latest_line": "NEX: num of gcell = 217 x 649,  cellSizeX 1.562500, cellSizeY 1.562500, bbox (x1 -23.300000, x2 314.900000, y1 0.000000, y2 1013.760000)",
           "recent_lines": [
-            " host.max_cores                   : 16",
-            " extract.connect_open           : true",
             "Extracting design: pma_cmn",
-            "Incr Extraction modNet : 4 design pma_cmn",
-            "NEX: start of threading: 16 threads."
+            "NEX: start of threading: 16 threads.",
+            "Information: 5 nets are successfully extracted. (NEX-028)",
+            "NEX: CTO mode extraction runtime user:0.70s, system:0.69s, elapsed:0.15s",
+            "NEX: num of gcell = 217 x 649,  cellSizeX 1.562500, cellSizeY 1.562500, bbox (x1 -23.300000, x2 314.900000, y1 0.000000, y2 1013.760000)"
           ],
-          "last_updated": "2026-04-21T08:17:27",
-          "size_bytes": 43313180,
+          "last_updated": "2026-04-21T08:48:14",
+          "size_bytes": 48699274,
           "stage_exists": true
         },
         {
