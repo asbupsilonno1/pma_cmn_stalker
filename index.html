@@ -202,7 +202,7 @@
   <div class="container">
 	<section class="hero">
 	  <h1>PMA CMN stalker</h1>
-	  <p>Generated at 2026-04-20T23:03:01</p>
+	  <p>Generated at 2026-04-20T23:33:44</p>
 	  <p>Monitoring APR FC flow stages only. RTLA-only stages are limited to conditioning and estimation when those logs are actually present.</p>
 	  <p>Auxiliary logs such as abutment-rule, spacing-rule, interactive, assembly, and merge helpers are intentionally excluded from the stage list.</p>
 	</section>
@@ -212,7 +212,7 @@
   </div>
   <script>
 	const snapshot = {
-  "generated_at": "2026-04-20T23:03:01",
+  "generated_at": "2026-04-20T23:33:44",
   "run_count": 5,
   "runs": [
     {
@@ -1552,7 +1552,7 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_golden/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "Thank you for using Fusion Compiler.",
+      "fc_latest_line": "fc_shell>",
       "overall_status": "started",
       "running_stage": null,
       "last_updated": "2026-04-20T17:31:04",
@@ -5115,19 +5115,19 @@
       "logs_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs",
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/reports",
-      "fc_latest_log": null,
-      "fc_latest_line": "",
-      "overall_status": "not_started",
-      "running_stage": null,
-      "last_updated": null,
+      "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
+      "fc_latest_line": "Information: Loading technology file '/p/hdk/cad/dp_contour/76p5/v1.0_1/pdk765_r1.0_1_26ww12.4/apr/synopsys/tech/m17_6x_2ya_2yb_2yc_2yd_1ye_1ga_mim3x_1gb__bumpi/g1m_8dg_50pp_tp4/p1276_icc2.tf' (FILE-007)",
+      "overall_status": "running",
+      "running_stage": "import_design",
+      "last_updated": "2026-04-20T23:32:48",
       "summary": {
         "passed": 0,
         "failed": 0,
         "skipped": 0,
-        "started": 0,
-        "not_started": 19
+        "started": 1,
+        "not_started": 18
       },
-      "has_activity": false,
+      "has_activity": true,
       "complete": false,
       "qor_by_stage": {
         "conditioning": {},
@@ -5139,22 +5139,28 @@
       "stages": [
         {
           "stage": "import_design",
-          "status": "not_started",
+          "status": "running",
           "log_error_count": 0,
           "has_log_errors": false,
           "log_error_samples": [],
           "files": {
-            "fc_log": null,
+            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc.import_design.log",
             "parallel_log": null,
             "pass_file": null,
             "fail_file": null,
             "skipped_fail_file": null
           },
-          "latest_line": "",
-          "recent_lines": [],
-          "last_updated": null,
-          "size_bytes": 0,
-          "stage_exists": false
+          "latest_line": "Information: Loading technology file '/p/hdk/cad/dp_contour/76p5/v1.0_1/pdk765_r1.0_1_26ww12.4/apr/synopsys/tech/m17_6x_2ya_2yb_2yc_2yd_1ye_1ga_mim3x_1gb__bumpi/g1m_8dg_50pp_tp4/p1276_icc2.tf' (FILE-007)",
+          "recent_lines": [
+            "Warning: DesignRule '' is missing the attribute 'forbiddenCutXParallelLengthTbl'. (p1276_icc2.tf line 45899) (TECH-026)",
+            "Warning: DesignRule '' is missing the attribute 'forbiddenCutYParallelLengthTbl'. (p1276_icc2.tf line 46553) (TECH-026)",
+            "Warning: DesignRule '' is missing the attribute 'forbiddenCutXParallelLengthTbl'. (p1276_icc2.tf line 46553) (TECH-026)",
+            "Warning: Cut layer 'v14' has a non-cross primary default ContactCode 'via14_160x80_88H_140H'. (line 41944) (TECH-083w)",
+            "Information: Loading technology file '/p/hdk/cad/dp_contour/76p5/v1.0_1/pdk765_r1.0_1_26ww12.4/apr/synopsys/tech/m17_6x_2ya_2yb_2yc_2yd_1ye_1ga_mim3x_1gb__bumpi/g1m_8dg_50pp_tp4/p1276_icc2.tf' (FILE-007)"
+          ],
+          "last_updated": "2026-04-20T23:32:48",
+          "size_bytes": 15697668,
+          "stage_exists": true
         },
         {
           "stage": "read_upf",
