@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T20:07:32",
+  "generated_at": "2026-04-21T20:38:26",
   "run_count": 5,
   "runs": [
     {
@@ -4903,16 +4903,16 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "INTEL_INFO   : Log file: /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/scratch/pma_cmn_qfill/fill/run_qfill.log (::sd_run_qfill) [Tue Apr 21 19:44:12 2026]",
+      "fc_latest_line": "Information: Update timing is using PrimeTime SI. (TIM-210)",
       "overall_status": "running",
-      "running_stage": "fill",
-      "last_updated": "2026-04-21T20:07:16",
+      "running_stage": "finish",
+      "last_updated": "2026-04-21T20:38:06",
       "summary": {
-        "passed": 16,
+        "passed": 17,
         "failed": 0,
         "skipped": 0,
         "started": 1,
-        "not_started": 2
+        "not_started": 1
       },
       "has_activity": true,
       "complete": false,
@@ -5420,16 +5420,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/initial_map.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU:  77340 s (21.48 hr) ELAPSE:  66826 s (18.56 hr) MEM-PEAK: 52027 Mb Tue Apr 21 20:07:01 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU:  79222 s (22.01 hr) ELAPSE:  68671 s (19.08 hr) MEM-PEAK: 52027 Mb Tue Apr 21 20:37:46 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU:  77307 s (21.47 hr) ELAPSE:  66795 s (18.55 hr) MEM-PEAK: 52027 Mb Tue Apr 21 20:06:30 2026",
-            "END_CMD: get_timing_paths      CPU:  77324 s (21.48 hr) ELAPSE:  66810 s (18.56 hr) MEM-PEAK: 52027 Mb Tue Apr 21 20:06:46 2026",
-            "START_CMD: get_timing_paths    CPU:  77324 s (21.48 hr) ELAPSE:  66810 s (18.56 hr) MEM-PEAK: 52027 Mb Tue Apr 21 20:06:46 2026",
-            "END_CMD: get_timing_paths      CPU:  77340 s (21.48 hr) ELAPSE:  66826 s (18.56 hr) MEM-PEAK: 52027 Mb Tue Apr 21 20:07:01 2026",
-            "START_CMD: get_timing_paths    CPU:  77340 s (21.48 hr) ELAPSE:  66826 s (18.56 hr) MEM-PEAK: 52027 Mb Tue Apr 21 20:07:01 2026"
+            "START_CMD: get_timing_paths    CPU:  79180 s (21.99 hr) ELAPSE:  68630 s (19.06 hr) MEM-PEAK: 52027 Mb Tue Apr 21 20:37:05 2026",
+            "END_CMD: get_timing_paths      CPU:  79202 s (22.00 hr) ELAPSE:  68651 s (19.07 hr) MEM-PEAK: 52027 Mb Tue Apr 21 20:37:26 2026",
+            "START_CMD: get_timing_paths    CPU:  79202 s (22.00 hr) ELAPSE:  68651 s (19.07 hr) MEM-PEAK: 52027 Mb Tue Apr 21 20:37:26 2026",
+            "END_CMD: get_timing_paths      CPU:  79222 s (22.01 hr) ELAPSE:  68671 s (19.08 hr) MEM-PEAK: 52027 Mb Tue Apr 21 20:37:46 2026",
+            "START_CMD: get_timing_paths    CPU:  79222 s (22.01 hr) ELAPSE:  68671 s (19.08 hr) MEM-PEAK: 52027 Mb Tue Apr 21 20:37:46 2026"
           ],
-          "last_updated": "2026-04-21T20:07:16",
-          "size_bytes": 219812225,
+          "last_updated": "2026-04-21T20:37:56",
+          "size_bytes": 219853199,
           "stage_exists": true
         },
         {
@@ -5536,16 +5536,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/compile_final_opto.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU:  44159 s (12.27 hr) ELAPSE:  40260 s (11.18 hr) MEM-PEAK: 58137 Mb Tue Apr 21 20:07:00 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU:  46044 s (12.79 hr) ELAPSE:  42104 s (11.70 hr) MEM-PEAK: 58137 Mb Tue Apr 21 20:37:44 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU:  44137 s (12.26 hr) ELAPSE:  40238 s (11.18 hr) MEM-PEAK: 58137 Mb Tue Apr 21 20:06:39 2026",
-            "END_CMD: get_timing_paths      CPU:  44148 s (12.26 hr) ELAPSE:  40249 s (11.18 hr) MEM-PEAK: 58137 Mb Tue Apr 21 20:06:49 2026",
-            "START_CMD: get_timing_paths    CPU:  44148 s (12.26 hr) ELAPSE:  40249 s (11.18 hr) MEM-PEAK: 58137 Mb Tue Apr 21 20:06:49 2026",
-            "END_CMD: get_timing_paths      CPU:  44159 s (12.27 hr) ELAPSE:  40260 s (11.18 hr) MEM-PEAK: 58137 Mb Tue Apr 21 20:07:00 2026",
-            "START_CMD: get_timing_paths    CPU:  44159 s (12.27 hr) ELAPSE:  40260 s (11.18 hr) MEM-PEAK: 58137 Mb Tue Apr 21 20:07:00 2026"
+            "START_CMD: get_timing_paths    CPU:  46012 s (12.78 hr) ELAPSE:  42073 s (11.69 hr) MEM-PEAK: 58137 Mb Tue Apr 21 20:37:13 2026",
+            "END_CMD: get_timing_paths      CPU:  46027 s (12.79 hr) ELAPSE:  42088 s (11.69 hr) MEM-PEAK: 58137 Mb Tue Apr 21 20:37:29 2026",
+            "START_CMD: get_timing_paths    CPU:  46027 s (12.79 hr) ELAPSE:  42088 s (11.69 hr) MEM-PEAK: 58137 Mb Tue Apr 21 20:37:29 2026",
+            "END_CMD: get_timing_paths      CPU:  46044 s (12.79 hr) ELAPSE:  42104 s (11.70 hr) MEM-PEAK: 58137 Mb Tue Apr 21 20:37:44 2026",
+            "START_CMD: get_timing_paths    CPU:  46044 s (12.79 hr) ELAPSE:  42104 s (11.70 hr) MEM-PEAK: 58137 Mb Tue Apr 21 20:37:44 2026"
           ],
-          "last_updated": "2026-04-21T20:07:09",
-          "size_bytes": 69852110,
+          "last_updated": "2026-04-21T20:37:59",
+          "size_bytes": 69902065,
           "stage_exists": true
         },
         {
@@ -5594,16 +5594,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/cts.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU:  35035 s ( 9.73 hr) ELAPSE:  31890 s ( 8.86 hr) MEM-PEAK: 61714 Mb Tue Apr 21 20:06:56 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU:  36948 s (10.26 hr) ELAPSE:  33767 s ( 9.38 hr) MEM-PEAK: 61714 Mb Tue Apr 21 20:38:13 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU:  35008 s ( 9.72 hr) ELAPSE:  31865 s ( 8.85 hr) MEM-PEAK: 61714 Mb Tue Apr 21 20:06:30 2026",
-            "END_CMD: get_timing_paths      CPU:  35021 s ( 9.73 hr) ELAPSE:  31878 s ( 8.85 hr) MEM-PEAK: 61714 Mb Tue Apr 21 20:06:43 2026",
-            "START_CMD: get_timing_paths    CPU:  35021 s ( 9.73 hr) ELAPSE:  31878 s ( 8.85 hr) MEM-PEAK: 61714 Mb Tue Apr 21 20:06:43 2026",
-            "END_CMD: get_timing_paths      CPU:  35035 s ( 9.73 hr) ELAPSE:  31890 s ( 8.86 hr) MEM-PEAK: 61714 Mb Tue Apr 21 20:06:56 2026",
-            "START_CMD: get_timing_paths    CPU:  35035 s ( 9.73 hr) ELAPSE:  31890 s ( 8.86 hr) MEM-PEAK: 61714 Mb Tue Apr 21 20:06:56 2026"
+            "START_CMD: get_timing_paths    CPU:  36907 s (10.25 hr) ELAPSE:  33727 s ( 9.37 hr) MEM-PEAK: 61714 Mb Tue Apr 21 20:37:32 2026",
+            "END_CMD: get_timing_paths      CPU:  36927 s (10.26 hr) ELAPSE:  33747 s ( 9.37 hr) MEM-PEAK: 61714 Mb Tue Apr 21 20:37:52 2026",
+            "START_CMD: get_timing_paths    CPU:  36927 s (10.26 hr) ELAPSE:  33747 s ( 9.37 hr) MEM-PEAK: 61714 Mb Tue Apr 21 20:37:52 2026",
+            "END_CMD: get_timing_paths      CPU:  36948 s (10.26 hr) ELAPSE:  33767 s ( 9.38 hr) MEM-PEAK: 61714 Mb Tue Apr 21 20:38:13 2026",
+            "START_CMD: get_timing_paths    CPU:  36948 s (10.26 hr) ELAPSE:  33767 s ( 9.38 hr) MEM-PEAK: 61714 Mb Tue Apr 21 20:38:13 2026"
           ],
-          "last_updated": "2026-04-21T20:07:01",
-          "size_bytes": 1355950869,
+          "last_updated": "2026-04-21T20:37:43",
+          "size_bytes": 1355979676,
           "stage_exists": true
         },
         {
@@ -5623,16 +5623,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/clock_route_opt.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU:  25475 s ( 7.08 hr) ELAPSE:  21702 s ( 6.03 hr) MEM-PEAK: 61613 Mb Tue Apr 21 20:06:49 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU:  27383 s ( 7.61 hr) ELAPSE:  23562 s ( 6.55 hr) MEM-PEAK: 61613 Mb Tue Apr 21 20:37:49 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU:  25444 s ( 7.07 hr) ELAPSE:  21672 s ( 6.02 hr) MEM-PEAK: 61613 Mb Tue Apr 21 20:06:19 2026",
-            "END_CMD: get_timing_paths      CPU:  25459 s ( 7.07 hr) ELAPSE:  21687 s ( 6.02 hr) MEM-PEAK: 61613 Mb Tue Apr 21 20:06:34 2026",
-            "START_CMD: get_timing_paths    CPU:  25459 s ( 7.07 hr) ELAPSE:  21687 s ( 6.02 hr) MEM-PEAK: 61613 Mb Tue Apr 21 20:06:34 2026",
-            "END_CMD: get_timing_paths      CPU:  25475 s ( 7.08 hr) ELAPSE:  21702 s ( 6.03 hr) MEM-PEAK: 61613 Mb Tue Apr 21 20:06:49 2026",
-            "START_CMD: get_timing_paths    CPU:  25475 s ( 7.08 hr) ELAPSE:  21702 s ( 6.03 hr) MEM-PEAK: 61613 Mb Tue Apr 21 20:06:49 2026"
+            "START_CMD: get_timing_paths    CPU:  27358 s ( 7.60 hr) ELAPSE:  23538 s ( 6.54 hr) MEM-PEAK: 61613 Mb Tue Apr 21 20:37:25 2026",
+            "END_CMD: get_timing_paths      CPU:  27371 s ( 7.60 hr) ELAPSE:  23550 s ( 6.54 hr) MEM-PEAK: 61613 Mb Tue Apr 21 20:37:37 2026",
+            "START_CMD: get_timing_paths    CPU:  27371 s ( 7.60 hr) ELAPSE:  23550 s ( 6.54 hr) MEM-PEAK: 61613 Mb Tue Apr 21 20:37:37 2026",
+            "END_CMD: get_timing_paths      CPU:  27383 s ( 7.61 hr) ELAPSE:  23562 s ( 6.55 hr) MEM-PEAK: 61613 Mb Tue Apr 21 20:37:49 2026",
+            "START_CMD: get_timing_paths    CPU:  27383 s ( 7.61 hr) ELAPSE:  23562 s ( 6.55 hr) MEM-PEAK: 61613 Mb Tue Apr 21 20:37:49 2026"
           ],
-          "last_updated": "2026-04-21T20:06:50",
-          "size_bytes": 91811511,
+          "last_updated": "2026-04-21T20:37:55",
+          "size_bytes": 91850018,
           "stage_exists": true
         },
         {
@@ -5681,16 +5681,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/route_opt.skipped_fail"
           },
-          "latest_line": "Information: Outputting hierarchy 'ltphy_cmnsynth__ltphy_tx_txdrv_slice_unit_logic_and_cell_fill' from 'layout' view. (OASIS-059)",
+          "latest_line": "Information: Update timing is using PrimeTime SI. (TIM-210)",
           "recent_lines": [
-            "Information: Outputting hierarchy 'ltphy_cmnsynth__ltphy_tx_txdrv_slice_unit_logic_and_diffcon_metal_via_fill' from 'layout' view. (OASIS-059)",
-            "Information: Outputting hierarchy 'ltphy_cmnsynth__ltphy_tx_txdrv_slice_unit_logic_and_implant_fill' from 'layout' view. (OASIS-059)",
-            "Information: Outputting hierarchy 'ltphy_cmnsynth__ltphy_tx_txdrv_slice_unit_logic_and_endcap_cell_fill' from 'layout' view. (OASIS-059)",
-            "Information: Outputting hierarchy 'ltphy_cmnsynth__ltphy_tx_txdrv_slice_unit_logic_and_ecg' from 'layout' view. (OASIS-059)",
-            "Information: Outputting hierarchy 'ltphy_cmnsynth__ltphy_tx_txdrv_slice_unit_logic_and_cell_fill' from 'layout' view. (OASIS-059)"
+            "Information: Building FLT nets and victim information for 217673 coupled nets.",
+            "Information: Update timing completed net estimation for all the timing graph nets (TIM-111)",
+            "Information: Net estimation statistics: timing graph nets = 217673, routed nets = 217518, across physical hierarchy nets = 0, parasitics cached nets = 217518, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 53. (TIM-112)",
+            "Information: Update timing is using PrimeTime delay calculation. (TIM-201)",
+            "Information: Update timing is using PrimeTime SI. (TIM-210)"
           ],
-          "last_updated": "2026-04-21T20:06:32",
-          "size_bytes": 254215979,
+          "last_updated": "2026-04-21T20:30:36",
+          "size_bytes": 266327341,
           "stage_exists": true
         },
         {
@@ -5714,49 +5714,60 @@
         },
         {
           "stage": "fill",
-          "status": "running",
-          "log_error_count": 16,
+          "status": "passed",
+          "log_error_count": 19,
           "has_log_errors": true,
           "log_error_samples": [
-            "INTEL_ERROR  : Need to define either heml or hpml layer for macro: tic76d4m14_diccdreg_cont_horz, please set ivar(heml,tic76d4m14_diccdreg_cont_horz) or ivar(hpml,tic76d4m14_diccdreg_cont_horz) in your block vars.tcl file and re-run. (::sd_get_keepout_cells) [Tue Apr 21 19:44:12 2026]"
+            "INTEL_ERROR  : Need to define either heml or hpml layer for macro: tic76d4m14_diccdreg_cont_horz, please set ivar(heml,tic76d4m14_diccdreg_cont_horz) or ivar(hpml,tic76d4m14_diccdreg_cont_horz) in your block vars.tcl file and re-run. (::sd_get_keepout_cells) [Tue Apr 21 19:44:12 2026]",
+            "Information: FLOW error check completed. (FAE-4001)",
+            "Information: Flow error check: SUCCESS. (FAE-4001)"
           ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc.fill.log",
-            "parallel_log": null,
-            "pass_file": null,
+            "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fill.parallel_rpt_out.log",
+            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fill.pass",
             "fail_file": null,
-            "skipped_fail_file": null
+            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fill.skipped_fail"
           },
-          "latest_line": "INTEL_INFO   : Log file: /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/scratch/pma_cmn_qfill/fill/run_qfill.log (::sd_run_qfill) [Tue Apr 21 19:44:12 2026]",
+          "latest_line": "NEX: Macro density polygons from cell instance i_cmnlogic/i_cmn/i_sync_macclk_reset_b_l1/intc_ctech_mux_in/ctech_lib_mux_2to1_dcszo are ignored.",
           "recent_lines": [
-            "INTEL_ERROR  : Need to define either heml or hpml layer for macro: tic76d4m14_diccdreg_cont_horz, please set ivar(heml,tic76d4m14_diccdreg_cont_horz) or ivar(hpml,tic76d4m14_diccdreg_cont_horz) in your block vars.tcl file and re-run. (::sd_get_keepout_cells) [Tue Apr 21 19:44:12 2026]",
-            "INTEL_INFO   : Done writing UIN files on layers. (::sd_create_uin_metal_via_fill) [Tue Apr 21 19:44:12 2026]",
-            "INTEL_WARNING: Skip metal coloring as macro references are not specified. Please use ivar(fill,metal_color_cells). (::sd_create_uin_metal_color) [Tue Apr 21 19:44:12 2026]",
-            "INTEL_INFO   : Running:  /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/scratch/pma_cmn_qfill/fill/pma_cmn_qfill.tcsh (::sd_run_qfill) [Tue Apr 21 19:44:12 2026]",
-            "INTEL_INFO   : Log file: /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/scratch/pma_cmn_qfill/fill/run_qfill.log (::sd_run_qfill) [Tue Apr 21 19:44:12 2026]"
+            "NEX: Macro density polygons from cell instance i_cmnlogic/i_cmn/i_core/i_or_pstate_1/ctmi_230985 are ignored.",
+            "NEX: Macro density polygons from cell instance i_cmnlogic/i_cmn/i_sync_macclk_reset_b_l0/intc_ctech_mux_in/ctech_lib_mux_2to1_dcszo are ignored.",
+            "NEX: Macro density polygons from cell instance i_cmnlogic/i_cmn/i_sync_macclk_reset_b_l0/intc_ctech_mux_out/ctech_lib_mux_2to1_dcszo are ignored.",
+            "NEX: Macro density polygons from cell instance i_cmnlogic/i_cmn/i_sync_macclk_reset_b_l0/intc_ctech_sync_reg/ctech_lib_doublesync_rstb_dcszo_0 are ignored.",
+            "NEX: Macro density polygons from cell instance i_cmnlogic/i_cmn/i_sync_macclk_reset_b_l1/intc_ctech_mux_in/ctech_lib_mux_2to1_dcszo are ignored."
           ],
-          "last_updated": "2026-04-21T19:44:12",
-          "size_bytes": 9697198,
+          "last_updated": "2026-04-21T20:38:06",
+          "size_bytes": 30330682,
           "stage_exists": true
         },
         {
           "stage": "finish",
-          "status": "not_started",
-          "log_error_count": 0,
-          "has_log_errors": false,
-          "log_error_samples": [],
+          "status": "running",
+          "log_error_count": 2,
+          "has_log_errors": true,
+          "log_error_samples": [
+            "Information: FLOW error check completed. (FAE-4001)",
+            "Information: Flow error check: SUCCESS. (FAE-4001)"
+          ],
           "files": {
-            "fc_log": null,
+            "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc.finish.log",
             "parallel_log": null,
             "pass_file": null,
             "fail_file": null,
             "skipped_fail_file": null
           },
-          "latest_line": "",
-          "recent_lines": [],
-          "last_updated": null,
-          "size_bytes": 0,
-          "stage_exists": false
+          "latest_line": "Information: Update timing is using PrimeTime SI. (TIM-210)",
+          "recent_lines": [
+            "Information: Activity for scenario func.0p825-1p02-76dot5-min.F_125.pcff3 was cached, no propagation required. (POW-005)",
+            "Information: Update timing completed net estimation for all the timing graph nets (TIM-111)",
+            "Information: Net estimation statistics: timing graph nets = 217673, routed nets = 217518, across physical hierarchy nets = 0, parasitics cached nets = 217518, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 53. (TIM-112)",
+            "Information: Update timing is using PrimeTime delay calculation. (TIM-201)",
+            "Information: Update timing is using PrimeTime SI. (TIM-210)"
+          ],
+          "last_updated": "2026-04-21T20:36:45",
+          "size_bytes": 8623147,
+          "stage_exists": true
         }
       ]
     }
