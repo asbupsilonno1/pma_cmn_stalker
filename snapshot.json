@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T02:13:24",
+  "generated_at": "2026-04-23T02:44:20",
   "run_count": 5,
   "runs": [
     {
@@ -4903,15 +4903,15 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "Information: Loading technology file '/p/hdk/cad/dp_contour/76p5/v1.0_1/pdk765_r1.0_1_26ww12.4/apr/synopsys/tech/m17_6x_2ya_2yb_2yc_2yd_1ye_1ga_mim3x_1gb__bumpi/g1m_8dg_50pp_tp4/p1276_icc2.tf' (FILE-007)",
-      "overall_status": "running",
-      "running_stage": "import_design",
-      "last_updated": "2026-04-23T02:12:59",
+      "fc_latest_line": "Thank you for using Fusion Compiler.",
+      "overall_status": "started",
+      "running_stage": null,
+      "last_updated": "2026-04-23T02:44:07",
       "summary": {
-        "passed": 17,
+        "passed": 18,
         "failed": 0,
         "skipped": 0,
-        "started": 1,
+        "started": 0,
         "not_started": 1
       },
       "has_activity": true,
@@ -5231,42 +5231,40 @@
       "stages": [
         {
           "stage": "import_design",
-          "status": "running",
-          "log_error_count": 7,
+          "status": "passed",
+          "log_error_count": 2,
           "has_log_errors": true,
           "log_error_samples": [
             "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
-            "INTEL_WARNING: sd_report_design_qor error message: Errors detected during redirect (::sd_report_all) [Tue Apr 21 00:26:23 2026]",
-            "INTEL_WARNING: sd_reports_create_run_summary sd_report_ref_libs error message: wrong # args: should be \"sd_reports_create_run_summary\" (::sd_report_all) [Tue Apr 21 00:26:54 2026]"
+            "Error: Cannot find a fill cell to create fill shape in. (NDMUI-401)"
           ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc.import_design.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/import_design.parallel_rpt_out.log",
-            "pass_file": null,
+            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/import_design.pass",
             "fail_file": null,
-            "skipped_fail_file": null
+            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/import_design.skipped_fail"
           },
-          "latest_line": "Thank you for using Fusion Compiler.",
+          "latest_line": "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/seq_ulvt/ndm/lib765_g1m_240h_50pp_seq_ulvt.ndm' (FILE-007)",
           "recent_lines": [
-            " 18754             1 Mb   Tue Apr 21 00:27:06 2026    Tue Apr 21 00:27:37 2026    grep -v functionality",
-            " 18755             1 Mb   Tue Apr 21 00:27:06 2026    Tue Apr 21 00:27:37 2026    wc -l",
-            "CPU usage for this session:    527 seconds (  0.15 hours)",
-            "Elapsed time for this session:   1532 seconds (  0.43 hours)",
-            "Thank you for using Fusion Compiler."
+            "Information: Loading library file '/nfs/site/disks/ipi7.arc.proj_archive/arc/g70idvd5bdigs50cdshipm4/ip_handoff/IPDEA0UV2RTL1IFC1V8/be/physical/ndm/g70idvd5bdigs50cdshipm4.ndm' (FILE-007)",
+            "Information: Loading library file '/nfs/site/disks/ipi7.arc.proj_archive/arc/ip765hduspsr2048x39m4b2s0r2p1d0/ip_handoff/IPDEA0UV2RTL1IFC1V5/be/physical/ndm/ip765hduspsr2048x39m4b2s0r2p1d0.ndm' (FILE-007)",
+            "Information: Loading library file '/nfs/site/disks/ipi7.arc.proj_archive/arc/ip765hduspsr2048x52m4b2s13r2p1d0/ip_handoff/IPDEA0UV2RTL1IFC1V5/be/physical/ndm/ip765hduspsr2048x52m4b2s13r2p1d0.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/seq_svt/ndm/lib765_g1m_240h_50pp_seq_svt.ndm' (FILE-007)",
+            "Information: Loading library file '/p/hdk/cad/dp_contour/76p5/v1.0_1/lib765_g1m_240h_50pp_pdk10_r4v0p0_fv/seq_ulvt/ndm/lib765_g1m_240h_50pp_seq_ulvt.ndm' (FILE-007)"
           ],
-          "last_updated": "2026-04-23T02:08:00",
-          "size_bytes": 30346742,
+          "last_updated": "2026-04-23T02:43:50",
+          "size_bytes": 33051491,
           "stage_exists": true
         },
         {
           "stage": "read_upf",
           "status": "passed",
-          "log_error_count": 7,
+          "log_error_count": 2,
           "has_log_errors": true,
           "log_error_samples": [
             "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
-            "Error: Cannot find a fill cell to create fill shape in. (NDMUI-401)",
-            "INTEL_WARNING: sd_report_design_qor error message: Errors detected during redirect (::sd_report_all) [Tue Apr 21 00:30:12 2026]"
+            "Error: Cannot find a fill cell to create fill shape in. (NDMUI-401)"
           ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc.read_upf.log",
@@ -5275,16 +5273,10 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/read_upf.skipped_fail"
           },
-          "latest_line": "Thank you for using Fusion Compiler.",
-          "recent_lines": [
-            "PROCESS-ID    MEM-PEAK    START-TIME                  END-TIME                    PROCESS-NAME",
-            " 14651         37615 Mb   Tue Apr 21 00:30:46 2026    Tue Apr 21 00:31:17 2026    /nfs/site/disks/crt_tools_058/fusioncompiler/X-2025.06-SP1-T-20250911/linux64/nwtn/bin/dgcom_exec -shell fc -root_path /nfs/site/disks/crt_tools_058/fusioncompiler/X-2025.06-SP1-T-20250911 -f /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_f",
-            "CPU usage for this session:    619 seconds (  0.17 hours)",
-            "Elapsed time for this session:   1683 seconds (  0.47 hours)",
-            "Thank you for using Fusion Compiler."
-          ],
-          "last_updated": "2026-04-21T00:32:08",
-          "size_bytes": 20301667,
+          "latest_line": "",
+          "recent_lines": [],
+          "last_updated": "2026-04-23T02:44:07",
+          "size_bytes": 16158318,
           "stage_exists": true
         },
         {
@@ -5420,16 +5412,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/initial_map.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU: 188248 s (52.29 hr) ELAPSE: 175168 s (48.66 hr) MEM-PEAK: 52028 Mb Thu Apr 23 02:12:43 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU: 190141 s (52.82 hr) ELAPSE: 177018 s (49.17 hr) MEM-PEAK: 52028 Mb Thu Apr 23 02:43:33 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU: 188212 s (52.28 hr) ELAPSE: 175133 s (48.65 hr) MEM-PEAK: 52028 Mb Thu Apr 23 02:12:08 2026",
-            "END_CMD: get_timing_paths      CPU: 188230 s (52.29 hr) ELAPSE: 175151 s (48.65 hr) MEM-PEAK: 52028 Mb Thu Apr 23 02:12:26 2026",
-            "START_CMD: get_timing_paths    CPU: 188230 s (52.29 hr) ELAPSE: 175151 s (48.65 hr) MEM-PEAK: 52028 Mb Thu Apr 23 02:12:26 2026",
-            "END_CMD: get_timing_paths      CPU: 188248 s (52.29 hr) ELAPSE: 175168 s (48.66 hr) MEM-PEAK: 52028 Mb Thu Apr 23 02:12:43 2026",
-            "START_CMD: get_timing_paths    CPU: 188248 s (52.29 hr) ELAPSE: 175168 s (48.66 hr) MEM-PEAK: 52028 Mb Thu Apr 23 02:12:43 2026"
+            "START_CMD: get_timing_paths    CPU: 190106 s (52.81 hr) ELAPSE: 176983 s (49.16 hr) MEM-PEAK: 52028 Mb Thu Apr 23 02:42:58 2026",
+            "END_CMD: get_timing_paths      CPU: 190123 s (52.81 hr) ELAPSE: 177001 s (49.17 hr) MEM-PEAK: 52028 Mb Thu Apr 23 02:43:16 2026",
+            "START_CMD: get_timing_paths    CPU: 190123 s (52.81 hr) ELAPSE: 177001 s (49.17 hr) MEM-PEAK: 52028 Mb Thu Apr 23 02:43:16 2026",
+            "END_CMD: get_timing_paths      CPU: 190141 s (52.82 hr) ELAPSE: 177018 s (49.17 hr) MEM-PEAK: 52028 Mb Thu Apr 23 02:43:33 2026",
+            "START_CMD: get_timing_paths    CPU: 190141 s (52.82 hr) ELAPSE: 177018 s (49.17 hr) MEM-PEAK: 52028 Mb Thu Apr 23 02:43:33 2026"
           ],
-          "last_updated": "2026-04-23T02:12:59",
-          "size_bytes": 221914136,
+          "last_updated": "2026-04-23T02:43:47",
+          "size_bytes": 221952251,
           "stage_exists": true
         },
         {
