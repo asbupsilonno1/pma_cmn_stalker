@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T03:46:13",
+  "generated_at": "2026-04-23T04:17:09",
   "run_count": 5,
   "runs": [
     {
@@ -4903,15 +4903,15 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "Use check_multibit_library command to identify these multibit library cells.",
+      "fc_latest_line": "START_CMD: copy_lib            CPU:     20 s ( 0.01 hr) ELAPSE:     24 s ( 0.01 hr) MEM-PEAK:   485 Mb Thu Apr 23 04:14:23 2026",
       "overall_status": "running",
-      "running_stage": "conditioning",
-      "last_updated": "2026-04-23T03:45:59",
+      "running_stage": "redefine",
+      "last_updated": "2026-04-23T04:16:38",
       "summary": {
-        "passed": 17,
+        "passed": 16,
         "failed": 0,
         "skipped": 0,
-        "started": 2,
+        "started": 3,
         "not_started": 2
       },
       "has_activity": true,
@@ -5289,20 +5289,20 @@
         },
         {
           "stage": "redefine",
-          "status": "passed",
-          "log_error_count": 500,
+          "status": "running",
+          "log_error_count": 40,
           "has_log_errors": true,
           "log_error_samples": [
-            "Error: error deleting \"/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/outputs/redefine/pma_cmn.ndm\": file already exists",
-            "Error: Nothing matched for lib_cell_list (SEL-005)",
-            "Error: bad value specified for option lib_cell_list"
+            "Error: Library '' is not found. (LIB-011)",
+            "Error: Current block is not defined. (DES-001)",
+            "Error: expected boolean value but got \"\""
           ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc.redefine.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/redefine.parallel_rpt_out.log",
-            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/redefine.pass",
+            "pass_file": null,
             "fail_file": null,
-            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/redefine.skipped_fail"
+            "skipped_fail_file": null
           },
           "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
@@ -5312,8 +5312,8 @@
             "Elapsed time for this session:     50 seconds (  0.01 hours)",
             "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-23T02:45:54",
-          "size_bytes": 28652199,
+          "last_updated": "2026-04-23T04:14:37",
+          "size_bytes": 28445703,
           "stage_exists": true
         },
         {
@@ -5348,7 +5348,7 @@
         {
           "stage": "setup_timing",
           "status": "passed",
-          "log_error_count": 46,
+          "log_error_count": 50,
           "has_log_errors": true,
           "log_error_samples": [
             "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
@@ -5362,21 +5362,21 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/setup_timing.skipped_fail"
           },
-          "latest_line": "INTEL_INFO   : Calculating QOR for scenario func.0p675-0p81-76dot5-max.S_125.prcs3 (::sd_report_design_qor) [Thu Apr 23 03:44:38 2026]",
+          "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
-            "INTEL_INFO   : Calculating max_capacitance (::sd_report_design_qor) [Thu Apr 23 03:42:43 2026]",
-            "INTEL_INFO   : Calculating QOR for scenario dfx.0p825-1p02-76dot5-min.F_125.pcff3 (::sd_report_design_qor) [Thu Apr 23 03:42:44 2026]",
-            "INTEL_INFO   : Calculating max_transition (::sd_report_design_qor) [Thu Apr 23 03:44:33 2026]",
-            "INTEL_INFO   : Calculating max_capacitance (::sd_report_design_qor) [Thu Apr 23 03:44:37 2026]",
-            "INTEL_INFO   : Calculating QOR for scenario func.0p675-0p81-76dot5-max.S_125.prcs3 (::sd_report_design_qor) [Thu Apr 23 03:44:38 2026]"
+            "Maximum memory usage for this session: 52749.05 MB",
+            "Maximum memory usage for this session including child processes: 52749.05 MB",
+            "CPU usage for this session:  10525 seconds (  2.92 hours)",
+            "Elapsed time for this session:   3014 seconds (  0.84 hours)",
+            "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-23T03:45:03",
-          "size_bytes": 40370543,
+          "last_updated": "2026-04-23T03:52:36",
+          "size_bytes": 40454192,
           "stage_exists": true
         },
         {
           "stage": "conditioning",
-          "status": "running",
+          "status": "started",
           "log_error_count": 0,
           "has_log_errors": false,
           "log_error_samples": [],
@@ -5387,16 +5387,16 @@
             "fail_file": null,
             "skipped_fail_file": null
           },
-          "latest_line": "Warning: Removed pin 'i_cmnlogic/i_cmn/i_fw/i_uc_top/Xttop/Xtensa/PCandIFetch/PCUnit/tmpIFetchValid_P1_reg/tmp_reg_0/data_in' had a constraint.  The constraint is no longer applied. (CSTR-013)",
+          "latest_line": "A detailed stack trace has been captured in /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/Synopsys_stack_trace_24588.txt.",
           "recent_lines": [
-            "Warning: Removed pin 'i_cmnlogic/i_cmn/i_fw/i_uc_top/Xttop/debugWrSel_reg/tmp_reg_0/scan_out' had a constraint.  The constraint is no longer applied. (CSTR-013)",
-            "Warning: Removed cell 'i_cmnlogic/i_cmn/i_fw/i_uc_top/Xttop/faultRptWrSel_reg/tmp_reg_0' had a constraint.  The constraint is no longer applied. (CSTR-013)",
-            "Warning: Removed pin 'i_cmnlogic/i_cmn/i_fw/i_uc_top/Xttop/faultRptWrSel_reg/tmp_reg_0/data_in' had a constraint.  The constraint is no longer applied. (CSTR-013)",
-            "Warning: Removed cell 'i_cmnlogic/i_cmn/i_fw/i_uc_top/Xttop/Xtensa/PCandIFetch/PCUnit/tmpIFetchValid_P1_reg/tmp_reg_0' had a constraint.  The constraint is no longer applied. (CSTR-013)",
-            "Warning: Removed pin 'i_cmnlogic/i_cmn/i_fw/i_uc_top/Xttop/Xtensa/PCandIFetch/PCUnit/tmpIFetchValid_P1_reg/tmp_reg_0/data_in' had a constraint.  The constraint is no longer applied. (CSTR-013)"
+            "SNPSee_05df245ab75e88bb922a52816f42e51b56c95f2ebe24276cd0e6e48563956768d71f9b2a14cc67f3b4966d8fd01ea975e42c45ed702021ab+201",
+            "SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de+311",
+            "start_thread+220",
+            "clone+65",
+            "A detailed stack trace has been captured in /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/Synopsys_stack_trace_24588.txt."
           ],
-          "last_updated": "2026-04-23T03:45:59",
-          "size_bytes": 17393370,
+          "last_updated": "2026-04-23T04:08:40",
+          "size_bytes": 21884265,
           "stage_exists": true
         },
         {
@@ -5464,16 +5464,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/initial_map.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU: 193964 s (53.88 hr) ELAPSE: 180757 s (50.21 hr) MEM-PEAK: 52028 Mb Thu Apr 23 03:45:52 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU: 195845 s (54.40 hr) ELAPSE: 182592 s (50.72 hr) MEM-PEAK: 52028 Mb Thu Apr 23 04:16:27 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU: 193927 s (53.87 hr) ELAPSE: 180721 s (50.20 hr) MEM-PEAK: 52028 Mb Thu Apr 23 03:45:16 2026",
-            "END_CMD: get_timing_paths      CPU: 193946 s (53.87 hr) ELAPSE: 180739 s (50.21 hr) MEM-PEAK: 52028 Mb Thu Apr 23 03:45:34 2026",
-            "START_CMD: get_timing_paths    CPU: 193946 s (53.87 hr) ELAPSE: 180739 s (50.21 hr) MEM-PEAK: 52028 Mb Thu Apr 23 03:45:34 2026",
-            "END_CMD: get_timing_paths      CPU: 193964 s (53.88 hr) ELAPSE: 180757 s (50.21 hr) MEM-PEAK: 52028 Mb Thu Apr 23 03:45:52 2026",
-            "START_CMD: get_timing_paths    CPU: 193964 s (53.88 hr) ELAPSE: 180757 s (50.21 hr) MEM-PEAK: 52028 Mb Thu Apr 23 03:45:52 2026"
+            "START_CMD: get_timing_paths    CPU: 195804 s (54.39 hr) ELAPSE: 182552 s (50.71 hr) MEM-PEAK: 52028 Mb Thu Apr 23 04:15:47 2026",
+            "END_CMD: get_timing_paths      CPU: 195825 s (54.40 hr) ELAPSE: 182572 s (50.71 hr) MEM-PEAK: 52028 Mb Thu Apr 23 04:16:07 2026",
+            "START_CMD: get_timing_paths    CPU: 195825 s (54.40 hr) ELAPSE: 182572 s (50.71 hr) MEM-PEAK: 52028 Mb Thu Apr 23 04:16:07 2026",
+            "END_CMD: get_timing_paths      CPU: 195845 s (54.40 hr) ELAPSE: 182592 s (50.72 hr) MEM-PEAK: 52028 Mb Thu Apr 23 04:16:27 2026",
+            "START_CMD: get_timing_paths    CPU: 195845 s (54.40 hr) ELAPSE: 182592 s (50.72 hr) MEM-PEAK: 52028 Mb Thu Apr 23 04:16:27 2026"
           ],
-          "last_updated": "2026-04-23T03:45:28",
-          "size_bytes": 222032092,
+          "last_updated": "2026-04-23T04:16:38",
+          "size_bytes": 222069440,
           "stage_exists": true
         },
         {
@@ -5810,8 +5810,8 @@
             "Elapsed time for this session:  21308 seconds (  5.92 hours)",
             "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-22T02:43:17",
-          "size_bytes": 47996044,
+          "last_updated": "2026-04-23T04:06:00",
+          "size_bytes": 47998971,
           "stage_exists": true
         }
       ]
