@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T04:17:09",
+  "generated_at": "2026-04-23T04:48:05",
   "run_count": 5,
   "runs": [
     {
@@ -4903,15 +4903,15 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "START_CMD: copy_lib            CPU:     20 s ( 0.01 hr) ELAPSE:     24 s ( 0.01 hr) MEM-PEAK:   485 Mb Thu Apr 23 04:14:23 2026",
+      "fc_latest_line": "Thank you for using Fusion Compiler.",
       "overall_status": "running",
-      "running_stage": "redefine",
-      "last_updated": "2026-04-23T04:16:38",
+      "running_stage": "conditioning",
+      "last_updated": "2026-04-23T04:47:50",
       "summary": {
-        "passed": 16,
+        "passed": 17,
         "failed": 0,
         "skipped": 0,
-        "started": 3,
+        "started": 2,
         "not_started": 2
       },
       "has_activity": true,
@@ -5289,31 +5289,31 @@
         },
         {
           "stage": "redefine",
-          "status": "running",
-          "log_error_count": 40,
+          "status": "passed",
+          "log_error_count": 4,
           "has_log_errors": true,
           "log_error_samples": [
-            "Error: Library '' is not found. (LIB-011)",
-            "Error: Current block is not defined. (DES-001)",
-            "Error: expected boolean value but got \"\""
+            "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
+            "Error: could not open script file \"redefine_set_ungroup_candidates.tcl\" (CMD-015)",
+            "INTEL_ERROR  : Caught error while sourcing post-hook file '/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/src/pma_cmn/1276.5/apr_fc/scripts/step_ungroup.post.tcl'. (::iproc_source) [Thu Apr 23 04:22:50 2026]"
           ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc.redefine.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/redefine.parallel_rpt_out.log",
-            "pass_file": null,
+            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/redefine.pass",
             "fail_file": null,
-            "skipped_fail_file": null
+            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/redefine.skipped_fail"
           },
-          "latest_line": "Thank you for using Fusion Compiler.",
+          "latest_line": "INTEL_INFO   : executing  proc sd_report_qor to generate reports (::sd_report_all) [Thu Apr 23 04:47:19 2026]",
           "recent_lines": [
-            " 40175             2 Mb   Thu Apr 23 02:45:43 2026    running                     awk {print $1}",
-            " 40174             1 Mb   Thu Apr 23 02:45:43 2026    running                     du -sh /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective",
-            "CPU usage for this session:     20 seconds (  0.01 hours)",
-            "Elapsed time for this session:     50 seconds (  0.01 hours)",
-            "Thank you for using Fusion Compiler."
+            "INTEL_INFO   : Overriding ::ivar(reports,redefine) = 'sd_report_utilization sd_report_utilization_per_va sd_report_qor sd_report_design  sd_report_check_mv_design sd_report_multibit sd_report_missing_port_constraints  sd_report_Unclocked_flip_flops sd_report_design_qor sd_report_ref_libs sd_report_threshold_voltage_groups sd_report_clock_gating sd_report_clock_names sd_report_app_options sd_report_ivars sd_reports_cpu_info {sd_reports_create_run_summary sd_report_ref_libs} sd_reports_cpu_info' (prev. value = 'sd_report_ref_libs sd_report_threshold_voltage_groups sd_report_clock_gating sd_report_clock_names sd_report_app_options sd_report_ivars sd_reports_cpu_info {sd_reports_create_run_summary sd_report_ref_libs} sd_reports_cpu_info') [Thu Apr 23 04:47:18 2026]",
+            "INTEL_INFO   : Overriding ::ivar(reports,redefine) = 'sd_report_utilization sd_report_utilization_per_va sd_report_qor sd_report_design sd_report_check_mv_design sd_report_multibit sd_report_missing_port_constraints sd_report_Unclocked_flip_flops sd_report_design_qor sd_report_ref_libs sd_report_threshold_voltage_groups sd_report_clock_gating sd_report_clock_names {sd_reports_create_run_summary sd_report_ref_libs}' (prev. value = 'sd_report_utilization sd_report_utilization_per_va sd_report_qor sd_report_design  sd_report_check_mv_design sd_report_multibit sd_report_missing_port_constraints  sd_report_Unclocked_flip_flops sd_report_design_qor sd_report_ref_libs sd_report_threshold_voltage_groups sd_report_clock_gating sd_report_clock_names sd_report_app_options sd_report_ivars sd_reports_cpu_info {sd_reports_create_run_summary sd_report_ref_libs} sd_reports_cpu_info') [Thu Apr 23 04:47:18 2026]",
+            "INTEL_INFO   : executing  proc sd_report_utilization to generate reports (::sd_report_all) [Thu Apr 23 04:47:18 2026]",
+            "INTEL_INFO   : executing  proc sd_report_utilization_per_va to generate reports (::sd_report_all) [Thu Apr 23 04:47:18 2026]",
+            "INTEL_INFO   : executing  proc sd_report_qor to generate reports (::sd_report_all) [Thu Apr 23 04:47:19 2026]"
           ],
-          "last_updated": "2026-04-23T04:14:37",
-          "size_bytes": 28445703,
+          "last_updated": "2026-04-23T04:47:50",
+          "size_bytes": 41478656,
           "stage_exists": true
         },
         {
@@ -5376,7 +5376,7 @@
         },
         {
           "stage": "conditioning",
-          "status": "started",
+          "status": "running",
           "log_error_count": 0,
           "has_log_errors": false,
           "log_error_samples": [],
@@ -5464,16 +5464,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/initial_map.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU: 195845 s (54.40 hr) ELAPSE: 182592 s (50.72 hr) MEM-PEAK: 52028 Mb Thu Apr 23 04:16:27 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU: 197743 s (54.93 hr) ELAPSE: 184441 s (51.23 hr) MEM-PEAK: 52028 Mb Thu Apr 23 04:47:16 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU: 195804 s (54.39 hr) ELAPSE: 182552 s (50.71 hr) MEM-PEAK: 52028 Mb Thu Apr 23 04:15:47 2026",
-            "END_CMD: get_timing_paths      CPU: 195825 s (54.40 hr) ELAPSE: 182572 s (50.71 hr) MEM-PEAK: 52028 Mb Thu Apr 23 04:16:07 2026",
-            "START_CMD: get_timing_paths    CPU: 195825 s (54.40 hr) ELAPSE: 182572 s (50.71 hr) MEM-PEAK: 52028 Mb Thu Apr 23 04:16:07 2026",
-            "END_CMD: get_timing_paths      CPU: 195845 s (54.40 hr) ELAPSE: 182592 s (50.72 hr) MEM-PEAK: 52028 Mb Thu Apr 23 04:16:27 2026",
-            "START_CMD: get_timing_paths    CPU: 195845 s (54.40 hr) ELAPSE: 182592 s (50.72 hr) MEM-PEAK: 52028 Mb Thu Apr 23 04:16:27 2026"
+            "START_CMD: get_timing_paths    CPU: 197702 s (54.92 hr) ELAPSE: 184402 s (51.22 hr) MEM-PEAK: 52028 Mb Thu Apr 23 04:46:37 2026",
+            "END_CMD: get_timing_paths      CPU: 197723 s (54.92 hr) ELAPSE: 184421 s (51.23 hr) MEM-PEAK: 52028 Mb Thu Apr 23 04:46:56 2026",
+            "START_CMD: get_timing_paths    CPU: 197723 s (54.92 hr) ELAPSE: 184421 s (51.23 hr) MEM-PEAK: 52028 Mb Thu Apr 23 04:46:56 2026",
+            "END_CMD: get_timing_paths      CPU: 197743 s (54.93 hr) ELAPSE: 184441 s (51.23 hr) MEM-PEAK: 52028 Mb Thu Apr 23 04:47:16 2026",
+            "START_CMD: get_timing_paths    CPU: 197743 s (54.93 hr) ELAPSE: 184441 s (51.23 hr) MEM-PEAK: 52028 Mb Thu Apr 23 04:47:16 2026"
           ],
-          "last_updated": "2026-04-23T04:16:38",
-          "size_bytes": 222069440,
+          "last_updated": "2026-04-23T04:47:27",
+          "size_bytes": 222105779,
           "stage_exists": true
         },
         {
