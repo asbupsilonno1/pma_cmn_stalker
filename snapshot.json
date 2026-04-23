@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T07:53:44",
+  "generated_at": "2026-04-23T08:24:41",
   "run_count": 5,
   "runs": [
     {
@@ -4906,7 +4906,7 @@
       "fc_latest_line": "Thank you for using Fusion Compiler.",
       "overall_status": "running",
       "running_stage": "conditioning",
-      "last_updated": "2026-04-23T07:53:31",
+      "last_updated": "2026-04-23T08:24:23",
       "summary": {
         "passed": 17,
         "failed": 0,
@@ -5464,16 +5464,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/initial_map.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU: 209188 s (58.11 hr) ELAPSE: 195605 s (54.33 hr) MEM-PEAK: 52028 Mb Thu Apr 23 07:53:20 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU: 211090 s (58.64 hr) ELAPSE: 197458 s (54.85 hr) MEM-PEAK: 52028 Mb Thu Apr 23 08:24:13 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU: 209148 s (58.10 hr) ELAPSE: 195566 s (54.32 hr) MEM-PEAK: 52028 Mb Thu Apr 23 07:52:41 2026",
-            "END_CMD: get_timing_paths      CPU: 209168 s (58.10 hr) ELAPSE: 195585 s (54.33 hr) MEM-PEAK: 52028 Mb Thu Apr 23 07:53:00 2026",
-            "START_CMD: get_timing_paths    CPU: 209168 s (58.10 hr) ELAPSE: 195585 s (54.33 hr) MEM-PEAK: 52028 Mb Thu Apr 23 07:53:00 2026",
-            "END_CMD: get_timing_paths      CPU: 209188 s (58.11 hr) ELAPSE: 195605 s (54.33 hr) MEM-PEAK: 52028 Mb Thu Apr 23 07:53:20 2026",
-            "START_CMD: get_timing_paths    CPU: 209188 s (58.11 hr) ELAPSE: 195605 s (54.33 hr) MEM-PEAK: 52028 Mb Thu Apr 23 07:53:20 2026"
+            "START_CMD: get_timing_paths    CPU: 211048 s (58.62 hr) ELAPSE: 197417 s (54.84 hr) MEM-PEAK: 52028 Mb Thu Apr 23 08:23:32 2026",
+            "END_CMD: get_timing_paths      CPU: 211068 s (58.63 hr) ELAPSE: 197437 s (54.84 hr) MEM-PEAK: 52028 Mb Thu Apr 23 08:23:52 2026",
+            "START_CMD: get_timing_paths    CPU: 211068 s (58.63 hr) ELAPSE: 197437 s (54.84 hr) MEM-PEAK: 52028 Mb Thu Apr 23 08:23:52 2026",
+            "END_CMD: get_timing_paths      CPU: 211090 s (58.64 hr) ELAPSE: 197458 s (54.85 hr) MEM-PEAK: 52028 Mb Thu Apr 23 08:24:13 2026",
+            "START_CMD: get_timing_paths    CPU: 211090 s (58.64 hr) ELAPSE: 197458 s (54.85 hr) MEM-PEAK: 52028 Mb Thu Apr 23 08:24:13 2026"
           ],
-          "last_updated": "2026-04-23T07:53:31",
-          "size_bytes": 222314821,
+          "last_updated": "2026-04-23T08:24:23",
+          "size_bytes": 222350047,
           "stage_exists": true
         },
         {
