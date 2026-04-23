@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T21:54:02",
+  "generated_at": "2026-04-23T02:13:24",
   "run_count": 5,
   "runs": [
     {
@@ -3609,7 +3609,7 @@
       "fc_latest_line": "fc_shell>",
       "overall_status": "started",
       "running_stage": null,
-      "last_updated": "2026-04-22T01:54:01",
+      "last_updated": "2026-04-22T23:55:28",
       "summary": {
         "passed": 18,
         "failed": 0,
@@ -4887,8 +4887,8 @@
             "Elapsed time for this session:  99002 seconds ( 27.50 hours)",
             "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-22T01:54:01",
-          "size_bytes": 39503487,
+          "last_updated": "2026-04-22T23:55:28",
+          "size_bytes": 39503509,
           "stage_exists": true
         }
       ]
@@ -4903,15 +4903,15 @@
       "indicators_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/Indicators",
       "reports_dir": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/reports",
       "fc_latest_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc_latest.log",
-      "fc_latest_line": "fc_shell>",
-      "overall_status": "started",
-      "running_stage": null,
-      "last_updated": "2026-04-22T21:53:56",
+      "fc_latest_line": "Information: Loading technology file '/p/hdk/cad/dp_contour/76p5/v1.0_1/pdk765_r1.0_1_26ww12.4/apr/synopsys/tech/m17_6x_2ya_2yb_2yc_2yd_1ye_1ga_mim3x_1gb__bumpi/g1m_8dg_50pp_tp4/p1276_icc2.tf' (FILE-007)",
+      "overall_status": "running",
+      "running_stage": "import_design",
+      "last_updated": "2026-04-23T02:12:59",
       "summary": {
-        "passed": 18,
+        "passed": 17,
         "failed": 0,
         "skipped": 0,
-        "started": 0,
+        "started": 1,
         "not_started": 1
       },
       "has_activity": true,
@@ -5231,20 +5231,20 @@
       "stages": [
         {
           "stage": "import_design",
-          "status": "passed",
-          "log_error_count": 9,
+          "status": "running",
+          "log_error_count": 7,
           "has_log_errors": true,
           "log_error_samples": [
             "Error: Cannot change the family of 'g1mfmz203ab1d03x5' that belongs to the family 'ctech_lib_doublesync' (LCS-1003)",
-            "Error: Cannot find a fill cell to create fill shape in. (NDMUI-401)",
-            "INTEL_WARNING: sd_report_design_qor error message: Errors detected during redirect (::sd_report_all) [Tue Apr 21 00:26:23 2026]"
+            "INTEL_WARNING: sd_report_design_qor error message: Errors detected during redirect (::sd_report_all) [Tue Apr 21 00:26:23 2026]",
+            "INTEL_WARNING: sd_reports_create_run_summary sd_report_ref_libs error message: wrong # args: should be \"sd_reports_create_run_summary\" (::sd_report_all) [Tue Apr 21 00:26:54 2026]"
           ],
           "files": {
             "fc_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/fc.import_design.log",
             "parallel_log": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/import_design.parallel_rpt_out.log",
-            "pass_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/import_design.pass",
+            "pass_file": null,
             "fail_file": null,
-            "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/import_design.skipped_fail"
+            "skipped_fail_file": null
           },
           "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
@@ -5254,8 +5254,8 @@
             "Elapsed time for this session:   1532 seconds (  0.43 hours)",
             "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-21T00:28:03",
-          "size_bytes": 36564285,
+          "last_updated": "2026-04-23T02:08:00",
+          "size_bytes": 30346742,
           "stage_exists": true
         },
         {
@@ -5420,16 +5420,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/initial_map.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU: 172329 s (47.87 hr) ELAPSE: 159623 s (44.34 hr) MEM-PEAK: 52028 Mb Wed Apr 22 21:53:38 2026",
+          "latest_line": "START_CMD: get_timing_paths    CPU: 188248 s (52.29 hr) ELAPSE: 175168 s (48.66 hr) MEM-PEAK: 52028 Mb Thu Apr 23 02:12:43 2026",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU: 172292 s (47.86 hr) ELAPSE: 159586 s (44.33 hr) MEM-PEAK: 52028 Mb Wed Apr 22 21:53:01 2026",
-            "END_CMD: get_timing_paths      CPU: 172311 s (47.86 hr) ELAPSE: 159605 s (44.33 hr) MEM-PEAK: 52028 Mb Wed Apr 22 21:53:20 2026",
-            "START_CMD: get_timing_paths    CPU: 172311 s (47.86 hr) ELAPSE: 159605 s (44.33 hr) MEM-PEAK: 52028 Mb Wed Apr 22 21:53:20 2026",
-            "END_CMD: get_timing_paths      CPU: 172329 s (47.87 hr) ELAPSE: 159623 s (44.34 hr) MEM-PEAK: 52028 Mb Wed Apr 22 21:53:38 2026",
-            "START_CMD: get_timing_paths    CPU: 172329 s (47.87 hr) ELAPSE: 159623 s (44.34 hr) MEM-PEAK: 52028 Mb Wed Apr 22 21:53:38 2026"
+            "START_CMD: get_timing_paths    CPU: 188212 s (52.28 hr) ELAPSE: 175133 s (48.65 hr) MEM-PEAK: 52028 Mb Thu Apr 23 02:12:08 2026",
+            "END_CMD: get_timing_paths      CPU: 188230 s (52.29 hr) ELAPSE: 175151 s (48.65 hr) MEM-PEAK: 52028 Mb Thu Apr 23 02:12:26 2026",
+            "START_CMD: get_timing_paths    CPU: 188230 s (52.29 hr) ELAPSE: 175151 s (48.65 hr) MEM-PEAK: 52028 Mb Thu Apr 23 02:12:26 2026",
+            "END_CMD: get_timing_paths      CPU: 188248 s (52.29 hr) ELAPSE: 175168 s (48.66 hr) MEM-PEAK: 52028 Mb Thu Apr 23 02:12:43 2026",
+            "START_CMD: get_timing_paths    CPU: 188248 s (52.29 hr) ELAPSE: 175168 s (48.66 hr) MEM-PEAK: 52028 Mb Thu Apr 23 02:12:43 2026"
           ],
-          "last_updated": "2026-04-22T21:53:51",
-          "size_bytes": 221608675,
+          "last_updated": "2026-04-23T02:12:59",
+          "size_bytes": 221914136,
           "stage_exists": true
         },
         {
@@ -5609,7 +5609,7 @@
         {
           "stage": "clock_route_opt",
           "status": "passed",
-          "log_error_count": 5,
+          "log_error_count": 7,
           "has_log_errors": true,
           "log_error_samples": [
             "Information: >>>>>>> 39 unique error and warning message tags while observing clock_opt / final_opto: (MSG-3100)",
@@ -5623,16 +5623,16 @@
             "fail_file": null,
             "skipped_fail_file": "/nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/runs/pma_cmn/1276.5/apr_fc/logs/clock_route_opt.skipped_fail"
           },
-          "latest_line": "START_CMD: get_timing_paths    CPU: 120886 s (33.58 hr) ELAPSE: 114525 s (31.81 hr) MEM-PEAK: 61613 Mb Wed Apr 22 21:53:52 2026",
+          "latest_line": "Thank you for using Fusion Compiler.",
           "recent_lines": [
-            "START_CMD: get_timing_paths    CPU: 120859 s (33.57 hr) ELAPSE: 114498 s (31.81 hr) MEM-PEAK: 61613 Mb Wed Apr 22 21:53:26 2026",
-            "END_CMD: get_timing_paths      CPU: 120873 s (33.58 hr) ELAPSE: 114511 s (31.81 hr) MEM-PEAK: 61613 Mb Wed Apr 22 21:53:39 2026",
-            "START_CMD: get_timing_paths    CPU: 120873 s (33.58 hr) ELAPSE: 114511 s (31.81 hr) MEM-PEAK: 61613 Mb Wed Apr 22 21:53:39 2026",
-            "END_CMD: get_timing_paths      CPU: 120886 s (33.58 hr) ELAPSE: 114525 s (31.81 hr) MEM-PEAK: 61613 Mb Wed Apr 22 21:53:52 2026",
-            "START_CMD: get_timing_paths    CPU: 120886 s (33.58 hr) ELAPSE: 114525 s (31.81 hr) MEM-PEAK: 61613 Mb Wed Apr 22 21:53:52 2026"
+            " 47548           110 Mb   Tue Apr 21 15:06:22 2026    Tue Apr 21 15:06:53 2026    /usr/intel/bin/tclsh8.6 /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/global/snps/apr_fc/power_scoring.tcl -W /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective -B pma_cmn -D pma_cmn -F apr_fc",
+            "  3960            93 Mb   Tue Apr 21 15:06:52 2026    Tue Apr 21 15:08:26 2026    /usr/intel/bin/tclsh8.6 /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective/global/snps/apr_fc/performance_scoring.tcl -W /nfs/site/disks/zsc11_hsio_ave18_SD_00003/ababu/cio80_pma_cmn_flatten_selective -B pma_cmn -D pma_cmn -F",
+            "CPU usage for this session: 123896 seconds ( 34.42 hours)",
+            "Elapsed time for this session: 121204 seconds ( 33.67 hours)",
+            "Thank you for using Fusion Compiler."
           ],
-          "last_updated": "2026-04-22T21:53:56",
-          "size_bytes": 93830083,
+          "last_updated": "2026-04-22T23:45:16",
+          "size_bytes": 94101940,
           "stage_exists": true
         },
         {
